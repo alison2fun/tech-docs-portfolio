@@ -1,21 +1,19 @@
 name: CI
 
-# 触发条件：当你推代码(push)或者提合并请求(pull_request)时
 on: [push, pull_request]
 
 jobs:
-  # 任务名称：Vale检查
   prose:
     runs-on: ubuntu-latest
     steps:
-      # 1. 把代码拉取到虚拟机
       - name: Checkout
         uses: actions/checkout@v4
 
-      # 2. 安装 Vale 工具
+      # 修正点：使用正确的官方 Action，并开启报错拦截
       - name: Vale
-        uses: errata-ai/setup-vale@v2
-
-      # 3. 开始检查 (使用如果你刚才测试通过的配置)
-      - name: Run Vale
-        run: vale .
+        uses: errata-ai/vale-action@v2
+        with:
+          # 关键参数：发现错误时让流水线变红（默认是只报告不报错）
+          fail_on_error: true 
+          # 告诉它检查所有文件
+          files: '.'
