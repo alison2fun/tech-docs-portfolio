@@ -1,0 +1,21 @@
+name: CI
+
+# 触发条件：当你推代码(push)或者提合并请求(pull_request)时
+on: [push, pull_request]
+
+jobs:
+  # 任务名称：Vale检查
+  prose:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. 把代码拉取到虚拟机
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # 2. 安装 Vale 工具
+      - name: Vale
+        uses: errata-ai/setup-vale@v2
+
+      # 3. 开始检查 (使用如果你刚才测试通过的配置)
+      - name: Run Vale
+        run: vale .
