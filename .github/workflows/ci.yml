@@ -3,16 +3,17 @@ name: CI
 on: [push, pull_request]
 
 jobs:
-  prose:
+  check:
     runs-on: ubuntu-latest
     steps:
+      # 1. 拉取代码
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Vale
-        uses: errata-ai/vale-action@v2
-        with:
-          # 修正点1：直接写点号 '.'，代表检查所有文件 (简单粗暴最有效)
-          files: .
-          # 修正点2：强制报错。只要发现问题，必须让流水线变红
-          fail_on_error: true
+      # 2. 仅仅安装 Vale 工具 (不让它自动运行，我们自己来)
+      - name: Install Vale
+        uses: errata-ai/setup-vale@v2
+
+      # 3. 简单粗暴：直接运行命令 (和你在本地做的一模一样)
+      - name: Run Vale
+        run: vale .
