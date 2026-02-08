@@ -6,14 +6,20 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-      # 1. 拉取代码
+      # 1. 把代码拿下来
       - name: Checkout
         uses: actions/checkout@v4
 
-      # 2. 仅仅安装 Vale 工具 (不让它自动运行，我们自己来)
+      # 2. 手动下载并安装 Vale (不依赖任何插件，直接从官网下)
       - name: Install Vale
-        uses: errata-ai/setup-vale@v2
+        run: |
+          # 下载 Vale v3.0.7 (Linux版)
+          wget https://github.com/errata-ai/vale/releases/download/v3.0.7/vale_3.0.7_Linux_64-bit.tar.gz
+          # 解压
+          tar -xvzf vale_3.0.7_Linux_64-bit.tar.gz
+          # 放到系统目录里
+          sudo mv vale /usr/local/bin/
 
-      # 3. 简单粗暴：直接运行命令 (和你在本地做的一模一样)
+      # 3. 运行检查 (这回它没法偷懒了)
       - name: Run Vale
-        run: vale .
+        run: vale test.md
