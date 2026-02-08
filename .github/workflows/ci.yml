@@ -9,11 +9,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # 修正点：使用正确的官方 Action，并开启报错拦截
       - name: Vale
         uses: errata-ai/vale-action@v2
         with:
-          # 关键参数：发现错误时让流水线变红（默认是只报告不报错）
-          fail_on_error: true 
-          # 告诉它检查所有文件
-          files: '.'
+          # 修正点1：直接写点号 '.'，代表检查所有文件 (简单粗暴最有效)
+          files: .
+          # 修正点2：强制报错。只要发现问题，必须让流水线变红
+          fail_on_error: true
