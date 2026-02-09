@@ -1,5 +1,5 @@
 # Tech Docs Portfolio: Automated Quality Assurance
-
+[![CI](https://github.com/alison2fun/tech-docs-portfolio/actions/workflows/ci.yml/badge.svg)](https://github.com/alison2fun/tech-docs-portfolio/actions/workflows/ci.yml)
 ## 📖 项目简介 (Project Overview)
 这是一个基于 **Docs-as-Code (文档即代码)** 理念构建的技术文档自动化质量检查系统。
 本项目旨在展示如何通过 **Vale** 和 **GitHub Actions**，将文档的语法检查、风格规范（Style Guide）和持续集成（CI/CD）流程化，确保技术文档的一致性与专业性。
