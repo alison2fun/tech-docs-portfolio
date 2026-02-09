@@ -29,12 +29,13 @@ vale .
 提交代码到 GitHub 后，点击仓库的 Actions 标签页，即可查看自动化检查报告。
 
 ### 3. 目录结构 (Structure)
+```text
 .
 ├── .github/workflows/  # CI/CD 配置文件
 ├── styles/             # Vale 规则库 (包含自定义规则与大厂规范)
 ├── .vale.ini           # Vale 核心配置文件
 └── test.md             # 测试文档
-
+```
 ### 4.  保存 (`Ctrl + S`)。
 
 ---
