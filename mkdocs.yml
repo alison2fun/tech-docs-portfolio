@@ -1,0 +1,12 @@
+site_name: 我的自动化文档作品集
+theme:
+  name: material
+  language: zh  # 设置为中文
+  features:
+    - navigation.tabs # 顶部导航栏
+    - search.highlight # 搜索高亮
+
+nav:
+  - 首页: index.md
+  - 快速开始: install.md # 对应 docs/install.md
+  - 风格指南: style-guide.md
