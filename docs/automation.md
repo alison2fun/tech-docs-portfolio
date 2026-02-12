@@ -25,15 +25,15 @@ graph LR
    
 ```   
 
-
 ### 2.2 核心技术点
 #### A. 自定义正则规则 (Regex Strategy)
 针对中文技术文档特有的“中西文空格”问题，编写了强制校验规则：
-```yaml
+```
 # styles/MyStyle/Spacing.yml
 tokens:
   - ".*[\u4e00-\u9fa5][a-zA-Z0-9].*"  # 抓取：(任意字)中文+英文(任意字)
   - ".*[a-zA-Z0-9][\u4e00-\u9fa5].*"  # 抓取：(任意字)英文+中文(任意字)
+
 ```    
 #### B. 行业标准集成 (Compliance)
 引入 **Google Developer Documentation Style Guide**，对语气（Voice & Tone）进行标准化约束，例如禁止在文档中使用 "Please" 等客套词汇，保持指令的清晰度。
