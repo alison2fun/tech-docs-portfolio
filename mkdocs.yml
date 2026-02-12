@@ -6,6 +6,14 @@ theme:
     - navigation.tabs # 顶部导航栏
     - search.highlight # 搜索高亮
 
+# ✅ 新增：告诉 MkDocs 我们要用 Mermaid 画图
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
 nav:
   - 首页: index.md
   - Kernel Space:
