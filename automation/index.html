@@ -9,8 +9,10 @@
       
       
       
-        <link rel="prev" href="../install/">
+        <link rel="prev" href="..">
       
+      
+        <link rel="next" href="../install/">
       
       
         
@@ -21,7 +23,7 @@
     
     
       
-        <title>风格指南 - 我的自动化文档作品集</title>
+        <title>01 自动化流水线 - 我的自动化文档作品集</title>
       
     
     
@@ -62,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#writing-style-guide" class="md-skip">
+        <a href="#01-quality-gate" class="md-skip">
           跳转至
         </a>
       
@@ -96,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              风格指南
+              01 自动化流水线
             
           </span>
         </div>
@@ -186,11 +188,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../automation/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
           
   
   
@@ -225,11 +229,9 @@
   
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="./" class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../style-guide/" class="md-tabs__link">
         
   
   
@@ -306,24 +308,29 @@
       
   
   
+    
   
   
+  
     
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -341,7 +348,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -356,10 +363,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../automation/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    01 自动化流水线
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -375,6 +409,104 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-challenge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 背景与挑战 (Challenge)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-solution-docs-as-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 解决方案 (Solution: Docs as Code)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 解决方案 (Solution: Docs as Code)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 架构图
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 架构图">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#b-compliance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. 行业标准集成 (Compliance)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-cicd-automation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. CI/CD 集成 (Automation)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-result" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 实施效果 (Result)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -418,37 +550,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    风格指南
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../style-guide/" class="md-nav__link">
         
   
   
@@ -464,76 +569,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-spacing" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. 中英文混排规范 (Spacing)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-voice-and-tone" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. 语气与语态 (Voice and Tone)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2. 语气与语态 (Voice and Tone)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#21-please" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.1 避免使用 "Please"
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#22-active-voice" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.2 使用主动语态 (Active Voice)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -565,10 +600,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-spacing" class="md-nav__link">
+  <a href="#1-challenge" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. 中英文混排规范 (Spacing)
+        1. 背景与挑战 (Challenge)
       
     </span>
   </a>
@@ -576,22 +611,34 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-voice-and-tone" class="md-nav__link">
+  <a href="#2-solution-docs-as-code" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. 语气与语态 (Voice and Tone)
+        2. 解决方案 (Solution: Docs as Code)
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2. 语气与语态 (Voice and Tone)">
+    <nav class="md-nav" aria-label="2. 解决方案 (Solution: Docs as Code)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#21-please" class="md-nav__link">
+  <a href="#21" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.1 避免使用 "Please"
+        2.1 架构图
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 架构图">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#b-compliance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. 行业标准集成 (Compliance)
       
     </span>
   </a>
@@ -599,10 +646,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#22-active-voice" class="md-nav__link">
+  <a href="#c-cicd-automation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.2 使用主动语态 (Active Voice)
+        C. CI/CD 集成 (Automation)
       
     </span>
   </a>
@@ -611,6 +658,22 @@
         
       </ul>
     </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-result" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 实施效果 (Result)
+      
+    </span>
+  </a>
   
 </li>
       
@@ -631,74 +694,52 @@
 
 
 
-<h1 id="writing-style-guide">写作风格指南 (Writing Style Guide)</h1>
-<p>本指南基于 <strong>Microsoft Style Guide</strong> 并结合中文排版习惯制定。所有的规则均已通过 Vale 实现自动化检测。</p>
-<h2 id="1-spacing">1. 中英文混排规范 (Spacing)</h2>
-<p>在中文技术文档中，汉字与英文单词/数字之间<strong>必须</strong>保留一个空格。</p>
+<h1 id="01-quality-gate">[01] 文档自动化流水线 (Quality Gate)</h1>
+<blockquote>
+<p><strong>核心成果</strong>: 将人工校对时间从 30分钟/篇 降低至 &lt;10秒，实现了 100% 的格式错误拦截率。</p>
+</blockquote>
+<h2 id="1-challenge">1. 背景与挑战 (Challenge)</h2>
+<p>在多人协作的技术文档项目中，我们面临以下痛点：
+* <strong>格式混乱</strong>: 中英文混排缺乏空格（盘古之白），全角半角标点混用。
+* <strong>标准缺失</strong>: 缺乏统一的术语表，"Login" 被写成 "登陆"、"登入" 等多种形式。
+* <strong>效率低下</strong>: 资深工程师需要花费大量时间审核低级格式问题，而非关注技术准确性。</p>
+<h2 id="2-solution-docs-as-code">2. 解决方案 (Solution: Docs as Code)</h2>
+<p>我搭建了一套基于 <strong>GitHub Actions + Vale</strong> 的自动化质量门禁系统。</p>
+<h3 id="21">2.1 架构图</h3>
+<pre><code class="language-mermaid">graph LR
+    A[作者提交 Commit] --&gt; B{GitHub Actions};
+    B --&gt;|触发| C[Vale Linter];
+    C --&gt;|检查| D[自定义正则规则];
+    C --&gt;|检查| E[Google 风格指南];
+    D &amp; E --&gt; F{是否通过?};
+    F --&gt;|Fail| G[流水线变红/拦截合并];
+    F --&gt;|Pass| H[自动部署 MkDocs];
+
+   ```
+### 2.2 核心技术点
+#### A. 自定义正则规则 (Regex Strategy)
+针对中文技术文档特有的“中西文空格”问题，编写了强制校验规则：
+```yaml
+# styles/MyStyle/Spacing.yml
+tokens:
+  - &quot;.*[\u4e00-\u9fa5][a-zA-Z0-9].*&quot;  # 抓取：(任意字)中文+英文(任意字)
+  - &quot;.*[a-zA-Z0-9][\u4e00-\u9fa5].*&quot;  # 抓取：(任意字)英文+中文(任意字)
+</code></pre>
+<h4 id="b-compliance">B. 行业标准集成 (Compliance)</h4>
+<p>引入 <strong>Google Developer Documentation Style Guide</strong>，对语气（Voice &amp; Tone）进行标准化约束，例如禁止在文档中使用 "Please" 等客套词汇，保持指令的清晰度。</p>
+<h4 id="c-cicd-automation">C. CI/CD 集成 (Automation)</h4>
+<p>配置 GitHub Actions 脚本，实现 Fail-Fast 机制。</p>
+<blockquote>
+<p><em><a href="https://github.com/alison2fun/tech-docs-portfolio/blob/main/.github/workflows/ci.yml">点击查看 CI 配置文件</a></em></p>
+</blockquote>
+<h2 id="3-result">3. 实施效果 (Result)</h2>
 <ul>
-<li><strong>规则 ID</strong>: <code>MyStyle.Spacing</code></li>
-<li><strong>严重等级</strong>: <code>Error</code> (强制拦截)</li>
+<li><strong>Before</strong>: 文档发布后常被读者指出排版错误，显得不专业。</li>
+<li><strong>After</strong>: 所有低级格式问题在 <code>git push</code> 阶段即被拦截，Reviewer 专注于技术逻辑审核。</li>
+<li><strong>证据 (Evidence)</strong>: 
+    &gt; <a href="https://github.com/alison2fun/tech-docs-portfolio/actions">点击查看 GitHub Actions 拦截记录</a> 
+    &gt; <em>(请查看历史记录中红色的 "Fail" 与绿色的 "Pass" 对比)</em></li>
 </ul>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">✅ 正确示例 (Do)</th>
-<th style="text-align: left;">❌ 错误示例 (Don't)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">这是一个 <strong>Github</strong> 仓库</td>
-<td style="text-align: left;">这是一个<strong>Github</strong>仓库</td>
-</tr>
-<tr>
-<td style="text-align: left;">今天的气温是 <strong>25</strong> 度</td>
-<td style="text-align: left;">今天的气温是<strong>25</strong>度</td>
-</tr>
-</tbody>
-</table>
-<h2 id="2-voice-and-tone">2. 语气与语态 (Voice and Tone)</h2>
-<p>根据 <strong>Google Development Style Guide</strong>,我们应该保持客观、直接。</p>
-<h3 id="21-please">2.1 避免使用 "Please"</h3>
-<p>技术文档应注重效率，指令应直接下达，无需过度客套。</p>
-<ul>
-<li><strong>规则 ID</strong>: <code>Google.Politeness</code></li>
-<li><strong>严重等级</strong>: <code>Suggestion</code></li>
-</ul>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">✅ 正确示例 (Do)</th>
-<th style="text-align: left;">❌ 错误示例 (Don't)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><strong>Click</strong> the Submit button.</td>
-<td style="text-align: left;"><strong>Please click</strong> the Submit button.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Run</strong> the following command.</td>
-<td style="text-align: left;"><strong>Please note that you should run</strong> the command.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="22-active-voice">2.2 使用主动语态 (Active Voice)</h3>
-<p>主动语态更清晰，责任主体更明确。</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">✅ 正确示例 (Do)</th>
-<th style="text-align: left;">❌ 错误示例 (Don't)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">The browser <strong>sends</strong> a request.</td>
-<td style="text-align: left;">A request <strong>is sent</strong> by the browser.</td>
-</tr>
-</tbody>
-</table>
 
 
 
