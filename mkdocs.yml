@@ -6,7 +6,7 @@ theme:
     - navigation.tabs # 顶部导航栏
     - search.highlight # 搜索高亮
 
-# ✅ 新增：告诉 MkDocs 我们要用 Mermaid 画图
+# 告诉 MkDocs 要用 Mermaid 画图
 markdown_extensions:
   - pymdownx.superfences:
       custom_fences:
@@ -18,5 +18,6 @@ nav:
   - 首页: index.md
   - Kernel Space:
     - 01 自动化流水线: automation.md
+    - 02 芯片数据手册重构: hardware.md
   - 快速开始: install.md # 对应 docs/install.md
   - 风格指南: style-guide.md

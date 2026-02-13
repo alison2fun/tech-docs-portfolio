@@ -750,7 +750,7 @@
 <h2 id="2-solution-docs-as-code">2. 解决方案 (Solution: Docs as Code)</h2>
 <p>我搭建了一套基于 <strong>GitHub Actions + Vale</strong> 的自动化质量门禁系统。</p>
 <h3 id="21">2.1 架构图</h3>
-<pre><code class="language-mermaid">graph LR
+<pre class="mermaid"><code>graph LR
     A[作者提交 Commit] --&gt; B{GitHub Actions};
     B --&gt;|触发| C[Vale Linter];
     C --&gt;|检查| D[自定义正则规则];
@@ -758,17 +758,15 @@
     D &amp; E --&gt; F{是否通过?};
     F --&gt;|Fail| G[流水线变红/拦截合并];
     F --&gt;|Pass| H[自动部署 MkDocs];
-
 </code></pre>
 <h3 id="22">2.2 核心技术点</h3>
 <h4 id="a-regex-strategy">A. 自定义正则规则 (Regex Strategy)</h4>
-<p>针对中文技术文档特有的“中西文空格”问题，编写了强制校验规则：</p>
-<pre><code># styles/MyStyle/Spacing.yml
+<p>针对中文技术文档特有的“中西文空格”问题，编写了强制校验规则：
+<div class="highlight"><pre><span></span><code># styles/MyStyle/Spacing.yml
 tokens:
   - &quot;.*[\u4e00-\u9fa5][a-zA-Z0-9].*&quot;  # 抓取：(任意字)中文+英文(任意字)
   - &quot;.*[a-zA-Z0-9][\u4e00-\u9fa5].*&quot;  # 抓取：(任意字)英文+中文(任意字)
-
-</code></pre>
+</code></pre></div></p>
 <h4 id="b-compliance">B. 行业标准集成 (Compliance)</h4>
 <p>引入 <strong>Google Developer Documentation Style Guide</strong>，对语气（Voice &amp; Tone）进行标准化约束，例如禁止在文档中使用 "Please" 等客套词汇，保持指令的清晰度。</p>
 <h4 id="c-cicd-automation">C. CI/CD 集成 (Automation)</h4>
