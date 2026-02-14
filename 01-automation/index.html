@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../03-api/">
+        <link rel="prev" href="..">
       
       
-        <link rel="next" href="../style-guide/">
+        <link rel="next" href="../02-hardware/">
       
       
         
@@ -23,7 +23,7 @@
     
     
       
-        <title>快速开始 - 我的自动化文档作品集</title>
+        <title>01 自动化流水线 - 我的自动化文档作品集</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#quick-start" class="md-skip">
+        <a href="#01-quality-gate" class="md-skip">
           跳转至
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              快速开始
+              01 自动化流水线
             
           </span>
         </div>
@@ -188,11 +188,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../01-automation/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
           
   
   
@@ -208,11 +210,9 @@
   
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="./" class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../install/" class="md-tabs__link">
         
   
   
@@ -308,24 +308,29 @@
       
   
   
+    
   
   
+  
     
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -343,7 +348,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -358,10 +363,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../01-automation/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    01 自动化流水线
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -377,6 +409,126 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-challenge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 背景与挑战 (Challenge)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-solution-docs-as-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 解决方案 (Solution: Docs as Code)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 解决方案 (Solution: Docs as Code)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 架构图
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 核心技术点
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2 核心技术点">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-regex-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. 自定义正则规则 (Regex Strategy)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-compliance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. 行业标准集成 (Compliance)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-cicd-automation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. CI/CD 集成 (Automation)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-result" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 实施效果 (Result)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -449,37 +601,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    快速开始
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../install/" class="md-nav__link">
         
   
   
@@ -495,87 +620,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ✅ 前置条件 (Prerequisites)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🚀 安装步骤
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🚀 安装步骤">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#vale" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        第一步：安装 Vale 客户端
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#vs-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        第二步：安装 VS Code 插件
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        第三步：验证安装
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -634,10 +678,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#1-challenge" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ✅ 前置条件 (Prerequisites)
+        1. 背景与挑战 (Challenge)
       
     </span>
   </a>
@@ -645,22 +689,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#2-solution-docs-as-code" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🚀 安装步骤
+        2. 解决方案 (Solution: Docs as Code)
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🚀 安装步骤">
+    <nav class="md-nav" aria-label="2. 解决方案 (Solution: Docs as Code)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#vale" class="md-nav__link">
+  <a href="#21" class="md-nav__link">
     <span class="md-ellipsis">
       
-        第一步：安装 Vale 客户端
+        2.1 架构图
       
     </span>
   </a>
@@ -668,10 +712,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#vs-code" class="md-nav__link">
+  <a href="#22" class="md-nav__link">
     <span class="md-ellipsis">
       
-        第二步：安装 VS Code 插件
+        2.2 核心技术点
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2 核心技术点">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-regex-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. 自定义正则规则 (Regex Strategy)
       
     </span>
   </a>
@@ -679,10 +735,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#b-compliance" class="md-nav__link">
     <span class="md-ellipsis">
       
-        第三步：验证安装
+        B. 行业标准集成 (Compliance)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-cicd-automation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. CI/CD 集成 (Automation)
       
     </span>
   </a>
@@ -691,6 +758,22 @@
         
       </ul>
     </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-result" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 实施效果 (Result)
+      
+    </span>
+  </a>
   
 </li>
       
@@ -711,44 +794,50 @@
 
 
 
-<h1 id="quick-start">快速开始 (Quick Start)</h1>
-<p>本指南将帮助你在 5 分钟内搭建本地自动化检查环境。</p>
-<h2 id="prerequisites">✅ 前置条件 (Prerequisites)</h2>
-<ul>
-<li><strong>操作系统</strong>：Windows / macOS / Linux</li>
-<li><strong>核心工具</strong>：<ul>
-<li><a href="https://code.visualstudio.com/">VS Code</a></li>
-<li><a href="https://git-scm.com/">Git</a></li>
-</ul>
-</li>
-</ul>
-<h2 id="_1">🚀 安装步骤</h2>
-<h3 id="vale">第一步：安装 Vale 客户端</h3>
-<p>推荐使用包管理器安装：</p>
-<ul>
-<li>
-<p><strong>"Windows (Winget)"</strong>
-   <code>powershell
-    winget install Vale.Vale</code></p>
-</li>
-<li>
-<p><strong>"macOS (Homebrew)"</strong>
-    <div class="highlight"><pre><span></span><code>brew<span class="w"> </span>install<span class="w"> </span>vale
+<h1 id="01-quality-gate">[01] 文档自动化流水线 (Quality Gate)</h1>
+<blockquote>
+<p><strong>核心成果</strong>: 将人工校对时间从 30分钟/篇 降低至 &lt;10秒，实现了 100% 的格式错误拦截率。</p>
+</blockquote>
+<h2 id="1-challenge">1. 背景与挑战 (Challenge)</h2>
+<p>在多人协作的技术文档项目中，我们面临以下痛点：
+* <strong>格式混乱</strong>: 中英文混排缺乏空格（盘古之白），全角半角标点混用。
+* <strong>标准缺失</strong>: 缺乏统一的术语表，"Login" 被写成 "登陆"、"登入" 等多种形式。
+* <strong>效率低下</strong>: 资深工程师需要花费大量时间审核低级格式问题，而非关注技术准确性。</p>
+<h2 id="2-solution-docs-as-code">2. 解决方案 (Solution: Docs as Code)</h2>
+<p>我搭建了一套基于 <strong>GitHub Actions + Vale</strong> 的自动化质量门禁系统。</p>
+<h3 id="21">2.1 架构图</h3>
+<pre class="mermaid"><code>graph LR
+    A[作者提交 Commit] --&gt; B{GitHub Actions};
+    B --&gt;|触发| C[Vale Linter];
+    C --&gt;|检查| D[自定义正则规则];
+    C --&gt;|检查| E[Google 风格指南];
+    D &amp; E --&gt; F{是否通过?};
+    F --&gt;|Fail| G[流水线变红/拦截合并];
+    F --&gt;|Pass| H[自动部署 MkDocs];
+</code></pre>
+<h3 id="22">2.2 核心技术点</h3>
+<h4 id="a-regex-strategy">A. 自定义正则规则 (Regex Strategy)</h4>
+<p>针对中文技术文档特有的“中西文空格”问题，编写了强制校验规则：
+<div class="highlight"><pre><span></span><code># styles/MyStyle/Spacing.yml
+tokens:
+  - &quot;.*[\u4e00-\u9fa5][a-zA-Z0-9].*&quot;  # 抓取：(任意字)中文+英文(任意字)
+  - &quot;.*[a-zA-Z0-9][\u4e00-\u9fa5].*&quot;  # 抓取：(任意字)英文+中文(任意字)
 </code></pre></div></p>
-</li>
+<h4 id="b-compliance">B. 行业标准集成 (Compliance)</h4>
+<p>引入 <strong>Google Developer Documentation Style Guide</strong>，对语气（Voice &amp; Tone）进行标准化约束，例如禁止在文档中使用 "Please" 等客套词汇，保持指令的清晰度。</p>
+<h4 id="c-cicd-automation">C. CI/CD 集成 (Automation)</h4>
+<p>配置 GitHub Actions 脚本，实现 Fail-Fast 机制。</p>
+<blockquote>
+<p><em><a href="https://github.com/alison2fun/tech-docs-portfolio/blob/main/.github/workflows/ci.yml">点击查看 CI 配置文件</a></em></p>
+</blockquote>
+<h2 id="3-result">3. 实施效果 (Result)</h2>
+<ul>
+<li><strong>Before</strong>: 文档发布后常被读者指出排版错误，显得不专业。</li>
+<li><strong>After</strong>: 所有低级格式问题在 <code>git push</code> 阶段即被拦截，Reviewer 专注于技术逻辑审核。</li>
+<li><strong>证据 (Evidence)</strong>: 
+    &gt; <a href="https://github.com/alison2fun/tech-docs-portfolio/actions">点击查看 GitHub Actions 拦截记录</a> 
+    &gt; <em>(请查看历史记录中红色的 "Fail" 与绿色的 "Pass" 对比)</em></li>
 </ul>
-<h3 id="vs-code">第二步：安装 VS Code 插件</h3>
-<ol>
-<li>打开 VS Code。</li>
-<li>点击左侧扩展图标 (Extensions)。</li>
-<li>搜索 <strong>"Vale"</strong> 并安装官方插件。</li>
-</ol>
-<h3 id="_2">第三步：验证安装</h3>
-<p>打开终端，输入以下命令检查版本：
-<div class="highlight"><pre><span></span><code>vale<span class="w"> </span>-v
-</code></pre></div>
-输出示例: 
-<code>vale version 3.0.7</code></p>
 
 
 
