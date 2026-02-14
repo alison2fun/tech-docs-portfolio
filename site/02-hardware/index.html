@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../03-api/">
+        <link rel="prev" href="../01-automation/">
       
       
-        <link rel="next" href="../style-guide/">
+        <link rel="next" href="../03-api/">
       
       
         
@@ -23,7 +23,7 @@
     
     
       
-        <title>快速开始 - 我的自动化文档作品集</title>
+        <title>02 芯片数据手册重构 - 我的自动化文档作品集</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#quick-start" class="md-skip">
+        <a href="#02-datasheet-refactoring" class="md-skip">
           跳转至
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              快速开始
+              02 芯片数据手册重构
             
           </span>
         </div>
@@ -188,10 +188,12 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../01-automation/" class="md-tabs__link">
           
   
@@ -208,11 +210,9 @@
   
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="./" class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../install/" class="md-tabs__link">
         
   
   
@@ -308,24 +308,29 @@
       
   
   
+    
   
   
+  
     
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -343,7 +348,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -386,10 +391,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../02-hardware/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    02 芯片数据手册重构
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -405,6 +437,98 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-pain-points" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 痛点分析 (Pain Points)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-xyz-2024" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 重构案例：光感传感器 XYZ-2024
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 重构案例：光感传感器 XYZ-2024">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-interactive-timing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 协议时序可视化 (Interactive Timing)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-register-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 寄存器定义 (Register Map)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-driver-snippet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 驱动代码示例 (Driver Snippet)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-driver-snippet_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 驱动代码示例 (Driver Snippet)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -449,37 +573,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    快速开始
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../install/" class="md-nav__link">
         
   
   
@@ -495,87 +592,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ✅ 前置条件 (Prerequisites)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🚀 安装步骤
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🚀 安装步骤">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#vale" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        第一步：安装 Vale 客户端
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#vs-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        第二步：安装 VS Code 插件
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        第三步：验证安装
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -634,10 +650,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#1-pain-points" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ✅ 前置条件 (Prerequisites)
+        1. 痛点分析 (Pain Points)
       
     </span>
   </a>
@@ -645,22 +661,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#2-xyz-2024" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🚀 安装步骤
+        2. 重构案例：光感传感器 XYZ-2024
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🚀 安装步骤">
+    <nav class="md-nav" aria-label="2. 重构案例：光感传感器 XYZ-2024">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#vale" class="md-nav__link">
+  <a href="#21-interactive-timing" class="md-nav__link">
     <span class="md-ellipsis">
       
-        第一步：安装 Vale 客户端
+        2.1 协议时序可视化 (Interactive Timing)
       
     </span>
   </a>
@@ -668,10 +684,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#vs-code" class="md-nav__link">
+  <a href="#22-register-map" class="md-nav__link">
     <span class="md-ellipsis">
       
-        第二步：安装 VS Code 插件
+        2.2 寄存器定义 (Register Map)
       
     </span>
   </a>
@@ -679,10 +695,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#23-driver-snippet" class="md-nav__link">
     <span class="md-ellipsis">
       
-        第三步：验证安装
+        2.3 驱动代码示例 (Driver Snippet)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-driver-snippet_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 驱动代码示例 (Driver Snippet)
       
     </span>
   </a>
@@ -711,44 +738,106 @@
 
 
 
-<h1 id="quick-start">快速开始 (Quick Start)</h1>
-<p>本指南将帮助你在 5 分钟内搭建本地自动化检查环境。</p>
-<h2 id="prerequisites">✅ 前置条件 (Prerequisites)</h2>
+<h1 id="02-datasheet-refactoring">[02] 芯片数据手册重构 (Datasheet Refactoring)</h1>
+<blockquote>
+<p><strong>核心价值</strong>: 将数百页的静态 PDF 芯片手册，重构为开发者友好的、可交互的 Web 文档。</p>
+</blockquote>
+<h2 id="1-pain-points">1. 痛点分析 (Pain Points)</h2>
+<p>传统硬件开发中，软件工程师阅读 PDF 数据手册面临三大难题：
+1.  <strong>信息检索难</strong>: 几千个寄存器散落在数百页文档中，Ctrl+F 效率极低。
+2.  <strong>图表死板</strong>: 时序图通常是截图，无法缩放，看不清纳秒级 (ns) 的时序要求。
+3.  <strong>复制困难</strong>: 寄存器地址和配置位宽通常是图片格式，手敲代码容易出错。</p>
+<h2 id="2-xyz-2024">2. 重构案例：光感传感器 XYZ-2024</h2>
+<h3 id="21-interactive-timing">2.1 协议时序可视化 (Interactive Timing)</h3>
+<p>使用 <strong>Mermaid</strong> 代码替代传统截图，清晰展示 SPI 读取时序。</p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant MCU as 主控 (Master)
+    participant Sensor as 传感器 (Slave)
+
+    Note over MCU, Sensor: 1. 启动传输 (CS Low)
+    MCU-&gt;&gt;Sensor: CS = 0 (拉低片选)
+
+    Note over MCU, Sensor: 2. 发送寄存器地址 (0x10)
+    MCU-&gt;&gt;Sensor: MOSI: 0x10 (Write Reg Addr)
+    Sensor--&gt;&gt;MCU: MISO: High-Z
+
+    Note over MCU, Sensor: 3. 读取数据 (Data)
+    MCU-&gt;&gt;Sensor: CLK Toggling...
+    Sensor-&gt;&gt;MCU: MISO: 0xA5 (Data Byte)
+
+    Note over MCU, Sensor: 4. 结束传输 (CS High)
+    MCU-&gt;&gt;Sensor: CS = 1 (拉高片选)</code></pre>
+<h3 id="22-register-map">2.2 寄存器定义 (Register Map)</h3>
+<p>使用结构化表格定义寄存器，支持直接复制 Bit 定义。</p>
+<p><strong>寄存器名称</strong>: <code>CTRL_REG1</code> (控制寄存器 1)
+<strong>地址</strong>: <code>0x20</code>
+<strong>默认值</strong>: <code>0x00</code></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Bit</th>
+<th style="text-align: center;">7</th>
+<th style="text-align: center;">6</th>
+<th style="text-align: center;">5</th>
+<th style="text-align: center;">4</th>
+<th style="text-align: center;">3</th>
+<th style="text-align: center;">2</th>
+<th style="text-align: center;">1</th>
+<th style="text-align: center;">0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Name</strong></td>
+<td style="text-align: center;">RESET</td>
+<td style="text-align: center;">SLEEP</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">ODR [1]</td>
+<td style="text-align: center;">ODR [0]</td>
+<td style="text-align: center;">X_EN</td>
+<td style="text-align: center;">Y_EN</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Access</strong></td>
+<td style="text-align: center;">RW</td>
+<td style="text-align: center;">RW</td>
+<td style="text-align: center;">R</td>
+<td style="text-align: center;">R</td>
+<td style="text-align: center;">RW</td>
+<td style="text-align: center;">RW</td>
+<td style="text-align: center;">RW</td>
+<td style="text-align: center;">RW</td>
+</tr>
+</tbody>
+</table>
 <ul>
-<li><strong>操作系统</strong>：Windows / macOS / Linux</li>
-<li><strong>核心工具</strong>：<ul>
-<li><a href="https://code.visualstudio.com/">VS Code</a></li>
-<li><a href="https://git-scm.com/">Git</a></li>
+<li><strong>RESET</strong>: 软件复位，写 1 复位。</li>
+<li><strong>ODR [1:0]</strong>: 输出数据速率选择。<ul>
+<li><code>00</code>: Power Down</li>
+<li><code>01</code>: 10 Hz</li>
+<li><code>10</code>: 100 Hz</li>
 </ul>
 </li>
 </ul>
-<h2 id="_1">🚀 安装步骤</h2>
-<h3 id="vale">第一步：安装 Vale 客户端</h3>
-<p>推荐使用包管理器安装：</p>
-<ul>
-<li>
-<p><strong>"Windows (Winget)"</strong>
-   <code>powershell
-    winget install Vale.Vale</code></p>
-</li>
-<li>
-<p><strong>"macOS (Homebrew)"</strong>
-    <div class="highlight"><pre><span></span><code>brew<span class="w"> </span>install<span class="w"> </span>vale
-</code></pre></div></p>
-</li>
-</ul>
-<h3 id="vs-code">第二步：安装 VS Code 插件</h3>
-<ol>
-<li>打开 VS Code。</li>
-<li>点击左侧扩展图标 (Extensions)。</li>
-<li>搜索 <strong>"Vale"</strong> 并安装官方插件。</li>
-</ol>
-<h3 id="_2">第三步：验证安装</h3>
-<p>打开终端，输入以下命令检查版本：
-<div class="highlight"><pre><span></span><code>vale<span class="w"> </span>-v
+<h3 id="23-driver-snippet">2.3 驱动代码示例 (Driver Snippet)</h3>
+<p>提供开箱即用的 C 语言配置代码，减少开发者的试错成本。</p>
+<h3 id="23-driver-snippet_1">2.3 驱动代码示例 (Driver Snippet)</h3>
+<p>提供开箱即用的 C 语言配置代码，减少开发者的试错成本。</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// 示例：初始化传感器，设置 100Hz 采样率</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">Sensor_Init</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">ctrl_val</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// 设置 ODR = 100Hz (Bit 3:2 = 10)</span>
+<span class="w">    </span><span class="n">ctrl_val</span><span class="w"> </span><span class="o">|=</span><span class="w"> </span><span class="p">(</span><span class="mh">0x02</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// 启用 X/Y 轴 (Bit 1:0 = 11)</span>
+<span class="w">    </span><span class="n">ctrl_val</span><span class="w"> </span><span class="o">|=</span><span class="w"> </span><span class="mh">0x03</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// 写入寄存器 0x20</span>
+<span class="w">    </span><span class="n">SPI_Write</span><span class="p">(</span><span class="mh">0x20</span><span class="p">,</span><span class="w"> </span><span class="n">ctrl_val</span><span class="p">);</span>
+<span class="p">}</span>
 </code></pre></div>
-输出示例: 
-<code>vale version 3.0.7</code></p>
 
 
 

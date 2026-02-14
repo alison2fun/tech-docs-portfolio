@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../03-api/">
+        <link rel="prev" href="../02-hardware/">
       
       
-        <link rel="next" href="../style-guide/">
+        <link rel="next" href="../install/">
       
       
         
@@ -23,7 +23,7 @@
     
     
       
-        <title>快速开始 - 我的自动化文档作品集</title>
+        <title>03 IoT 接口文档 - 我的自动化文档作品集</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#quick-start" class="md-skip">
+        <a href="#03-iot-api-integration" class="md-skip">
           跳转至
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              快速开始
+              03 IoT 接口文档
             
           </span>
         </div>
@@ -188,10 +188,12 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../01-automation/" class="md-tabs__link">
           
   
@@ -208,11 +210,9 @@
   
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="./" class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../install/" class="md-tabs__link">
         
   
   
@@ -308,24 +308,29 @@
       
   
   
+    
   
   
+  
     
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -343,7 +348,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -414,41 +419,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../03-api/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    03 IoT 接口文档
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
     
   
   
@@ -468,7 +438,7 @@
   <span class="md-ellipsis">
     
   
-    快速开始
+    03 IoT 接口文档
   
 
     
@@ -486,7 +456,7 @@
   <span class="md-ellipsis">
     
   
-    快速开始
+    03 IoT 接口文档
   
 
     
@@ -512,33 +482,50 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#1-authentication" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ✅ 前置条件 (Prerequisites)
+        1. 认证鉴权 (Authentication)
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="1. 认证鉴权 (Authentication)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        鉴权时序图
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🚀 安装步骤
+        2. 获取设备数据
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🚀 安装步骤">
+    <nav class="md-nav" aria-label="2. 获取设备数据">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#vale" class="md-nav__link">
+  <a href="#parameters" class="md-nav__link">
     <span class="md-ellipsis">
       
-        第一步：安装 Vale 客户端
+        请求参数 (Parameters)
       
     </span>
   </a>
@@ -546,10 +533,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#vs-code" class="md-nav__link">
+  <a href="#response" class="md-nav__link">
     <span class="md-ellipsis">
       
-        第二步：安装 VS Code 插件
+        响应示例 (Response)
       
     </span>
   </a>
@@ -557,10 +544,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#error-codes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        第三步：验证安装
+        错误码 (Error Codes)
       
     </span>
   </a>
@@ -576,6 +563,41 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    快速开始
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -634,33 +656,50 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#1-authentication" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ✅ 前置条件 (Prerequisites)
+        1. 认证鉴权 (Authentication)
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="1. 认证鉴权 (Authentication)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        鉴权时序图
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🚀 安装步骤
+        2. 获取设备数据
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🚀 安装步骤">
+    <nav class="md-nav" aria-label="2. 获取设备数据">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#vale" class="md-nav__link">
+  <a href="#parameters" class="md-nav__link">
     <span class="md-ellipsis">
       
-        第一步：安装 Vale 客户端
+        请求参数 (Parameters)
       
     </span>
   </a>
@@ -668,10 +707,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#vs-code" class="md-nav__link">
+  <a href="#response" class="md-nav__link">
     <span class="md-ellipsis">
       
-        第二步：安装 VS Code 插件
+        响应示例 (Response)
       
     </span>
   </a>
@@ -679,10 +718,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#error-codes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        第三步：验证安装
+        错误码 (Error Codes)
       
     </span>
   </a>
@@ -711,44 +750,95 @@
 
 
 
-<h1 id="quick-start">快速开始 (Quick Start)</h1>
-<p>本指南将帮助你在 5 分钟内搭建本地自动化检查环境。</p>
-<h2 id="prerequisites">✅ 前置条件 (Prerequisites)</h2>
+<h1 id="03-iot-api-integration">[03] IoT 接口集成指南 (API Integration)</h1>
+<blockquote>
+<p><strong>场景</strong>: 开发者如何通过 RESTful API 获取光感传感器 (XYZ-2024) 的实时数据。</p>
+</blockquote>
+<h2 id="1-authentication">1. 认证鉴权 (Authentication)</h2>
+<p>所有 API 请求必须在 Header 中携带 <code>Authorization</code> 字段。鉴权流程采用标准的 OAuth 2.0 机制。</p>
+<h3 id="_1">鉴权时序图</h3>
+<pre class="mermaid"><code>sequenceDiagram
+    participant App as 客户端 (App)
+    participant Auth as 认证中心 (Auth)
+    participant API as 业务网关 (API)
+
+    App-&gt;&gt;Auth: 1. 发送 AppID &amp; Secret
+    activate Auth
+    Auth--&gt;&gt;App: 2. 返回 Access Token (有效期 2h)
+    deactivate Auth
+
+    App-&gt;&gt;API: 3. 请求数据 (Header 携带 Token)
+    activate API
+    Note right of API: 校验 Token 有效性
+    API--&gt;&gt;App: 4. 返回传感器数据
+    deactivate API</code></pre>
+<h2 id="2">2. 获取设备数据</h2>
+<p>获取指定设备的实时遥测数据。</p>
 <ul>
-<li><strong>操作系统</strong>：Windows / macOS / Linux</li>
-<li><strong>核心工具</strong>：<ul>
-<li><a href="https://code.visualstudio.com/">VS Code</a></li>
-<li><a href="https://git-scm.com/">Git</a></li>
+<li><strong>Endpoint</strong>: <code>GET /v1/devices/{device_id}/telemetry</code></li>
+<li><strong>Content-Type</strong>: <code>application/json</code></li>
 </ul>
-</li>
-</ul>
-<h2 id="_1">🚀 安装步骤</h2>
-<h3 id="vale">第一步：安装 Vale 客户端</h3>
-<p>推荐使用包管理器安装：</p>
-<ul>
-<li>
-<p><strong>"Windows (Winget)"</strong>
-   <code>powershell
-    winget install Vale.Vale</code></p>
-</li>
-<li>
-<p><strong>"macOS (Homebrew)"</strong>
-    <div class="highlight"><pre><span></span><code>brew<span class="w"> </span>install<span class="w"> </span>vale
-</code></pre></div></p>
-</li>
-</ul>
-<h3 id="vs-code">第二步：安装 VS Code 插件</h3>
-<ol>
-<li>打开 VS Code。</li>
-<li>点击左侧扩展图标 (Extensions)。</li>
-<li>搜索 <strong>"Vale"</strong> 并安装官方插件。</li>
-</ol>
-<h3 id="_2">第三步：验证安装</h3>
-<p>打开终端，输入以下命令检查版本：
-<div class="highlight"><pre><span></span><code>vale<span class="w"> </span>-v
+<h3 id="parameters">请求参数 (Parameters)</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th style="text-align: center;">必选</th>
+<th style="text-align: left;">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>device_id</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: left;">设备唯一标识符 (SN)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>limit</code></td>
+<td style="text-align: left;">Int</td>
+<td style="text-align: center;">❌</td>
+<td style="text-align: left;">返回数据条数，默认 10</td>
+</tr>
+</tbody>
+</table>
+<h3 id="response">响应示例 (Response)</h3>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;success&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;device_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;XYZ-2024-001&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;timestamp&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1678886400</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;sensors&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;light_intensity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">450</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;battery_level&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">85</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div>
-输出示例: 
-<code>vale version 3.0.7</code></p>
+<h3 id="error-codes">错误码 (Error Codes)</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">代码</th>
+<th style="text-align: left;">含义</th>
+<th style="text-align: left;">解决方案</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>401</code></td>
+<td style="text-align: left;">Unauthorized</td>
+<td style="text-align: left;">Token 过期或无效，请重新获取</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>404</code></td>
+<td style="text-align: left;">Device Not Found</td>
+<td style="text-align: left;">检查 <code>device_id</code> 是否输入正确</td>
+</tr>
+</tbody>
+</table>
 
 
 
