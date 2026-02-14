@@ -743,10 +743,12 @@
 <p><strong>核心价值</strong>: 将数百页的静态 PDF 芯片手册，重构为开发者友好的、可交互的 Web 文档。</p>
 </blockquote>
 <h2 id="1-pain-points">1. 痛点分析 (Pain Points)</h2>
-<p>传统硬件开发中，软件工程师阅读 PDF 数据手册面临三大难题：
-1.  <strong>信息检索难</strong>: 几千个寄存器散落在数百页文档中，Ctrl+F 效率极低。
-2.  <strong>图表死板</strong>: 时序图通常是截图，无法缩放，看不清纳秒级 (ns) 的时序要求。
-3.  <strong>复制困难</strong>: 寄存器地址和配置位宽通常是图片格式，手敲代码容易出错。</p>
+<p>传统硬件开发中，软件工程师阅读 PDF 数据手册面临三大难题：</p>
+<ol>
+<li><strong>信息检索难</strong>: 几千个寄存器散落在数百页文档中，Ctrl+F 效率极低。</li>
+<li><strong>图表死板</strong>: 时序图通常是截图，无法缩放，看不清纳秒级 (ns) 的时序要求。</li>
+<li><strong>复制困难</strong>: 寄存器地址和配置位宽通常是图片格式，手敲代码容易出错。</li>
+</ol>
 <h2 id="2-xyz-2024">2. 重构案例：光感传感器 XYZ-2024</h2>
 <h3 id="21-interactive-timing">2.1 协议时序可视化 (Interactive Timing)</h3>
 <p>使用 <strong>Mermaid</strong> 代码替代传统截图，清晰展示 SPI 读取时序。</p>
