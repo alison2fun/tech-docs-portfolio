@@ -71,3 +71,4 @@ void Sensor_Init(void) {
     // 写入寄存器 0x20
     SPI_Write(0x20, ctrl_val);
 }
+```

@@ -17,7 +17,8 @@ markdown_extensions:
 nav:
   - 首页: index.md
   - Kernel Space:
-    - 01 自动化流水线: automation.md
-    - 02 芯片数据手册重构: hardware.md
+    - 01 自动化流水线: 01-automation.md
+    - 02 芯片数据手册重构: 02-hardware.md
+    - 03 IoT 接口文档: 03-api.md
   - 快速开始: install.md # 对应 docs/install.md
   - 风格指南: style-guide.md
