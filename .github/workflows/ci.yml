@@ -10,7 +10,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # 2. 手动下载并安装 Vale (不依赖任何插件，直接从官网下)
+      # 2. 手动下载并安装 Vale 
       - name: Install Vale
         run: |
           # 下载 Vale v3.0.7 (Linux版)
@@ -20,6 +20,6 @@ jobs:
           # 放到系统目录里
           sudo mv vale /usr/local/bin/
 
-      # 3. 运行检查 (这回它没法偷懒了)
+      # 3. 运行检查 
       - name: Run Vale
         run: vale test.md
