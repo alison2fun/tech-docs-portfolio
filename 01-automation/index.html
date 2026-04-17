@@ -177,7 +177,7 @@
   
     
   
-  首页
+  简历 / Home
 
       </a>
     </li>
@@ -198,11 +198,30 @@
           
   
   
-  Kernel Space
+  项目案例
 
         </a>
       </li>
     
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../style-guide/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  写作规范
+
+      </a>
+    </li>
   
 
       
@@ -219,25 +238,6 @@
     
   
   快速开始
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../style-guide/" class="md-tabs__link">
-        
-  
-  
-    
-  
-  风格指南
 
       </a>
     </li>
@@ -291,7 +291,7 @@
   <span class="md-ellipsis">
     
   
-    首页
+    简历 / Home
   
 
     
@@ -337,7 +337,7 @@
   <span class="md-ellipsis">
     
   
-    Kernel Space
+    项目案例
   
 
     
@@ -353,7 +353,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Kernel Space
+    项目案例
   
 
           </label>
@@ -746,14 +746,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../install/" class="md-nav__link">
+      <a href="../style-guide/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    快速开始
+    写作规范
   
 
     
@@ -773,14 +773,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../style-guide/" class="md-nav__link">
+      <a href="../install/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    风格指南
+    快速开始
   
 
     
@@ -936,21 +936,21 @@
 
 
 
-<h1 id="01-quality-gate">[01] 文档自动化流水线 (Quality Gate)</h1>
+<h1 id="01-quality-gate">01 · 文档自动化流水线 (Quality Gate)<a class="headerlink" href="#01-quality-gate" title="Permanent link">&para;</a></h1>
 <blockquote>
 <p><strong>核心成果</strong>: 将人工校对时间从 30分钟/篇 降低至 &lt;10秒，实现了 100% 的格式错误拦截率。</p>
 </blockquote>
-<h2 id="1-challenge">1. 背景与挑战 (Challenge)</h2>
+<h2 id="1-challenge">1. 背景与挑战 (Challenge)<a class="headerlink" href="#1-challenge" title="Permanent link">&para;</a></h2>
 <p>在多人协作的技术文档项目中，我们面临以下痛点：</p>
 <ul>
 <li><strong>格式混乱</strong>: 中英文混排缺乏空格（盘古之白），全角半角标点混用。</li>
 <li><strong>标准缺失</strong>: 缺乏统一的术语表，"Login" 被写成 "登陆"、"登入" 等多种形式。</li>
 <li><strong>效率低下</strong>: 资深工程师需要花费大量时间审核低级格式问题，而非关注技术准确性。</li>
 </ul>
-<h2 id="2-solution-docs-as-code">2. 解决方案 (Solution: Docs as Code)</h2>
+<h2 id="2-solution-docs-as-code">2. 解决方案 (Solution: Docs as Code)<a class="headerlink" href="#2-solution-docs-as-code" title="Permanent link">&para;</a></h2>
 <p>我搭建了一套基于 <strong>GitHub Actions + Vale</strong> 的自动化质量门禁系统。</p>
-<h3 id="21">2.1 架构图</h3>
-<pre class="mermaid"><code>graph LR
+<h3 id="21">2.1 架构图<a class="headerlink" href="#21" title="Permanent link">&para;</a></h3>
+<pre><code class="language-mermaid">graph LR
     A[作者提交 Commit] --&gt; B{GitHub Actions};
     B --&gt;|触发| C[Vale Linter];
     C --&gt;|检查| D[自定义正则规则];
@@ -958,23 +958,25 @@
     D &amp; E --&gt; F{是否通过?};
     F --&gt;|Fail| G[流水线变红/拦截合并];
     F --&gt;|Pass| H[自动部署 MkDocs];
+
 </code></pre>
-<h3 id="22">2.2 核心技术点</h3>
-<h4 id="a-regex-strategy">A. 自定义正则规则 (Regex Strategy)</h4>
-<p>针对中文技术文档特有的“中西文空格”问题，编写了强制校验规则：
-<div class="highlight"><pre><span></span><code># styles/MyStyle/Spacing.yml
+<h3 id="22">2.2 核心技术点<a class="headerlink" href="#22" title="Permanent link">&para;</a></h3>
+<h4 id="a-regex-strategy">A. 自定义正则规则 (Regex Strategy)<a class="headerlink" href="#a-regex-strategy" title="Permanent link">&para;</a></h4>
+<p>针对中文技术文档特有的“中西文空格”问题，编写了强制校验规则：</p>
+<pre><code># styles/MyStyle/Spacing.yml
 tokens:
   - &quot;.*[\u4e00-\u9fa5][a-zA-Z0-9].*&quot;  # 抓取：(任意字)中文+英文(任意字)
   - &quot;.*[a-zA-Z0-9][\u4e00-\u9fa5].*&quot;  # 抓取：(任意字)英文+中文(任意字)
-</code></pre></div></p>
-<h4 id="b-compliance">B. 行业标准集成 (Compliance)</h4>
+
+</code></pre>
+<h4 id="b-compliance">B. 行业标准集成 (Compliance)<a class="headerlink" href="#b-compliance" title="Permanent link">&para;</a></h4>
 <p>引入 <strong>Google Developer Documentation Style Guide</strong>，对语气（Voice &amp; Tone）进行标准化约束，例如禁止在文档中使用 "Please" 等客套词汇，保持指令的清晰度。</p>
-<h4 id="c-cicd-automation">C. CI/CD 集成 (Automation)</h4>
+<h4 id="c-cicd-automation">C. CI/CD 集成 (Automation)<a class="headerlink" href="#c-cicd-automation" title="Permanent link">&para;</a></h4>
 <p>配置 GitHub Actions 脚本，实现 Fail-Fast 机制。</p>
 <blockquote>
 <p><em><a href="https://github.com/alison2fun/tech-docs-portfolio/blob/main/.github/workflows/ci.yml">点击查看 CI 配置文件</a></em></p>
 </blockquote>
-<h2 id="3-result">3. 实施效果 (Result)</h2>
+<h2 id="3-result">3. 实施效果 (Result)<a class="headerlink" href="#3-result" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Before</strong>: 文档发布后常被读者指出排版错误，显得不专业。</li>
 <li><strong>After</strong>: 所有低级格式问题在 <code>git push</code> 阶段即被拦截，Reviewer 专注于技术逻辑审核。</li>

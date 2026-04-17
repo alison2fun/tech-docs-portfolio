@@ -59,11 +59,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#graph-td-a-b-b-c-b-d-d-e-e-g-e-h" class="md-skip">
-          跳转至
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -173,7 +168,7 @@
   
     
   
-  首页
+  简历 / Home
 
       </a>
     </li>
@@ -192,11 +187,30 @@
           
   
   
-  Kernel Space
+  项目案例
 
         </a>
       </li>
     
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../style-guide/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  写作规范
+
+      </a>
+    </li>
   
 
       
@@ -213,25 +227,6 @@
     
   
   快速开始
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../style-guide/" class="md-tabs__link">
-        
-  
-  
-    
-  
-  风格指南
 
       </a>
     </li>
@@ -285,7 +280,7 @@
   <span class="md-ellipsis">
     
   
-    首页
+    简历 / Home
   
 
     
@@ -326,7 +321,7 @@
   <span class="md-ellipsis">
     
   
-    Kernel Space
+    项目案例
   
 
     
@@ -342,7 +337,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Kernel Space
+    项目案例
   
 
           </label>
@@ -588,14 +583,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../install/" class="md-nav__link">
+      <a href="../style-guide/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    快速开始
+    写作规范
   
 
     
@@ -615,14 +610,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../style-guide/" class="md-nav__link">
+      <a href="../install/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    风格指南
+    快速开始
   
 
     
@@ -653,47 +648,6 @@
   
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#graph-td-a-b-b-c-b-d-d-e-e-g-e-h" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        graph TD A(开始：检查电源)--&gt;B{电源亮了？} B --没亮--&gt;C[插电源] B --亮了--&gt;D[检查纸张] D --&gt;E{有纸吗？} E --没有--&gt;G[加纸] E --有--&gt;H[检查驱动]
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sequencediagram-participant-u-as-browser-participant-s-as-server-participant-d-as-db-u-s-get-apiusers1-activate-s-note-right-of-s-token-s-d-select-from-users-where-id1-activate-d-d-s-json-deactivate-d-s-u-200-ok-data-deactivate-s" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        sequenceDiagram participant U as 用户 (Browser) participant S as 服务器 (Server) participant D as 数据库 (DB) U-&gt;&gt;S: GET /api/users/1 activate S Note right of S: 解析 Token 验证身份 S-&gt;&gt;D: SELECT * FROM users WHERE id=1 activate D D--&gt;&gt;S: 返回用户数据 JSON deactivate D S--&gt;&gt;U: 200 OK (Data) deactivate S
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#statediagram-v2-idle-idle-working-start-working-idle-working-error-error-state-working-highspeed-highspeed-lowspeed-50-lowspeed-highspeed-40" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        stateDiagram-v2 [*] --&gt; Idle: 上电初始化 Idle --&gt; Working: 收到 Start 指令 Working --&gt; Idle: 任务完成 Working --&gt; Error: 检测到过热 Error --&gt; [*]: 系统关机保护 state Working { [*] --&gt; HighSpeed HighSpeed --&gt; LowSpeed : 温度 &gt; 50度 LowSpeed --&gt; HighSpeed : 温度 &lt; 40度 }
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -711,8 +665,8 @@
 
   <h1>Playground</h1>
 
-<p>流程图
-<pre class="mermaid"><code>graph TD
+<p>流程图</p>
+<pre><code class="language-mermaid">graph TD
 
     A(开始: 用户点击登录) --&gt; B{输入格式正确?}
     B -- 是 --&gt; C[发送 API 请求]
@@ -720,16 +674,19 @@
     C --&gt; E{服务器响应 200?}
     E -- Yes --&gt; F[登录成功, 跳转首页]
     E -- No --&gt; G[显示后端返回的 ErrorMsg]
-    G -.-&gt; B</code></pre></p>
+    G -.-&gt; B
+</code></pre>
 <hr />
-<h2 id="graph-td-a-b-b-c-b-d-d-e-e-g-e-h"><pre class="mermaid"><code>graph TD
+<pre><code class="language-mermaid">graph TD
 A(开始：检查电源)--&gt;B{电源亮了？}
 B --没亮--&gt;C[插电源]
 B --亮了--&gt;D[检查纸张]
 D --&gt;E{有纸吗？}
 E --没有--&gt;G[加纸]
-E --有--&gt;H[检查驱动]</code></pre></h2>
-<h2 id="sequencediagram-participant-u-as-browser-participant-s-as-server-participant-d-as-db-u-s-get-apiusers1-activate-s-note-right-of-s-token-s-d-select-from-users-where-id1-activate-d-d-s-json-deactivate-d-s-u-200-ok-data-deactivate-s"><pre class="mermaid"><code>sequenceDiagram
+E --有--&gt;H[检查驱动]
+</code></pre>
+<hr />
+<pre><code class="language-mermaid">sequenceDiagram
     participant U as 用户 (Browser)
     participant S as 服务器 (Server)
     participant D as 数据库 (DB)
@@ -744,9 +701,11 @@ E --有--&gt;H[检查驱动]</code></pre></h2>
     deactivate D
 
     S--&gt;&gt;U: 200 OK (Data)
-    deactivate S</code></pre></h2>
-<p>时序图
-<pre class="mermaid"><code>sequenceDiagram
+    deactivate S
+</code></pre>
+<hr />
+<p>时序图</p>
+<pre><code class="language-mermaid">sequenceDiagram
     participant I as 手机 (phone)
     participant S as 微信服务器 (server)
 
@@ -761,10 +720,11 @@ E --有--&gt;H[检查驱动]</code></pre></h2>
     S--&gt;&gt;I: 支付成功
 
     deactivate S
-</code></pre></p>
+
+</code></pre>
 <hr />
 <p>状态图</p>
-<h2 id="statediagram-v2-idle-idle-working-start-working-idle-working-error-error-state-working-highspeed-highspeed-lowspeed-50-lowspeed-highspeed-40"><pre class="mermaid"><code>
+<pre><code class="language-mermaid">
 stateDiagram-v2
     [*] --&gt; Idle: 上电初始化
 
@@ -781,15 +741,18 @@ stateDiagram-v2
     }
 
 
-</code></pre></h2>
-<pre class="mermaid"><code>stateDiagram-v2
+
+</code></pre>
+<hr />
+<pre><code class="language-mermaid">stateDiagram-v2
 [*] --&gt; 待付款
 待付款 --&gt; 待发货: 支付成功
 待发货 --&gt; 运输中: 商家发货
 运输中 --&gt; 已完成: 用户签收
 待付款 --&gt; 已取消: 超时未付
 已完成 --&gt; [*]
-已取消 --&gt; [*]</code></pre>
+已取消 --&gt; [*]
+</code></pre>
 
 
 

@@ -177,7 +177,7 @@
   
     
   
-  首页
+  简历 / Home
 
       </a>
     </li>
@@ -198,11 +198,30 @@
           
   
   
-  Kernel Space
+  项目案例
 
         </a>
       </li>
     
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../style-guide/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  写作规范
+
+      </a>
+    </li>
   
 
       
@@ -219,25 +238,6 @@
     
   
   快速开始
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../style-guide/" class="md-tabs__link">
-        
-  
-  
-    
-  
-  风格指南
 
       </a>
     </li>
@@ -291,7 +291,7 @@
   <span class="md-ellipsis">
     
   
-    首页
+    简历 / Home
   
 
     
@@ -337,7 +337,7 @@
   <span class="md-ellipsis">
     
   
-    Kernel Space
+    项目案例
   
 
     
@@ -353,7 +353,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Kernel Space
+    项目案例
   
 
           </label>
@@ -724,14 +724,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../install/" class="md-nav__link">
+      <a href="../style-guide/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    快速开始
+    写作规范
   
 
     
@@ -751,14 +751,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../style-guide/" class="md-nav__link">
+      <a href="../install/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    风格指南
+    快速开始
   
 
     
@@ -892,14 +892,14 @@
 
 
 
-<h1 id="03-iot-api-integration">[03] IoT 接口集成指南 (API Integration)</h1>
+<h1 id="03-iot-api-integration">03 ·  IoT 接口集成指南 (API Integration)<a class="headerlink" href="#03-iot-api-integration" title="Permanent link">&para;</a></h1>
 <blockquote>
 <p><strong>场景</strong>: 开发者如何通过 RESTful API 获取光感传感器 (XYZ-2024) 的实时数据。</p>
 </blockquote>
-<h2 id="1-authentication">1. 认证鉴权 (Authentication)</h2>
+<h2 id="1-authentication">1. 认证鉴权 (Authentication)<a class="headerlink" href="#1-authentication" title="Permanent link">&para;</a></h2>
 <p>所有 API 请求必须在 Header 中携带 <code>Authorization</code> 字段。鉴权流程采用标准的 OAuth 2.0 机制。</p>
-<h3 id="_1">鉴权时序图</h3>
-<pre class="mermaid"><code>sequenceDiagram
+<h3 id="_1">鉴权时序图<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<pre><code class="language-mermaid">sequenceDiagram
     participant App as 客户端 (App)
     participant Auth as 认证中心 (Auth)
     participant API as 业务网关 (API)
@@ -913,14 +913,15 @@
     activate API
     Note right of API: 校验 Token 有效性
     API--&gt;&gt;App: 4. 返回传感器数据
-    deactivate API</code></pre>
-<h2 id="2">2. 获取设备数据</h2>
+    deactivate API
+</code></pre>
+<h2 id="2">2. 获取设备数据<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
 <p>获取指定设备的实时遥测数据。</p>
 <ul>
 <li><strong>Endpoint</strong>: <code>GET /v1/devices/{device_id}/telemetry</code></li>
 <li><strong>Content-Type</strong>: <code>application/json</code></li>
 </ul>
-<h3 id="parameters">请求参数 (Parameters)</h3>
+<h3 id="parameters">请求参数 (Parameters)<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -945,21 +946,21 @@
 </tr>
 </tbody>
 </table>
-<h3 id="response">响应示例 (Response)</h3>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;success&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;device_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;XYZ-2024-001&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;timestamp&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1678886400</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;sensors&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;light_intensity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">450</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;battery_level&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">85</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-<h3 id="error-codes">错误码 (Error Codes)</h3>
+<h3 id="response">响应示例 (Response)<a class="headerlink" href="#response" title="Permanent link">&para;</a></h3>
+<pre><code class="language-json">{
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;success&quot;,
+  &quot;data&quot;: {
+    &quot;device_id&quot;: &quot;XYZ-2024-001&quot;,
+    &quot;timestamp&quot;: 1678886400,
+    &quot;sensors&quot;: {
+      &quot;light_intensity&quot;: 450,
+      &quot;battery_level&quot;: 85
+    }
+  }
+}
+</code></pre>
+<h3 id="error-codes">错误码 (Error Codes)<a class="headerlink" href="#error-codes" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>

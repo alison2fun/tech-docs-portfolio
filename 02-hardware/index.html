@@ -177,7 +177,7 @@
   
     
   
-  首页
+  简历 / Home
 
       </a>
     </li>
@@ -198,11 +198,30 @@
           
   
   
-  Kernel Space
+  项目案例
 
         </a>
       </li>
     
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../style-guide/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  写作规范
+
+      </a>
+    </li>
   
 
       
@@ -219,25 +238,6 @@
     
   
   快速开始
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../style-guide/" class="md-tabs__link">
-        
-  
-  
-    
-  
-  风格指南
 
       </a>
     </li>
@@ -291,7 +291,7 @@
   <span class="md-ellipsis">
     
   
-    首页
+    简历 / Home
   
 
     
@@ -337,7 +337,7 @@
   <span class="md-ellipsis">
     
   
-    Kernel Space
+    项目案例
   
 
     
@@ -353,7 +353,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Kernel Space
+    项目案例
   
 
           </label>
@@ -718,14 +718,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../install/" class="md-nav__link">
+      <a href="../style-guide/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    快速开始
+    写作规范
   
 
     
@@ -745,14 +745,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../style-guide/" class="md-nav__link">
+      <a href="../install/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    风格指南
+    快速开始
   
 
     
@@ -880,21 +880,21 @@
 
 
 
-<h1 id="02-datasheet-refactoring">[02] 芯片数据手册重构 (Datasheet Refactoring)</h1>
+<h1 id="02-datasheet-refactoring">02 · 芯片数据手册重构 (Datasheet Refactoring)<a class="headerlink" href="#02-datasheet-refactoring" title="Permanent link">&para;</a></h1>
 <blockquote>
 <p><strong>核心价值</strong>: 将数百页的静态 PDF 芯片手册，重构为开发者友好的、可交互的 Web 文档。</p>
 </blockquote>
-<h2 id="1-pain-points">1. 痛点分析 (Pain Points)</h2>
+<h2 id="1-pain-points">1. 痛点分析 (Pain Points)<a class="headerlink" href="#1-pain-points" title="Permanent link">&para;</a></h2>
 <p>传统硬件开发中，软件工程师阅读 PDF 数据手册面临三大难题：</p>
 <ol>
 <li><strong>信息检索难</strong>: 几千个寄存器散落在数百页文档中，Ctrl+F 效率极低。</li>
 <li><strong>图表死板</strong>: 时序图通常是截图，无法缩放，看不清纳秒级 (ns) 的时序要求。</li>
 <li><strong>复制困难</strong>: 寄存器地址和配置位宽通常是图片格式，手敲代码容易出错。</li>
 </ol>
-<h2 id="2-xyz-2024">2. 重构案例：光感传感器 XYZ-2024</h2>
-<h3 id="21-interactive-timing">2.1 协议时序可视化 (Interactive Timing)</h3>
+<h2 id="2-xyz-2024">2. 重构案例：光感传感器 XYZ-2024<a class="headerlink" href="#2-xyz-2024" title="Permanent link">&para;</a></h2>
+<h3 id="21-interactive-timing">2.1 协议时序可视化 (Interactive Timing)<a class="headerlink" href="#21-interactive-timing" title="Permanent link">&para;</a></h3>
 <p>使用 <strong>Mermaid</strong> 代码替代传统截图，清晰展示 SPI 读取时序。</p>
-<pre class="mermaid"><code>sequenceDiagram
+<pre><code class="language-mermaid">sequenceDiagram
     participant MCU as 主控 (Master)
     participant Sensor as 传感器 (Slave)
 
@@ -910,8 +910,9 @@
     Sensor-&gt;&gt;MCU: MISO: 0xA5 (Data Byte)
 
     Note over MCU, Sensor: 4. 结束传输 (CS High)
-    MCU-&gt;&gt;Sensor: CS = 1 (拉高片选)</code></pre>
-<h3 id="22-register-map">2.2 寄存器定义 (Register Map)</h3>
+    MCU-&gt;&gt;Sensor: CS = 1 (拉高片选)
+</code></pre>
+<h3 id="22-register-map">2.2 寄存器定义 (Register Map)<a class="headerlink" href="#22-register-map" title="Permanent link">&para;</a></h3>
 <p>使用结构化表格定义寄存器，支持直接复制 Bit 定义。</p>
 <p><strong>寄存器名称</strong>: <code>CTRL_REG1</code> (控制寄存器 1)
 <strong>地址</strong>: <code>0x20</code>
@@ -964,24 +965,24 @@
 </ul>
 </li>
 </ul>
-<h3 id="23-driver-snippet">2.3 驱动代码示例 (Driver Snippet)</h3>
+<h3 id="23-driver-snippet">2.3 驱动代码示例 (Driver Snippet)<a class="headerlink" href="#23-driver-snippet" title="Permanent link">&para;</a></h3>
 <p>提供开箱即用的 C 语言配置代码，减少开发者的试错成本。</p>
-<h3 id="23-driver-snippet_1">2.3 驱动代码示例 (Driver Snippet)</h3>
+<h3 id="23-driver-snippet_1">2.3 驱动代码示例 (Driver Snippet)<a class="headerlink" href="#23-driver-snippet_1" title="Permanent link">&para;</a></h3>
 <p>提供开箱即用的 C 语言配置代码，减少开发者的试错成本。</p>
-<div class="highlight"><pre><span></span><code><span class="c1">// 示例：初始化传感器，设置 100Hz 采样率</span>
-<span class="kt">void</span><span class="w"> </span><span class="nf">Sensor_Init</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">ctrl_val</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<pre><code class="language-c">// 示例：初始化传感器，设置 100Hz 采样率
+void Sensor_Init(void) {
+    uint8_t ctrl_val = 0;
 
-<span class="w">    </span><span class="c1">// 设置 ODR = 100Hz (Bit 3:2 = 10)</span>
-<span class="w">    </span><span class="n">ctrl_val</span><span class="w"> </span><span class="o">|=</span><span class="w"> </span><span class="p">(</span><span class="mh">0x02</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+    // 设置 ODR = 100Hz (Bit 3:2 = 10)
+    ctrl_val |= (0x02 &lt;&lt; 2);
 
-<span class="w">    </span><span class="c1">// 启用 X/Y 轴 (Bit 1:0 = 11)</span>
-<span class="w">    </span><span class="n">ctrl_val</span><span class="w"> </span><span class="o">|=</span><span class="w"> </span><span class="mh">0x03</span><span class="p">;</span>
+    // 启用 X/Y 轴 (Bit 1:0 = 11)
+    ctrl_val |= 0x03;
 
-<span class="w">    </span><span class="c1">// 写入寄存器 0x20</span>
-<span class="w">    </span><span class="n">SPI_Write</span><span class="p">(</span><span class="mh">0x20</span><span class="p">,</span><span class="w"> </span><span class="n">ctrl_val</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div>
+    // 写入寄存器 0x20
+    SPI_Write(0x20, ctrl_val);
+}
+</code></pre>
 
 
 
