@@ -1,4 +1,4 @@
-# [03] IoT 接口集成指南 (API Integration)
+# 03 ·  IoT 接口集成指南 (API Integration)
 
 > **场景**: 开发者如何通过 RESTful API 获取光感传感器 (XYZ-2024) 的实时数据。
 

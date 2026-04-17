@@ -1,9 +1,10 @@
 # 05 · 任务拆解小程序文档集
 
-**项目类型：​** C 端小程序用户文档 + 开发者 API 文档
-**文档风格：​** 波普手帐风（Voice & Tone 主动设计）
-**受众：​** 终端用户（User Guide）+ 前后端开发者（API Reference）
-**工具链：​** Markdown · GitHub · MkDocs
+- **项目类型：​** C 端小程序用户文档 + 开发者 API 文档  
+- **文档风格：​** 波普手帐风（Voice & Tone 主动设计）  
+- **受众：​** 终端用户（User Guide）+ 前后端开发者（API Reference）  
+- **工具链：​** Markdown · GitHub · MkDocs
+
 
 ## 设计决策说明
 

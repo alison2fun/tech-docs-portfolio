@@ -15,16 +15,15 @@ markdown_extensions:
           format: !!python/name:pymdownx.superfences.fence_code_format
 
 nav:
-  - 首页: index.md
-  - Kernel Space:
+  - 简历 / Home: index.md
+  - 项目案例:
     - 01 自动化流水线: 01-automation.md
     - 02 芯片数据手册重构: 02-hardware.md
     - 03 IoT 接口文档: 03-api.md
     - 04 OpenClaw 快速入门: 04-openclaw-quickstart.md
     - 05 任务拆解小程序:
-        - 用户手册: 05-miniprogram-task-decomposer/index.md
-        - API 参考文档: 05-miniprogram-task-decomposer/api-reference.md
+        - 用户手册: 05-task-decomposer/index.md
+        - API 参考文档: 05-task-decomposer/api-reference.md
 
-
-  - 快速开始: install.md # 对应 docs/install.md
-  - 风格指南: style-guide.md
+  - 写作规范: style-guide.md
+  - 快速开始: install.md

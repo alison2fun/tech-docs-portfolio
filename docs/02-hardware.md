@@ -1,4 +1,4 @@
-# [02] 芯片数据手册重构 (Datasheet Refactoring)
+# 02 · 芯片数据手册重构 (Datasheet Refactoring)
 
 > **核心价值**: 将数百页的静态 PDF 芯片手册，重构为开发者友好的、可交互的 Web 文档。
 

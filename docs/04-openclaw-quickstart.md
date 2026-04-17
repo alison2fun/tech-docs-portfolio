@@ -1,4 +1,4 @@
-#  OpenClaw 开发者快速入门 (Quick Start)
+# 04 · OpenClaw 开发者快速入门 (Quick Start)
 
 欢迎来到 OpenClaw！OpenClaw 是一个轻量级、高可扩展的开源 AI 智能体（Agent）编排框架。无论你是想构建自动化的数据分析助手，还是复杂的对话式交互机器人，OpenClaw 都能帮助你用最少的代码实现 LLM（大型语言模型）与外部工具的无缝连接。
 
