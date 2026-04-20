@@ -24,6 +24,9 @@ nav:
     - 05 任务拆解小程序:
         - 用户手册: 05-miniprogram-task-decomposer/index.md
         - API 参考文档: 05-miniprogram-task-decomposer/api-reference.md
+        - 版本日志: 05-miniprogram-task-decomposer/release-notes.md
+        - PRD 产品需求: 05-miniprogram-task-decomposer/prd.md
+
 
   - 写作规范: style-guide.md
   - 快速开始: install.md
