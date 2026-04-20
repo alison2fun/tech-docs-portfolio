@@ -1,41 +1,50 @@
-# Tech Docs Portfolio: Automated Quality Assurance
-[![CI](https://github.com/alison2fun/tech-docs-portfolio/actions/workflows/ci.yml/badge.svg)](https://github.com/alison2fun/tech-docs-portfolio/actions/workflows/ci.yml)
-## 📖 项目简介 (Project Overview)
-这是一个基于 **Docs-as-Code (文档即代码)** 理念构建的技术文档自动化质量检查系统。
-本项目旨在展示如何通过 **Vale** 和 **GitHub Actions**，将文档的语法检查、风格规范（Style Guide）和持续集成（CI/CD）流程化，确保技术文档的一致性与专业性。
-
-## 🛠️ 技术栈 (Tech Stack)
-* **Linter**: [Vale](https://vale.sh/) (命令行版 CLI)
-* **CI/CD**: GitHub Actions (自动化流水线)
-* **Version Control**: Git
-* **Editor**: VS Code
-
-## ✨ 核心功能 (Key Features)
-1.  **自动化纠错**：配置了本地 Vale 环境，支持实时检测文档中的格式错误（如中英文空格、标点误用）。
-2.  **自定义规则 (Custom Rules)**：编写了正则表达式规则 (`.yml`)，解决了中文技术文档特有的排版痛点。
-3.  **大厂规范集成**：集成了 Microsoft 和 Google 的官方风格指南，对齐行业标准。
-4.  **云端守门员**：通过 GitHub Actions 配置了 CI 流水线，任何不合规的文档提交都会被自动拦截。
-
-## 🚀 如何运行 (How to Run)
-
-### 1. 本地检查
-确保已安装 Vale，在终端运行：
-```bash
-
-vale .
-```
-
-### 2. 自动化测试
-提交代码到 GitHub 后，点击仓库的 Actions 标签页，即可查看自动化检查报告。
-
-### 3. 目录结构 (Structure)
-```text
-.
-├── .github/workflows/  # CI/CD 配置文件
-├── styles/             # Vale 规则库 (包含自定义规则与大厂规范)
-├── .vale.ini           # Vale 核心配置文件
-└── test.md             # 测试文档
-```
-### 4.  保存 (`Ctrl + S`)。
+# 技术文档工程作品集
+### *Tech Docs Portfolio — Docs-as-Code / API / Miniprogram*
 
 ---
+
+> 电子信息硕士 转型 技术文档工程师（TW）
+> 用工程师的严谨，写人人看得懂的文档。
+
+---
+
+## 作品一览
+
+### 小程序案例：AI 任务拆解助手
+
+*帮拖延症患者把"我要减肥"变成"现在去倒一杯水"*
+
+| 文档 | 一句话说明 | 传送门 |
+|---|---|---|
+| 快速上手 | 3 分钟完成第一次拆解 | [点我跳转](https://alison2fun.github.io/tech-docs-portfolio/05-miniprogram-task-decomposer/quickstart/) |
+| 用户手册 | 完整功能操作说明 | [点我跳转](https://alison2fun.github.io/tech-docs-portfolio/05-miniprogram-task-decomposer/) |
+| API 参考 | 接口定义 + 错误码速查 | [点我跳转](https://alison2fun.github.io/tech-docs-portfolio/05-miniprogram-task-decomposer/api-reference/) |
+| PRD 需求文档 | 功能逻辑 + 状态流转图 | [点我跳转](https://alison2fun.github.io/tech-docs-portfolio/05-miniprogram-task-decomposer/prd/) |
+| 版本日志 | 更新记录 + 已知限制 | [点我跳转](https://alison2fun.github.io/tech-docs-portfolio/05-miniprogram-task-decomposer/release-notes/) |
+
+---
+
+## 工具链
+
+写作        →  Markdown + MkDocs Material
+版本控制    →  Git 语义化提交
+自动发布    →  GitHub Actions CI/CD
+质量检测    →  Vale（集成 Microsoft & Google 风格指南）
+
+
+
+---
+
+## 关于作者
+
+电子信息硕士，正在转型 TW。
+
+习惯用**光路图**的方式想信息架构，
+用**公差分析**的眼光看参数约束，
+用**系统容错**的思维写异常边界。
+
+*文档不是代码的注脚，是产品的另一张脸。*
+
+---
+
+*GitHub Pages 站点自动构建 · 最近更新：2026-04*
