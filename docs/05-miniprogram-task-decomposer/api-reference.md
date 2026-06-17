@@ -1,174 +1,213 @@
----
-title: API 参考文档
----
 
-# API 参考文档 (API Reference)
+# 微步 ACTION · API 参考文档
 
-> 本文档面向接入"任务拆解小程序"后端服务的前端开发者。所有接口遵循 RESTful 设计风格，数据格式为 JSON。
+> 本文档面向接入微步 ACTION 后端服务的前端开发者，用于说明任务拆解接口的调用方式、请求参数、响应结构和错误处理。
 
 ---
 
-## 版本记录 (Changelog)
+## 基础信息
 
-| 版本号 | 发布日期 | 变更说明 |
-|--------|----------|----------|
-| v1.1.0 | 2025-03-10 | 新增调用配额字段 `quota_remaining`；细化错误码分类 |
-| v1.0.0 | 2025-01-20 | 初始版本发布，支持任务拆解核心接口 |
-
----
-
-## 基础信息 (Base Info)
-
-- **Base URL：​** `https://api.task-decomposer.com/api/v1`
-- **协议：​** HTTPS
-- **字符编码：​** UTF-8
-- **认证方式：​** Bearer Token（微信登录授权后获取）
+| 项目       | 说明                                       |
+| -------- | ---------------------------------------- |
+| Base URL | `https://api.task-decomposer.com/api/v1` |
+| 协议       | HTTPS                                    |
+| 数据格式     | JSON                                     |
+| 字符编码     | UTF-8                                    |
+| 认证方式     | Bearer Token                             |
 
 ---
 
-## 认证说明 (Authentication)
+## 认证说明
 
-所有接口均需在请求头中携带有效的访问令牌。令牌通过微信 OAuth 2.0 授权流程获取，有效期为 **7200 秒**，过期后需重新授权。
+所有接口请求都需要在 Header 中携带有效访问令牌。
 
-```
-Authorization: Bearer {wx_access_token}
+```http
+Authorization: Bearer {access_token}
+Content-Type: application/json
 ```
 
----
+其中，`{access_token}` 为用户完成微信授权后获取的访问令牌。
 
-## 接口详情 (Endpoints)
-
-### POST /tasks/decompose
-
-**功能描述：​** 接收用户输入的原始任务描述，调用 AI 引擎将其拆解为 5 个微小、可立即执行的子步骤，并返回结构化的任务列表。
+如果 Token 缺失、格式错误或已过期，接口将返回 `401 Unauthorized`。
 
 ---
 
-#### 请求头 (Request Headers)
+## 接口概览
 
-| 字段名 | 类型 | 必填 | 说明 |
-|--------|------|------|------|
-| `Authorization` | string | 是 | 格式：`Bearer {wx_access_token}` |
-| `Content-Type` | string | 是 | 固定值：`application/json` |
+| 接口                 | 方法     | 说明                    |
+| ------------------ | ------ | --------------------- |
+| `/tasks/decompose` | `POST` | 将用户输入的大任务拆解为 5 个可执行步骤 |
 
 ---
 
-#### 请求体 (Request Body)
+## 任务拆解接口
+
+### Endpoint
+
+```http
+POST /tasks/decompose
+```
+
+### 功能说明
+
+接收用户输入的原始任务描述，调用 AI 引擎将其拆解为 5 个微小、可立即执行的步骤，并返回结构化步骤列表。
+
+这个接口主要用于小程序首页的 **一键粉碎任务** 功能。
+
+---
+
+## 请求头
+
+| 字段名             | 类型     | 必填 | 说明                         |
+| --------------- | ------ | -- | -------------------------- |
+| `Authorization` | string | 是  | 格式：`Bearer {access_token}` |
+| `Content-Type`  | string | 是  | 固定值：`application/json`     |
+
+---
+
+## 请求体
 
 ```json
 {
-  "task_description": "两周内完成毕业论文第二章文献综述",
+  "task_description": "明天下午准备技术文档岗位面试的 2 分钟自我介绍",
   "language": "zh-CN"
 }
 ```
 
-| 字段名 | 类型 | 必填 | 约束 | 说明 |
-|--------|------|------|------|------|
-| `task_description` | string | 是 | 10 \~ 200 字符 | 用户输入的原始任务描述，建议包含具体目标、时间范围和当前状态 |
-| `language` | string | 否 | 枚举值：`zh-CN`、`en-US` | 指定 AI 返回步骤的语言，默认 `zh-CN` |
+| 字段名                | 类型     | 必填 | 约束                | 说明                             |
+| ------------------ | ------ | -- | ----------------- | ------------------------------ |
+| `task_description` | string | 是  | 10 ~ 200 字        | 用户输入的原始任务描述，建议包含具体目标、时间范围和当前状态 |
+| `language`         | string | 否  | `zh-CN` / `en-US` | 指定返回步骤语言，默认 `zh-CN`            |
 
 ---
 
-#### 成功响应 (Success Response)
+## 成功响应
 
-**HTTP 状态码：​** `200 OK`
+**HTTP 状态码：** `200 OK`
 
 ```json
 {
   "code": 0,
   "message": "success",
   "data": {
-    "task_id": "task_20250317_abc123",
-    "original_description": "两周内完成毕业论文第二章文献综述",
+    "task_id": "task_20260420_abc123",
+    "original_description": "明天下午准备技术文档岗位面试的 2 分钟自我介绍",
     "steps": [
       {
         "step_id": 1,
-        "content": "打开知网，搜索关键词「任务拆解 + 认知负荷」，收集 10 篇相关文献",
+        "content": "打开作品集首页，确认自己最想展示的 3 个项目",
+        "estimated_minutes": 10,
         "is_completed": false
       },
       {
         "step_id": 2,
-        "content": "阅读并标注其中 5 篇最相关文献的摘要与结论",
+        "content": "写下 3 句话，说明自己为什么适合技术文档岗位",
+        "estimated_minutes": 10,
         "is_completed": false
       },
       {
         "step_id": 3,
-        "content": "建立文献综述框架，列出 3 个核心论点",
+        "content": "从作品集中选 1 个项目，准备 30 秒说明",
+        "estimated_minutes": 15,
         "is_completed": false
       },
       {
         "step_id": 4,
-        "content": "按论点分类整理文献引用，完成初稿提纲",
+        "content": "把自我介绍控制在 2 分钟内，读一遍并计时",
+        "estimated_minutes": 10,
         "is_completed": false
       },
       {
         "step_id": 5,
-        "content": "撰写文献综述正文第一段（约 300 字），完成开头破题",
+        "content": "录音回听一遍，删掉重复和太虚的表达",
+        "estimated_minutes": 10,
         "is_completed": false
       }
     ],
     "quota_remaining": 17,
-    "created_at": "2025-03-17T09:30:00Z"
+    "created_at": "2026-04-20T10:30:00Z"
   }
 }
 ```
 
-| 字段名 | 类型 | 说明 |
-|--------|------|------|
-| `code` | integer | 业务状态码，`0` 表示成功 |
-| `message` | string | 响应描述 |
-| `data.task_id` | string | 本次任务的唯一标识符，格式：`task_{日期}_{随机串}` |
-| `data.original_description` | string | 原始输入内容，用于前端回显确认 |
-| `data.steps` | array | AI 拆解生成的步骤列表，固定返回 5 条 |
-| `data.steps[].step_id` | integer | 步骤序号，范围 1 \~ 5 |
-| `data.steps[].content` | string | 步骤描述文本 |
-| `data.steps[].is_completed` | boolean | 初始值固定为 `false`，由客户端本地维护勾选状态 |
-| `data.quota_remaining` | integer | 当前账号今日剩余调用次数，上限 20 次/账号/日 |
-| `data.created_at` | string | 任务创建时间，ISO 8601 格式，UTC 时区 |
+---
+
+## 响应字段说明
+
+| 字段名                              | 类型      | 说明                  |
+| -------------------------------- | ------- | ------------------- |
+| `code`                           | integer | 业务状态码，`0` 表示成功      |
+| `message`                        | string  | 响应描述                |
+| `data.task_id`                   | string  | 本次任务的唯一标识符          |
+| `data.original_description`      | string  | 用户原始输入内容，用于前端回显     |
+| `data.steps`                     | array   | AI 生成的步骤列表，固定返回 5 条 |
+| `data.steps[].step_id`           | integer | 步骤序号，范围 1 ~ 5       |
+| `data.steps[].content`           | string  | 步骤描述                |
+| `data.steps[].estimated_minutes` | integer | 预计完成时间，单位为分钟        |
+| `data.steps[].is_completed`      | boolean | 步骤完成状态，初始值为 `false` |
+| `data.quota_remaining`           | integer | 当前账号今日剩余调用次数        |
+| `data.created_at`                | string  | 任务创建时间，ISO 8601 格式  |
 
 ---
 
-#### 错误响应 (Error Responses)
+## 错误响应
 
-所有错误响应均返回统一的 JSON 结构：
+所有错误响应均返回统一 JSON 结构：
 
 ```json
 {
-  "code": {错误码},
-  "message": "{错误描述}",
+  "code": 4001,
+  "message": "任务描述太短啦，再说具体一点",
   "data": null
 }
 ```
 
-| HTTP 状态码 | 业务错误码 | 错误标识 | 触发场景 | 建议处理方式 |
-|-------------|-----------|----------|----------|-------------|
-| `400` | `4001` | `ERR_DESC_TOO_SHORT` | `task_description` 少于 10 个字符 | 前端提示用户"描述太简短啦，再说具体一点" |
-| `400` | `4002` | `ERR_DESC_TOO_LONG` | `task_description` 超过 200 个字符 | 前端限制输入框最大字符数并实时提示 |
-| `401` | `4010` | `ERR_UNAUTHORIZED` | Token 缺失、格式错误或已过期 | 引导用户重新微信授权登录 |
-| `429` | `4290` | `ERR_RATE_LIMIT` | 当日调用次数已达 20 次上限 | 前端展示"今日次数已用完，明天再来"提示 |
-| `503` | `5030` | `ERR_AI_UNAVAILABLE` | AI 服务暂时不可用 | 前端提示"拆解服务维护中，请稍后重试"并提供重试按钮 |
+| HTTP 状态码 |  业务错误码 | 错误标识                 | 触发场景                        | 建议处理             |
+| -------- | -----: | -------------------- | --------------------------- | ---------------- |
+| `400`    | `4001` | `ERR_DESC_TOO_SHORT` | `task_description` 少于 10 字  | 提示用户补充目标、时间或当前状态 |
+| `400`    | `4002` | `ERR_DESC_TOO_LONG`  | `task_description` 超过 200 字 | 限制输入长度，并提示用户精简描述 |
+| `401`    | `4010` | `ERR_UNAUTHORIZED`   | Token 缺失、格式错误或过期            | 引导用户重新登录或授权      |
+| `429`    | `4290` | `ERR_RATE_LIMIT`     | 当日调用次数达到上限                  | 提示今日次数已用完，次日再试   |
+| `503`    | `5030` | `ERR_AI_UNAVAILABLE` | AI 服务暂时不可用                  | 提示稍后重试，并保留用户输入   |
 
 ---
 
-## 调用配额说明 (Rate Limiting)
+## 调用配额
 
-为保障服务稳定性，每个微信账号每自然日最多调用本接口 **20 次**。配额于每日 **00:00（UTC+8）​** 重置。
+每个微信账号每日最多调用任务拆解接口 20 次。
 
-剩余次数可通过成功响应中的 `quota_remaining` 字段实时获取，建议前端在输入界面显眼位置展示剩余次数，降低用户因超限产生的挫败感。
+配额于每日 `00:00 UTC+8` 重置。
+
+前端可通过成功响应中的 `quota_remaining` 字段展示剩余次数，减少用户在提交后才发现超限的挫败感。
 
 ---
 
-## 工具推荐 (Tooling)
-
-在开发和调试阶段，推荐使用以下工具对本接口进行测试：
-
-- **​[Apifox](https://apifox.com)​**：支持中文界面，适合团队协作与接口 Mock
-- **​[Postman](https://www.postman.com)​**：业界标准 API 调试工具，支持自动化测试集合
-- **curl（命令行）：​** 快速验证接口连通性
+## curl 示例
 
 ```bash
-curl -X POST https://api.task-decomposer.com/api/v1/tasks/decompose \
-  -H "Authorization: Bearer {your_wx_access_token}" \
+curl -X POST "https://api.task-decomposer.com/api/v1/tasks/decompose" \
+  -H "Authorization: Bearer {access_token}" \
   -H "Content-Type: application/json" \
-  -d '{"task_description": "两周内完成毕业论文第二章文献综述", "language": "zh-CN"}'
+  -d '{
+    "task_description": "明天下午准备技术文档岗位面试的 2 分钟自我介绍",
+    "language": "zh-CN"
+  }'
 ```
+
+---
+
+## 版本记录
+
+| 版本     | 日期         | 说明                        |
+| ------ | ---------- | ------------------------- |
+| v1.0.0 | 2026-04-20 | 初始版本，支持任务拆解核心接口、错误码和调用配额  |
+| v1.1.0 | 计划中        | 支持手动编辑步骤、拆解结果反馈和更细的任务类型识别 |
+
+---
+
+## 下一步阅读
+
+1. [用户文档](index.md)：查看微步 ACTION 的用户使用流程；
+2. [PRD 产品需求](prd.md)：查看产品目标、用户场景和功能边界；
+3. [版本日志](release-notes.md)：查看功能迭代记录；
+4. [小程序产品总览](../mini-programs.md)：返回查看其他小程序项目。

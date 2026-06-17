@@ -1,52 +1,88 @@
-# 01 · 文档自动化流水线 (Quality Gate)
+# 文档质量自动化流水线
 
-> **核心成果**: 将人工校对时间从 30分钟/篇 降低至 <10秒，实现了 100% 的格式错误拦截率。
+## 项目概览
 
-## 1. 背景与挑战 (Challenge)
-在多人协作的技术文档项目中，我们面临以下痛点：
+这是一个基于 Markdown、Vale、GitHub Actions 和 MkDocs 搭建的文档质量自动化项目。
 
-* **格式混乱**: 中英文混排缺乏空格（盘古之白），全角半角标点混用。
-* **标准缺失**: 缺乏统一的术语表，"Login" 被写成 "登陆"、"登入" 等多种形式。
-* **效率低下**: 资深工程师需要花费大量时间审核低级格式问题，而非关注技术准确性。
+它模拟了一个轻量级 Docs-as-Code 工作流：作者在本地编写 Markdown 文档，通过 Vale 检查写作风格、术语和格式问题；提交代码后，再由 GitHub Actions 自动运行检查流程，降低人工检查成本，并提升文档的一致性和可维护性。
 
-## 2. 解决方案 (Solution: Docs as Code)
+这个项目的目标不是单纯搭建一个网站，而是展示技术文档如何被编写、检查、维护和交付。
 
-我搭建了一套基于 **GitHub Actions + Vale** 的自动化质量门禁系统。
+## 背景与问题
 
-### 2.1 架构图
+在技术文档写作和协作过程中，常见问题包括：
+
+- 中英文混排格式不一致；
+- 术语和表达方式不统一；
+- 写作风格依赖人工判断；
+- 文档提交后才发现格式或风格问题；
+- 缺少可重复执行的文档质量检查流程；
+- Reviewer 需要花大量时间处理低级格式问题。
+
+如果这些问题只依赖人工审查，文档质量会高度依赖个人经验，也不利于长期维护。
+
+## 解决方案
+
+本项目使用 Docs-as-Code 思路，把文档当作代码一样管理和检查。
+
+整体流程包括：
+
+1. 使用 Markdown 编写结构化文档；
+2. 使用 Vale 定义写作规则和格式检查规则；
+3. 在本地运行 Vale，提前发现文档问题；
+4. 使用 GitHub Actions 在提交后自动运行检查；
+5. 使用 MkDocs Material 构建和发布文档站点；
+6. 通过 Changelog 记录文档结构和内容变化。
+
+## 文档结构
+
+这个项目下包含以下文档：
+
+- **Quick Start**：帮助读者快速搭建本地文档质量检查环境；
+- **Writing Style Guide**：说明本项目采用的写作规范和示例；
+- **GitHub Actions Workflow**：说明自动化检查流程如何接入提交过程；
+- **Troubleshooting**：整理 Vale、VS Code 插件和 GitHub Actions 常见问题；
+- **Changelog**：记录文档结构、规则和内容的更新过程。
+
+## 使用工具
+
+| 工具 | 作用 |
+|---|---|
+| Markdown | 编写结构化技术文档 |
+| Vale | 检查写作风格、术语和自定义规则 |
+| GitHub Actions | 在提交后自动运行文档检查 |
+| MkDocs Material | 构建和发布静态文档站点 |
+| Mermaid | 绘制轻量级流程图 |
+| Git | 管理版本历史和协作流程 |
+
+## 工作流
+
 ```mermaid
-graph LR
-    A[作者提交 Commit] --> B{GitHub Actions};
-    B -->|触发| C[Vale Linter];
-    C -->|检查| D[自定义正则规则];
-    C -->|检查| E[Google 风格指南];
-    D & E --> F{是否通过?};
-    F -->|Fail| G[流水线变红/拦截合并];
-    F -->|Pass| H[自动部署 MkDocs];
-   
-```   
-
-### 2.2 核心技术点
-#### A. 自定义正则规则 (Regex Strategy)
-针对中文技术文档特有的“中西文空格”问题，编写了强制校验规则：
+flowchart LR
+    A[编写 Markdown 文档] --> B[本地运行 Vale 检查]
+    B --> C{是否通过检查}
+    C -- 否 --> D[修改格式或写作问题]
+    D --> B
+    C -- 是 --> E[提交到 GitHub]
+    E --> F[GitHub Actions 自动检查]
+    F --> G[发布文档站点]
 ```
-# styles/MyStyle/Spacing.yml
-tokens:
-  - ".*[\u4e00-\u9fa5][a-zA-Z0-9].*"  # 抓取：(任意字)中文+英文(任意字)
-  - ".*[a-zA-Z0-9][\u4e00-\u9fa5].*"  # 抓取：(任意字)英文+中文(任意字)
+## 这个项目证明什么能力
 
-```    
-#### B. 行业标准集成 (Compliance)
-引入 **Google Developer Documentation Style Guide**，对语气（Voice & Tone）进行标准化约束，例如禁止在文档中使用 "Please" 等客套词汇，保持指令的清晰度。
+通过这个项目，我希望展示以下能力：
 
-#### C. CI/CD 集成 (Automation)
-配置 GitHub Actions 脚本，实现 Fail-Fast 机制。
-> *[点击查看 CI 配置文件](https://github.com/alison2fun/tech-docs-portfolio/blob/main/.github/workflows/ci.yml)*
+- 能够编写结构化、任务导向的技术文档；
+- 理解 Docs-as-Code 文档工作流；
+- 能够使用 Vale 和 GitHub Actions 提升文档质量；
+- 能够把文档拆分为 Quick Start、Guide、Reference、Troubleshooting 和 Changelog；
+- 能够从长期维护角度思考文档结构、术语一致性和自动化检查。
 
-## 3. 实施效果 (Result)
 
-* **Before**: 文档发布后常被读者指出排版错误，显得不专业。
-* **After**: 所有低级格式问题在 `git push` 阶段即被拦截，Reviewer 专注于技术逻辑审核。
-* **证据 (Evidence)**: 
-    > [点击查看 GitHub Actions 拦截记录](https://github.com/alison2fun/tech-docs-portfolio/actions) 
-    > *(请查看历史记录中红色的 "Fail" 与绿色的 "Pass" 对比)*
+## 推荐阅读路径
+
+如果你是第一次阅读这个项目，建议按以下顺序查看：
+
+1. [快速开始](install.md)：先搭建本地文档质量检查环境；
+2. [写作风格指南](style-guide.md)：了解本项目采用的写作规则；
+3. [故障排查](troubleshooting.md)：查看常见问题和排查方式；
+4. [更新记录](changelog.md)：了解这个文档项目的迭代记录。

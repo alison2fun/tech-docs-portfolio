@@ -1,37 +1,50 @@
 site_name: 我的自动化文档作品集
+
 theme:
   name: material
-  language: zh  # 设置为中文
+  language: zh
   features:
-    - navigation.tabs # 顶部导航栏
-    - search.highlight # 搜索高亮
+    - navigation.tabs
+    - search.highlight
 
-# 告诉 MkDocs 要用 Mermaid 画图
 markdown_extensions:
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
-
-nav:
-  - 简历 / Home: index.md
-  - 项目案例:
-    - 01 自动化流水线: 01-automation.md
-    - 02 芯片数据手册重构: 02-hardware.md
-    - 03 IoT 接口文档: 03-api.md
-    - 04 OpenClaw 快速入门: 04-openclaw-quickstart.md
-    - 05 任务拆解小程序:
-        - 用户手册: 05-miniprogram-task-decomposer/index.md
-        - API 参考文档: 05-miniprogram-task-decomposer/api-reference.md
-        - 版本日志: 05-miniprogram-task-decomposer/release-notes.md
-        - PRD 产品需求: 05-miniprogram-task-decomposer/prd.md
-
-
-  - 写作规范: style-guide.md
-  - 快速开始: install.md
-
-# 自动生成目录
-markdown_extensions:
   - toc:
       permalink: true
+
+nav:
+  - Start Here: index.md
+
+  - 文档作品:
+      - 文档质量自动化流水线:
+          - 项目概览: 01-automation.md
+          - 快速开始: install.md
+          - 写作风格指南: style-guide.md
+          - GitHub Actions 工作流: github-actions-workflow.md
+          - 故障排查: troubleshooting.md
+          - 更新记录: changelog.md
+      - 硬件数据手册重构: 02-hardware.md
+      - IoT 接口文档: 03-api.md
+      - OpenClaw 快速入门: 04-openclaw-quickstart.md
+      - 小程序产品文档集:
+        - 总览: mini-programs.md
+        - 微步 ACTION：AI 任务拆解:
+
+          - 用户文档: 05-miniprogram-task-decomposer/index.md
+          - API 参考: 05-miniprogram-task-decomposer/api-reference.md
+          - PRD 产品需求: 05-miniprogram-task-decomposer/prd.md
+          - 版本日志: 05-miniprogram-task-decomposer/release-notes.md
+        - PopDots：波点拼贴图片生成器: dot-collage.md
+        - 照片换底色小程序: photo-background.md
+
+  - 案例复盘:
+      - 作品集改版复盘: case-studies/portfolio-redesign.md
+
+  - 写作样稿:
+      - 概览: writing-samples/index.md
+
+  - 简历: 简历.md
