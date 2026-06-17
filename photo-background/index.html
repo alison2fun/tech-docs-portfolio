@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../changelog/">
+        <link rel="prev" href="../dot-collage/">
       
       
-        <link rel="next" href="../03-api/">
+        <link rel="next" href="../case-studies/portfolio-redesign/">
       
       
         
@@ -23,7 +23,7 @@
     
     
       
-        <title>硬件数据手册重构 - 我的自动化文档作品集</title>
+        <title>照片换底色小程序 - 我的自动化文档作品集</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#pdf-web" class="md-skip">
+        <a href="#_1" class="md-skip">
           跳转至
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              硬件数据手册重构
+              照片换底色小程序
             
           </span>
         </div>
@@ -622,37 +622,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    硬件数据手册重构
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../02-hardware/" class="md-nav__link">
         
   
   
@@ -668,242 +641,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        项目背景
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        原始痛点
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="原始痛点">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. 信息检索成本高
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. 时序图不够友好
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. 寄存器信息难以复用
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        重构目标
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#xyz-2024" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        重构案例：光感传感器 XYZ-2024
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#1_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. 协议时序可视化
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. 寄存器定义重构
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2. 寄存器定义重构">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ctrl_reg1-1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        CTRL_REG1 控制寄存器 1
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#bit" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Bit 定义
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        字段说明
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#odr10" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ODR[1:0] 取值
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. 驱动代码示例
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3. 驱动代码示例">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        配置逻辑说明
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        重构前后对比
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        这个项目证明什么能力
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        下一步阅读
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -969,6 +706,8 @@
                 
   
   
+    
+  
   
   
     
@@ -979,11 +718,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" checked>
         
           
           <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
@@ -1004,7 +743,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1245,10 +984,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../photo-background/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    照片换底色小程序
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1264,6 +1030,309 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        项目概览
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 关于照片换底色神器
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 关于照片换底色神器">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 核心价值：不用打开修图软件，也能快速换底色
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 快速上手
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 快速上手">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 上传照片
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 选择背景颜色
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 开始制作
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 制作结果
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 制作结果">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 查看换底效果
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 保存到相册
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 调整尺寸与压缩
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 调整尺寸与压缩">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 选择常见尺寸
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 完成设置
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 重新换图
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-faq" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 常见问题 FAQ
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. 常见问题 FAQ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 为什么人物边缘看起来不够干净？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 可以自定义背景颜色吗？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 可以做一寸、二寸照片吗？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4 图片保存失败怎么办？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#65" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.5 换底后的图片可以重新制作吗？
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. 隐私说明
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        文档集入口
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        文档版本
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1508,10 +1577,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        项目背景
+        项目概览
       
     </span>
   </a>
@@ -1519,44 +1588,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        原始痛点
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="原始痛点">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. 信息检索成本高
+        1. 关于照片换底色神器
       
     </span>
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="1. 关于照片换底色神器">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
+  <a href="#11" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. 时序图不够友好
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. 寄存器信息难以复用
+        1.1 核心价值：不用打开修图软件，也能快速换底色
       
     </span>
   </a>
@@ -1565,6 +1612,228 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 快速上手
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 快速上手">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 上传照片
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 选择背景颜色
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 开始制作
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 制作结果
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 制作结果">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 查看换底效果
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 保存到相册
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 调整尺寸与压缩
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 调整尺寸与压缩">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 选择常见尺寸
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 完成设置
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 重新换图
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-faq" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 常见问题 FAQ
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. 常见问题 FAQ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 为什么人物边缘看起来不够干净？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 可以自定义背景颜色吗？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 可以做一寸、二寸照片吗？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4 图片保存失败怎么办？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#65" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.5 换底后的图片可以重新制作吗？
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. 隐私说明
+      
+    </span>
+  </a>
   
 </li>
       
@@ -1572,7 +1841,7 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        重构目标
+        文档集入口
       
     </span>
   </a>
@@ -1580,143 +1849,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#xyz-2024" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        重构案例：光感传感器 XYZ-2024
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#1_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. 协议时序可视化
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. 寄存器定义重构
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2. 寄存器定义重构">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ctrl_reg1-1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        CTRL_REG1 控制寄存器 1
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#bit" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Bit 定义
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        字段说明
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#odr10" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ODR[1:0] 取值
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. 驱动代码示例
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3. 驱动代码示例">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        配置逻辑说明
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        重构前后对比
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        这个项目证明什么能力
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        下一步阅读
+        文档版本
       
     </span>
   </a>
@@ -1740,305 +1876,258 @@
 
 
 
-<h1 id="pdf-web">芯片数据手册重构：把静态 PDF 改成开发者友好的 Web 文档<a class="headerlink" href="#pdf-web" title="Permanent link">&para;</a></h1>
-<h2 id="_1">项目背景<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>硬件数据手册通常很厚，动不动几百页。里面有寄存器、时序图、电气参数、通信协议、配置说明。信息都在，但开发者真正用起来时，经常还是很痛苦。</p>
-<p>我在整理这个案例时，想模拟一个真实场景：</p>
-<p>软件工程师需要基于某个传感器芯片写驱动。
-他手里有一份 PDF 数据手册，但他真正关心的是：</p>
+<h1 id="_1">照片换底色神器 · 用户文档<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>急着要白底、蓝底、红底照片？上传一张图，选个底色，马上制作。</p>
+</blockquote>
+<p><img alt="版本" src="https://img.shields.io/badge/版本-v1.0.0-brightgreen" />
+<img alt="文档风格" src="https://img.shields.io/badge/风格-轻量工具文档-ff69b4" />
+<img alt="工具链" src="https://img.shields.io/badge/工具链-微信小程序%20·%20AI%20Engine%20·%20图像处理-blue" /></p>
+<hr />
+<h2 id="_2">项目概览<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ul>
-<li>SPI 怎么读写；</li>
-<li>寄存器地址是什么；</li>
-<li>每个 bit 控制什么功能；</li>
-<li>初始化代码应该怎么写；</li>
-<li>配置完之后怎样确认逻辑没错。</li>
+<li><strong>项目类型：</strong> C 端照片换底色小程序用户文档</li>
+<li><strong>核心功能：</strong> 上传照片 → 选择底色 → AI 处理 → 调整尺寸与质量 → 保存到相册</li>
+<li><strong>适用场景：</strong> 证件照、报名照、头像、简历照、临时照片处理</li>
+<li><strong>受众：</strong> 需要快速换照片背景的普通用户</li>
 </ul>
-<p>如果这些信息散在 PDF 的不同章节里，开发者就会不断翻页、搜索、截图、手敲参数。效率低，也容易出错。</p>
-<p>所以我把这个案例当成一次“资料重构”练习：把静态 PDF 里的关键信息，整理成更适合开发者阅读和复用的 Web 文档。</p>
-<h2 id="_2">原始痛点<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>我主要关注 3 个问题。</p>
-<h3 id="1">1. 信息检索成本高<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
-<p>PDF 数据手册里通常会有大量寄存器和配置说明。
-开发者想找一个寄存器地址，可能要在目录、表格、正文之间来回跳。</p>
-<p>如果文档没有清楚的结构，<code>Ctrl + F</code> 只能解决一部分问题。关键词搜到了，也不一定能马上理解上下文。</p>
-<h3 id="2">2. 时序图不够友好<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
-<p>很多数据手册里的时序图是截图或静态图片。
-开发者想看清楚片选、时钟、MOSI、MISO 的关系时，经常需要放大缩小。</p>
-<p>如果要把时序逻辑讲给别人，截图也不方便修改。</p>
-<h3 id="3">3. 寄存器信息难以复用<a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
-<p>寄存器地址、bit 位、默认值、访问权限这些内容，如果只存在图片或大段正文里，开发者复制和核对都很麻烦。</p>
-<p>手动输入 bit 位配置，很容易出现位移错误、地址错误或配置遗漏。</p>
-<h2 id="_3">重构目标<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<p>这次重构的目标很明确：</p>
-<p>让开发者更快找到信息、更容易理解通信流程，也能更安全地复制关键配置。</p>
-<p>我把原始资料拆成 3 类内容：</p>
+<hr />
+<h2 id="1">1. 关于照片换底色神器<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<h3 id="11">1.1 核心价值：不用打开修图软件，也能快速换底色<a class="headerlink" href="#11" title="Permanent link">&para;</a></h3>
+<p>有时候只是想换个照片背景，却要打开复杂修图软件，抠图、换底、调尺寸，来回折腾很久。</p>
+<p>照片换底色神器就是为这种小需求准备的。</p>
+<p>你只需要上传一张照片，选择想要的背景颜色，小程序会自动处理图片，并生成新的换底色照片。</p>
+<p>常见的清新蓝、纯净白、中国红、天空蓝都可以直接选择。
+还可以点 <strong>更多</strong>，选择渐变色、推荐纯色，或者输入 HEX 色值自定义颜色。</p>
+<p>做好之后，可以继续调整图片尺寸和压缩质量，最后保存到相册。</p>
+<hr />
+<h2 id="2">2. 快速上手<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>三步完成换底色：上传照片、选择背景、保存结果。</p>
+</blockquote>
+<h3 id="21">2.1 上传照片<a class="headerlink" href="#21" title="Permanent link">&para;</a></h3>
+<p>打开小程序后，先上传一张需要处理的照片。</p>
+<p>适合上传的图片包括：</p>
 <ul>
-<li><strong>协议时序</strong>：用 Mermaid 把通信过程画出来；</li>
-<li><strong>寄存器定义</strong>：用结构化表格整理地址、bit 位和访问权限；</li>
-<li><strong>驱动代码示例</strong>：用 C 代码展示如何把寄存器配置落到实际初始化流程里。</li>
+<li>证件照；</li>
+<li>简历照；</li>
+<li>报名照；</li>
+<li>头像照片；</li>
+<li>需要更换背景的人像照片。</li>
 </ul>
-<p>这样处理之后，文档不只是“说明芯片有什么功能”，还能帮助开发者更快开始写代码。</p>
-<h2 id="xyz-2024">重构案例：光感传感器 XYZ-2024<a class="headerlink" href="#xyz-2024" title="Permanent link">&para;</a></h2>
-<p>下面用一个模拟的光感传感器 <code>XYZ-2024</code> 作为示例，展示我会如何重构一份芯片手册。</p>
-<h2 id="1_1">1. 协议时序可视化<a class="headerlink" href="#1_1" title="Permanent link">&para;</a></h2>
-<p>原始 PDF 里的 SPI 读取流程，如果只用截图展示，读者需要自己理解每一步发生了什么。</p>
-<p>我改用 Mermaid sequence diagram，把一次 SPI 读取拆成几个阶段：</p>
-<ul>
-<li>拉低片选；</li>
-<li>发送寄存器地址；</li>
-<li>读取数据；</li>
-<li>拉高片选，结束传输。</li>
-</ul>
-<pre class="mermaid"><code>sequenceDiagram
-    participant MCU as 主控 Master
-    participant Sensor as 传感器 Slave
+<p style="text-align: center;">
+  <img src="../images/bg-upload-blue.png" alt="照片换底色神器上传照片界面" />
+  <br>
+  <small>▲ 上传照片后，可以先预览当前背景效果</small>
+</p>
 
-    Note over MCU, Sensor: 1. 启动传输：CS Low
-    MCU-&gt;&gt;Sensor: CS = 0，拉低片选
-
-    Note over MCU, Sensor: 2. 发送寄存器地址：0x10
-    MCU-&gt;&gt;Sensor: MOSI: 0x10，写入寄存器地址
-    Sensor--&gt;&gt;MCU: MISO: High-Z
-
-    Note over MCU, Sensor: 3. 读取数据
-    MCU-&gt;&gt;Sensor: CLK toggling
-    Sensor-&gt;&gt;MCU: MISO: 0xA5，返回数据字节
-
-    Note over MCU, Sensor: 4. 结束传输：CS High
-    MCU-&gt;&gt;Sensor: CS = 1，拉高片选</code></pre>
-<p>这个改法的好处是：时序图可以直接维护在 Markdown 里。
-如果后续协议流程有变化，不需要重新截图，只要改 Mermaid 代码。</p>
-<h2 id="2_1">2. 寄存器定义重构<a class="headerlink" href="#2_1" title="Permanent link">&para;</a></h2>
-<p>寄存器说明是芯片手册里最容易让人眼花的部分。</p>
-<p>我会优先把寄存器名称、地址、默认值、bit 定义和访问权限拆出来，让开发者一眼看到最关键的信息。</p>
-<h3 id="ctrl_reg1-1"><code>CTRL_REG1</code> 控制寄存器 1<a class="headerlink" href="#ctrl_reg1-1" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Tip：什么照片更适合？</strong>
+人物边缘清楚、背景不太复杂、光线均匀的照片，处理效果通常更稳定。</p>
+</blockquote>
+<hr />
+<h3 id="22">2.2 选择背景颜色<a class="headerlink" href="#22" title="Permanent link">&para;</a></h3>
+<p>上传照片后，在 <strong>设定底色</strong> 区选择你需要的背景颜色。</p>
+<p>常用颜色包括：</p>
 <table>
 <thead>
 <tr>
-<th>字段</th>
+<th>背景色</th>
+<th>适合场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>清新蓝</td>
+<td>常见证件照、报名照、头像</td>
+</tr>
+<tr>
+<td>纯净白</td>
+<td>简历照、证件材料、正式用途</td>
+</tr>
+<tr>
+<td>中国红</td>
+<td>部分证件照、考试报名、特定材料</td>
+</tr>
+<tr>
+<td>天空蓝</td>
+<td>更柔和的蓝底照片</td>
+</tr>
+<tr>
+<td>更多</td>
+<td>渐变色、推荐纯色、自定义 HEX 色值</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: center;">
+  <img src="../images/bg-select-red.png" alt="选择中国红背景色界面" />
+  <br>
+  <small>▲ 点击颜色圆点，即可切换照片背景</small>
+</p>
+
+<p>如果预设颜色不够用，点击 <strong>更多</strong>，可以打开更多颜色面板。</p>
+<p style="text-align: center;">
+  <img src="../images/bg-more-colors.png" alt="更多颜色选择面板" />
+  <br>
+  <small>▲ 更多颜色里可以选择渐变、推荐纯色，也可以输入 HEX 色值</small>
+</p>
+
+<hr />
+<h3 id="23">2.3 开始制作<a class="headerlink" href="#23" title="Permanent link">&para;</a></h3>
+<p>选好背景色后，点击 <strong>选图制作</strong> 或 <strong>开始制作</strong>。</p>
+<p>小程序会进入处理状态，等待几秒即可生成新的照片。</p>
+<p style="text-align: center;">
+  <img src="../images/bg-processing.png" alt="照片换底色处理中界面" />
+  <br>
+  <small>▲ 处理中，请等待照片生成完成</small>
+</p>
+
+<p>处理完成后，会进入制作结果页面。</p>
+<hr />
+<h2 id="3">3. 制作结果<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<h3 id="31">3.1 查看换底效果<a class="headerlink" href="#31" title="Permanent link">&para;</a></h3>
+<p>在制作结果页，你可以看到换底后的照片。</p>
+<p>页面会显示当前图片的基础信息，比如：</p>
+<ul>
+<li>图片尺寸；</li>
+<li>文件大小；</li>
+<li>画质比例。</li>
+</ul>
+<p style="text-align: center;">
+  <img src="../images/bg-size-quality.png" alt="尺寸与压缩设置界面" />
+  <br>
+  <small>▲ 可以选择原图、自定义、一寸、二寸，并调整画质</small>
+</p>
+
+<p>你可以双指缩放，也可以单指拖动，调整图片在预览框中的位置。</p>
+<hr />
+<h3 id="32">3.2 保存到相册<a class="headerlink" href="#32" title="Permanent link">&para;</a></h3>
+<p>确认效果后，点击 <strong>保存到相册</strong>。</p>
+<p>保存时，系统可能会弹出相册权限请求。允许后，图片会保存到手机相册。</p>
+<p>如果你还想继续调整，可以点击：</p>
+<ul>
+<li><strong>尺寸与压缩</strong>：调整照片规格和画质；</li>
+<li><strong>重新制作</strong>：返回前面步骤重新选择图片或底色。</li>
+</ul>
+<hr />
+<h2 id="4">4. 调整尺寸与压缩<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
+<p>有些报名系统、证件材料或平台上传入口，会要求固定尺寸和文件大小。</p>
+<p>这时可以进入 <strong>尺寸与压缩</strong>。</p>
+<h3 id="41">4.1 选择常见尺寸<a class="headerlink" href="#41" title="Permanent link">&para;</a></h3>
+<p>目前支持：</p>
+<table>
+<thead>
+<tr>
+<th>尺寸</th>
 <th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>寄存器名称</td>
-<td><code>CTRL_REG1</code></td>
+<td>原图</td>
+<td>保持原始尺寸</td>
 </tr>
 <tr>
-<td>地址</td>
-<td><code>0x20</code></td>
+<td>自定义</td>
+<td>手动设置宽高</td>
 </tr>
 <tr>
-<td>默认值</td>
-<td><code>0x00</code></td>
+<td>一寸</td>
+<td>常见证件照尺寸</td>
 </tr>
 <tr>
-<td>作用</td>
-<td>控制传感器复位、休眠、输出数据速率和 X/Y 轴使能</td>
+<td>二寸</td>
+<td>常见证件照尺寸</td>
 </tr>
 </tbody>
 </table>
-<h3 id="bit">Bit 定义<a class="headerlink" href="#bit" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Bit</th>
-<th style="text-align: right;">7</th>
-<th style="text-align: right;">6</th>
-<th style="text-align: right;">5</th>
-<th style="text-align: right;">4</th>
-<th style="text-align: right;">3</th>
-<th style="text-align: right;">2</th>
-<th style="text-align: right;">1</th>
-<th style="text-align: right;">0</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Name</td>
-<td style="text-align: right;">RESET</td>
-<td style="text-align: right;">SLEEP</td>
-<td style="text-align: right;">-</td>
-<td style="text-align: right;">-</td>
-<td style="text-align: right;">ODR[1]</td>
-<td style="text-align: right;">ODR[0]</td>
-<td style="text-align: right;">X_EN</td>
-<td style="text-align: right;">Y_EN</td>
-</tr>
-<tr>
-<td>Access</td>
-<td style="text-align: right;">RW</td>
-<td style="text-align: right;">RW</td>
-<td style="text-align: right;">R</td>
-<td style="text-align: right;">R</td>
-<td style="text-align: right;">RW</td>
-<td style="text-align: right;">RW</td>
-<td style="text-align: right;">RW</td>
-<td style="text-align: right;">RW</td>
-</tr>
-</tbody>
-</table>
-<h3 id="_4">字段说明<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>字段</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>RESET</code></td>
-<td>软件复位。写入 <code>1</code> 后触发复位。</td>
-</tr>
-<tr>
-<td><code>SLEEP</code></td>
-<td>休眠模式控制位。</td>
-</tr>
-<tr>
-<td><code>ODR[1:0]</code></td>
-<td>输出数据速率选择。</td>
-</tr>
-<tr>
-<td><code>X_EN</code></td>
-<td>启用 X 轴数据输出。</td>
-</tr>
-<tr>
-<td><code>Y_EN</code></td>
-<td>启用 Y 轴数据输出。</td>
-</tr>
-</tbody>
-</table>
-<h3 id="odr10"><code>ODR[1:0]</code> 取值<a class="headerlink" href="#odr10" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>值</th>
-<th>输出数据速率</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>00</code></td>
-<td>Power Down</td>
-</tr>
-<tr>
-<td><code>01</code></td>
-<td>10 Hz</td>
-</tr>
-<tr>
-<td><code>10</code></td>
-<td>100 Hz</td>
-</tr>
-<tr>
-<td><code>11</code></td>
-<td>Reserved</td>
-</tr>
-</tbody>
-</table>
-<p>这个表格拆完之后，开发者不需要在大段正文里找 bit 位含义，也更容易把配置映射到代码里。</p>
-<h2 id="3_1">3. 驱动代码示例<a class="headerlink" href="#3_1" title="Permanent link">&para;</a></h2>
-<p>寄存器表解决“查信息”的问题，代码示例解决“怎么用”的问题。</p>
-<p>下面示例展示如何初始化传感器，并设置 100 Hz 采样率。</p>
-<div class="highlight"><pre><span></span><code><span class="c1">// 示例：初始化传感器，设置 100 Hz 采样率</span>
-<span class="kt">void</span><span class="w"> </span><span class="nf">Sensor_Init</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">ctrl_val</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-
-<span class="w">    </span><span class="c1">// 设置 ODR = 100 Hz，Bit 3:2 = 10</span>
-<span class="w">    </span><span class="n">ctrl_val</span><span class="w"> </span><span class="o">|=</span><span class="w"> </span><span class="p">(</span><span class="mh">0x02</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
-
-<span class="w">    </span><span class="c1">// 启用 X/Y 轴，Bit 1:0 = 11</span>
-<span class="w">    </span><span class="n">ctrl_val</span><span class="w"> </span><span class="o">|=</span><span class="w"> </span><span class="mh">0x03</span><span class="p">;</span>
-
-<span class="w">    </span><span class="c1">// 写入 CTRL_REG1，地址为 0x20</span>
-<span class="w">    </span><span class="n">SPI_Write</span><span class="p">(</span><span class="mh">0x20</span><span class="p">,</span><span class="w"> </span><span class="n">ctrl_val</span><span class="p">);</span>
-<span class="p">}</span>
+<p>选择尺寸后，可以继续调整画质比例。</p>
+<p>画质越高，图片越清晰，文件也会更大。
+画质越低，图片更小，适合有上传大小限制的场景。</p>
+<h3 id="42">4.2 完成设置<a class="headerlink" href="#42" title="Permanent link">&para;</a></h3>
+<p>调整完成后，点击 <strong>完成设置</strong>。</p>
+<p>系统会重新生成符合尺寸和画质要求的图片。
+确认无误后，再保存到相册。</p>
+<hr />
+<h2 id="5">5. 重新换图<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
+<p>如果上传错照片，或者想处理另一张图，可以点击 <strong>换图</strong>。</p>
+<p>重新换图后，可以继续选择底色、制作结果、调整尺寸和保存。</p>
+<p>这个功能适合连续处理多张照片，比如：</p>
+<ul>
+<li>同一张照片试不同底色；</li>
+<li>给多张照片统一做蓝底；</li>
+<li>先处理证件照，再处理头像图。</li>
+</ul>
+<hr />
+<h2 id="6-faq">6. 常见问题 FAQ<a class="headerlink" href="#6-faq" title="Permanent link">&para;</a></h2>
+<h3 id="61">6.1 为什么人物边缘看起来不够干净？<a class="headerlink" href="#61" title="Permanent link">&para;</a></h3>
+<p>可能和原图质量有关。</p>
+<p>常见原因包括：</p>
+<ul>
+<li>原图背景太复杂；</li>
+<li>头发边缘和背景颜色太接近；</li>
+<li>图片分辨率太低；</li>
+<li>光线太暗或阴影太重。</li>
+</ul>
+<p>可以试试换一张光线更清楚、背景更简单的照片。</p>
+<h3 id="62">6.2 可以自定义背景颜色吗？<a class="headerlink" href="#62" title="Permanent link">&para;</a></h3>
+<p>可以。</p>
+<p>点击 <strong>更多</strong>，在自由调色区域输入 HEX 色值，确认后即可应用到背景。</p>
+<p>例如：</p>
+<div class="highlight"><pre><span></span><code>#4A90E2
 </code></pre></div>
-<h3 id="_5">配置逻辑说明<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
-<p>这段代码对应前面的寄存器定义：</p>
-<table>
-<thead>
-<tr>
-<th>代码</th>
-<th>对应寄存器字段</th>
-<th>含义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>(0x02 &lt;&lt; 2)</code></td>
-<td><code>ODR[1:0]</code></td>
-<td>设置输出数据速率为 100 Hz</td>
-</tr>
-<tr>
-<td><code>0x03</code></td>
-<td><code>X_EN</code> + <code>Y_EN</code></td>
-<td>同时启用 X 轴和 Y 轴</td>
-</tr>
-<tr>
-<td><code>SPI_Write(0x20, ctrl_val)</code></td>
-<td><code>CTRL_REG1</code></td>
-<td>将配置写入控制寄存器</td>
-</tr>
-</tbody>
-</table>
-<p>我会尽量把代码和寄存器表放在一起解释。
-这样读者不只是复制代码，也能理解每一行对应哪个 bit 位。</p>
-<h2 id="_6">重构前后对比<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>维度</th>
-<th>原始 PDF 手册</th>
-<th>重构后的 Web 文档</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>信息查找</td>
-<td>依赖目录和全文搜索</td>
-<td>按协议、寄存器、代码示例拆分</td>
-</tr>
-<tr>
-<td>时序说明</td>
-<td>静态截图，不易修改</td>
-<td>Mermaid 图，可维护、可复用</td>
-</tr>
-<tr>
-<td>寄存器说明</td>
-<td>表格密集，阅读成本高</td>
-<td>拆成基本信息、bit 定义、字段说明</td>
-</tr>
-<tr>
-<td>代码落地</td>
-<td>需要开发者自行推导</td>
-<td>提供初始化示例和配置解释</td>
-</tr>
-<tr>
-<td>后续维护</td>
-<td>修改成本高</td>
-<td>Markdown + Mermaid 方便迭代</td>
-</tr>
-</tbody>
-</table>
-<h2 id="_7">这个项目证明什么能力<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
-<p>这个案例主要展示我的复杂资料重构能力。</p>
-<p>通过这个项目，我希望证明：</p>
+<h3 id="63">6.3 可以做一寸、二寸照片吗？<a class="headerlink" href="#63" title="Permanent link">&para;</a></h3>
+<p>可以。</p>
+<p>在制作结果页点击 <strong>尺寸与压缩</strong>，选择一寸或二寸规格，再点击 <strong>完成设置</strong>。</p>
+<h3 id="64">6.4 图片保存失败怎么办？<a class="headerlink" href="#64" title="Permanent link">&para;</a></h3>
+<p>可以先检查：</p>
 <ul>
-<li>我能从硬件资料中提取开发者真正需要的信息；</li>
-<li>我能把 PDF 中分散的内容重组为结构化 Web 文档；</li>
-<li>我能用 Mermaid、表格和代码示例降低读者理解成本；</li>
-<li>我能把寄存器说明和驱动代码对应起来，帮助开发者减少配置错误；</li>
-<li>我理解技术文档不只是复述资料，还要服务真实使用场景。</li>
+<li>是否允许小程序访问相册；</li>
+<li>手机存储空间是否充足；</li>
+<li>当前网络是否稳定；</li>
+<li>是否已经完成图片处理。</li>
 </ul>
-<h2 id="_8">下一步阅读<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
-<p>如果你想继续查看其他文档作品，可以阅读：</p>
+<p>如果权限被拒绝，可以在微信的小程序权限设置里重新开启相册权限。</p>
+<h3 id="65">6.5 换底后的图片可以重新制作吗？<a class="headerlink" href="#65" title="Permanent link">&para;</a></h3>
+<p>可以。</p>
+<p>点击 <strong>重新制作</strong>，返回前面步骤重新选择底色或图片。</p>
+<hr />
+<h2 id="7">7. 隐私说明<a class="headerlink" href="#7" title="Permanent link">&para;</a></h2>
+<ul>
+<li>你上传的照片仅用于当前换底色处理；</li>
+<li>小程序不会主动公开你的图片；</li>
+<li>保存图片时，需要你授权访问相册；</li>
+<li>如果使用云端能力处理图片，数据会通过加密方式传输；</li>
+<li>你可以随时在微信小程序权限设置中关闭相册相关权限。</li>
+</ul>
+<hr />
+<h2 id="_3">文档集入口<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>如需查看其他小程序文档，可以点击：</p>
 <ol>
-<li><a href="../01-automation/">文档质量自动化流水线</a>：查看我如何设计文档工程化案例；</li>
-<li><a href="../03-api/">IoT 接口文档</a>：查看 API / 接口说明写法；</li>
-<li><a href="../04-openclaw-quickstart/">OpenClaw 快速入门</a>：查看 Quick Start 类型文档；</li>
-<li><a href="../writing-samples/">写作样稿</a>：查看更多技术写作样稿规划。</li>
+<li><a href="../mini-programs/">小程序产品总览</a></li>
+<li><a href="../05-miniprogram-task-decomposer/">微步 ACTION 用户文档</a></li>
+<li><a href="../dot-collage/">PopDots 波点拼贴图片生成器</a></li>
 </ol>
+<hr />
+<h2 id="_4">文档版本<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>版本</th>
+<th>日期</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>v1.0.0</td>
+<td>2026-06-12</td>
+<td>初始版本，包含上传照片、选择底色、更多颜色、制作结果、尺寸压缩、保存到相册和 FAQ</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><em>© 2026 alison2fun · MIT License</em></p>
 
 
 
