@@ -20,6 +20,10 @@ theme:
 extra_css:
   - styles/kami-portfolio-20260619.css
 
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js
+  - javascripts/mermaid-init.js
+
 # 3. 开启必要的 Markdown 扩展（为了支持截图控制和更好的排版）
 markdown_extensions:
   - attr_list                # 【核心】允许在 Markdown 中为图片添加 class 类名
@@ -27,7 +31,11 @@ markdown_extensions:
   - tables                   # 确保表格正常渲染
   - admonition               # 支持 Note/Warning 等提示块
   - pymdownx.highlight       # 代码高亮基础支持
-  - pymdownx.superfences     # 支持更复杂的代码块嵌套
+  - pymdownx.superfences:    # 支持更复杂的代码块嵌套，并把 Mermaid 代码块渲染为图表容器
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
 
 nav:
   - Start Here: index.md
