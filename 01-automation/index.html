@@ -1572,15 +1572,14 @@
 </tbody>
 </table>
 <h2 id="_7">工作流</h2>
-<div class="highlight"><pre><span></span><code>flowchart LR
+<pre class="mermaid"><code>flowchart LR
     A[编写 Markdown 文档] --&gt; B[本地运行 Vale 检查]
     B --&gt; C{是否通过检查}
     C -- 否 --&gt; D[修改格式或写作问题]
     D --&gt; B
     C -- 是 --&gt; E[提交到 GitHub]
     E --&gt; F[GitHub Actions 自动检查]
-    F --&gt; G[发布文档站点]
-</code></pre></div>
+    F --&gt; G[发布文档站点]</code></pre>
 <h2 id="_8">这个项目证明什么能力</h2>
 <p>通过这个项目，我希望展示以下能力：</p>
 <ul>
@@ -1657,6 +1656,10 @@
     
     
       <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js"></script>
+      
+        <script src="../javascripts/mermaid-init.js"></script>
       
     
   </body>

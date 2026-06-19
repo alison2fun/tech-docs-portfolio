@@ -1580,7 +1580,7 @@
 </ul>
 <h2 id="_3">工作流概览</h2>
 <p>本项目的自动化检查流程如下：</p>
-<div class="highlight"><pre><span></span><code>flowchart LR
+<pre class="mermaid"><code>flowchart LR
     A[提交文档修改] --&gt; B[触发 GitHub Actions]
     B --&gt; C[安装 Vale]
     C --&gt; D[读取 .vale.ini 配置]
@@ -1589,8 +1589,7 @@
     F -- 是 --&gt; G[允许继续发布或合并]
     F -- 否 --&gt; H[返回错误日志]
     H --&gt; I[作者修复文档问题]
-    I --&gt; A
-</code></pre></div>
+    I --&gt; A</code></pre>
 <h2 id="_4">触发条件</h2>
 <p>GitHub Actions 可以在以下情况触发：</p>
 <ul>
@@ -1804,6 +1803,10 @@
     
     
       <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js"></script>
+      
+        <script src="../javascripts/mermaid-init.js"></script>
       
     
   </body>

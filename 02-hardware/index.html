@@ -1803,7 +1803,7 @@
 <li>读取数据；</li>
 <li>拉高片选，结束传输。</li>
 </ul>
-<div class="highlight"><pre><span></span><code>sequenceDiagram
+<pre class="mermaid"><code>sequenceDiagram
     participant MCU as 主控 Master
     participant Sensor as 传感器 Slave
 
@@ -1819,8 +1819,7 @@
     Sensor-&gt;&gt;MCU: MISO: 0xA5，返回数据字节
 
     Note over MCU, Sensor: 4. 结束传输：CS High
-    MCU-&gt;&gt;Sensor: CS = 1，拉高片选
-</code></pre></div>
+    MCU-&gt;&gt;Sensor: CS = 1，拉高片选</code></pre>
 <p>这个改法的好处是：时序图可以直接维护在 Markdown 里。
 如果后续协议流程有变化，不需要重新截图，只要改 Mermaid 代码。</p>
 <h2 id="2_1">2. 寄存器定义重构</h2>
@@ -2113,6 +2112,10 @@
     
     
       <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js"></script>
+      
+        <script src="../javascripts/mermaid-init.js"></script>
       
     
   </body>

@@ -2085,7 +2085,7 @@
 </ul>
 <hr />
 <h2 id="5">5. 功能流程图</h2>
-<div class="highlight"><pre><span></span><code>flowchart TD
+<pre class="mermaid"><code>flowchart TD
     A[用户输入任务] --&gt; B{输入是否有效}
     B -- 否 --&gt; C[提示用户修改输入]
     B -- 是 --&gt; D[AI 生成 5 个子步骤]
@@ -2094,8 +2094,7 @@
     F --&gt; G[进度条更新]
     G --&gt; H{是否完成 5 步}
     H -- 否 --&gt; F
-    H -- 是 --&gt; I[发放积分与勋章]
-</code></pre></div>
+    H -- 是 --&gt; I[发放积分与勋章]</code></pre>
 <hr />
 <h2 id="6">6. 异常边界</h2>
 <table>
@@ -2243,6 +2242,10 @@
     
     
       <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js"></script>
+      
+        <script src="../../javascripts/mermaid-init.js"></script>
       
     
   </body>

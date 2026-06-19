@@ -1787,7 +1787,7 @@
 <p>所有 API 请求都需要在 Header 中携带 <code>Authorization</code> 字段。</p>
 <p>本示例采用 OAuth 2.0 风格的 Token 鉴权流程：客户端先用 <code>AppID</code> 和 <code>Secret</code> 向认证中心换取 <code>access_token</code>，再用这个 token 调用设备数据接口。</p>
 <h3 id="_5">鉴权流程</h3>
-<div class="highlight"><pre><span></span><code>sequenceDiagram
+<pre class="mermaid"><code>sequenceDiagram
     participant App as 客户端 App
     participant Auth as 认证中心 Auth
     participant API as 业务网关 API
@@ -1801,8 +1801,7 @@
     activate API
     Note right of API: 校验 Token 有效性
     API--&gt;&gt;App: 4. 返回传感器数据
-    deactivate API
-</code></pre></div>
+    deactivate API</code></pre>
 <h3 id="header">Header 示例</h3>
 <p>调用业务接口时，需要在请求 Header 中加入：</p>
 <div class="highlight"><pre><span></span><code><span class="err">Authorization: Bearer &lt;access_token&gt;</span>
@@ -2056,6 +2055,10 @@
     
     
       <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js"></script>
+      
+        <script src="../javascripts/mermaid-init.js"></script>
       
     
   </body>

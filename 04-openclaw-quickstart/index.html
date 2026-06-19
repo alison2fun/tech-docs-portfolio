@@ -2182,7 +2182,7 @@
 <li>Executor 调用外部工具或模型；</li>
 <li>Agent 汇总结果并返回输出。</li>
 </ol>
-<div class="highlight"><pre><span></span><code>flowchart LR
+<pre class="mermaid"><code>flowchart LR
     User([用户输入]) --&gt; Engine
 
     subgraph OpenClaw 核心流程
@@ -2198,8 +2198,7 @@
         Executor -.-&gt; LLM[LLM 接口]
     end
 
-    Executor --&gt; Output([最终输出])
-</code></pre></div>
+    Executor --&gt; Output([最终输出])</code></pre>
 <h2 id="_17">核心组件说明</h2>
 <table>
 <thead>
@@ -2329,6 +2328,10 @@
     
     
       <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js"></script>
+      
+        <script src="../javascripts/mermaid-init.js"></script>
       
     
   </body>
