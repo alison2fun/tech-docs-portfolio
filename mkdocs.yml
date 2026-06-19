@@ -3,9 +3,9 @@ site_name: 我的自动化文档作品集
 # 1. 优化主题色与导航体验
 theme:
   name: material
-  # 推荐：深青色主调，沉稳且有科技感。如果不喜欢，可将 primary 改回 custom 或 blue
+  # Kami 风格使用暖白底和墨蓝强调；底层 palette 也避免回退到 Material 绿色主题
   palette:
-    primary: teal
+    primary: white
     accent: indigo
   features:
     - navigation.tabs          # 【核心】开启顶部导航 Tab，让侧边栏变清爽
@@ -16,9 +16,9 @@ theme:
     - search.highlight         # 搜索结果高亮
     - content.code.copy        # 【核心】为代码块添加“一键复制”按钮
 
-# 2. 引入自定义 CSS（注意路径对应 docs/styles/custom.css）
+# 2. 引入自定义 CSS（带版本号文件名，避免 GitHub Pages/CDN 缓存旧样式）
 extra_css:
-  - styles/custom.css
+  - styles/kami-portfolio-20260619.css
 
 # 3. 开启必要的 Markdown 扩展（为了支持截图控制和更好的排版）
 markdown_extensions:
