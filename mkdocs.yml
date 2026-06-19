@@ -1,20 +1,33 @@
 site_name: 我的自动化文档作品集
 
+# 1. 优化主题色与导航体验
 theme:
   name: material
-  language: zh
+  # 推荐：深青色主调，沉稳且有科技感。如果不喜欢，可将 primary 改回 custom 或 blue
+  palette:
+    primary: teal
+    accent: indigo
   features:
-    - navigation.tabs
-    - search.highlight
+    - navigation.tabs          # 【核心】开启顶部导航 Tab，让侧边栏变清爽
+    - navigation.tabs.sticky   # 顶部导航在向下滚动时吸顶
+    # - navigation.sections      # 侧边栏主分类加粗，层级更分明
+    - navigation.top           # 右下角增加“回到顶部”按钮
+    - search.suggest           # 搜索输入提示
+    - search.highlight         # 搜索结果高亮
+    - content.code.copy        # 【核心】为代码块添加“一键复制”按钮
 
+# 2. 引入自定义 CSS（注意路径对应 docs/styles/custom.css）
+extra_css:
+  - styles/custom.css
+
+# 3. 开启必要的 Markdown 扩展（为了支持截图控制和更好的排版）
 markdown_extensions:
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
-  - toc:
-      permalink: true
+  - attr_list                # 【核心】允许在 Markdown 中为图片添加 class 类名
+  - md_in_html               # 允许在 HTML 标签内写 Markdown
+  - tables                   # 确保表格正常渲染
+  - admonition               # 支持 Note/Warning 等提示块
+  - pymdownx.highlight       # 代码高亮基础支持
+  - pymdownx.superfences     # 支持更复杂的代码块嵌套
 
 nav:
   - Start Here: index.md
