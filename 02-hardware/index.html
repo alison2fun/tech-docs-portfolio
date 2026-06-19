@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="zh" class="no-js">
+<html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -29,6 +29,9 @@
     
       <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
       
 
 
@@ -46,6 +49,8 @@
       
     
     
+      <link rel="stylesheet" href="../styles/custom.css">
+    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -55,7 +60,12 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -65,7 +75,7 @@
       
         
         <a href="#pdf-web" class="md-skip">
-          跳转至
+          Skip to content
         </a>
       
     </div>
@@ -76,8 +86,10 @@
     
       
 
-<header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="页眉">
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="我的自动化文档作品集" class="md-header__button md-logo" aria-label="我的自动化文档作品集" data-md-component="logo">
       
   
@@ -105,8 +117,8 @@
       </div>
     </div>
     
+      
     
-      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
@@ -120,27 +132,29 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="查找">
+      <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
       </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
       
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            正在初始化搜索引擎
+            Initializing search
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -153,15 +167,9 @@
     
   </nav>
   
-</header>
     
-    <div class="md-container" data-md-component="container">
       
-      
-        
-          
-            
-<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
   <div class="md-grid">
     <ul class="md-tabs__list">
       
@@ -280,7 +288,13 @@
     </ul>
   </div>
 </nav>
-          
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
         
       
       <main class="md-main" data-md-component="main">
@@ -297,7 +311,7 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="我的自动化文档作品集" class="md-nav__button md-logo" aria-label="我的自动化文档作品集" data-md-component="logo">
       
@@ -671,7 +685,7 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="目录">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
@@ -680,7 +694,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      目录
+      Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -1494,7 +1508,7 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="目录">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
@@ -1503,7 +1517,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      目录
+      Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -1740,8 +1754,8 @@
 
 
 
-<h1 id="pdf-web">芯片数据手册重构：把静态 PDF 改成开发者友好的 Web 文档<a class="headerlink" href="#pdf-web" title="Permanent link">&para;</a></h1>
-<h2 id="_1">项目背景<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h1 id="pdf-web">芯片数据手册重构：把静态 PDF 改成开发者友好的 Web 文档</h1>
+<h2 id="_1">项目背景</h2>
 <p>硬件数据手册通常很厚，动不动几百页。里面有寄存器、时序图、电气参数、通信协议、配置说明。信息都在，但开发者真正用起来时，经常还是很痛苦。</p>
 <p>我在整理这个案例时，想模拟一个真实场景：</p>
 <p>软件工程师需要基于某个传感器芯片写驱动。
@@ -1755,20 +1769,20 @@
 </ul>
 <p>如果这些信息散在 PDF 的不同章节里，开发者就会不断翻页、搜索、截图、手敲参数。效率低，也容易出错。</p>
 <p>所以我把这个案例当成一次“资料重构”练习：把静态 PDF 里的关键信息，整理成更适合开发者阅读和复用的 Web 文档。</p>
-<h2 id="_2">原始痛点<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h2 id="_2">原始痛点</h2>
 <p>我主要关注 3 个问题。</p>
-<h3 id="1">1. 信息检索成本高<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
+<h3 id="1">1. 信息检索成本高</h3>
 <p>PDF 数据手册里通常会有大量寄存器和配置说明。
 开发者想找一个寄存器地址，可能要在目录、表格、正文之间来回跳。</p>
 <p>如果文档没有清楚的结构，<code>Ctrl + F</code> 只能解决一部分问题。关键词搜到了，也不一定能马上理解上下文。</p>
-<h3 id="2">2. 时序图不够友好<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
+<h3 id="2">2. 时序图不够友好</h3>
 <p>很多数据手册里的时序图是截图或静态图片。
 开发者想看清楚片选、时钟、MOSI、MISO 的关系时，经常需要放大缩小。</p>
 <p>如果要把时序逻辑讲给别人，截图也不方便修改。</p>
-<h3 id="3">3. 寄存器信息难以复用<a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
+<h3 id="3">3. 寄存器信息难以复用</h3>
 <p>寄存器地址、bit 位、默认值、访问权限这些内容，如果只存在图片或大段正文里，开发者复制和核对都很麻烦。</p>
 <p>手动输入 bit 位配置，很容易出现位移错误、地址错误或配置遗漏。</p>
-<h2 id="_3">重构目标<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_3">重构目标</h2>
 <p>这次重构的目标很明确：</p>
 <p>让开发者更快找到信息、更容易理解通信流程，也能更安全地复制关键配置。</p>
 <p>我把原始资料拆成 3 类内容：</p>
@@ -1778,9 +1792,9 @@
 <li><strong>驱动代码示例</strong>：用 C 代码展示如何把寄存器配置落到实际初始化流程里。</li>
 </ul>
 <p>这样处理之后，文档不只是“说明芯片有什么功能”，还能帮助开发者更快开始写代码。</p>
-<h2 id="xyz-2024">重构案例：光感传感器 XYZ-2024<a class="headerlink" href="#xyz-2024" title="Permanent link">&para;</a></h2>
+<h2 id="xyz-2024">重构案例：光感传感器 XYZ-2024</h2>
 <p>下面用一个模拟的光感传感器 <code>XYZ-2024</code> 作为示例，展示我会如何重构一份芯片手册。</p>
-<h2 id="1_1">1. 协议时序可视化<a class="headerlink" href="#1_1" title="Permanent link">&para;</a></h2>
+<h2 id="1_1">1. 协议时序可视化</h2>
 <p>原始 PDF 里的 SPI 读取流程，如果只用截图展示，读者需要自己理解每一步发生了什么。</p>
 <p>我改用 Mermaid sequence diagram，把一次 SPI 读取拆成几个阶段：</p>
 <ul>
@@ -1789,7 +1803,7 @@
 <li>读取数据；</li>
 <li>拉高片选，结束传输。</li>
 </ul>
-<pre class="mermaid"><code>sequenceDiagram
+<div class="highlight"><pre><span></span><code>sequenceDiagram
     participant MCU as 主控 Master
     participant Sensor as 传感器 Slave
 
@@ -1805,13 +1819,14 @@
     Sensor-&gt;&gt;MCU: MISO: 0xA5，返回数据字节
 
     Note over MCU, Sensor: 4. 结束传输：CS High
-    MCU-&gt;&gt;Sensor: CS = 1，拉高片选</code></pre>
+    MCU-&gt;&gt;Sensor: CS = 1，拉高片选
+</code></pre></div>
 <p>这个改法的好处是：时序图可以直接维护在 Markdown 里。
 如果后续协议流程有变化，不需要重新截图，只要改 Mermaid 代码。</p>
-<h2 id="2_1">2. 寄存器定义重构<a class="headerlink" href="#2_1" title="Permanent link">&para;</a></h2>
+<h2 id="2_1">2. 寄存器定义重构</h2>
 <p>寄存器说明是芯片手册里最容易让人眼花的部分。</p>
 <p>我会优先把寄存器名称、地址、默认值、bit 定义和访问权限拆出来，让开发者一眼看到最关键的信息。</p>
-<h3 id="ctrl_reg1-1"><code>CTRL_REG1</code> 控制寄存器 1<a class="headerlink" href="#ctrl_reg1-1" title="Permanent link">&para;</a></h3>
+<h3 id="ctrl_reg1-1"><code>CTRL_REG1</code> 控制寄存器 1</h3>
 <table>
 <thead>
 <tr>
@@ -1838,7 +1853,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="bit">Bit 定义<a class="headerlink" href="#bit" title="Permanent link">&para;</a></h3>
+<h3 id="bit">Bit 定义</h3>
 <table>
 <thead>
 <tr>
@@ -1878,7 +1893,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="_4">字段说明<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<h3 id="_4">字段说明</h3>
 <table>
 <thead>
 <tr>
@@ -1909,7 +1924,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="odr10"><code>ODR[1:0]</code> 取值<a class="headerlink" href="#odr10" title="Permanent link">&para;</a></h3>
+<h3 id="odr10"><code>ODR[1:0]</code> 取值</h3>
 <table>
 <thead>
 <tr>
@@ -1937,7 +1952,7 @@
 </tbody>
 </table>
 <p>这个表格拆完之后，开发者不需要在大段正文里找 bit 位含义，也更容易把配置映射到代码里。</p>
-<h2 id="3_1">3. 驱动代码示例<a class="headerlink" href="#3_1" title="Permanent link">&para;</a></h2>
+<h2 id="3_1">3. 驱动代码示例</h2>
 <p>寄存器表解决“查信息”的问题，代码示例解决“怎么用”的问题。</p>
 <p>下面示例展示如何初始化传感器，并设置 100 Hz 采样率。</p>
 <div class="highlight"><pre><span></span><code><span class="c1">// 示例：初始化传感器，设置 100 Hz 采样率</span>
@@ -1954,7 +1969,7 @@
 <span class="w">    </span><span class="n">SPI_Write</span><span class="p">(</span><span class="mh">0x20</span><span class="p">,</span><span class="w"> </span><span class="n">ctrl_val</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="_5">配置逻辑说明<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<h3 id="_5">配置逻辑说明</h3>
 <p>这段代码对应前面的寄存器定义：</p>
 <table>
 <thead>
@@ -1984,7 +1999,7 @@
 </table>
 <p>我会尽量把代码和寄存器表放在一起解释。
 这样读者不只是复制代码，也能理解每一行对应哪个 bit 位。</p>
-<h2 id="_6">重构前后对比<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<h2 id="_6">重构前后对比</h2>
 <table>
 <thead>
 <tr>
@@ -2021,7 +2036,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="_7">这个项目证明什么能力<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<h2 id="_7">这个项目证明什么能力</h2>
 <p>这个案例主要展示我的复杂资料重构能力。</p>
 <p>通过这个项目，我希望证明：</p>
 <ul>
@@ -2031,7 +2046,7 @@
 <li>我能把寄存器说明和驱动代码对应起来，帮助开发者减少配置错误；</li>
 <li>我理解技术文档不只是复述资料，还要服务真实使用场景。</li>
 </ul>
-<h2 id="_8">下一步阅读<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<h2 id="_8">下一步阅读</h2>
 <p>如果你想继续查看其他文档作品，可以阅读：</p>
 <ol>
 <li><a href="../01-automation/">文档质量自动化流水线</a>：查看我如何设计文档工程化案例；</li>
@@ -2058,6 +2073,12 @@
           
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
         
       </main>
       
@@ -2088,7 +2109,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>

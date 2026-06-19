@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="zh" class="no-js">
+<html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -29,6 +29,9 @@
     
       <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
       
 
 
@@ -46,6 +49,8 @@
       
     
     
+      <link rel="stylesheet" href="../styles/custom.css">
+    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -55,7 +60,12 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -65,7 +75,7 @@
       
         
         <a href="#action" class="md-skip">
-          跳转至
+          Skip to content
         </a>
       
     </div>
@@ -76,8 +86,10 @@
     
       
 
-<header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="页眉">
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="我的自动化文档作品集" class="md-header__button md-logo" aria-label="我的自动化文档作品集" data-md-component="logo">
       
   
@@ -105,8 +117,8 @@
       </div>
     </div>
     
+      
     
-      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
@@ -120,27 +132,29 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="查找">
+      <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
       </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
       
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            正在初始化搜索引擎
+            Initializing search
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -153,15 +167,9 @@
     
   </nav>
   
-</header>
     
-    <div class="md-container" data-md-component="container">
       
-      
-        
-          
-            
-<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
   <div class="md-grid">
     <ul class="md-tabs__list">
       
@@ -280,7 +288,13 @@
     </ul>
   </div>
 </nav>
-          
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
         
       
       <main class="md-main" data-md-component="main">
@@ -297,7 +311,7 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="我的自动化文档作品集" class="md-nav__button md-logo" aria-label="我的自动化文档作品集" data-md-component="logo">
       
@@ -887,7 +901,7 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="目录">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
@@ -896,7 +910,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      目录
+      Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -1493,7 +1507,7 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="目录">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
@@ -1502,7 +1516,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      目录
+      Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -1734,7 +1748,7 @@
 
 
 
-<h1 id="action">微步 ACTION · 用户文档<a class="headerlink" href="#action" title="Permanent link">&para;</a></h1>
+<h1 id="action">微步 ACTION · 用户文档</h1>
 <blockquote>
 <p>把那个拖了好久的大计划，变成现在就能开始的小行动。</p>
 </blockquote>
@@ -1742,7 +1756,7 @@
 <img alt="文档风格" src="https://img.shields.io/badge/风格-波普手帐风-ff69b4" />
 <img alt="工具链" src="https://img.shields.io/badge/工具链-Markdown%20·%20MkDocs%20·%20GitHub-blue" /></p>
 <hr />
-<h2 id="_1">项目概览<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h2 id="_1">项目概览</h2>
 <ul>
 <li><strong>项目类型：</strong> C 端小程序用户文档 + 开发者 API 文档</li>
 <li><strong>文档风格：</strong> 波普手帐风（Voice &amp; Tone 主动设计）</li>
@@ -1750,8 +1764,8 @@
 <li><strong>工具链：</strong> Markdown · GitHub · MkDocs · GitHub Actions</li>
 </ul>
 <hr />
-<h2 id="1">1. 关于小程序<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
-<h3 id="11">1.1 核心价值：五步拆解法<a class="headerlink" href="#11" title="Permanent link">&para;</a></h3>
+<h2 id="1">1. 关于小程序</h2>
+<h3 id="11">1.1 核心价值：五步拆解法</h3>
 <p>你有没有过这种感觉——明明知道要做，就是迟迟不想开始？</p>
 <p>不是因为懒，而是因为那件事太大了，大到不知道从哪里下手。脑子里一片模糊，然后就这样又拖了一天。</p>
 <p><strong>任务拆解小程序</strong>就是为这个时刻而生的。你只需要把那个让你头疼的大计划丢进来，AI 会在几秒内把它切成五个足够微小、立刻就能行动的小步骤——小到你看完会说"这个我现在就能做"。</p>
@@ -1763,11 +1777,11 @@
 - 喜欢进度条、勋章、积分反馈的人；
 - 需要一点启动感和正反馈的人。</p>
 <hr />
-<h2 id="2">2. 快速上手<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<h2 id="2">2. 快速上手</h2>
 <blockquote>
 <p>🚀 只需三步，把那个拖了好久的大计划，变成现在就能开始的小行动。</p>
 </blockquote>
-<h3 id="21">2.1 输入并拆解首个任务<a class="headerlink" href="#21" title="Permanent link">&para;</a></h3>
+<h3 id="21">2.1 输入并拆解首个任务</h3>
 <p><strong>第一步：给目标一个"家"</strong></p>
 <p>打开小程序，点击页面中央的<strong>输入框</strong>，写下那个让你头疼的大计划。</p>
 <blockquote>
@@ -1799,7 +1813,7 @@
 <small>▲ 在魔法输入框输入你的目标</small>
 </p>
 
-<h3 id="22">2.2 见证成就：勾选完成项<a class="headerlink" href="#22" title="Permanent link">&para;</a></h3>
+<h3 id="22">2.2 见证成就：勾选完成项</h3>
 <p>五个小步骤会以卡片形式呈现在你面前，每张卡片旁边都有一个 ☐ checkbox。</p>
 <p>完成一步后，点击对应的 checkbox，它会变成 ☑，进度条也会随之更新。每一个勾，都是你战胜拖延的证明。</p>
 <p style="text-align: center;">
@@ -1808,22 +1822,22 @@
   <small>▲ 勾选步骤后进度条同步更新</small>
 </p>
 
-<h3 id="23">2.3 得到积分奖励<a class="headerlink" href="#23" title="Permanent link">&para;</a></h3>
+<h3 id="23">2.3 得到积分奖励</h3>
 <p>五个步骤全部打勾后，恭喜界面会弹出，同时你将获得本次任务的积分奖励 🎉</p>
 <p>积分会自动累积到你的成就系统中，可在<strong>任务与成就</strong>页面随时查看。</p>
 <hr />
-<h2 id="3">3. 任务与成就管理<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<h2 id="3">3. 任务与成就管理</h2>
 <blockquote>
 <p>每一次拆解都留有痕迹，每一格进度都算数。这里是你的专属战绩板。</p>
 </blockquote>
-<h3 id="31">3.1 重新生成任务<a class="headerlink" href="#31" title="Permanent link">&para;</a></h3>
+<h3 id="31">3.1 重新生成任务</h3>
 <p>如果 AI 拆解结果不太对味，点击右上角的<strong>重新生成</strong>按钮即可。  </p>
 <blockquote>
 <p><strong>Tip：</strong> 想要更好结果，先升级你的输入：<br />
 - "准备面试" → "准备明天下午字节跳动 TW 岗位自我介绍，控制在 2 分钟"
 输入越精准，AI 拆解出来的步骤就越贴合你的实际情况。</p>
 </blockquote>
-<h3 id="32">3.2 进度与勋章<a class="headerlink" href="#32" title="Permanent link">&para;</a></h3>
+<h3 id="32">3.2 进度与勋章</h3>
 <p>点击底部导航栏的<strong>成就</strong>页面，你会看到两个区域：</p>
 <p><strong>进度看板</strong>显示正在进行的任务和完成情况。<br />
 <strong>勋章墙</strong>记录历史完成情况，每完成一项解锁勋章。</p>
@@ -1832,33 +1846,33 @@
 积分目前用于解锁更多个性化的勋章样式，让你的成就墙越来越好看。后续版本将持续更新更多玩法，敬请期待！</p>
 </blockquote>
 <hr />
-<h2 id="4-faq">4. 常见问题 FAQ<a class="headerlink" href="#4-faq" title="Permanent link">&para;</a></h2>
-<h3 id="41">4.1 如何得到更高质量的拆解？<a class="headerlink" href="#41" title="Permanent link">&para;</a></h3>
+<h2 id="4-faq">4. 常见问题 FAQ</h2>
+<h3 id="41">4.1 如何得到更高质量的拆解？</h3>
 <p>输入越具体，AI 拆解越贴近实际可执行步骤。  </p>
 <p>参考输入公式：<strong>具体任务 + 时间范围 + 当前状态或限制条件</strong></p>
 <blockquote>
 <p>例：明天上午 10 点前，整理好毕业论文答辩 PPT 的前三页逻辑框架，目前只有一个粗略提纲。</p>
 </blockquote>
-<h3 id="42">4.2 如何修改已拆解的任务？<a class="headerlink" href="#42" title="Permanent link">&para;</a></h3>
+<h3 id="42">4.2 如何修改已拆解的任务？</h3>
 <p>本小程序目前不支持对单个步骤进行编辑。如果拆解结果不理想，有两个选择：</p>
 <ul>
 <li>点击任务卡片右上角的<strong>重新生成</strong>按钮，AI 会基于原始输入重新给出一套方案。</li>
 <li>返回首页，在<strong>魔法输入框</strong>中重新输入一个更具体的描述，开始一次新的拆解。</li>
 </ul>
-<h3 id="43">4.3 我的任务数据会丢失吗？<a class="headerlink" href="#43" title="Permanent link">&para;</a></h3>
+<h3 id="43">4.3 我的任务数据会丢失吗？</h3>
 <p>不会。所有任务记录（包括进行中和已完成的）都保存在你的微信账号下，退出小程序后数据不会清空，可在<strong>任务与成就</strong>页面随时查看完整历史。</p>
 <blockquote>
 <p><strong>注意：</strong> 数据同步依赖网络连接。无网络环境下历史记录可能暂时无法加载，联网后将自动恢复。</p>
 </blockquote>
 <hr />
-<h2 id="5">5. 隐私说明<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
+<h2 id="5">5. 隐私说明</h2>
 <ul>
 <li>你输入的任务描述仅用于 AI 拆解计算，不会被用于模型训练或对外共享。</li>
 <li>使用语音输入功能时，小程序需要申请麦克风权限，你可以随时在微信设置中关闭。</li>
 <li>所有数据通过加密传输（HTTPS），存储于与你微信账号绑定的云端空间。</li>
 </ul>
 <hr />
-<h2 id="_2">文档集入口<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h2 id="_2">文档集入口</h2>
 <p>如需进一步了解，可以点击：</p>
 <ol>
 <li><a href="api-reference/">API 参考文档</a>  </li>
@@ -1867,7 +1881,7 @@
 <li><a href="../mini-programs/">小程序产品总览</a></li>
 </ol>
 <hr />
-<h2 id="_3">文档版本<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_3">文档版本</h2>
 <table>
 <thead>
 <tr>
@@ -1907,6 +1921,12 @@
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
       </main>
       
         <footer class="md-footer">
@@ -1936,7 +1956,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>

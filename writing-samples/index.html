@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="zh" class="no-js">
+<html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -29,6 +29,9 @@
     
       <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
       
 
 
@@ -46,6 +49,8 @@
       
     
     
+      <link rel="stylesheet" href="../styles/custom.css">
+    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -55,7 +60,12 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -65,7 +75,7 @@
       
         
         <a href="#_1" class="md-skip">
-          跳转至
+          Skip to content
         </a>
       
     </div>
@@ -76,8 +86,10 @@
     
       
 
-<header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="页眉">
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="我的自动化文档作品集" class="md-header__button md-logo" aria-label="我的自动化文档作品集" data-md-component="logo">
       
   
@@ -105,8 +117,8 @@
       </div>
     </div>
     
+      
     
-      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
@@ -120,27 +132,29 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="查找">
+      <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
       </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
       
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            正在初始化搜索引擎
+            Initializing search
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -153,15 +167,9 @@
     
   </nav>
   
-</header>
     
-    <div class="md-container" data-md-component="container">
       
-      
-        
-          
-            
-<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
   <div class="md-grid">
     <ul class="md-tabs__list">
       
@@ -278,7 +286,13 @@
     </ul>
   </div>
 </nav>
-          
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
         
       
       <main class="md-main" data-md-component="main">
@@ -295,7 +309,7 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="我的自动化文档作品集" class="md-nav__button md-logo" aria-label="我的自动化文档作品集" data-md-component="logo">
       
@@ -1207,7 +1221,7 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="目录">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
@@ -1216,7 +1230,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      目录
+      Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -1392,7 +1406,7 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="目录">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
@@ -1401,7 +1415,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      目录
+      Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -1538,8 +1552,8 @@
 
 
 
-<h1 id="_1">写作样稿<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<h2 id="_2">页面目标<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h1 id="_1">写作样稿</h1>
+<h2 id="_2">页面目标</h2>
 <p>这个页面用来整理我的技术写作样稿。</p>
 <p>我现在不会把所有写过的内容都塞进来。这样看起来很多，但对面试帮助不一定大。
 这一页会优先放和技术文档工程师、资料开发工程师、技术内容 / 海外技术内容岗位相关的样稿。</p>
@@ -1551,7 +1565,7 @@
 <li>我有没有英文技术内容表达能力；</li>
 <li>我是否理解不同文档类型的写法差异。</li>
 </ul>
-<h2 id="_3">样稿规划<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_3">样稿规划</h2>
 <p>我会先按 5 类整理写作样稿。</p>
 <table>
 <thead>
@@ -1589,7 +1603,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="_4">当前可查看样稿<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h2 id="_4">当前可查看样稿</h2>
 <p>目前可以先查看以下页面：</p>
 <ul>
 <li><a href="../install/">快速开始：搭建本地文档质量检查环境</a></li>
@@ -1600,26 +1614,26 @@
 <li><a href="../05-miniprogram-task-decomposer/api-reference/">任务拆解小程序 API 参考文档</a></li>
 </ul>
 <p>这些页面目前分散在不同项目下。后续我会继续挑选和打磨，把它们整理成更清楚的写作样稿集合。</p>
-<h2 id="_5">我会如何打磨样稿<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<h2 id="_5">我会如何打磨样稿</h2>
 <p>我不会只追求页面数量。</p>
 <p>每一类样稿都会重点检查几个问题：</p>
-<h3 id="1">1. 读者是谁<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
+<h3 id="1">1. 读者是谁</h3>
 <p>不同文档面对的读者不一样。
 Quick Start 面向第一次上手的人，API Reference 面向开发者，Product Explanation 面向想快速理解产品价值的人。</p>
 <p>读者不同，写法就应该不同。</p>
-<h3 id="2">2. 读者要完成什么任务<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
+<h3 id="2">2. 读者要完成什么任务</h3>
 <p>好的技术文档应该让读者完成一件具体的事。
 比如安装工具、配置环境、理解一个接口、排查一个错误。</p>
 <p>所以我会尽量把样稿写成任务导向，而不是单纯介绍概念。</p>
-<h3 id="3">3. 有没有预期结果<a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
+<h3 id="3">3. 有没有预期结果</h3>
 <p>很多操作文档的问题在这里。</p>
 <p>它告诉读者要做什么，却没有告诉读者做完以后应该看到什么。
 我现在会有意识地补充“预期结果”和“验证方式”，让读者知道自己有没有做对。</p>
-<h3 id="4">4. 有没有继续阅读路径<a class="headerlink" href="#4" title="Permanent link">&para;</a></h3>
+<h3 id="4">4. 有没有继续阅读路径</h3>
 <p>单篇文档写完不代表结束。</p>
 <p>如果读者看完 Quick Start，下一步应该知道去看 Guide、Reference 还是 Troubleshooting。
 所以我会在核心页面底部补充可点击的下一步链接。</p>
-<h2 id="_6">后续计划<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<h2 id="_6">后续计划</h2>
 <p>接下来我会优先补 3 类样稿：</p>
 <ol>
 <li>
@@ -1635,7 +1649,7 @@ Quick Start 面向第一次上手的人，API Reference 面向开发者，Produc
    把已有接口说明继续整理成更像开发者文档的格式。</p>
 </li>
 </ol>
-<h2 id="_7">推荐阅读<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<h2 id="_7">推荐阅读</h2>
 <p>如果你想先了解我目前已经完成的技术文档样稿，可以从这里开始：</p>
 <ol>
 <li><a href="../install/">快速开始</a>：查看任务型文档写法；</li>
@@ -1662,6 +1676,12 @@ Quick Start 面向第一次上手的人，API Reference 面向开发者，Produc
           
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
         
       </main>
       
@@ -1692,7 +1712,7 @@ Quick Start 面向第一次上手的人，API Reference 面向开发者，Produc
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>

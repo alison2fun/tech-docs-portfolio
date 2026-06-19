@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="zh" class="no-js">
+<html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -29,6 +29,9 @@
     
       <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
       
 
 
@@ -46,6 +49,8 @@
       
     
     
+      <link rel="stylesheet" href="../styles/custom.css">
+    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -55,7 +60,12 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -65,7 +75,7 @@
       
         
         <a href="#openclaw-agent" class="md-skip">
-          跳转至
+          Skip to content
         </a>
       
     </div>
@@ -76,8 +86,10 @@
     
       
 
-<header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="页眉">
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="我的自动化文档作品集" class="md-header__button md-logo" aria-label="我的自动化文档作品集" data-md-component="logo">
       
   
@@ -105,8 +117,8 @@
       </div>
     </div>
     
+      
     
-      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
@@ -120,27 +132,29 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="查找">
+      <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
       </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
       
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            正在初始化搜索引擎
+            Initializing search
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -153,15 +167,9 @@
     
   </nav>
   
-</header>
     
-    <div class="md-container" data-md-component="container">
       
-      
-        
-          
-            
-<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
   <div class="md-grid">
     <ul class="md-tabs__list">
       
@@ -280,7 +288,13 @@
     </ul>
   </div>
 </nav>
-          
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
         
       
       <main class="md-main" data-md-component="main">
@@ -297,7 +311,7 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="我的自动化文档作品集" class="md-nav__button md-logo" aria-label="我的自动化文档作品集" data-md-component="logo">
       
@@ -727,7 +741,7 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="目录">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
@@ -736,7 +750,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      目录
+      Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -1616,7 +1630,7 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="目录">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
@@ -1625,7 +1639,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      目录
+      Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -1984,8 +1998,8 @@
 
 
 
-<h1 id="openclaw-agent">OpenClaw 开发者快速入门：构建第一个 Agent<a class="headerlink" href="#openclaw-agent" title="Permanent link">&para;</a></h1>
-<h2 id="_1">页面目标<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h1 id="openclaw-agent">OpenClaw 开发者快速入门：构建第一个 Agent</h1>
+<h2 id="_1">页面目标</h2>
 <p>这篇文档模拟一个开源 AI Agent 编排框架的 Quick Start。</p>
 <p>我写这页时，主要想练习一件事：怎么让开发者在最短路径里跑通第一个可用示例。</p>
 <p>很多框架文档一上来会讲很多概念，Engine、Router、Planner、Memory、Executor 全部铺开。概念当然重要，但第一次接触框架的开发者，最想知道的往往是：</p>
@@ -1997,7 +2011,7 @@
 <li>如果报错，先查哪里。</li>
 </ul>
 <p>所以这篇文档会先带你完成一个最小示例，再解释 OpenClaw 的核心工作流。</p>
-<h2 id="_2">适用读者<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h2 id="_2">适用读者</h2>
 <p>本文适合以下读者：</p>
 <ul>
 <li>第一次接触 OpenClaw 的开发者；</li>
@@ -2005,7 +2019,7 @@
 <li>希望用 LLM 连接外部工具、API 或知识库的开发者。</li>
 </ul>
 <p>读者需要具备基础 Python 使用经验，并能在本地终端运行命令。</p>
-<h2 id="_3">完成后你将能够<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_3">完成后你将能够</h2>
 <p>完成本文后，你将能够：</p>
 <ul>
 <li>安装 OpenClaw；</li>
@@ -2015,7 +2029,7 @@
 <li>运行脚本并查看 Agent 输出；</li>
 <li>理解一次 Agent 调用的大致流程。</li>
 </ul>
-<h2 id="_4">前置条件<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h2 id="_4">前置条件</h2>
 <p>开始前，请确认你已经准备好以下环境：</p>
 <table>
 <thead>
@@ -2043,10 +2057,10 @@
 </tr>
 </tbody>
 </table>
-<h2 id="1-openclaw">步骤 1：安装 OpenClaw<a class="headerlink" href="#1-openclaw" title="Permanent link">&para;</a></h2>
-<h3 id="_5">目标<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<h2 id="1-openclaw">步骤 1：安装 OpenClaw</h2>
+<h3 id="_5">目标</h3>
 <p>安装 OpenClaw 的核心依赖，让本地环境具备创建 Agent 的基础能力。</p>
-<h3 id="_6">操作<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<h3 id="_6">操作</h3>
 <p>推荐先创建虚拟环境，避免和全局 Python 依赖冲突。</p>
 <div class="highlight"><pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>.venv
 </code></pre></div>
@@ -2063,13 +2077,13 @@
 <p>如果你需要使用本地文档检索或向量数据库能力，可以安装完整版：</p>
 <div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span><span class="s2">&quot;openclaw[vector]&quot;</span>
 </code></pre></div>
-<h3 id="_7">预期结果<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<h3 id="_7">预期结果</h3>
 <p>安装完成后，终端不应出现依赖安装失败信息。</p>
 <p>如果安装过程中出现权限问题或依赖冲突，建议先确认当前是否已经激活虚拟环境。</p>
-<h2 id="2-api-key">步骤 2：配置 API Key<a class="headerlink" href="#2-api-key" title="Permanent link">&para;</a></h2>
-<h3 id="_8">目标<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<h2 id="2-api-key">步骤 2：配置 API Key</h2>
+<h3 id="_8">目标</h3>
 <p>让 OpenClaw 能够调用 LLM 接口。</p>
-<h3 id="_9">操作<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<h3 id="_9">操作</h3>
 <p>在终端中设置环境变量。</p>
 <p>Windows PowerShell：</p>
 <div class="highlight"><pre><span></span><code><span class="nv">$env:OPENAI_API_KEY</span><span class="p">=</span><span class="s2">&quot;your-api-key-here&quot;</span>
@@ -2078,13 +2092,13 @@
 <div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">OPENAI_API_KEY</span><span class="o">=</span><span class="s2">&quot;your-api-key-here&quot;</span>
 </code></pre></div>
 <p>请将 <code>your-api-key-here</code> 替换为你自己的 API Key。</p>
-<h3 id="_10">预期结果<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<h3 id="_10">预期结果</h3>
 <p>环境变量设置完成后，后续 Python 脚本可以读取该 Key，并调用对应模型。</p>
 <p>如果你使用其他兼容 OpenAI API 的模型服务，需要根据服务商要求配置对应的 Base URL 或模型名称。</p>
-<h2 id="3-agent">步骤 3：创建第一个 Agent<a class="headerlink" href="#3-agent" title="Permanent link">&para;</a></h2>
-<h3 id="_11">目标<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<h2 id="3-agent">步骤 3：创建第一个 Agent</h2>
+<h3 id="_11">目标</h3>
 <p>创建一个最小可运行的天气助手 Agent，并让它调用外部工具获取信息。</p>
-<h3 id="_12">操作<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<h3 id="_12">操作</h3>
 <p>新建文件：</p>
 <div class="highlight"><pre><span></span><code>hello_agent.py
 </code></pre></div>
@@ -2114,7 +2128,7 @@
 
 <span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
 </code></pre></div>
-<h3 id="_13">代码说明<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<h3 id="_13">代码说明</h3>
 <table>
 <thead>
 <tr>
@@ -2145,19 +2159,19 @@
 </tr>
 </tbody>
 </table>
-<h2 id="4">步骤 4：运行脚本<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
-<h3 id="_14">目标<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<h2 id="4">步骤 4：运行脚本</h2>
+<h3 id="_14">目标</h3>
 <p>验证 Agent 是否能够正常接收输入、调用工具并返回结果。</p>
-<h3 id="_15">操作<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
+<h3 id="_15">操作</h3>
 <p>在终端运行：</p>
 <div class="highlight"><pre><span></span><code>python<span class="w"> </span>hello_agent.py
 </code></pre></div>
-<h3 id="_16">预期结果<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
+<h3 id="_16">预期结果</h3>
 <p>终端应输出类似下面的内容：</p>
 <div class="highlight"><pre><span></span><code>今天新加坡的天气是多云转晴，气温在 28°C 左右，微风。比较适合户外跑步，但建议注意防晒和补水。
 </code></pre></div>
 <p>实际输出会根据模型、工具和天气 API 返回结果有所不同。</p>
-<h2 id="openclaw">OpenClaw 的工作流<a class="headerlink" href="#openclaw" title="Permanent link">&para;</a></h2>
+<h2 id="openclaw">OpenClaw 的工作流</h2>
 <p>跑通第一个示例之后，再来看 OpenClaw 的基本工作流会更容易理解。</p>
 <p>一次典型 Agent 调用可以拆成几个阶段：</p>
 <ol>
@@ -2168,7 +2182,7 @@
 <li>Executor 调用外部工具或模型；</li>
 <li>Agent 汇总结果并返回输出。</li>
 </ol>
-<pre class="mermaid"><code>flowchart LR
+<div class="highlight"><pre><span></span><code>flowchart LR
     User([用户输入]) --&gt; Engine
 
     subgraph OpenClaw 核心流程
@@ -2184,8 +2198,9 @@
         Executor -.-&gt; LLM[LLM 接口]
     end
 
-    Executor --&gt; Output([最终输出])</code></pre>
-<h2 id="_17">核心组件说明<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h2>
+    Executor --&gt; Output([最终输出])
+</code></pre></div>
+<h2 id="_17">核心组件说明</h2>
 <table>
 <thead>
 <tr>
@@ -2222,22 +2237,22 @@
 </table>
 <p>这个结构里，最值得关注的是工具执行器。
 它让 Agent 不只依赖模型本身的回答，还能调用外部能力完成实际任务。</p>
-<h2 id="_18">常见问题<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h2>
-<h3 id="api-key">运行脚本时提示 API Key 不存在怎么办？<a class="headerlink" href="#api-key" title="Permanent link">&para;</a></h3>
+<h2 id="_18">常见问题</h2>
+<h3 id="api-key">运行脚本时提示 API Key 不存在怎么办？</h3>
 <p>请确认你已经设置环境变量：</p>
 <div class="highlight"><pre><span></span><code>OPENAI_API_KEY
 </code></pre></div>
 <p>如果你在设置环境变量后仍然报错，可以关闭终端后重新打开，再次运行脚本。</p>
-<h3 id="openclawvector">安装 <code>openclaw[vector]</code> 失败怎么办？<a class="headerlink" href="#openclawvector" title="Permanent link">&para;</a></h3>
+<h3 id="openclawvector">安装 <code>openclaw[vector]</code> 失败怎么办？</h3>
 <p>完整版安装可能包含向量数据库或本地检索相关依赖。
 如果你只是想完成第一个 Agent 示例，可以先安装基础版本：</p>
 <div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>openclaw
 </code></pre></div>
 <p>等基础示例跑通后，再处理向量检索能力。</p>
-<h3 id="agent">为什么 Agent 输出和示例不一样？<a class="headerlink" href="#agent" title="Permanent link">&para;</a></h3>
+<h3 id="agent">为什么 Agent 输出和示例不一样？</h3>
 <p>Agent 输出会受到模型版本、工具返回结果、系统提示词和实时数据影响。</p>
 <p>只要脚本能够正常运行，并返回与天气相关的回答，就说明最小流程已经跑通。</p>
-<h2 id="_19">这个页面证明什么能力<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h2>
+<h2 id="_19">这个页面证明什么能力</h2>
 <p>这篇 Quick Start 主要展示我的开发者文档写作能力。</p>
 <p>通过这页，我想证明：</p>
 <ul>
@@ -2247,7 +2262,7 @@
 <li>我能区分“概念解释”和“任务型文档”的写法；</li>
 <li>我会补充预期结果，让读者知道自己有没有跑成功。</li>
 </ul>
-<h2 id="_20">下一步阅读<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h2>
+<h2 id="_20">下一步阅读</h2>
 <p>如果你想继续查看其他文档作品，可以阅读：</p>
 <ol>
 <li><a href="../03-api/">IoT 接口集成指南</a>：查看 API 集成文档写法；</li>
@@ -2274,6 +2289,12 @@
           
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
         
       </main>
       
@@ -2304,7 +2325,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>

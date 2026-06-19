@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="zh" class="no-js">
+<html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -29,6 +29,9 @@
     
       <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
       
 
 
@@ -46,6 +49,8 @@
       
     
     
+      <link rel="stylesheet" href="../styles/custom.css">
+    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -55,7 +60,12 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -65,7 +75,7 @@
       
         
         <a href="#_1" class="md-skip">
-          跳转至
+          Skip to content
         </a>
       
     </div>
@@ -76,8 +86,10 @@
     
       
 
-<header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="页眉">
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="我的自动化文档作品集" class="md-header__button md-logo" aria-label="我的自动化文档作品集" data-md-component="logo">
       
   
@@ -105,8 +117,8 @@
       </div>
     </div>
     
+      
     
-      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
@@ -120,27 +132,29 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="查找">
+      <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
       </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
       
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            正在初始化搜索引擎
+            Initializing search
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -153,15 +167,9 @@
     
   </nav>
   
-</header>
     
-    <div class="md-container" data-md-component="container">
       
-      
-        
-          
-            
-<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
   <div class="md-grid">
     <ul class="md-tabs__list">
       
@@ -280,7 +288,13 @@
     </ul>
   </div>
 </nav>
-          
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
         
       
       <main class="md-main" data-md-component="main">
@@ -297,7 +311,7 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="我的自动化文档作品集" class="md-nav__button md-logo" aria-label="我的自动化文档作品集" data-md-component="logo">
       
@@ -609,7 +623,7 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="目录">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
@@ -618,7 +632,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      目录
+      Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -1690,7 +1704,7 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="目录">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
@@ -1699,7 +1713,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      目录
+      Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -2130,11 +2144,11 @@
 
 
 
-<h1 id="_1">故障排查：文档质量自动化流水线<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<h2 id="_2">页面目标<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h1 id="_1">故障排查：文档质量自动化流水线</h1>
+<h2 id="_2">页面目标</h2>
 <p>本文档整理在搭建和使用文档质量自动化流水线时可能遇到的常见问题。</p>
 <p>这些问题主要涉及 Vale 安装、VS Code 插件、项目配置和 GitHub Actions 自动检查。每个问题都按照“现象、可能原因、解决方法、验证方式”的结构组织，帮助读者快速定位和解决问题。</p>
-<h2 id="_3">适用范围<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_3">适用范围</h2>
 <p>本文档适用于以下场景：</p>
 <ul>
 <li>本地安装 Vale 后无法运行；</li>
@@ -2144,8 +2158,8 @@
 <li>GitHub Actions 自动检查失败。</li>
 </ul>
 <hr />
-<h2 id="vale-command-not-found">Vale Command Not Found<a class="headerlink" href="#vale-command-not-found" title="Permanent link">&para;</a></h2>
-<h3 id="_4">现象<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<h2 id="vale-command-not-found">Vale Command Not Found</h2>
+<h3 id="_4">现象</h3>
 <p>在终端运行以下命令：</p>
 <div class="highlight"><pre><span></span><code>vale<span class="w"> </span>-v
 </code></pre></div>
@@ -2153,7 +2167,7 @@
 <div class="highlight"><pre><span></span><code>vale: command not found
 </code></pre></div>
 <p>或在 Windows PowerShell 中提示无法识别 <code>vale</code> 命令。</p>
-<h3 id="_5">可能原因<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<h3 id="_5">可能原因</h3>
 <p>可能原因包括：</p>
 <ul>
 <li>Vale 没有安装成功；</li>
@@ -2161,7 +2175,7 @@
 <li>安装完成后没有重新打开终端；</li>
 <li>当前终端环境无法识别新安装的命令。</li>
 </ul>
-<h3 id="_6">解决方法<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<h3 id="_6">解决方法</h3>
 <ol>
 <li>重新确认 Vale 是否已安装。</li>
 <li>关闭当前终端并重新打开。</li>
@@ -2176,16 +2190,16 @@
 <p>macOS 用户可以尝试：</p>
 <div class="highlight"><pre><span></span><code>brew<span class="w"> </span>install<span class="w"> </span>vale
 </code></pre></div>
-<h3 id="_7">验证方式<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<h3 id="_7">验证方式</h3>
 <p>如果终端输出 Vale 版本号，说明问题已解决。</p>
 <p>示例：</p>
 <div class="highlight"><pre><span></span><code>vale version 3.x.x
 </code></pre></div>
 <hr />
-<h2 id="vs-code-vale">VS Code Vale 插件没有提示<a class="headerlink" href="#vs-code-vale" title="Permanent link">&para;</a></h2>
-<h3 id="_8">现象<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<h2 id="vs-code-vale">VS Code Vale 插件没有提示</h2>
+<h3 id="_8">现象</h3>
 <p>已经安装 VS Code Vale 插件，但打开 Markdown 文件后没有看到任何 Vale 提示。</p>
-<h3 id="_9">可能原因<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<h3 id="_9">可能原因</h3>
 <p>可能原因包括：</p>
 <ul>
 <li>当前打开的是单个 Markdown 文件，而不是项目根目录；</li>
@@ -2194,7 +2208,7 @@
 <li>当前 Markdown 文件没有触发任何 Vale 规则；</li>
 <li>Vale 插件没有正确识别项目配置。</li>
 </ul>
-<h3 id="_10">解决方法<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<h3 id="_10">解决方法</h3>
 <ol>
 <li>确认 VS Code 打开的是项目根目录，而不是单个文件。</li>
 <li>确认项目根目录下存在 <code>.vale.ini</code>。</li>
@@ -2204,14 +2218,14 @@
 </ol>
 <div class="highlight"><pre><span></span><code>vale<span class="w"> </span>docs/
 </code></pre></div>
-<h3 id="_11">验证方式<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<h3 id="_11">验证方式</h3>
 <p>如果命令行可以输出检查结果，说明 Vale 本身可用。
 如果 VS Code 仍然没有提示，问题可能出在插件配置或编辑器刷新状态。</p>
 <hr />
-<h2 id="vale-cannot-find-style-files">Vale Cannot Find Style Files<a class="headerlink" href="#vale-cannot-find-style-files" title="Permanent link">&para;</a></h2>
-<h3 id="_12">现象<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<h2 id="vale-cannot-find-style-files">Vale Cannot Find Style Files</h2>
+<h3 id="_12">现象</h3>
 <p>运行 Vale 检查时，终端提示找不到样式规则文件，或提示某些 style 不存在。</p>
-<h3 id="_13">可能原因<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<h3 id="_13">可能原因</h3>
 <p>可能原因包括：</p>
 <ul>
 <li><code>.vale.ini</code> 中的 <code>StylesPath</code> 配置错误；</li>
@@ -2220,7 +2234,7 @@
 <li>文件夹名称大小写不一致；</li>
 <li>当前命令不是在项目根目录运行。</li>
 </ul>
-<h3 id="_14">解决方法<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<h3 id="_14">解决方法</h3>
 <ol>
 <li>确认项目根目录中存在 <code>.vale.ini</code>。</li>
 <li>打开 <code>.vale.ini</code>，检查 <code>StylesPath</code> 是否指向正确目录。</li>
@@ -2229,13 +2243,13 @@
 </ol>
 <div class="highlight"><pre><span></span><code>vale<span class="w"> </span>docs/
 </code></pre></div>
-<h3 id="_15">验证方式<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
+<h3 id="_15">验证方式</h3>
 <p>如果 Vale 能够开始扫描 Markdown 文件，并输出具体检查结果，说明规则路径配置正确。</p>
 <hr />
-<h2 id="markdown">Markdown 文件没有被检查<a class="headerlink" href="#markdown" title="Permanent link">&para;</a></h2>
-<h3 id="_16">现象<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
+<h2 id="markdown">Markdown 文件没有被检查</h2>
+<h3 id="_16">现象</h3>
 <p>运行检查命令后，没有看到任何输出，或者感觉某些 Markdown 文件没有被扫描。</p>
-<h3 id="_17">可能原因<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
+<h3 id="_17">可能原因</h3>
 <p>可能原因包括：</p>
 <ul>
 <li>检查路径写错；</li>
@@ -2244,7 +2258,7 @@
 <li>当前文档没有触发任何规则；</li>
 <li>被检查文件被配置规则排除了。</li>
 </ul>
-<h3 id="_18">解决方法<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h3>
+<h3 id="_18">解决方法</h3>
 <ol>
 <li>确认你在项目根目录运行命令。</li>
 <li>使用明确路径运行检查：</li>
@@ -2260,13 +2274,13 @@
 <ol>
 <li>人为制造一个明显错误，再次运行检查，确认规则是否触发。</li>
 </ol>
-<h3 id="_19">验证方式<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h3>
+<h3 id="_19">验证方式</h3>
 <p>如果 Vale 输出文件名、行号和规则名称，说明 Markdown 文件已被检查。</p>
 <hr />
-<h2 id="github-actions">GitHub Actions 检查失败<a class="headerlink" href="#github-actions" title="Permanent link">&para;</a></h2>
-<h3 id="_20">现象<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h3>
+<h2 id="github-actions">GitHub Actions 检查失败</h2>
+<h3 id="_20">现象</h3>
 <p>提交代码后，GitHub Actions 自动检查失败。</p>
-<h3 id="_21">可能原因<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h3>
+<h3 id="_21">可能原因</h3>
 <p>可能原因包括：</p>
 <ul>
 <li>CI 配置文件路径错误；</li>
@@ -2275,7 +2289,7 @@
 <li>文档中存在未修复的 Vale error；</li>
 <li>本地环境和 CI 环境使用的 Vale 版本不同。</li>
 </ul>
-<h3 id="_22">解决方法<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h3>
+<h3 id="_22">解决方法</h3>
 <ol>
 <li>打开 GitHub Actions 失败记录。</li>
 <li>查看失败步骤的日志。</li>
@@ -2287,13 +2301,13 @@
 <ol>
 <li>修复文档问题或 CI 配置问题后重新提交。</li>
 </ol>
-<h3 id="_23">验证方式<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h3>
+<h3 id="_23">验证方式</h3>
 <p>如果 GitHub Actions 重新运行后显示通过，说明问题已解决。</p>
 <hr />
-<h2 id="github-actions_1">本地检查通过，但 GitHub Actions 失败<a class="headerlink" href="#github-actions_1" title="Permanent link">&para;</a></h2>
-<h3 id="_24">现象<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h3>
+<h2 id="github-actions_1">本地检查通过，但 GitHub Actions 失败</h2>
+<h3 id="_24">现象</h3>
 <p>本地运行 Vale 检查没有问题，但提交后 GitHub Actions 检查失败。</p>
-<h3 id="_25">可能原因<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h3>
+<h3 id="_25">可能原因</h3>
 <p>可能原因包括：</p>
 <ul>
 <li>本地和 CI 使用的 Vale 版本不同；</li>
@@ -2302,7 +2316,7 @@
 <li><code>.vale.ini</code> 或 <code>styles/</code> 规则文件没有被提交；</li>
 <li>Windows 和 Linux 环境下路径大小写处理不同。</li>
 </ul>
-<h3 id="_26">解决方法<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h3>
+<h3 id="_26">解决方法</h3>
 <ol>
 <li>确认 <code>.vale.ini</code> 和 <code>styles/</code> 已经提交到仓库。</li>
 <li>检查 GitHub Actions 日志中的实际运行路径。</li>
@@ -2313,10 +2327,10 @@
 <ol>
 <li>如果问题与路径大小写有关，统一文件夹和配置中的名称。</li>
 </ol>
-<h3 id="_27">验证方式<a class="headerlink" href="#_27" title="Permanent link">&para;</a></h3>
+<h3 id="_27">验证方式</h3>
 <p>重新提交后，GitHub Actions 检查通过。</p>
 <hr />
-<h2 id="_28">排查顺序建议<a class="headerlink" href="#_28" title="Permanent link">&para;</a></h2>
+<h2 id="_28">排查顺序建议</h2>
 <p>遇到问题时，建议按以下顺序排查：</p>
 <ol>
 <li>先确认 Vale 是否安装成功；</li>
@@ -2326,7 +2340,7 @@
 <li>最后查看 GitHub Actions 日志。</li>
 </ol>
 <p>这个顺序可以帮助你区分问题出在工具安装、项目配置、文档内容，还是 CI 自动化流程。</p>
-<h2 id="_29">下一步<a class="headerlink" href="#_29" title="Permanent link">&para;</a></h2>
+<h2 id="_29">下一步</h2>
 <p>如果你想理解这些问题背后的规则设计，请继续阅读：</p>
 <ol>
 <li><a href="../style-guide/">写作风格指南</a>：了解本项目采用的写作规范；</li>
@@ -2352,6 +2366,12 @@
           
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
         
       </main>
       
@@ -2382,7 +2402,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>

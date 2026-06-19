@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="zh" class="no-js">
+<html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -27,6 +27,9 @@
     
       <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
       
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
       
 
 
@@ -44,6 +47,8 @@
       
     
     
+      <link rel="stylesheet" href="styles/custom.css">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -53,18 +58,18 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
-      
-        
-        <a href="#start-here" class="md-skip">
-          跳转至
-        </a>
       
     </div>
     <div data-md-component="announce">
@@ -74,8 +79,10 @@
     
       
 
-<header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="页眉">
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="." title="我的自动化文档作品集" class="md-header__button md-logo" aria-label="我的自动化文档作品集" data-md-component="logo">
       
   
@@ -103,8 +110,8 @@
       </div>
     </div>
     
+      
     
-      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
@@ -118,27 +125,29 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="查找">
+      <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
       </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
       
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            正在初始化搜索引擎
+            Initializing search
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -151,15 +160,9 @@
     
   </nav>
   
-</header>
     
-    <div class="md-container" data-md-component="container">
       
-      
-        
-          
-            
-<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
   <div class="md-grid">
     <ul class="md-tabs__list">
       
@@ -276,7 +279,13 @@
     </ul>
   </div>
 </nav>
-          
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
         
       
       <main class="md-main" data-md-component="main">
@@ -284,7 +293,9 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -293,7 +304,7 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="." title="我的自动化文档作品集" class="md-nav__button md-logo" aria-label="我的自动化文档作品集" data-md-component="logo">
       
@@ -319,26 +330,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Start Here
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
       
       <a href="." class="md-nav__link md-nav__link--active">
         
@@ -356,119 +347,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        我是谁
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        我想展示的 3 类能力
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="我想展示的 3 类能力">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. 技术文档写作能力
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. 文档工程化意识
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. 中英文技术内容表达能力
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        推荐阅读路径
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        这个作品集现在怎么读
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        我的文档理念
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -1358,119 +1236,17 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="目录">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        我是谁
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        我想展示的 3 类能力
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="我想展示的 3 类能力">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. 技术文档写作能力
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. 文档工程化意识
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. 中英文技术内容表达能力
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        推荐阅读路径
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        这个作品集现在怎么读
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        我的文档理念
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -1484,101 +1260,120 @@
               <article class="md-content__inner md-typeset">
                 
                   
-
-
-
-<h1 id="start-here">Start Here<a class="headerlink" href="#start-here" title="Permanent link">&para;</a></h1>
-<h2 id="_1">我是谁<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>我是梁卓雯，正在准备技术文档工程师、资料开发工程师、技术内容 / 海外技术内容相关岗位。</p>
-<p>文档不是把信息放上去就完事。</p>
-<p>它要有入口，有路径，有下一步，有排错，有维护记录。读者看完一页之后，最好知道自己接下来该去哪。</p>
-<p>这也是我现在想通过这个作品集展示的能力。</p>
-<h2 id="3">我想展示的 3 类能力<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
-<h3 id="1">1. 技术文档写作能力<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
-<p>我能把一个技术流程拆成清楚、可执行、能验证的文档。</p>
-<p>这件事听起来很普通，但真的写起来会发现，很多文档卡住读者的地方，不是信息不够，而是没有告诉他每一步做完应该看到什么。</p>
-<p>所以我在 Quick Start 里补了适用读者、前置条件、操作步骤、预期结果和常见问题。</p>
-<p>相关页面：</p>
-<ul>
-<li><a href="install/">快速开始</a>，搭建本地文档质量检查环境</li>
-<li><a href="style-guide/">写作风格指南</a>，沉淀写作规则、示例和术语表</li>
-<li><a href="troubleshooting/">故障排查</a>，用“现象、可能原因、解决方法、验证方式”组织排错内容</li>
-<li><a href="05-miniprogram-task-decomposer/">任务拆解小程序用户手册</a>，展示面向用户的功能说明</li>
-<li><a href="05-miniprogram-task-decomposer/api-reference/">API 参考文档</a>，展示接口说明和结构化表达能力</li>
-</ul>
-<h3 id="2">2. 文档工程化意识<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
-<p>我越来越觉得，技术文档很像一个长期运行的小系统。</p>
-<p>它会新增页面，会改术语，会出现旧链接，会有写作规则不统一的问题，也会有本地检查通过、线上检查失败这种很真实的麻烦。</p>
-<p>所以我做了一个“文档质量自动化流水线”作为核心案例，把 Markdown、Vale、GitHub Actions 和 MkDocs 串起来，模拟一个轻量级 Docs-as-Code 工作流。</p>
-<p>相关页面：</p>
-<ul>
-<li><a href="01-automation/">文档质量自动化流水线</a>，查看项目背景、工具链和整体工作流</li>
-<li><a href="github-actions-workflow/">GitHub Actions 工作流</a>，查看提交后的自动化检查流程</li>
-<li><a href="changelog/">更新记录</a>，查看这个文档项目的结构和内容如何迭代</li>
-<li>页面之间的内部链接和推荐阅读路径，用来减少读者迷路</li>
-</ul>
-<p>这件事对我来说很重要。</p>
-<p>它让我不只是停留在“我写了一些文档”，而是开始考虑这些文档怎么被检查、怎么被维护、怎么被别人顺着读下去。</p>
-<h3 id="3_1">3. 中英文技术内容表达能力<a class="headerlink" href="#3_1" title="Permanent link">&para;</a></h3>
-<p>我希望未来能做技术文档、资料开发，也想争取一些海外技术内容相关的机会。</p>
-<p>英文这块我现在不打算一口气把全站翻完。那样很容易变成机械翻译，工作量也很大。</p>
-<p>我会先做最小可展示版本，优先处理三个页面：</p>
-<ul>
-<li>Start Here</li>
-<li>文档质量自动化流水线项目概览</li>
-<li>Quick Start</li>
-</ul>
-<p>这三页最能说明问题。一个负责职业定位，一个负责项目解释，一个负责任务型技术文档。</p>
-<p>后续我会继续补充中英文技术写作样稿，包括产品说明、教程、API 说明和面向海外读者的技术内容。</p>
-<h2 id="_2">推荐阅读路径<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>如果你是面试官，可以按这个顺序看：</p>
-<ol>
-<li>
-<p><a href="01-automation/">文档质量自动化流水线</a>
-   先看我的核心文档工程化案例，了解这个项目解决什么问题。</p>
-</li>
-<li>
-<p><a href="install/">快速开始</a>
-   看我如何写任务型文档，让读者完成一次本地文档质量检查。</p>
-</li>
-<li>
-<p><a href="style-guide/">写作风格指南</a>
-   看我如何把写作规范整理成可复用、可检查的规则。</p>
-</li>
-<li>
-<p><a href="github-actions-workflow/">GitHub Actions 工作流</a>
-   看我如何把文档质量检查接入自动化流程。</p>
-</li>
-<li>
-<p><a href="case-studies/portfolio-redesign/">作品集改版复盘</a>
-   看我如何把这个网站从“简历堆叠”改成一个小型文档系统。</p>
-</li>
-</ol>
-<p>如果你想看完整经历，可以查看 <a href="%E7%AE%80%E5%8E%86/">简历</a>。</p>
-<h2 id="_3">这个作品集现在怎么读<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>文档作品</strong>，放正式技术文档，包括 Quick Start、Guide、API Reference、Troubleshooting 和 Changelog。</li>
-<li><strong>案例复盘</strong>，记录我怎么发现问题、怎么调整结构、怎么复盘决策。</li>
-<li><strong>写作样稿</strong>，后续会放中英文技术写作、产品说明和教程样稿。</li>
-<li><strong>简历</strong>，放完整教育背景、项目经历、技能和联系方式。</li>
-</ul>
-<h2 id="_4">我的文档理念<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<p>我现在对技术文档的理解很简单。</p>
-<p>读者要知道从哪里开始。
-读者要知道下一步去哪。
-读者出错的时候，要能找到排查办法。
-文档改过什么，也应该留下记录。</p>
-<p>这几件事做到了，一个文档站才会真的像一个系统。</p>
-<p>这个作品集目前还在迭代，但它已经开始变成我想要的样子，一个能展示技术写作、信息架构、文档工程化和持续维护意识的小型文档产品。</p>
+  
 
 
 
 
+<!-- 隐藏默认的页面标题 -->
+<style>.md-typeset h1 { display: none; }</style>
+
+<div class="taste-portal">
+
+    <!-- 顶部状态标签 -->
+    <div class="status-badge">
+        <span class="status-dot"></span>
+        Start Here
+    </div>
+
+    <!-- Hero 引言区 -->
+    <div class="hero-section">
+        <h1 class="hero-title">技术文档作品集</h1>
+        <div class="hero-subtitle">面向技术文档工程师 / 资料开发工程师 / 技术内容岗位</div>
+        <div class="hero-desc">
+            <p>我把这个网站当成一个小型文档产品来改。从首页入口、导航结构，到 Quick Start、故障排查和更新记录，我一步步把原来比较散的内容整理成一个可阅读、可维护的文档系统。</p>
+            <p>这件事让我更清楚地理解：文档要有入口、有路径、有下一步，也要有维护记录。我希望面试官看到的，不是一个静态页面，而是我如何把技术内容一点点搭成文档系统。</p>
+        </div>
+    </div>
+
+    <!-- Bento 网格区：真实项目路由 -->
+    <div class="bento-grid">
+
+        <!-- 卡片 1：跨 2 列的核心工程化能力 -->
+        <div class="solid-card card-wide">
+            <div class="card-header">
+                <span class="serif-num">01</span>
+                <span class="card-label">Infrastructure</span>
+            </div>
+            <h3 class="card-title">文档质量自动化流水线</h3>
+            <p class="card-desc">我把 Markdown、Vale、GitHub Actions 和 MkDocs 串起来，做了一个轻量级 Docs-as-Code 案例。这个项目记录了文档如何被编写、检查、发布和持续维护，也让我开始真正理解“文档工程化”不是工具堆叠，而是一套能长期运行的流程。</p>
+            <div class="action-link-group">
+                <a href="01-automation.md" class="action-link">项目概览 &rarr;</a>
+                <a href="github-actions-workflow.md" class="action-link">GitHub Actions 工作流 &rarr;</a>
+                <a href="changelog.md" class="action-link">更新记录 &rarr;</a>
+            </div>
+        </div>
+
+        <!-- 卡片 2：技术文档写作 -->
+        <div class="solid-card">
+            <div class="card-header">
+                <span class="serif-num">02</span>
+                <span class="card-label">Writing</span>
+            </div>
+            <h3 class="card-title">技术文档写作能力</h3>
+            <p class="card-desc">我在这个作品集里补了 Quick Start、写作风格指南、故障排查和 API 参考文档。写这些页面的时候，我发现很多文档卡住读者的地方，往往出在操作路径和预期结果没有写清楚。所以我会在任务型文档里补适用读者、前置条件、操作步骤、预期结果和常见问题。</p>
+            <div class="action-link-group">
+                <a href="install.md" class="action-link">快速开始 &rarr;</a>
+                <a href="style-guide.md" class="action-link">写作风格指南 &rarr;</a>
+                <a href="troubleshooting.md" class="action-link">故障排查 &rarr;</a>
+            </div>
+        </div>
+
+        <!-- 卡片 3：推荐阅读路径 -->
+        <div class="solid-card">
+            <div class="card-header">
+                <span class="serif-num">03</span>
+                <span class="card-label">Reading Path</span>
+            </div>
+            <h3 class="card-title">推荐阅读路径</h3>
+            <p class="card-desc">如果你是面试官，可以按这个顺序看：</p>
+            <ul class="path-list">
+                <li><a href="01-automation.md" class="path-link">文档质量自动化流水线 &rarr;</a> <span class="path-desc">了解核心项目解决什么问题</span></li>
+                <li><a href="install.md" class="path-link">快速开始 &rarr;</a> <span class="path-desc">看我如何写任务型文档</span></li>
+                <li><a href="style-guide.md" class="path-link">写作风格指南 &rarr;</a> <span class="path-desc">看我如何沉淀写作规则</span></li>
+                <li><a href="github-actions-workflow.md" class="path-link">GitHub Actions 工作流 &rarr;</a> <span class="path-desc">看我如何把文档检查接入自动化流程</span></li>
+                <li><a href="case-studies/portfolio-redesign.md" class="path-link">作品集改版复盘 &rarr;</a> <span class="path-desc">看我如何把网站从简历堆叠改成文档系统</span></li>
+            </ul>
+        </div>
+
+        <!-- 卡片 4：中英文能力 -->
+        <div class="solid-card">
+            <div class="card-header">
+                <span class="serif-num">04</span>
+                <span class="card-label">Bilingual</span>
+            </div>
+            <h3 class="card-title">中英文技术内容表达能力</h3>
+            <p class="card-desc">英文部分我不会一口气翻完整站。第一阶段我会先做三个页面：Start Here、项目概览、Quick Start。这三个页面分别对应英文职业定位、英文项目解释和英文任务型技术文档。先把最关键的页面打磨好，再继续扩展英文样稿。</p>
+            <div class="action-link-group">
+                <a href="#" class="action-link text-muted">英文 Start Here（计划中） &rarr;</a>
+                <a href="#" class="action-link text-muted">英文项目概览（计划中） &rarr;</a>
+                <a href="#" class="action-link text-muted">英文 Quick Start（计划中） &rarr;</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 底部务实声明 -->
+    <div class="portal-footer">
+        <p>读者要知道从哪里开始，下一步去哪，出错时能找到排查方法，文档改过什么也要留下记录。</p>
+        <p>这个作品集还在迭代中。我会继续把新的文档练习、项目复盘和英文样稿补进来，让它越来越接近一个真实的技术文档系统。</p>
+    </div>
+
+</div>
 
 
 
 
 
+
+
+  
+  
+
+
+
+
+  
 
 
 
@@ -1589,6 +1384,12 @@
           
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
         
       </main>
       
@@ -1619,7 +1420,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.tabs", "search.highlight"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
