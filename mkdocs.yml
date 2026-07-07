@@ -3,10 +3,20 @@ site_name: 我的自动化文档作品集
 # 1. 优化主题色与导航体验
 theme:
   name: material
-  # Kami 风格使用暖白底和墨蓝强调；底层 palette 也避免回退到 Material 绿色主题
+  # Kami 风格使用暖白底和墨蓝强调；同时提供夜间模式
   palette:
-    primary: white
-    accent: indigo
+    - scheme: default
+      primary: white
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: 切换到夜间模式
+    - scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: 切换到日间模式
   features:
     - navigation.tabs          # 【核心】开启顶部导航 Tab，让侧边栏变清爽
     - navigation.tabs.sticky   # 顶部导航在向下滚动时吸顶
@@ -38,9 +48,16 @@ markdown_extensions:
           format: !!python/name:pymdownx.superfences.fence_code_format
 
 nav:
-  - Start Here: index.md
+  - 首页: index.md
 
-  - 文档作品:
+  - 关于: about.md
+
+  - 文稿:
+      - 文稿总览: posts/index.md
+
+  - 作品:
+      - 作品总览: portfolio.md
+      - 写作样稿: writing-samples/index.md
       - 文档质量自动化流水线:
           - 项目概览: 01-automation.md
           - 快速开始: install.md
@@ -62,10 +79,8 @@ nav:
         - PopDots：波点拼贴图片生成器: dot-collage.md
         - 照片换底色小程序: photo-background.md
 
-  - 案例复盘:
+  - 案例:
+      - 案例总览: case-studies/index.md
       - 作品集改版复盘: case-studies/portfolio-redesign.md
-
-  - 写作样稿:
-      - 概览: writing-samples/index.md
 
   - 简历: 简历.md
