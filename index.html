@@ -220,17 +220,18 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="about/" class="md-tabs__link">
-        
-  
-  
     
+    
+      <li class="md-tabs__item">
+        <a href="about/" class="md-tabs__link">
+          
+  
   
   关于
 
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
       
@@ -246,7 +247,7 @@
           
   
   
-  文稿
+  思考与经验
 
         </a>
       </li>
@@ -395,9 +396,23 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="about/" class="md-nav__link">
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -411,7 +426,79 @@
   
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    关于
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    关于我
+  
+
+    
+  </span>
+  
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="site-changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changelog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -444,7 +531,7 @@
   <span class="md-ellipsis">
     
   
-    文稿
+    思考与经验
   
 
     
@@ -460,7 +547,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    文稿
+    思考与经验
   
 
           </label>
@@ -480,7 +567,35 @@
   <span class="md-ellipsis">
     
   
-    文稿总览
+    思考与经验总览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="posts/portfolio-information-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    技术文档作品集为什么需要信息架构
   
 
     
@@ -1418,29 +1533,28 @@
 
 <div class="home-portal">
 
-    <div class="identity-mark" aria-hidden="true">梁</div>
+    <img src="assets/profile-photo.png" alt="梁卓雯头像" class="identity-photo">
 
     <h1 class="home-title"><span>梁卓雯</span><span>Zhuowen Liang</span></h1>
 
     <p class="home-tagline"><span>技术文档工程师</span><span>资料开发工程师方向</span></p>
 
-    <p class="home-summary"><span>电子信息硕士背景。</span><span>熟悉 Docs-as-Code 工作流。</span><span>能整理硬件资料、API 接口和产品流程。</span><span>输出可维护的技术文档。</span></p>
+    <p class="home-summary">电子信息硕士背景，专注于构建高可靠、易维护的 Docs-as-Code 技术文档系统。</p>
 
     <div class="home-meta" aria-label="联系与能力摘要">
-        <span>CET-6 612</span>
         <span>Markdown / MkDocs / GitHub Actions / Vale</span>
         <a href="mailto:lzwof@foxmail.com">lzwof@foxmail.com</a>
     </div>
 
     <nav class="home-actions" aria-label="作品集主要入口">
-        <a href="portfolio/" class="home-action">文档作品</a>
-        <a href="posts/" class="home-action">文稿 / 思考</a>
-        <a href="case-studies/" class="home-action">案例复盘</a>
+        <a href="portfolio/" class="home-action home-action-primary">文档作品</a>
+        <a href="posts/" class="home-action">思考与经验</a>
+        <a href="case-studies/" class="home-action home-action-outline">案例复盘</a>
         <a href="简历/" class="home-action">简历</a>
-        <a href="about/" class="home-action">关于我</a>
+        <a href="about/" class="home-action home-action-outline">关于我</a>
     </nav>
 
-    <p class="home-note">建议第一次浏览从“关于我”开始；如果只想快速看交付物，直接进入“文档作品”。</p>
+    <p class="home-tech-stack">Powered by MkDocs Material | GitHub Actions | Vale | Mermaid.js | <a href="site-changelog/">v2.0.0</a></p>
 
 </div>
 
@@ -1511,6 +1625,8 @@
         <script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js"></script>
       
         <script src="javascripts/mermaid-init.js"></script>
+      
+        <script src="javascripts/download-links.js"></script>
       
     
   </body>

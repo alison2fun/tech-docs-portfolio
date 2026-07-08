@@ -225,17 +225,18 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="../about/" class="md-tabs__link">
-        
-  
-  
     
+    
+      <li class="md-tabs__item">
+        <a href="../about/" class="md-tabs__link">
+          
+  
   
   关于
 
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
       
@@ -251,7 +252,7 @@
           
   
   
-  文稿
+  思考与经验
 
         </a>
       </li>
@@ -392,9 +393,23 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../about/" class="md-nav__link">
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -408,7 +423,79 @@
   
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    关于
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    关于我
+  
+
+    
+  </span>
+  
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../site-changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changelog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -441,7 +528,7 @@
   <span class="md-ellipsis">
     
   
-    文稿
+    思考与经验
   
 
     
@@ -457,7 +544,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    文稿
+    思考与经验
   
 
           </label>
@@ -477,7 +564,35 @@
   <span class="md-ellipsis">
     
   
-    文稿总览
+    思考与经验总览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../posts/portfolio-information-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    技术文档作品集为什么需要信息架构
   
 
     
@@ -1514,9 +1629,9 @@
 
 <h1 id="_1">案例复盘</h1>
 <p>这个栏目放过程型内容：不是只展示最终页面，而是记录我如何发现问题、做取舍、重组结构和验证结果。</p>
-<p>它介于“文稿”和“作品”之间：</p>
+<p>它介于“思考与经验”和“作品”之间：</p>
 <ul>
-<li>比文稿更具体，有明确对象和改动过程；</li>
+<li>比思考与经验更具体，有明确对象和改动过程；</li>
 <li>比作品更强调判断，而不是只展示交付物。</li>
 </ul>
 <div class="listing-grid">
@@ -1544,7 +1659,11 @@
 <li><strong>小程序产品文档集搭建复盘</strong>：补齐从原型到用户手册、PRD、API 参考的整理过程后再发布。</li>
 </ul>
 <h2 id="_3">推荐继续阅读</h2>
-<p>如果你想直接看最终交付物，可以进入 <a href="../portfolio/">作品总览</a>。如果你想看更偏方法论的思考，可以进入 <a href="../posts/">文稿 / 思考</a>。</p>
+<p>如果你想直接看最终交付物，可以进入 <a href="../portfolio/">作品总览</a>。如果你想看更偏方法论的思考，可以进入 <a href="../posts/">思考与经验</a>。</p>
+<div class="bottom-pager">
+    <a href="../portfolio/" class="pager-link">返回作品总览</a>
+    <a href="portfolio-redesign/" class="pager-link pager-link-primary">下一篇：作品集改版复盘</a>
+</div>
 
 
 
@@ -1608,6 +1727,8 @@
         <script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js"></script>
       
         <script src="../javascripts/mermaid-init.js"></script>
+      
+        <script src="../javascripts/download-links.js"></script>
       
     
   </body>

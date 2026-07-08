@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="150" viewBox="0 0 200 150" role="img" aria-labelledby="title desc">
+  <title id="title">API documentation thumbnail</title>
+  <desc id="desc">A compact API request and response documentation illustration.</desc>
+  <rect width="200" height="150" fill="#fffdf7"/>
+  <rect x="12" y="12" width="176" height="126" rx="8" fill="#f5f4ed" stroke="#c8bfad"/>
+  <text x="24" y="34" fill="#1b365d" font-family="Georgia, serif" font-size="12" font-weight="600">API integration</text>
+  <rect x="24" y="48" width="152" height="28" rx="4" fill="#e8eef6" stroke="#1b365d"/>
+  <text x="34" y="66" fill="#1b365d" font-family="Consolas, monospace" font-size="10">GET /v1/devices/{id}/telemetry</text>
+  <g font-family="Consolas, monospace" font-size="8" fill="#34312c">
+    <text x="24" y="94">{</text>
+    <text x="36" y="106">"code": 200,</text>
+    <text x="36" y="118">"light_intensity": 450,</text>
+    <text x="36" y="130">"battery_level": 85</text>
+    <text x="24" y="140">}</text>
+  </g>
+  <g stroke="#b38a58" stroke-width="1.5" fill="none" marker-end="url(#arrow)">
+    <path d="M96 78 C96 86 96 88 96 94"/>
+  </g>
+  <defs>
+    <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M0 0 L6 3 L0 6 Z" fill="#b38a58"/>
+    </marker>
+  </defs>
+</svg>

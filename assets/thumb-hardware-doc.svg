@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="150" viewBox="0 0 200 150" role="img" aria-labelledby="title desc">
+  <title id="title">Hardware datasheet thumbnail</title>
+  <desc id="desc">A compact register table and timing line illustration.</desc>
+  <rect width="200" height="150" fill="#fffdf7"/>
+  <rect x="12" y="12" width="176" height="126" rx="8" fill="#f5f4ed" stroke="#c8bfad"/>
+  <text x="24" y="34" fill="#1b365d" font-family="Georgia, serif" font-size="12" font-weight="600">Register map</text>
+  <g stroke="#1b365d" stroke-width="1">
+    <rect x="24" y="48" width="152" height="52" fill="#fffdf7"/>
+    <path d="M24 61 H176 M24 74 H176 M24 87 H176 M62 48 V100 M102 48 V100 M138 48 V100"/>
+  </g>
+  <g fill="#34312c" font-family="Consolas, monospace" font-size="8">
+    <text x="30" y="58">Reg</text><text x="68" y="58">Addr</text><text x="108" y="58">Bit</text><text x="144" y="58">Access</text>
+    <text x="30" y="71">CTRL1</text><text x="68" y="71">0x20</text><text x="108" y="71">ODR</text><text x="144" y="71">RW</text>
+    <text x="30" y="84">STATUS</text><text x="68" y="84">0x27</text><text x="108" y="84">DRDY</text><text x="144" y="84">R</text>
+    <text x="30" y="97">DATA</text><text x="68" y="97">0x30</text><text x="108" y="97">OUT</text><text x="144" y="97">R</text>
+  </g>
+  <g stroke="#b38a58" stroke-width="2" fill="none">
+    <path d="M28 118 H48 V108 H68 V118 H88 V108 H108 V118 H128 V108 H148 V118 H172"/>
+  </g>
+  <text x="24" y="132" fill="#6f6b63" font-family="Consolas, monospace" font-size="8">SPI timing + register structure</text>
+</svg>

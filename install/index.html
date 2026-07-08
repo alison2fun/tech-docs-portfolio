@@ -225,17 +225,18 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="../about/" class="md-tabs__link">
-        
-  
-  
     
+    
+      <li class="md-tabs__item">
+        <a href="../about/" class="md-tabs__link">
+          
+  
   
   关于
 
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
       
@@ -251,7 +252,7 @@
           
   
   
-  文稿
+  思考与经验
 
         </a>
       </li>
@@ -392,9 +393,23 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../about/" class="md-nav__link">
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -408,7 +423,79 @@
   
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    关于
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    关于我
+  
+
+    
+  </span>
+  
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../site-changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changelog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -441,7 +528,7 @@
   <span class="md-ellipsis">
     
   
-    文稿
+    思考与经验
   
 
     
@@ -457,7 +544,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    文稿
+    思考与经验
   
 
           </label>
@@ -477,7 +564,35 @@
   <span class="md-ellipsis">
     
   
-    文稿总览
+    思考与经验总览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../posts/portfolio-information-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    技术文档作品集为什么需要信息架构
   
 
     
@@ -2372,6 +2487,8 @@ GitHub Actions 检查用于在提交后自动验证文档质量，避免不符�
         <script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js"></script>
       
         <script src="../javascripts/mermaid-init.js"></script>
+      
+        <script src="../javascripts/download-links.js"></script>
       
     
   </body>
