@@ -33,6 +33,7 @@ extra_css:
 extra_javascript:
   - https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js
   - javascripts/mermaid-init.js
+  - javascripts/download-links.js
 
 # 3. 开启必要的 Markdown 扩展（为了支持截图控制和更好的排版）
 markdown_extensions:
@@ -50,10 +51,13 @@ markdown_extensions:
 nav:
   - 首页: index.md
 
-  - 关于: about.md
+  - 关于:
+      - 关于我: about.md
+      - Changelog: site-changelog.md
 
-  - 文稿:
-      - 文稿总览: posts/index.md
+  - 思考与经验:
+      - 思考与经验总览: posts/index.md
+      - 技术文档作品集为什么需要信息架构: posts/portfolio-information-architecture.md
 
   - 作品:
       - 作品总览: portfolio.md

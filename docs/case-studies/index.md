@@ -2,9 +2,9 @@
 
 这个栏目放过程型内容：不是只展示最终页面，而是记录我如何发现问题、做取舍、重组结构和验证结果。
 
-它介于“文稿”和“作品”之间：
+它介于“思考与经验”和“作品”之间：
 
-* 比文稿更具体，有明确对象和改动过程；
+* 比思考与经验更具体，有明确对象和改动过程；
 * 比作品更强调判断，而不是只展示交付物。
 
 <div class="listing-grid">
@@ -34,4 +34,9 @@
 
 ## 推荐继续阅读
 
-如果你想直接看最终交付物，可以进入 [作品总览](../portfolio.md)。如果你想看更偏方法论的思考，可以进入 [文稿 / 思考](../posts/index.md)。
+如果你想直接看最终交付物，可以进入 [作品总览](../portfolio.md)。如果你想看更偏方法论的思考，可以进入 [思考与经验](../posts/index.md)。
+
+<div class="bottom-pager">
+    <a href="../portfolio/" class="pager-link">返回作品总览</a>
+    <a href="portfolio-redesign/" class="pager-link pager-link-primary">下一篇：作品集改版复盘</a>
+</div>

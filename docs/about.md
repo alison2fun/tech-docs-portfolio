@@ -73,7 +73,7 @@
 4. [硬件数据手册重构](02-hardware.md)：看复杂技术资料如何转成结构化说明；
 5. [作品集改版复盘](case-studies/portfolio-redesign.md)：看我如何判断信息架构问题并做取舍。
 
-如果你想先判断岗位匹配，可以直接看 [简历](简历.md)。如果你想看持续思考和方法论，可以看 [文稿 / 思考](posts/index.md)。
+如果你想先判断岗位匹配，可以直接看 [简历](简历.md)。如果你想看持续思考和方法论，可以看 [思考与经验](posts/index.md)。
 
 ## 中英文技术文档
 
@@ -89,3 +89,32 @@
 我通常先确认读者是谁，以及读者要完成什么任务。然后把原始资料拆成概念、步骤、参数、示例、错误处理和下一步，用表格、代码块、流程图或截图承载最适合结构化的信息。
 
 我比较在意两个细节：第一，读者做完一步以后应该看到什么；第二，读者看完这一页以后应该去哪里。很多文档不是写得不够多，而是缺少预期结果和继续阅读路径。
+
+## 简历概览
+
+<div class="resume-overview">
+    <div class="resume-overview-grid">
+        <div class="resume-overview-item">
+            <strong>职业标签</strong>
+            <span>技术文档工程师 / 资料开发工程师 / 开发者文档</span>
+        </div>
+        <div class="resume-overview-item">
+            <strong>核心工具箱</strong>
+            <span>Markdown、MkDocs、GitHub Actions、Vale、Mermaid、API Docs</span>
+        </div>
+        <div class="resume-overview-item">
+            <strong>证据入口</strong>
+            <span>Docs-as-Code、硬件资料重构、API 接口文档、小程序产品文档</span>
+        </div>
+    </div>
+    <div class="action-link-group">
+        <a href="../简历/" class="action-link action-link-primary">查看在线简历 &rarr;</a>
+        <a href="../assets/resume-zhuowen-liang.pdf" class="action-link" download="梁卓雯-技术文档工程师-深圳.pdf" type="application/pdf" target="_blank" rel="noopener" data-download-pdf data-md-ignore>下载 PDF 简历 &rarr;</a>
+        <a href="../site-changelog/" class="action-link">查看 Changelog &rarr;</a>
+    </div>
+</div>
+
+<div class="bottom-pager">
+    <a href="../" class="pager-link">返回首页</a>
+    <a href="../portfolio/" class="pager-link pager-link-primary">下一篇：文档作品</a>
+</div>
