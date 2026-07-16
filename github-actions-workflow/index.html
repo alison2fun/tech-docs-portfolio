@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#github-actions-workflow" class="md-skip">
+        <a href="#github-actions" class="md-skip">
           Skip to content
         </a>
       
@@ -1182,7 +1182,7 @@
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        页面目标
+        这次改动解决什么问题
       
     </span>
   </a>
@@ -1193,7 +1193,7 @@
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        适用场景
+        工作流概览
       
     </span>
   </a>
@@ -1204,7 +1204,7 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        工作流概览
+        关键设计
       
     </span>
   </a>
@@ -1226,7 +1226,7 @@
   <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        示例配置
+        验证任务
       
     </span>
   </a>
@@ -1237,7 +1237,7 @@
   <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       
-        配置说明
+        发布任务
       
     </span>
   </a>
@@ -1248,7 +1248,7 @@
   <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       
-        检查结果如何解读
+        本地复现
       
     </span>
   </a>
@@ -1259,7 +1259,7 @@
   <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
       
-        与本地检查的关系
+        本次基线处理
       
     </span>
   </a>
@@ -1270,7 +1270,7 @@
   <a href="#_9" class="md-nav__link">
     <span class="md-ellipsis">
       
-        常见失败原因
+        验证记录
       
     </span>
   </a>
@@ -1281,18 +1281,7 @@
   <a href="#_10" class="md-nav__link">
     <span class="md-ellipsis">
       
-        这份工作流文档的写作取舍
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        下一步
+        失败时先看哪里
       
     </span>
   </a>
@@ -1442,7 +1431,7 @@
   <span class="md-ellipsis">
     
   
-    OpenClaw 快速入门
+    OpenClaw CLI 快速入门
   
 
     
@@ -2197,7 +2186,7 @@
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        页面目标
+        这次改动解决什么问题
       
     </span>
   </a>
@@ -2208,7 +2197,7 @@
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        适用场景
+        工作流概览
       
     </span>
   </a>
@@ -2219,7 +2208,7 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        工作流概览
+        关键设计
       
     </span>
   </a>
@@ -2241,7 +2230,7 @@
   <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        示例配置
+        验证任务
       
     </span>
   </a>
@@ -2252,7 +2241,7 @@
   <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       
-        配置说明
+        发布任务
       
     </span>
   </a>
@@ -2263,7 +2252,7 @@
   <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       
-        检查结果如何解读
+        本地复现
       
     </span>
   </a>
@@ -2274,7 +2263,7 @@
   <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
       
-        与本地检查的关系
+        本次基线处理
       
     </span>
   </a>
@@ -2285,7 +2274,7 @@
   <a href="#_9" class="md-nav__link">
     <span class="md-ellipsis">
       
-        常见失败原因
+        验证记录
       
     </span>
   </a>
@@ -2296,18 +2285,7 @@
   <a href="#_10" class="md-nav__link">
     <span class="md-ellipsis">
       
-        这份工作流文档的写作取舍
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        下一步
+        失败时先看哪里
       
     </span>
   </a>
@@ -2331,178 +2309,211 @@
 
 
 
-<h1 id="github-actions-workflow">GitHub Actions Workflow：自动运行文档质量检查</h1>
-<h2 id="_1">页面目标</h2>
-<p>本文档说明本项目如何使用 GitHub Actions 自动运行文档质量检查。</p>
-<p>通过该工作流，文档在提交到仓库后会自动触发检查流程，帮助作者提前发现格式、术语和写作风格问题，减少人工审查中的重复性工作。</p>
-<h2 id="_2">适用场景</h2>
-<p>这个工作流适用于以下场景：</p>
+<h1 id="github-actions">GitHub Actions：让检查通过后再发布文档</h1>
+<h2 id="_1">这次改动解决什么问题</h2>
+<p>这个仓库原来有两条互不依赖的工作流：一条只用 Vale 检查 <code>test.md</code>，另一条在 <code>main</code> 分支更新后直接发布 MkDocs 站点。</p>
+<p>这会留下两个空档：</p>
 <ul>
-<li>提交 Markdown 文档后自动检查写作规范；</li>
-<li>在 Pull Request 合并前发现文档质量问题；</li>
-<li>避免格式、术语和风格问题进入主分支；</li>
-<li>将文档质量检查纳入 Docs-as-Code 工作流。</li>
+<li><code>docs/</code> 中的真实页面没有进入完整检查；</li>
+<li>即使文档检查失败，独立的发布任务仍可能继续运行。</li>
 </ul>
-<h2 id="_3">工作流概览</h2>
-<p>本项目的自动化检查流程如下：</p>
+<p>本次改动把检查和发布放进同一条流水线。发布任务必须等待全量文档检查和严格构建通过。</p>
+<h2 id="_2">工作流概览</h2>
 <pre class="mermaid"><code>flowchart LR
-    A[提交文档修改] --&gt; B[触发 GitHub Actions]
-    B --&gt; C[安装 Vale]
-    C --&gt; D[读取 .vale.ini 配置]
-    D --&gt; E[扫描 docs 目录]
-    E --&gt; F{是否通过检查}
-    F -- 是 --&gt; G[允许继续发布或合并]
-    F -- 否 --&gt; H[返回错误日志]
-    H --&gt; I[作者修复文档问题]
-    I --&gt; A</code></pre>
+    A["Push 或 Pull Request"] --&gt; B["安装固定版本依赖"]
+    B --&gt; C["Vale 扫描 docs/"]
+    C --&gt; D["MkDocs 严格构建"]
+    D --&gt; E{"事件来自 main 分支的 push？"}
+    E -- "否" --&gt; F["只返回检查结果"]
+    E -- "是" --&gt; G["发布到 GitHub Pages"]</code></pre>
+<p>Pull Request 只验证，不发布。只有 <code>main</code> 分支上的 <code>push</code> 事件能够进入发布任务，而且该任务声明了 <code>needs: validate</code>。</p>
+<h2 id="_3">关键设计</h2>
+<table>
+<thead>
+<tr>
+<th>决策</th>
+<th>实现</th>
+<th>原因</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>扫描真实文档</td>
+<td><code>files: docs</code></td>
+<td>避免只检查演示文件</td>
+</tr>
+<tr>
+<td>使用官方 Vale Action</td>
+<td>固定到 v2.1.2 的完整 commit SHA</td>
+<td>减少手写安装逻辑，并避免标签指向变化</td>
+</tr>
+<tr>
+<td>固定 Vale 版本</td>
+<td><code>version: 3.15.1</code></td>
+<td>降低本地与 CI 结果漂移</td>
+</tr>
+<tr>
+<td>提交规则快照</td>
+<td><code>styles/</code> 作为规则真源</td>
+<td>避免 CI 自动拉取上游新规则后结果漂移</td>
+</tr>
+<tr>
+<td>错误阻断检查</td>
+<td><code>fail_on_error: true</code></td>
+<td>发现 error 时返回失败状态</td>
+</tr>
+<tr>
+<td>检查全部历史内容</td>
+<td><code>filter_mode: nofilter</code></td>
+<td>防止旧页面中的 error 被增量过滤隐藏</td>
+</tr>
+<tr>
+<td>同时支持 push 和 PR</td>
+<td><code>reporter: github-check</code></td>
+<td>避免使用仅适用于 PR 的默认 reporter</td>
+</tr>
+<tr>
+<td>严格构建</td>
+<td><code>mkdocs build --strict</code></td>
+<td>把缺失链接、配置和构建警告纳入质量门禁</td>
+</tr>
+<tr>
+<td>固定文档依赖</td>
+<td><code>requirements-docs.txt</code></td>
+<td>让本地和 CI 安装相同版本</td>
+</tr>
+<tr>
+<td>发布依赖检查</td>
+<td><code>needs: validate</code></td>
+<td>检查失败时不部署站点</td>
+</tr>
+<tr>
+<td>最小权限</td>
+<td>默认只读，发布任务单独授予 <code>contents: write</code></td>
+<td>减少不必要的写权限</td>
+</tr>
+<tr>
+<td>明确提交身份</td>
+<td>配置 <code>github-actions[bot]</code></td>
+<td>确保 <code>gh-deploy</code> 能创建发布提交</td>
+</tr>
+</tbody>
+</table>
 <h2 id="_4">触发条件</h2>
-<p>GitHub Actions 可以在以下情况触发：</p>
-<ul>
-<li>向主分支提交代码；</li>
-<li>创建或更新 Pull Request；</li>
-<li>手动运行工作流。</li>
-</ul>
-<p>在本项目中，推荐至少在以下场景运行检查：</p>
+<p>工作流响应三类事件：</p>
 <div class="highlight"><pre><span></span><code><span class="nt">on</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">push</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">branches</span><span class="p">:</span>
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main</span>
 <span class="w">  </span><span class="nt">pull_request</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">workflow_dispatch</span><span class="p">:</span>
 </code></pre></div>
-<h2 id="_5">示例配置</h2>
-<p>以下是一个简化版 GitHub Actions 配置示例：</p>
-<div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Documentation Quality Check</span>
+<ul>
+<li><code>pull_request</code>：在合并前验证改动；</li>
+<li><code>push</code> 到 <code>main</code>：重新验证，通过后发布；</li>
+<li><code>workflow_dispatch</code>：需要时手动执行验证。</li>
+</ul>
+<p>手动执行不会发布，因为发布任务还会检查事件类型和分支。</p>
+<h2 id="_5">验证任务</h2>
+<p>验证任务依次执行：</p>
+<ol>
+<li>拉取仓库；</li>
+<li>安装 Python 3.12；</li>
+<li>根据 <code>requirements-docs.txt</code> 安装 MkDocs Material；</li>
+<li>使用 Vale 3.15.1 扫描整个 <code>docs/</code> 目录；</li>
+<li>使用严格模式构建站点。</li>
+</ol>
+<p>核心配置如下：</p>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Check writing style with Vale</span>
+<span class="w">  </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">vale-cli/vale-action@85f9f7f2c5f449ac0ae5b66662961bae3f77ca6a</span><span class="w"> </span><span class="c1"># v2.1.2</span>
+<span class="w">  </span><span class="nt">with</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3.15.1</span>
+<span class="w">    </span><span class="nt">files</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">docs</span>
+<span class="w">    </span><span class="nt">fail_on_error</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">filter_mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nofilter</span>
+<span class="w">    </span><span class="nt">reporter</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">github-check</span>
 
-<span class="nt">on</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">push</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">branches</span><span class="p">:</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main</span>
-<span class="w">  </span><span class="nt">pull_request</span><span class="p">:</span>
-
-<span class="nt">jobs</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">vale</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
-
-<span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Checkout repository</span>
-<span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v4</span>
-
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Install Vale</span>
-<span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
-<span class="w">          </span><span class="no">wget https://github.com/errata-ai/vale/releases/download/v3.0.7/vale_3.0.7_Linux_64-bit.tar.gz</span>
-<span class="w">          </span><span class="no">tar -xvzf vale_3.0.7_Linux_64-bit.tar.gz</span>
-<span class="w">          </span><span class="no">sudo mv vale /usr/local/bin/</span>
-
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Run Vale</span>
-<span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">vale docs/</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Build documentation</span>
+<span class="w">  </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mkdocs build --strict</span>
 </code></pre></div>
-<h2 id="_6">配置说明</h2>
+<p>Vale 会报告 suggestion、warning 和 error；当前门禁只因 error 失败。这样既保留改进提示，又避免一次改动被大量非阻断建议淹没。</p>
+<h2 id="_6">发布任务</h2>
+<p>发布任务包含两道条件：</p>
+<div class="highlight"><pre><span></span><code><span class="nt">if</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">github.event_name == &#39;push&#39; &amp;&amp; github.ref == &#39;refs/heads/main&#39;</span>
+<span class="nt">needs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">validate</span>
+</code></pre></div>
+<p>第一行限制事件和分支，第二行建立任务依赖。任何一项不满足，GitHub Pages 都不会更新。</p>
+<p>发布任务需要向 <code>gh-pages</code> 分支写入内容，因此只在该任务中授予：</p>
+<div class="highlight"><pre><span></span><code><span class="nt">permissions</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">contents</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">write</span>
+</code></pre></div>
+<h2 id="_7">本地复现</h2>
+<p>在仓库根目录安装与 CI 相同的文档依赖：</p>
+<div class="highlight"><pre><span></span><code><span class="n">python</span> <span class="n">-m</span> <span class="n">pip</span> <span class="n">install</span> <span class="p">-</span><span class="n">-requirement</span> <span class="n">requirements-docs</span><span class="p">.</span><span class="n">txt</span>
+</code></pre></div>
+<p>再运行两项检查：</p>
+<div class="highlight"><pre><span></span><code><span class="n">vale</span> <span class="n">docs</span>
+<span class="n">mkdocs</span> <span class="n">build</span> <span class="p">-</span><span class="n">-strict</span>
+</code></pre></div>
+<p>如果本地没有 Vale，请先按照<a href="../install/">快速开始</a>安装。排查本地与 CI 差异时，先确认 Vale 版本、依赖版本、执行路径和规则文件是否一致。</p>
+<h2 id="_8">本次基线处理</h2>
+<p>第一次把扫描范围从 <code>test.md</code> 扩大到 <code>docs/</code> 时，Vale 在 44 个 Markdown 文件中发现了 20 个 error。这些问题没有通过降低检查等级来隐藏，而是分成三类处理：</p>
+<ul>
+<li>项目专有名词加入词汇表，例如 <code>OAuth</code>、<code>OpenClaw</code>、<code>Vue</code> 和人名；</li>
+<li>写作规范中的“错误示例”改为代码文本，避免示例本身触发规则；</li>
+<li>修正标题格式和一个英文标题中的缩写提示。</li>
+</ul>
+<p>warning 和 suggestion 仍会显示，后续可以分批处理，不阻断当前基线。</p>
+<h2 id="_9">验证记录</h2>
 <table>
 <thead>
 <tr>
-<th>配置项</th>
-<th>作用</th>
+<th>检查</th>
+<th>环境</th>
+<th>结果</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>name</code></td>
-<td>定义工作流名称</td>
+<td><code>vale docs</code></td>
+<td>Windows，Vale 3.15.1</td>
+<td>通过：44 个文件，0 error、69 warning、181 suggestion</td>
 </tr>
 <tr>
-<td><code>on</code></td>
-<td>定义触发条件</td>
-</tr>
-<tr>
-<td><code>jobs</code></td>
-<td>定义要运行的任务</td>
-</tr>
-<tr>
-<td><code>runs-on</code></td>
-<td>指定运行环境</td>
-</tr>
-<tr>
-<td><code>actions/checkout</code></td>
-<td>拉取仓库代码</td>
-</tr>
-<tr>
-<td><code>Install Vale</code></td>
-<td>安装 Vale 检查工具</td>
-</tr>
-<tr>
-<td><code>Run Vale</code></td>
-<td>扫描文档目录并输出检查结果</td>
+<td><code>mkdocs build --strict</code></td>
+<td>Windows，Python 3.13.5，MkDocs Material 9.7.6</td>
+<td>通过</td>
 </tr>
 </tbody>
 </table>
-<h2 id="_7">检查结果如何解读</h2>
-<p>如果检查通过，GitHub Actions 会显示绿色通过状态。</p>
-<p>如果检查失败，日志中通常会包含：</p>
-<ul>
-<li>出错文件；</li>
-<li>行号；</li>
-<li>规则名称；</li>
-<li>错误级别；</li>
-<li>修改建议。</li>
-</ul>
-<p>示例：</p>
-<div class="highlight"><pre><span></span><code>docs/index.md
-  12:5  error  中文与英文之间应保留一个空格  MyStyle.Spacing
-</code></pre></div>
-<p>这表示 <code>docs/index.md</code> 第 12 行附近触发了 <code>MyStyle.Spacing</code> 规则，需要检查中英文或数字之间的空格。</p>
-<h2 id="_8">与本地检查的关系</h2>
-<p>本地 Vale 检查适合作者边写边改，GitHub Actions 则负责在提交后给出统一结果。两条检查路径处理的是不同阶段。</p>
+<h2 id="_10">失败时先看哪里</h2>
 <table>
 <thead>
 <tr>
-<th>检查方式</th>
-<th>使用时机</th>
-<th>作用</th>
+<th>失败步骤</th>
+<th>优先检查</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>本地检查</td>
-<td>提交前</td>
-<td>作者提前发现问题</td>
+<td>安装依赖</td>
+<td><code>requirements-docs.txt</code> 是否存在，版本是否可用</td>
 </tr>
 <tr>
-<td>GitHub Actions 检查</td>
-<td>提交后 / PR 阶段</td>
-<td>自动验证文档是否符合规则</td>
+<td>Vale</td>
+<td>文件、行号、规则名和 alert level</td>
+</tr>
+<tr>
+<td>MkDocs 严格构建</td>
+<td>导航路径、内部链接、YAML 配置和构建 warning</td>
+</tr>
+<tr>
+<td>发布</td>
+<td>事件是否为 <code>main</code> 分支 push，验证任务是否通过，写权限是否存在</td>
 </tr>
 </tbody>
 </table>
-<p>推荐流程是：</p>
-<ol>
-<li>作者在本地运行 <code>vale docs/</code>；</li>
-<li>修复明显问题；</li>
-<li>提交代码；</li>
-<li>GitHub Actions 自动再次检查；</li>
-<li>检查通过后再合并或发布。</li>
-</ol>
-<h2 id="_9">常见失败原因</h2>
-<p>GitHub Actions 检查失败可能由以下原因导致：</p>
-<ul>
-<li>Vale 安装失败；</li>
-<li>检查命令路径错误；</li>
-<li><code>.vale.ini</code> 没有提交到仓库；</li>
-<li><code>styles/</code> 规则目录没有提交；</li>
-<li>文档中存在未修复的 error；</li>
-<li>本地和 CI 环境使用的 Vale 版本不同。</li>
-</ul>
-<p>如果遇到这些问题，可以查看 <a href="../troubleshooting/">故障排查</a>。</p>
-<h2 id="_10">这份工作流文档的写作取舍</h2>
-<p>示例配置保留最小可运行结构，表格解释触发条件和关键字段，流程图把提交、检查、反馈和修复连起来。读者既可以复制配置，也能知道检查为什么会在这个阶段发生。</p>
-<p>页面同时连接本地检查与故障排查。自动化流程出错时，读者可以继续沿着日志和常见原因定位问题。</p>
-<h2 id="_11">下一步</h2>
-<p>阅读完本文后，可以继续查看：</p>
-<ol>
-<li><a href="../install/">快速开始</a>：了解如何在本地运行文档质量检查；</li>
-<li><a href="../style-guide/">写作风格指南</a>：了解本项目采用的写作规范；</li>
-<li><a href="../troubleshooting/">故障排查</a>：查看自动化检查常见问题；</li>
-<li><a href="../changelog/">更新记录</a>：了解本文档项目的迭代记录。</li>
-</ol>
+<p>完整配置见 <a href="https://github.com/alison2fun/tech-docs-portfolio/blob/main/.github/workflows/ci.yml"><code>.github/workflows/ci.yml</code></a>。</p>
 
 
 
