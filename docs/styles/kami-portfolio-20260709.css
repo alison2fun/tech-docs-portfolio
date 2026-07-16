@@ -5,6 +5,9 @@
   --kami-ink: #181817;
   --kami-blue: #1b365d;
   --kami-blue-soft: #e8eef6;
+  --kami-sand: #e8e6dc;
+  --kami-olive: #504e49;
+  --kami-stone: #6b6a64;
   --kami-muted: #6f6b63;
   --kami-border: #ddd7c9;
   --kami-border-strong: #c8bfad;
@@ -47,6 +50,9 @@ body[data-md-color-scheme="slate"] {
   --kami-ink: #eef3f8;
   --kami-blue: #9fbeef;
   --kami-blue-soft: #203047;
+  --kami-sand: #2c2b28;
+  --kami-olive: #d2cec2;
+  --kami-stone: #aaa69d;
   --kami-muted: #b5bfca;
   --kami-border: #334153;
   --kami-border-strong: #52677f;
@@ -771,9 +777,107 @@ body[data-md-color-scheme="slate"] .md-typeset table:not([class]) td {
 
 .taste-portal,
 .warm-portal {
-  max-width: 1100px;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: none;
   margin: clamp(0.4rem, 2.4vw, 2rem) auto;
   color: var(--kami-ink);
+}
+
+.md-typeset .grid.cards.evidence-map {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.work-index {
+  display: grid;
+  box-sizing: border-box;
+  width: 100%;
+  gap: 1.35rem;
+  margin: 1.2rem 0 2rem;
+}
+
+.work-index + .warm-portal {
+  margin-top: 0.75rem;
+}
+
+.warm-portal + .bottom-pager {
+  margin-top: 0.75rem;
+}
+
+.work-index-group {
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--kami-border-strong);
+}
+
+.work-index-heading {
+  display: flex;
+  gap: 0.75rem;
+  align-items: baseline;
+  margin-bottom: 0.25rem;
+}
+
+.work-index-heading > span {
+  color: var(--kami-olive);
+  font-family: var(--kami-serif);
+  font-size: 1.1rem;
+  font-style: italic;
+}
+
+.md-typeset .work-index-heading h3 {
+  margin: 0;
+  padding: 0;
+  color: var(--kami-ink);
+  border: 0;
+  font-family: var(--kami-serif);
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.md-typeset .work-index-group > p {
+  margin: 0 0 0.75rem;
+  color: var(--kami-muted);
+  font-size: 0.76rem;
+}
+
+.work-index-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid var(--kami-border);
+  border-left: 1px solid var(--kami-border);
+}
+
+.md-typeset a.work-index-item,
+.md-typeset a.work-index-item:visited {
+  display: grid;
+  gap: 0.18rem;
+  min-width: 0;
+  padding: 0.68rem 0.78rem;
+  color: var(--kami-ink);
+  text-decoration: none;
+  background: var(--kami-paper-soft);
+  border-right: 1px solid var(--kami-border);
+  border-bottom: 1px solid var(--kami-border);
+}
+
+.md-typeset a.work-index-item:hover,
+.md-typeset a.work-index-item:focus {
+  color: var(--kami-ink) !important;
+  background: var(--kami-sand);
+}
+
+.work-index-item span {
+  color: var(--kami-stone);
+  font-size: 0.63rem;
+  letter-spacing: 0.04em;
+  line-height: 1.35;
+}
+
+.work-index-item strong {
+  overflow-wrap: anywhere;
+  color: inherit;
+  font-size: 0.78rem;
+  font-weight: 500;
+  line-height: 1.48;
 }
 
 .home-portal {
@@ -1209,10 +1313,10 @@ body[data-md-color-scheme="slate"] .md-typeset table:not([class]) td {
   align-items: center;
   min-height: 2rem;
   padding: 0.2rem 0.72rem;
-  color: var(--kami-blue);
+  color: var(--kami-olive);
   text-decoration: none !important;
-  background: var(--kami-blue-soft);
-  border: 1px solid rgba(27, 54, 93, 0.12);
+  background: var(--kami-sand);
+  border: 1px solid var(--kami-border);
   border-radius: 999px;
   font-size: 0.72rem;
   font-weight: 500;
@@ -1231,6 +1335,16 @@ body[data-md-color-scheme="slate"] .md-typeset table:not([class]) td {
   color: var(--kami-paper);
   background: var(--kami-blue);
   border-color: var(--kami-blue);
+}
+
+.md-typeset a.action-link,
+.md-typeset a.action-link:visited {
+  color: var(--kami-olive);
+}
+
+.md-typeset a.action-link.action-link-primary,
+.md-typeset a.action-link.action-link-primary:visited {
+  color: var(--kami-paper);
 }
 
 .action-link.action-link-primary:hover {
@@ -1368,13 +1482,23 @@ body[data-md-color-scheme="slate"] .md-typeset table:not([class]) td {
 .md-typeset img.portfolio-thumb {
   display: block;
   width: 100%;
-  max-width: none;
-  height: clamp(9.5rem, 22vw, 14rem);
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 7;
   margin: 0 auto 0.15rem;
-  object-fit: contain;
+  object-fit: cover;
   background: var(--kami-ivory);
   border: 1px solid var(--md-typeset-table-color, var(--kami-border));
   border-radius: 4px;
+}
+
+.card-wide .portfolio-thumb,
+.md-typeset .card-wide img.portfolio-thumb {
+  aspect-ratio: 16 / 5;
+}
+
+.portfolio-thumb[src$="thumb-mini-programs.png"] {
+  object-position: center 42%;
 }
 
 .portfolio-context {
@@ -1392,7 +1516,7 @@ body[data-md-color-scheme="slate"] .md-typeset table:not([class]) td {
 }
 
 .portfolio-context strong {
-  color: var(--kami-blue);
+  color: var(--kami-olive);
 }
 
 .bottom-pager {
@@ -1401,6 +1525,9 @@ body[data-md-color-scheme="slate"] .md-typeset table:not([class]) td {
   gap: 0.68rem;
   align-items: center;
   justify-content: space-between;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: none;
   margin-top: 2rem;
   padding: 1rem;
   background: rgba(255, 253, 247, 0.74);
@@ -1410,7 +1537,11 @@ body[data-md-color-scheme="slate"] .md-typeset table:not([class]) td {
 
 .pager-link {
   display: inline-flex;
+  flex: 0 0 auto;
+  align-self: center;
+  box-sizing: border-box;
   min-height: 2rem;
+  margin: 0 !important;
   align-items: center;
   justify-content: center;
   padding: 0.22rem 0.72rem;
@@ -1422,6 +1553,7 @@ body[data-md-color-scheme="slate"] .md-typeset table:not([class]) td {
   font-size: 0.72rem;
   font-weight: 500;
   line-height: 1.4;
+  white-space: nowrap;
 }
 
 .pager-link:hover,
@@ -1541,7 +1673,7 @@ body[data-md-color-scheme="slate"] .md-typeset table:not([class]) td {
 }
 
 .listing-card-featured {
-  background: rgba(232, 238, 246, 0.38);
+  background: var(--kami-paper-soft);
   border-color: var(--kami-border-strong);
 }
 
@@ -1554,7 +1686,7 @@ body[data-md-color-scheme="slate"] .md-typeset table:not([class]) td {
 
 .listing-card .listing-kicker {
   margin-bottom: 0.5rem;
-  color: var(--kami-blue);
+  color: var(--kami-olive);
   font-size: 0.68rem;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -1570,6 +1702,20 @@ body[data-md-color-scheme="slate"] .md-typeset table:not([class]) td {
   font-size: clamp(1.12rem, 1rem + 0.8vw, 1.62rem);
   font-weight: 700;
   line-height: 1.35;
+}
+
+.md-typeset .listing-card h2 a,
+.md-typeset .listing-card h2 a:visited {
+  color: inherit;
+  text-decoration: none;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.16em;
+}
+
+.md-typeset .listing-card h2 a:hover,
+.md-typeset .listing-card h2 a:focus-visible {
+  color: var(--kami-blue);
+  text-decoration: underline;
 }
 
 .md-typeset .listing-card h2::before {
@@ -1596,9 +1742,9 @@ body[data-md-color-scheme="slate"] .md-typeset table:not([class]) td {
   align-items: center;
   min-height: 1.65rem;
   padding: 0.16rem 0.58rem;
-  color: var(--kami-blue);
-  background: rgba(232, 238, 246, 0.68);
-  border: 1px solid rgba(27, 54, 93, 0.1);
+  color: var(--kami-olive);
+  background: var(--kami-sand);
+  border: 1px solid var(--kami-border);
   border-radius: 999px;
   font-size: 0.66rem;
   font-weight: 500;
@@ -1606,14 +1752,14 @@ body[data-md-color-scheme="slate"] .md-typeset table:not([class]) td {
 
 body[data-md-color-scheme="slate"] .post-meta,
 body[data-md-color-scheme="slate"] .listing-card .listing-kicker {
-  color: #bcd3f1;
+  color: var(--kami-olive);
 }
 
 body[data-md-color-scheme="slate"] .listing-tags span {
-  color: #f6fbff;
-  background: rgba(73, 103, 143, 0.7);
-  border-color: rgba(159, 190, 239, 0.7);
-  font-weight: 700;
+  color: var(--kami-olive);
+  background: var(--kami-sand);
+  border-color: var(--kami-border-strong);
+  font-weight: 500;
 }
 
 @media screen and (max-width: 76.234375em) {
@@ -1702,7 +1848,13 @@ body[data-md-color-scheme="slate"] .listing-tags span {
   .portfolio-thumb {
     width: 100%;
     max-width: 100%;
-    height: clamp(9rem, 48vw, 12rem);
+    height: auto;
+    aspect-ratio: 16 / 7;
+  }
+
+  .card-wide .portfolio-thumb,
+  .md-typeset .card-wide img.portfolio-thumb {
+    aspect-ratio: 16 / 5;
   }
 
   .card-wide {
@@ -1721,6 +1873,14 @@ body[data-md-color-scheme="slate"] .listing-tags span {
 }
 
 @media screen and (max-width: 44.984375em) {
+  .md-typeset .grid.cards.evidence-map {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .work-index-list {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
   html,
   body {
     max-width: 100%;

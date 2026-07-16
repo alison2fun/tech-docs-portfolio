@@ -1,97 +1,73 @@
+---
+hide:
+  - navigation
+---
+
 # 写作样稿
 
-## 页面目标
+我一开始把所有样稿放进一张长表格，信息很全，找起来却不轻松。一个只想看 Quick Start 的人，需要先扫过 PRD、版本日志和产品总览，才能确认自己该点哪里。
 
-这个页面用来整理我的技术写作样稿。
+所以这页现在只做一件事：按读者要完成的任务，把已经写完的文档放到对应入口里。模拟项目和个人原型会继续标出来。
 
-我现在不会把所有写过的内容都塞进来。这样看起来很多，但对面试帮助不一定大。
-这一页会优先放和技术文档工程师、资料开发工程师、技术内容 / 海外技术内容岗位相关的样稿。
+## 按读者任务查看
 
-我的目标是让面试官可以快速判断：
+<div class="work-index">
+    <section class="work-index-group">
+        <div class="work-index-heading"><span>01</span><h3>先让读者做成一次</h3></div>
+        <p>前置条件、最短路径、验证结果和失败后的恢复，都要在第一次操作里接得上。</p>
+        <div class="work-index-list">
+            <a href="../install/" class="work-index-item"><span>Quick Start</span><strong>搭建本地文档质量检查环境</strong></a>
+            <a href="../troubleshooting/" class="work-index-item"><span>Troubleshooting</span><strong>文档质量流水线故障排查</strong></a>
+            <a href="../04-openclaw-quickstart/" class="work-index-item"><span>Developer Quick Start · 模拟</span><strong>OpenClaw 开发者快速入门</strong></a>
+        </div>
+    </section>
 
-* 我能不能把技术流程写清楚；
-* 我能不能写任务型文档；
-* 我能不能解释产品和技术概念；
-* 我有没有英文技术内容表达能力；
-* 我是否理解不同文档类型的写法差异。
+    <section class="work-index-group">
+        <div class="work-index-heading"><span>02</span><h3>让文档可以长期维护</h3></div>
+        <p>写作规则、自动检查、发布流程和更新记录需要留在同一套工作流里。</p>
+        <div class="work-index-list">
+            <a href="../01-automation/" class="work-index-item"><span>Project Overview</span><strong>文档质量自动化流水线</strong></a>
+            <a href="../style-guide/" class="work-index-item"><span>Style Guide</span><strong>技术文档写作风格指南</strong></a>
+            <a href="../github-actions-workflow/" class="work-index-item"><span>Workflow</span><strong>GitHub Actions 文档检查流程</strong></a>
+            <a href="../changelog/" class="work-index-item"><span>Changelog</span><strong>文档项目更新记录</strong></a>
+        </div>
+    </section>
 
-## 样稿规划
+    <section class="work-index-group">
+        <div class="work-index-heading"><span>03</span><h3>让开发者能够查找和调用</h3></div>
+        <p>接口、时序和寄存器信息最终都要回到一次可以执行、可以验证的技术任务。</p>
+        <div class="work-index-list">
+            <a href="../03-api/" class="work-index-item"><span>API Guide · 模拟</span><strong>IoT 接口集成指南</strong></a>
+            <a href="../02-hardware/" class="work-index-item"><span>Hardware Reference · 模拟</span><strong>XYZ-2024 数据手册重构</strong></a>
+            <a href="../05-miniprogram-task-decomposer/api-reference/" class="work-index-item"><span>API Reference · 原型</span><strong>微步 ACTION API 参考</strong></a>
+        </div>
+    </section>
 
-我会先按 5 类整理写作样稿。
+    <section class="work-index-group">
+        <div class="work-index-heading"><span>04</span><h3>把产品流程交给用户和协作者</h3></div>
+        <p>同一个产品需要面向不同读者解释范围、操作、接口、变化和已知限制。</p>
+        <div class="work-index-list">
+            <a href="../mini-programs/" class="work-index-item"><span>Product Overview</span><strong>三个小程序产品总览</strong></a>
+            <a href="../05-miniprogram-task-decomposer/" class="work-index-item"><span>User Guide</span><strong>微步 ACTION 用户文档</strong></a>
+            <a href="../05-miniprogram-task-decomposer/prd/" class="work-index-item"><span>PRD · 原型</span><strong>微步 ACTION 产品需求文档</strong></a>
+            <a href="../05-miniprogram-task-decomposer/release-notes/" class="work-index-item"><span>Release Notes · 原型</span><strong>微步 ACTION 版本日志</strong></a>
+            <a href="../dot-collage/" class="work-index-item"><span>Screenshot Guide</span><strong>PopDots 波点拼贴帮助</strong></a>
+            <a href="../photo-background/" class="work-index-item"><span>Screenshot Guide</span><strong>照片换底色小程序帮助</strong></a>
+        </div>
+    </section>
+</div>
 
-| 类型                        | 说明              | 证明能力           |
-| ------------------------- | --------------- | -------------- |
-| Quick Start               | 帮助读者快速完成第一次成功体验 | 任务型技术文档写作      |
-| How-to Guide              | 引导读者完成一个具体任务    | 步骤拆解、操作说明、验证结果 |
-| API Reference             | 说明接口、参数、返回值和示例  | 结构化表达、开发者文档能力  |
-| Product Explanation       | 解释产品功能、应用场景和价值  | 技术理解、产品表达      |
-| English Technical Writing | 用英文解释技术流程或项目背景  | 海外技术内容表达能力     |
+## 如果你只看两篇
 
-## 当前可查看样稿
+想看任务型文档，可以先打开[搭建本地文档质量检查环境](../install.md)。它从安装条件开始，一直写到第一次检查成功和常见报错。
 
-目前可以先查看以下页面：
+想看开发者文档，可以继续看[IoT 接口集成指南](../03-api.md)。这是一份明确标注为模拟场景的样稿，重点放在认证、请求、响应、错误处理和调试路径怎样连成一次完整调用。
 
-* [快速开始：搭建本地文档质量检查环境](../install.md)
-* [写作风格指南](../style-guide.md)
-* [GitHub Actions 工作流](../github-actions-workflow.md)
-* [故障排查：文档质量自动化流水线](../troubleshooting.md)
-* [任务拆解小程序用户手册](../05-miniprogram-task-decomposer/index.md)
-* [任务拆解小程序 API 参考文档](../05-miniprogram-task-decomposer/api-reference.md)
+## 关于英文样稿
 
-这些页面目前分散在不同项目下。后续我会继续挑选和打磨，把它们整理成更清楚的写作样稿集合。
+英文 Quick Start 和英文项目概览仍在计划中。完成之前，我不会在这里放一个点进去没有内容的入口。现有英文资料阅读经历可以在[关于我](../about.md)和[简历](../简历.md)中查看。
 
-## 我会如何打磨样稿
-
-我不会只追求页面数量。
-
-每一类样稿都会重点检查几个问题：
-
-### 1. 读者是谁
-
-不同文档面对的读者不一样。
-Quick Start 面向第一次上手的人，API Reference 面向开发者，Product Explanation 面向想快速理解产品价值的人。
-
-读者不同，写法就应该不同。
-
-### 2. 读者要完成什么任务
-
-好的技术文档应该让读者完成一件具体的事。
-比如安装工具、配置环境、理解一个接口、排查一个错误。
-
-所以我会尽量把样稿写成任务导向，而不是单纯介绍概念。
-
-### 3. 有没有预期结果
-
-很多操作文档的问题在这里。
-
-它告诉读者要做什么，却没有告诉读者做完以后应该看到什么。
-我现在会有意识地补充“预期结果”和“验证方式”，让读者知道自己有没有做对。
-
-### 4. 有没有继续阅读路径
-
-单篇文档写完不代表结束。
-
-如果读者看完 Quick Start，下一步应该知道去看 Guide、Reference 还是 Troubleshooting。
-所以我会在核心页面底部补充可点击的下一步链接。
-
-## 后续计划
-
-接下来我会优先补 3 类样稿：
-
-1. **英文 Quick Start**
-   用英文写一篇任务型技术文档，展示英文技术写作能力。
-
-2. **产品说明样稿**
-   选一个具体产品或功能，用面向用户的方式解释它解决什么问题。
-
-3. **API Reference 样稿**
-   把已有接口说明继续整理成更像开发者文档的格式。
-
-## 推荐阅读
-
-如果你想先了解我目前已经完成的技术文档样稿，可以从这里开始：
-
-1. [快速开始](../install.md)：查看任务型文档写法；
-2. [写作风格指南](../style-guide.md)：查看写作规则和术语管理；
-3. [GitHub Actions 工作流](../github-actions-workflow.md)：查看自动化流程说明；
-4. [任务拆解小程序 API 参考文档](../05-miniprogram-task-decomposer/api-reference.md)：查看结构化接口说明。
+<div class="bottom-pager">
+    <a href="../portfolio/" class="pager-link">返回作品总览</a>
+    <a href="../posts/" class="pager-link pager-link-primary">下一篇：思考与经验</a>
+</div>

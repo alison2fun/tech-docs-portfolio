@@ -6,7 +6,7 @@
 
 它模拟了一个轻量级 Docs-as-Code 工作流：作者在本地编写 Markdown 文档，通过 Vale 检查写作风格、术语和格式问题；提交代码后，再由 GitHub Actions 自动运行检查流程，降低人工检查成本，并提升文档的一致性和可维护性。
 
-这个项目的目标不是单纯搭建一个网站，而是展示技术文档如何被编写、检查、维护和交付。
+这个项目从搭建网站开始，继续把写作规则、自动检查、发布和维护接进同一条工作流。
 
 ## 背景与问题
 
@@ -67,15 +67,11 @@ flowchart LR
     E --> F[GitHub Actions 自动检查]
     F --> G[发布文档站点]
 ```
-## 这个项目证明什么能力
+## 我为什么这样组织这个项目
 
-通过这个项目，我希望展示以下能力：
+这个项目把同一套内容拆成 Quick Start、Style Guide、Workflow、Troubleshooting 和 Changelog。每个页面负责一类读者任务，事实和规则尽量只维护一份。
 
-- 能够编写结构化、任务导向的技术文档；
-- 理解 Docs-as-Code 文档工作流；
-- 能够使用 Vale 和 GitHub Actions 提升文档质量；
-- 能够把文档拆分为 Quick Start、Guide、Reference、Troubleshooting 和 Changelog；
-- 能够从长期维护角度思考文档结构、术语一致性和自动化检查。
+Vale 处理可以重复检查的术语与格式，GitHub Actions 把检查接入提交过程，MkDocs 负责导航、搜索和发布。这样安排以后，文档从写完一页继续走到检查、反馈、修复和更新。
 
 
 ## 推荐阅读路径

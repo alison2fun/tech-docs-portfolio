@@ -1,28 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="200" height="150" viewBox="0 0 200 150" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="100" viewBox="0 0 320 100" role="img" aria-labelledby="title desc">
   <title id="title">Docs-as-Code workflow thumbnail</title>
-  <desc id="desc">A compact flow diagram for Markdown, Vale, GitHub Actions, and MkDocs.</desc>
-  <rect width="200" height="150" fill="#fffdf7"/>
-  <rect x="12" y="12" width="176" height="126" rx="8" fill="#f5f4ed" stroke="#c8bfad"/>
-  <g fill="#1b365d" font-family="Georgia, serif" font-size="12" font-weight="600">
-    <text x="24" y="34">Docs-as-Code</text>
-  </g>
-  <g font-family="Consolas, monospace" font-size="9" fill="#1b365d">
-    <rect x="24" y="52" width="42" height="24" rx="4" fill="#e8eef6" stroke="#1b365d"/>
-    <text x="31" y="67">Markdown</text>
-    <rect x="82" y="52" width="36" height="24" rx="4" fill="#e8eef6" stroke="#1b365d"/>
-    <text x="91" y="67">Vale</text>
-    <rect x="134" y="52" width="42" height="24" rx="4" fill="#e8eef6" stroke="#1b365d"/>
-    <text x="140" y="67">Actions</text>
-    <rect x="52" y="100" width="42" height="24" rx="4" fill="#fffdf7" stroke="#b38a58"/>
-    <text x="62" y="115">MkDocs</text>
-    <rect x="110" y="100" width="42" height="24" rx="4" fill="#fffdf7" stroke="#b38a58"/>
-    <text x="119" y="115">Pages</text>
+  <desc id="desc">Markdown passes through Vale and GitHub Actions, then MkDocs publishes the site to Pages.</desc>
+  <rect width="320" height="100" rx="6" fill="#f5f4ed"/>
+  <text x="14" y="20" fill="#1b365d" font-family="Georgia, serif" font-size="11" font-weight="600">Docs-as-Code workflow</text>
+  <g font-family="Consolas, monospace" font-size="8" fill="#1b365d">
+    <rect x="14" y="36" width="54" height="28" rx="4" fill="#e8e6dc" stroke="#1b365d"/>
+    <text x="21" y="53">Markdown</text>
+    <rect x="84" y="36" width="42" height="28" rx="4" fill="#e8e6dc" stroke="#1b365d"/>
+    <text x="94" y="53">Vale</text>
+    <rect x="142" y="36" width="54" height="28" rx="4" fill="#e8e6dc" stroke="#1b365d"/>
+    <text x="150" y="53">Actions</text>
+    <rect x="210" y="68" width="48" height="24" rx="4" fill="#fffdf7" stroke="#b38a58"/>
+    <text x="218" y="83">MkDocs</text>
+    <rect x="274" y="44" width="36" height="28" rx="4" fill="#fffdf7" stroke="#b38a58"/>
+    <text x="280" y="61">Pages</text>
   </g>
   <g stroke="#1b365d" stroke-width="1.5" fill="none" marker-end="url(#arrow)">
-    <path d="M66 64 H82"/>
-    <path d="M118 64 H134"/>
-    <path d="M155 76 C150 92 142 100 131 100"/>
-    <path d="M94 112 H110"/>
+    <path d="M68 50 H84"/>
+    <path d="M126 50 H142"/>
+    <path d="M196 50 C226 50 246 54 274 58"/>
+    <path d="M258 80 C267 80 269 70 278 68"/>
   </g>
   <defs>
     <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
