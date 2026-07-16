@@ -80,7 +80,7 @@ nav:
           - 更新记录: changelog.md
       - 硬件数据手册重构: 02-hardware.md
       - IoT 接口文档: 03-api.md
-      - OpenClaw 快速入门: 04-openclaw-quickstart.md
+      - OpenClaw CLI 快速入门: 04-openclaw-quickstart.md
       - 小程序产品文档集:
         - 总览: mini-programs.md
         - 微步 ACTION：AI 任务拆解:

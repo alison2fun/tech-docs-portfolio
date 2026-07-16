@@ -1,293 +1,192 @@
-# OpenClaw 开发者快速入门：构建第一个 Agent
+# OpenClaw CLI 快速入门：完成首次本地对话
 
-## 页面目标
+## 你将完成什么
 
-这篇文档模拟一个开源 AI Agent 编排框架的 Quick Start。
+这份 Quick Start 带你走完一条最短的可验证路径：安装 OpenClaw、完成引导配置、确认 Gateway 正常运行，并在浏览器中收到第一条回复。
 
-我写这页时，主要想练习一件事：怎么让开发者在最短路径里跑通第一个可用示例。
+本页只使用 OpenClaw 官方文档中可以核对的 CLI 命令，不提供未经验证的 Python SDK 示例。
 
-很多框架文档一上来会讲很多概念，Engine、Router、Planner、Memory、Executor 全部铺开。概念当然重要，但第一次接触框架的开发者，最想知道的往往是：
+## 文档核验状态
 
-* 我需要准备什么环境；
-* 怎么安装；
-* 怎么写第一个 Agent；
-* 跑完后应该看到什么；
-* 如果报错，先查哪里。
+| 项目 | 状态 |
+| --- | --- |
+| 资料来源 | OpenClaw 官方文档 |
+| 最后核验日期 | 2026-07-16 |
+| 命令核验 | 已逐项对照官方安装、入门和故障排查页面 |
+| 本机执行 | 未执行完整引导；该过程需要模型服务商凭据，并会安装后台服务 |
 
-所以这篇文档会先带你完成一个最小示例，再解释 OpenClaw 的核心工作流。
+这一区分很重要：下面的命令是经过资料核验的操作路径，但不是我已经完成端到端运行的证明。文末列出了补齐运行证据时应记录的内容。
 
 ## 适用读者
 
-本文适合以下读者：
+本文适合已经能够使用终端，并希望在 Windows 上快速体验 OpenClaw 的读者。
 
-* 第一次接触 OpenClaw 的开发者；
-* 想快速了解 Agent 编排框架基本用法的人；
-* 希望用 LLM 连接外部工具、API 或知识库的开发者。
+本文采用以下范围：
 
-读者需要具备基础 Python 使用经验，并能在本地终端运行命令。
+* 使用 PowerShell；
+* 已自行管理 Node.js；
+* 使用 npm 安装 OpenClaw；
+* 通过本地 Control UI 完成首次对话。
 
-## 完成后你将能够
-
-完成本文后，你将能够：
-
-* 安装 OpenClaw；
-* 配置 LLM API Key；
-* 创建一个简单的天气助手 Agent；
-* 注册外部工具；
-* 运行脚本并查看 Agent 输出；
-* 理解一次 Agent 调用的大致流程。
+如果你没有安装 Node.js，也可以改用官方 PowerShell 安装脚本。官方安装器会检测环境，并在需要时处理 Node.js 安装。
 
 ## 前置条件
 
-开始前，请确认你已经准备好以下环境：
+开始前，请准备：
 
-| 条件      | 说明                                  |
-| ------- | ----------------------------------- |
-| Python  | 3.10 或更高版本                          |
-| 终端      | 可以使用 PowerShell、Terminal 或其他命令行工具   |
-| API Key | 已获取 OpenAI API Key 或其他兼容模型的 API Key |
-| 基础知识    | 了解 Python 文件、环境变量和命令行运行方式           |
+* Node.js 22.22.3+、24.15+ 或 25.9+；官方推荐 Node.js 24；
+* 一个受支持模型服务商的 API Key；
+* 可以运行 PowerShell 命令的 Windows 环境。
+
+Node.js 23 不受支持。先检查当前版本：
+
+```powershell
+node --version
+```
+
+如果输出不在受支持的版本范围内，请先更新 Node.js，再继续安装。
 
 ## 步骤 1：安装 OpenClaw
 
-### 目标
-
-安装 OpenClaw 的核心依赖，让本地环境具备创建 Agent 的基础能力。
-
-### 操作
-
-推荐先创建虚拟环境，避免和全局 Python 依赖冲突。
-
-```bash
-python -m venv .venv
-```
-
-激活虚拟环境。
-
-Windows：
+如果你已经自行管理 Node.js，请使用 npm 全局安装：
 
 ```powershell
-.venv\Scripts\activate
+npm install -g openclaw@latest
 ```
 
-macOS / Linux：
-
-```bash
-source .venv/bin/activate
-```
-
-安装 OpenClaw：
-
-```bash
-pip install openclaw
-```
-
-如果你需要使用本地文档检索或向量数据库能力，可以安装完整版：
-
-```bash
-pip install "openclaw[vector]"
-```
-
-### 预期结果
-
-安装完成后，终端不应出现依赖安装失败信息。
-
-如果安装过程中出现权限问题或依赖冲突，建议先确认当前是否已经激活虚拟环境。
-
-## 步骤 2：配置 API Key
-
-### 目标
-
-让 OpenClaw 能够调用 LLM 接口。
-
-### 操作
-
-在终端中设置环境变量。
-
-Windows PowerShell：
+安装结束后，确认终端能够找到 CLI：
 
 ```powershell
-$env:OPENAI_API_KEY="your-api-key-here"
-```
-
-macOS / Linux：
-
-```bash
-export OPENAI_API_KEY="your-api-key-here"
-```
-
-请将 `your-api-key-here` 替换为你自己的 API Key。
-
-### 预期结果
-
-环境变量设置完成后，后续 Python 脚本可以读取该 Key，并调用对应模型。
-
-如果你使用其他兼容 OpenAI API 的模型服务，需要根据服务商要求配置对应的 Base URL 或模型名称。
-
-## 步骤 3：创建第一个 Agent
-
-### 目标
-
-创建一个最小可运行的天气助手 Agent，并让它调用外部工具获取信息。
-
-### 操作
-
-新建文件：
-
-```text
-hello_agent.py
-```
-
-写入以下代码：
-
-```python
-import os
-from openclaw import Agent, LLMProvider
-from openclaw.tools import WeatherTool
-
-# 1. 配置大模型驱动
-llm = LLMProvider(model="gpt-4-turbo")
-
-# 2. 注册外部工具
-# WeatherTool 是一个示例工具，用于查询外部天气 API。
-tools = [WeatherTool()]
-
-# 3. 创建 Agent
-agent = Agent(
-    name="WeatherBot",
-    llm=llm,
-    tools=tools,
-    system_prompt="你是一个天气助手。请调用工具获取准确信息，并用简短、友好的语言回复。"
-)
-
-# 4. 执行任务测试
-user_input = "请问今天新加坡的天气怎么样？适合去户外跑步吗？"
-response = agent.run(user_input)
-
-print(response)
-```
-
-### 代码说明
-
-| 代码片段            | 作用                |
-| --------------- | ----------------- |
-| `LLMProvider`   | 配置 Agent 使用的大模型   |
-| `WeatherTool`   | 注册可调用的外部工具        |
-| `Agent`         | 创建智能体实例           |
-| `system_prompt` | 定义 Agent 的角色和回复边界 |
-| `agent.run()`   | 传入用户问题并执行任务       |
-
-## 步骤 4：运行脚本
-
-### 目标
-
-验证 Agent 是否能够正常接收输入、调用工具并返回结果。
-
-### 操作
-
-在终端运行：
-
-```bash
-python hello_agent.py
+openclaw --version
 ```
 
 ### 预期结果
 
-终端应输出类似下面的内容：
+终端返回 OpenClaw 版本号，且没有出现“无法识别命令”或 `command not found`。
 
-```text
-今天新加坡的天气是多云转晴，气温在 28°C 左右，微风。比较适合户外跑步，但建议注意防晒和补水。
+## 步骤 2：完成引导配置
+
+运行引导程序，并安装用于托管 Gateway 的后台服务：
+
+```powershell
+openclaw onboard --install-daemon
 ```
 
-实际输出会根据模型、工具和天气 API 返回结果有所不同。
+引导程序会让你选择模型服务商、填写凭据并配置 Gateway。具体选项可能随版本和服务商变化，请以终端中的提示为准。
 
-## OpenClaw 的工作流
+### 预期结果
 
-跑通第一个示例之后，再来看 OpenClaw 的基本工作流会更容易理解。
+引导程序完成配置，并安装可管理的后台服务。不要把 API Key 粘贴到文档、提交到 Git，或保留在公开截图中。
 
-一次典型 Agent 调用可以拆成几个阶段：
+## 步骤 3：检查 Gateway
 
-1. 用户输入任务；
-2. Agent 引擎接收请求；
-3. Router 判断任务意图；
-4. Planner 拆解任务步骤；
-5. Executor 调用外部工具或模型；
-6. Agent 汇总结果并返回输出。
+先运行诊断：
+
+```powershell
+openclaw doctor
+```
+
+再检查 Gateway 状态：
+
+```powershell
+openclaw gateway status
+```
+
+### 预期结果
+
+状态信息显示 Gateway 正在运行，并监听默认端口 `18789`。该端口可以修改；输出格式也可能随 OpenClaw 版本变化，因此应核对实际状态和端口，不要逐字比对示例文本。
+
+## 步骤 4：发送第一条消息
+
+打开本地控制面板：
+
+```powershell
+openclaw dashboard
+```
+
+浏览器打开 Control UI 后，在聊天框中输入一条简单消息，例如：
+
+```text
+请用一句话说明你现在可以帮助我做什么。
+```
+
+### 预期结果
+
+Control UI 正常加载，消息发送后能够收到回复。到这里，安装、凭据配置、Gateway 和模型调用这条最小链路已经连通。
+
+## 这条路径如何工作
 
 ```mermaid
 flowchart LR
-    User([用户输入]) --> Engine
-
-    subgraph OpenClaw 核心流程
-        direction TB
-        Engine[Agent 引擎] --> Router{意图路由}
-        Router --> Planner[规划器]
-        Planner <--> Memory[(记忆模块)]
-        Planner --> Executor[工具执行器]
-    end
-
-    subgraph 外部能力
-        Executor -.-> API[外部 API / 知识库]
-        Executor -.-> LLM[LLM 接口]
-    end
-
-    Executor --> Output([最终输出])
+    A["OpenClaw CLI"] --> B["引导配置"]
+    B --> C["模型服务商与凭据"]
+    B --> D["本地配置与工作区"]
+    C --> E["Gateway：默认端口 18789"]
+    D --> E
+    E --> F["Control UI"]
+    F --> G["首次回复"]
 ```
 
-## 核心组件说明
-
-| 组件       | 作用                    |
-| -------- | --------------------- |
-| Agent 引擎 | 接收输入，并协调路由、规划、工具执行和输出 |
-| 意图路由     | 判断用户任务类型，决定后续处理路径     |
-| 规划器      | 将复杂目标拆解为可执行步骤         |
-| 记忆模块     | 保存短期上下文或长期知识          |
-| 工具执行器    | 调用外部 API、知识库、数据库或其他工具 |
-| LLM 接口   | 提供自然语言理解、推理和生成能力      |
-
-这个结构里，最值得关注的是工具执行器。
-它让 Agent 不只依赖模型本身的回答，还能调用外部能力完成实际任务。
+这张图没有展开所有内部组件，只保留首次运行必须跨过的边界。对 Quick Start 来说，先让读者知道每一步是否成功，比一次性解释完整架构更重要。
 
 ## 常见问题
 
-### 运行脚本时提示 API Key 不存在怎么办？
+### 终端找不到 `openclaw`
 
-请确认你已经设置环境变量：
+先查找 npm 的全局安装目录：
 
-```bash
-OPENAI_API_KEY
+```powershell
+npm prefix -g
 ```
 
-如果你在设置环境变量后仍然报错，可以关闭终端后重新打开，再次运行脚本。
+在 Windows 中，应将命令输出的目录加入系统 `PATH`，然后重新打开终端，再运行：
 
-### 安装 `openclaw[vector]` 失败怎么办？
-
-完整版安装可能包含向量数据库或本地检索相关依赖。
-如果你只是想完成第一个 Agent 示例，可以先安装基础版本：
-
-```bash
-pip install openclaw
+```powershell
+openclaw --version
 ```
 
-等基础示例跑通后，再处理向量检索能力。
+### Dashboard 无法打开，或消息没有回复
 
-### 为什么 Agent 输出和示例不一样？
+按以下顺序收集信息：
 
-Agent 输出会受到模型版本、工具返回结果、系统提示词和实时数据影响。
+```powershell
+openclaw gateway status
+openclaw status
+openclaw logs --follow
+openclaw doctor
+```
 
-只要脚本能够正常运行，并返回与天气相关的回答，就说明最小流程已经跑通。
+`openclaw logs --follow` 会持续输出日志，收集到所需信息后按 `Ctrl+C` 退出。先记录第一条明确错误，再根据错误处理。本文不建议直接执行自动修复，因为修复操作可能修改本地配置。
 
-## 这份 Quick Start 的写作取舍
+### Gateway 没有监听 `18789`
 
-这条路径从环境准备、安装和 API Key 配置开始，先让读者跑通最小示例，再补充工作流和组件说明。每个关键步骤后都保留预期结果，读者可以当场判断自己是否走通。
+先运行 `openclaw gateway status`，确认服务是否已经启动；再用 `openclaw logs --follow` 查看启动日志。不要为了临时访问而直接把该端口暴露到公网。
 
-概念解释只服务当前任务。更多背景放在最小示例之后，常见失败则留在同一页末尾，尽量减少第一次操作时来回跳转。
+## 安全边界
 
-## 下一步阅读
+* 模型服务商凭据属于敏感信息，不应进入仓库、截图或聊天记录；
+* `--install-daemon` 会安装后台服务，执行前应确认这是你希望的运行方式；
+* 保持 Gateway 在本机 loopback 地址上使用；没有配置认证时，不要把端口暴露到局域网或公网；
+* 故障排查时先收集状态和日志，再决定是否修改配置。
 
-如果你想继续查看其他文档作品，可以阅读：
+## 如何补齐端到端证据
 
-1. [IoT 接口集成指南](03-api.md)：查看 API 集成文档写法；
-2. [硬件数据手册重构](02-hardware.md)：查看复杂资料重构案例；
-3. [文档质量自动化流水线](01-automation.md)：查看文档工程化案例；
-4. [写作样稿](writing-samples/index.md)：查看更多技术写作样稿规划。
+如果要把这页升级为完整的实测案例，应在脱敏后补充：
+
+1. `openclaw --version` 的实际输出；
+2. `openclaw gateway status` 中状态与端口的截图；
+3. Control UI 首次对话的截图；
+4. 测试环境、日期和异常处理记录。
+
+这些证据能把“根据资料写出的可执行步骤”和“在指定环境中已经跑通”清楚地区分开。
+
+## 参考资料
+
+* [Getting started](https://docs.openclaw.ai/start/getting-started)
+* [Install](https://docs.openclaw.ai/install)
+* [Node.js requirements](https://docs.openclaw.ai/install/node)
+* [Windows](https://docs.openclaw.ai/platforms/windows)
+* [Gateway CLI](https://docs.openclaw.ai/cli/gateway)
+* [Gateway troubleshooting](https://docs.openclaw.ai/gateway/troubleshooting)
+* [Gateway security](https://docs.openclaw.ai/gateway/security)
+

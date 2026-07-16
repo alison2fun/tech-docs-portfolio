@@ -116,7 +116,7 @@ vale docs/
 
 ---
 
-## Vale Cannot Find Style Files
+## Vale 找不到样式文件
 
 ### 现象
 
