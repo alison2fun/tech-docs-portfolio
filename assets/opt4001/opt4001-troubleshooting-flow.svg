@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 1140" role="img" aria-labelledby="title desc">
+  <title id="title">OPT4001YMNEVM 故障排查路径</title>
+  <desc id="desc">从母板供电、Windows 端口、GUI 识别、coupon board 读取、数据更新到结果合理性的纵向判断流程。</desc>
+  <defs>
+    <marker id="arrow-blue" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 z" fill="#1e3d68"/>
+    </marker>
+    <marker id="arrow-rose" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 z" fill="#b75d69"/>
+    </marker>
+    <style>
+      text {
+        font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+      }
+      .decision-text { fill: #1e3d68; font-size: 18px; font-weight: 700; text-anchor: middle; }
+      .action-text { fill: #403c36; font-size: 17px; font-weight: 600; text-anchor: middle; }
+      .branch-yes { fill: #4f7a68; font-size: 15px; font-weight: 700; }
+      .branch-no { fill: #a34f5c; font-size: 15px; font-weight: 700; }
+    </style>
+  </defs>
+
+  <rect width="760" height="1140" rx="20" fill="#fbfaf6"/>
+
+  <!-- Main-path connectors -->
+  <g fill="none" stroke="#1e3d68" stroke-width="3" marker-end="url(#arrow-blue)">
+    <line x1="250" y1="125" x2="250" y2="221"/>
+    <line x1="250" y1="295" x2="250" y2="391"/>
+    <line x1="250" y1="465" x2="250" y2="561"/>
+    <line x1="250" y1="635" x2="250" y2="731"/>
+    <line x1="250" y1="805" x2="250" y2="901"/>
+    <line x1="250" y1="975" x2="250" y2="1040"/>
+  </g>
+
+  <!-- Exception branches -->
+  <g fill="none" stroke="#b75d69" stroke-width="3" marker-end="url(#arrow-rose)">
+    <line x1="390" y1="90" x2="465" y2="90"/>
+    <line x1="390" y1="260" x2="465" y2="260"/>
+    <line x1="390" y1="430" x2="465" y2="430"/>
+    <line x1="390" y1="600" x2="465" y2="600"/>
+    <line x1="390" y1="770" x2="465" y2="770"/>
+    <line x1="390" y1="940" x2="465" y2="940"/>
+  </g>
+
+  <!-- Branch labels -->
+  <g>
+    <text x="270" y="178" class="branch-yes">是</text>
+    <text x="270" y="348" class="branch-yes">是</text>
+    <text x="270" y="518" class="branch-yes">是</text>
+    <text x="270" y="688" class="branch-no">否</text>
+    <text x="270" y="858" class="branch-yes">是</text>
+    <text x="270" y="1017" class="branch-yes">是</text>
+
+    <text x="420" y="80" class="branch-no">否</text>
+    <text x="420" y="250" class="branch-no">否</text>
+    <text x="420" y="420" class="branch-no">否</text>
+    <text x="420" y="590" class="branch-yes">是</text>
+    <text x="420" y="760" class="branch-no">否</text>
+    <text x="420" y="930" class="branch-no">否</text>
+  </g>
+
+  <!-- Decision nodes -->
+  <g>
+    <polygon points="250,50 390,90 250,130 110,90" fill="#eef3f8" stroke="#1e3d68" stroke-width="2"/>
+    <text x="250" y="84" class="decision-text">
+      <tspan x="250">母板绿色 LED</tspan><tspan x="250" dy="22">是否亮起？</tspan>
+    </text>
+
+    <polygon points="250,220 390,260 250,300 110,260" fill="#eef3f8" stroke="#1e3d68" stroke-width="2"/>
+    <text x="250" y="254" class="decision-text">
+      <tspan x="250">Windows 是否出现</tspan><tspan x="250" dy="22">两个 COM 端口？</tspan>
+    </text>
+
+    <polygon points="250,390 390,430 250,470 110,430" fill="#eef3f8" stroke="#1e3d68" stroke-width="2"/>
+    <text x="250" y="424" class="decision-text">
+      <tspan x="250">GUI 是否识别</tspan><tspan x="250" dy="22">OPTMBEVM 母板？</tspan>
+    </text>
+
+    <polygon points="250,560 390,600 250,640 110,600" fill="#fff7ed" stroke="#b58a52" stroke-width="2"/>
+    <text x="250" y="594" class="decision-text">
+      <tspan x="250">是否出现</tspan><tspan x="250" dy="22">REGRx01 Failed？</tspan>
+    </text>
+
+    <polygon points="250,730 390,770 250,810 110,770" fill="#eef3f8" stroke="#1e3d68" stroke-width="2"/>
+    <text x="250" y="764" class="decision-text">
+      <tspan x="250">lux 数值和曲线</tspan><tspan x="250" dy="22">是否更新？</tspan>
+    </text>
+
+    <polygon points="250,900 390,940 250,980 110,940" fill="#eef3f8" stroke="#1e3d68" stroke-width="2"/>
+    <text x="250" y="946" class="decision-text">结果是否合理？</text>
+  </g>
+
+  <!-- Corrective action nodes -->
+  <g>
+    <rect x="470" y="56" width="255" height="68" rx="12" fill="#fff3f1" stroke="#b75d69" stroke-width="2"/>
+    <text x="597.5" y="96" class="action-text">检查 USB 和供电</text>
+
+    <rect x="470" y="226" width="255" height="68" rx="12" fill="#fff3f1" stroke="#b75d69" stroke-width="2"/>
+    <text x="597.5" y="254" class="action-text">
+      <tspan x="597.5">检查设备枚举</tspan><tspan x="597.5" dy="22">和驱动</tspan>
+    </text>
+
+    <rect x="470" y="396" width="255" height="68" rx="12" fill="#fff3f1" stroke="#b75d69" stroke-width="2"/>
+    <text x="597.5" y="424" class="action-text">
+      <tspan x="597.5">处理 Connection</tspan><tspan x="597.5" dy="22">Problem</tspan>
+    </text>
+
+    <rect x="470" y="566" width="255" height="68" rx="12" fill="#fff7ed" stroke="#b58a52" stroke-width="2"/>
+    <text x="597.5" y="594" class="action-text">
+      <tspan x="597.5">检查 coupon board</tspan><tspan x="597.5" dy="22">和安装方向</tspan>
+    </text>
+
+    <rect x="470" y="736" width="255" height="68" rx="12" fill="#fff3f1" stroke="#b75d69" stroke-width="2"/>
+    <text x="597.5" y="764" class="action-text">
+      <tspan x="597.5">检查 Continuous</tspan><tspan x="597.5" dy="22">和 Start Capture</tspan>
+    </text>
+
+    <rect x="470" y="906" width="255" height="68" rx="12" fill="#fff3f1" stroke="#b75d69" stroke-width="2"/>
+    <text x="597.5" y="934" class="action-text">
+      <tspan x="597.5">检查数据解析</tspan><tspan x="597.5" dy="22">和光学路径</tspan>
+    </text>
+  </g>
+
+  <!-- Success node -->
+  <rect x="145" y="1040" width="210" height="64" rx="32" fill="#edf6f1" stroke="#4f7a68" stroke-width="2.5"/>
+  <text x="250" y="1079" fill="#315f4e" font-size="19" font-weight="700" text-anchor="middle">采集链路正常</text>
+</svg>
+

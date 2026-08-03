@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 360" role="img" aria-labelledby="title desc">
+  <title id="title">OPT4001YMN 光学路径结构示意</title>
+  <desc id="desc">环境光穿过 FPCB 开孔，到达朝向电路板的 OPT4001YMN 感光区域。</desc>
+  <defs>
+    <marker id="light-arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 Z" fill="#d49a22"/>
+    </marker>
+    <style>
+      text { font-family: "Noto Sans SC", "Microsoft YaHei", "PingFang SC", sans-serif; }
+      .label { fill: #183b66; font-size: 20px; font-weight: 700; }
+      .sub { fill: #5f6470; font-size: 15px; }
+    </style>
+  </defs>
+
+  <rect x="20" y="20" width="720" height="320" rx="18" fill="#fbfaf6" stroke="#d9c7a8" stroke-width="2"/>
+
+  <text x="380" y="62" class="label" text-anchor="middle">环境光</text>
+  <path d="M285 78 L345 178" fill="none" stroke="#d49a22" stroke-width="4" marker-end="url(#light-arrow)"/>
+  <path d="M380 78 V178" fill="none" stroke="#d49a22" stroke-width="4" marker-end="url(#light-arrow)"/>
+  <path d="M475 78 L415 178" fill="none" stroke="#d49a22" stroke-width="4" marker-end="url(#light-arrow)"/>
+
+  <path d="M90 180 H305 V235 H455 V180 H670 V265 H90 Z" fill="#9dbc66" stroke="#526f2f" stroke-width="2"/>
+  <text x="175" y="225" class="label" text-anchor="middle">FPCB</text>
+  <text x="585" y="225" class="label" text-anchor="middle">FPCB</text>
+  <text x="380" y="214" class="sub" text-anchor="middle">开孔</text>
+
+  <rect x="305" y="265" width="150" height="48" rx="8" fill="#e8f0f8" stroke="#183b66" stroke-width="2"/>
+  <rect x="333" y="265" width="94" height="10" rx="4" fill="#f2c94c"/>
+  <text x="380" y="296" class="label" text-anchor="middle">OPT4001YMN</text>
+  <text x="380" y="330" class="sub" text-anchor="middle">感光区域朝向 FPCB</text>
+</svg>

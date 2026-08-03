@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="430" viewBox="0 0 1180 430" role="img" aria-labelledby="title desc">
+  <title id="title">文档验证与发布工作流</title>
+  <desc id="desc">Markdown 通过 Pull Request、main 分支推送或手动运行触发验证。Vale 扫描 docs 目录，MkDocs 严格构建。只有 main 分支推送且验证成功才进入部署任务；其他事件只返回检查结果。</desc>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#1b365d"/>
+    </marker>
+    <style>
+      .title { font: 600 24px Georgia, 'Noto Serif CJK SC', 'Songti SC', serif; fill: #1b365d; }
+      .eyebrow { font: 600 13px Consolas, 'Noto Sans Mono CJK SC', monospace; letter-spacing: 1.2px; fill: #8a673d; }
+      .step { font: 600 17px 'Noto Sans CJK SC', 'Microsoft YaHei', sans-serif; fill: #1b365d; }
+      .detail { font: 14px 'Noto Sans CJK SC', 'Microsoft YaHei', sans-serif; fill: #4f5864; }
+      .code { font: 13px Consolas, 'Noto Sans Mono CJK SC', monospace; fill: #1b365d; }
+      .label { font: 600 13px 'Noto Sans CJK SC', 'Microsoft YaHei', sans-serif; fill: #8a673d; }
+      .line { fill: none; stroke: #1b365d; stroke-width: 2; marker-end: url(#arrow); }
+    </style>
+  </defs>
+
+  <rect width="1180" height="430" rx="18" fill="#f5f4ed"/>
+  <text x="48" y="48" class="eyebrow">DOCS-AS-CODE · VALIDATE BEFORE DEPLOY</text>
+  <text x="48" y="83" class="title">同一条工作流，先验证，再决定是否发布</text>
+
+  <g>
+    <rect x="48" y="135" width="160" height="104" rx="12" fill="#fffdf7" stroke="#1b365d" stroke-width="2"/>
+    <text x="72" y="174" class="step">编写 Markdown</text>
+    <text x="72" y="204" class="code">docs/</text>
+  </g>
+
+  <g>
+    <rect x="260" y="122" width="220" height="130" rx="12" fill="#fffdf7" stroke="#1b365d" stroke-width="2"/>
+    <text x="284" y="157" class="step">触发工作流</text>
+    <text x="284" y="187" class="detail">Pull Request</text>
+    <text x="284" y="211" class="detail">main push</text>
+    <text x="284" y="235" class="detail">手动运行</text>
+  </g>
+
+  <g>
+    <rect x="532" y="108" width="264" height="158" rx="12" fill="#e8eef6" stroke="#1b365d" stroke-width="2"/>
+    <text x="556" y="143" class="eyebrow">VALIDATE DOCUMENTATION</text>
+    <text x="556" y="177" class="step">Vale 3.15.1</text>
+    <text x="556" y="201" class="code">扫描 docs/；error 阻断</text>
+    <line x1="556" y1="217" x2="772" y2="217" stroke="#b9c5d4"/>
+    <text x="556" y="246" class="step">MkDocs 严格构建</text>
+  </g>
+
+  <g>
+    <path d="M890 121 L974 187 L890 253 L806 187 Z" fill="#fff7df" stroke="#b38a58" stroke-width="2.5"/>
+    <text x="850" y="178" class="step">事件是</text>
+    <text x="836" y="205" class="step">main push？</text>
+  </g>
+
+  <path d="M208 187 H260" class="line"/>
+  <path d="M480 187 H532" class="line"/>
+  <path d="M796 187 H806" class="line"/>
+
+  <g>
+    <path d="M890 253 V330 H720" class="line"/>
+    <text x="902" y="294" class="label">否</text>
+    <rect x="470" y="300" width="250" height="82" rx="12" fill="#fffdf7" stroke="#1b365d" stroke-width="2"/>
+    <text x="494" y="334" class="step">返回检查结果</text>
+    <text x="494" y="360" class="detail">Pull Request 和手动运行不部署</text>
+  </g>
+
+  <g>
+    <path d="M974 187 H1030 V300" class="line"/>
+    <text x="990" y="174" class="label">是</text>
+    <text x="992" y="233" class="code">needs: validate</text>
+    <rect x="866" y="300" width="266" height="82" rx="12" fill="#fffdf7" stroke="#1b365d" stroke-width="2"/>
+    <text x="890" y="334" class="step">部署到 GitHub Pages</text>
+    <text x="890" y="360" class="code">contents: write · gh-pages</text>
+  </g>
+</svg>

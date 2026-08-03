@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 300" role="img" aria-labelledby="title desc">
+  <title id="title">OPT4001YMNEVM 系统组成和数据路径</title>
+  <desc id="desc">EVM GUI 通过 USB 连接 OPTMBEVM 母板，母板内的 MSP430 通过 I²C 访问 coupon board 上的 OPT4001YMN，测量数据沿反方向返回 GUI。</desc>
+  <defs>
+    <marker id="arrow-navy" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 Z" fill="#183b66"/>
+    </marker>
+    <marker id="arrow-ochre" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 Z" fill="#b68445"/>
+    </marker>
+    <style>
+      text { font-family: "Noto Sans SC", "Microsoft YaHei", "PingFang SC", sans-serif; }
+      .label { fill: #183b66; font-size: 22px; font-weight: 700; }
+      .sub { fill: #5f6470; font-size: 17px; }
+      .edge { fill: #183b66; font-size: 17px; font-weight: 600; }
+      .return { fill: #8a612e; font-size: 17px; font-weight: 600; }
+    </style>
+  </defs>
+
+  <rect x="20" y="20" width="1040" height="260" rx="18" fill="#fbfaf6" stroke="#d9c7a8" stroke-width="2"/>
+
+  <path d="M200 130 H285" fill="none" stroke="#183b66" stroke-width="3" marker-end="url(#arrow-navy)"/>
+  <path d="M570 130 H655" fill="none" stroke="#183b66" stroke-width="3" marker-end="url(#arrow-navy)"/>
+  <path d="M860 130 H930" fill="none" stroke="#183b66" stroke-width="3" marker-end="url(#arrow-navy)"/>
+  <path d="M955 215 H120" fill="none" stroke="#b68445" stroke-width="2.5" stroke-dasharray="8 6" marker-end="url(#arrow-ochre)"/>
+
+  <rect x="55" y="83" width="145" height="94" rx="14" fill="#e8f0f8" stroke="#183b66" stroke-width="2"/>
+  <text x="127.5" y="119" class="label" text-anchor="middle">PC</text>
+  <text x="127.5" y="148" class="sub" text-anchor="middle">EVM GUI</text>
+
+  <rect x="285" y="55" width="285" height="150" rx="16" fill="#fffaf1" stroke="#b68445" stroke-width="2"/>
+  <text x="427.5" y="84" class="label" text-anchor="middle">OPTMBEVM 母板</text>
+  <rect x="342" y="105" width="171" height="68" rx="12" fill="#e8f0f8" stroke="#183b66" stroke-width="2"/>
+  <text x="427.5" y="135" class="label" text-anchor="middle">MSP430</text>
+  <text x="427.5" y="158" class="sub" text-anchor="middle">USB / I²C 控制</text>
+
+  <rect x="655" y="55" width="205" height="150" rx="16" fill="#f1f5e8" stroke="#758a45" stroke-width="2"/>
+  <text x="757.5" y="84" class="label" text-anchor="middle">coupon board</text>
+  <rect x="682" y="104" width="151" height="36" rx="8" fill="#fbfaf6" stroke="#758a45" stroke-width="1.5"/>
+  <text x="757.5" y="128" class="sub" text-anchor="middle">rigid board</text>
+  <rect x="682" y="151" width="151" height="36" rx="8" fill="#fbfaf6" stroke="#758a45" stroke-width="1.5"/>
+  <text x="757.5" y="175" class="sub" text-anchor="middle">flex board</text>
+
+  <rect x="930" y="83" width="100" height="94" rx="14" fill="#e8f0f8" stroke="#183b66" stroke-width="2"/>
+  <text x="980" y="121" class="label" text-anchor="middle">OPT4001</text>
+  <text x="980" y="147" class="label" text-anchor="middle">YMN</text>
+
+  <text x="243" y="115" class="edge" text-anchor="middle">USB</text>
+  <text x="612" y="115" class="edge" text-anchor="middle">I²C</text>
+  <text x="895" y="115" class="edge" text-anchor="middle">板间连接</text>
+  <text x="537" y="245" class="return" text-anchor="middle">测量数据返回 GUI</text>
+</svg>

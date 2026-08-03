@@ -1,26 +1,32 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="320" height="100" viewBox="0 0 320 100" role="img" aria-labelledby="title desc">
-  <title id="title">Docs-as-Code workflow thumbnail</title>
-  <desc id="desc">Markdown passes through Vale and GitHub Actions, then MkDocs publishes the site to Pages.</desc>
+  <title id="title">Docs-as-Code validation and deployment workflow</title>
+  <desc id="desc">Markdown enters validation by Vale and MkDocs. A deployment gate allows validated main branch changes to publish to Pages.</desc>
   <rect width="320" height="100" rx="6" fill="#f5f4ed"/>
-  <text x="14" y="20" fill="#1b365d" font-family="Georgia, serif" font-size="11" font-weight="600">Docs-as-Code workflow</text>
+  <text x="14" y="20" fill="#1b365d" font-family="Georgia, serif" font-size="11" font-weight="600">Docs-as-Code · validate before deploy</text>
+
   <g font-family="Consolas, monospace" font-size="8" fill="#1b365d">
-    <rect x="14" y="36" width="54" height="28" rx="4" fill="#e8e6dc" stroke="#1b365d"/>
-    <text x="21" y="53">Markdown</text>
-    <rect x="84" y="36" width="42" height="28" rx="4" fill="#e8e6dc" stroke="#1b365d"/>
-    <text x="94" y="53">Vale</text>
-    <rect x="142" y="36" width="54" height="28" rx="4" fill="#e8e6dc" stroke="#1b365d"/>
-    <text x="150" y="53">Actions</text>
-    <rect x="210" y="68" width="48" height="24" rx="4" fill="#fffdf7" stroke="#b38a58"/>
-    <text x="218" y="83">MkDocs</text>
-    <rect x="274" y="44" width="36" height="28" rx="4" fill="#fffdf7" stroke="#b38a58"/>
-    <text x="280" y="61">Pages</text>
+    <rect x="14" y="39" width="54" height="28" rx="4" fill="#e8e6dc" stroke="#1b365d"/>
+    <text x="21" y="56">Markdown</text>
+
+    <rect x="86" y="31" width="84" height="44" rx="5" fill="#e8eef6" stroke="#1b365d"/>
+    <text x="99" y="47" font-weight="600">VALIDATE</text>
+    <text x="96" y="63">Vale + MkDocs</text>
+
+    <rect x="188" y="39" width="42" height="28" rx="14" fill="#fffdf7" stroke="#b38a58" stroke-width="2"/>
+    <text x="198" y="56" fill="#8a673d" font-weight="600">GATE</text>
+
+    <rect x="248" y="39" width="58" height="28" rx="4" fill="#fffdf7" stroke="#1b365d"/>
+    <text x="258" y="56">Pages</text>
   </g>
+
   <g stroke="#1b365d" stroke-width="1.5" fill="none" marker-end="url(#arrow)">
-    <path d="M68 50 H84"/>
-    <path d="M126 50 H142"/>
-    <path d="M196 50 C226 50 246 54 274 58"/>
-    <path d="M258 80 C267 80 269 70 278 68"/>
+    <path d="M68 53 H86"/>
+    <path d="M170 53 H188"/>
+    <path d="M230 53 H248"/>
   </g>
+
+  <text x="185" y="84" fill="#6f6b63" font-family="Consolas, monospace" font-size="7">main push + checks passed</text>
+
   <defs>
     <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
       <path d="M0 0 L6 3 L0 6 Z" fill="#1b365d"/>

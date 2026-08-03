@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1020 240" role="img" aria-labelledby="title desc">
+  <title id="title">OPT4001YMNEVM 故障定位层级</title>
+  <desc id="desc">六个竖向节点从左到右排列，依次表示电脑和 USB、母板、coupon board、工作模式、数据解析与光学路径。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="4.5" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 z" fill="#1e3d68"/>
+    </marker>
+  </defs>
+
+  <rect width="1020" height="240" rx="18" fill="#fbfaf6"/>
+
+  <g font-family="system-ui, sans-serif" text-anchor="middle">
+    <g>
+      <rect x="20" y="35" width="135" height="170" rx="14" fill="#e9f0f8" stroke="#1e3d68" stroke-width="2"/>
+      <text x="87.5" y="76" fill="#1e3d68" font-size="23" font-weight="700">
+        <tspan x="87.5">电脑</tspan>
+        <tspan x="87.5" dy="22">/ USB</tspan>
+      </text>
+      <text x="87.5" y="141" fill="#6f6a61" font-size="18">
+        <tspan x="87.5">未出现两个</tspan>
+        <tspan x="87.5" dy="19">COM 端口</tspan>
+      </text>
+      <line x1="155" y1="120" x2="178" y2="120" stroke="#1e3d68" stroke-width="3" marker-end="url(#arrow)"/>
+    </g>
+
+    <g>
+      <rect x="190" y="35" width="135" height="170" rx="14" fill="#fff" stroke="#b58a52" stroke-width="2"/>
+      <text x="257.5" y="76" fill="#1e3d68" font-size="22" font-weight="700">
+        <tspan x="257.5">OPTMBEVM</tspan>
+        <tspan x="257.5" dy="22">母板</tspan>
+      </text>
+      <text x="257.5" y="141" fill="#6f6a61" font-size="17">
+        <tspan x="257.5">Connection</tspan>
+        <tspan x="257.5" dy="18">Problem</tspan>
+      </text>
+      <line x1="325" y1="120" x2="348" y2="120" stroke="#1e3d68" stroke-width="3" marker-end="url(#arrow)"/>
+    </g>
+
+    <g>
+      <rect x="360" y="35" width="135" height="170" rx="14" fill="#e9f0f8" stroke="#1e3d68" stroke-width="2"/>
+      <text x="427.5" y="76" fill="#1e3d68" font-size="21" font-weight="700">
+        <tspan x="427.5">coupon board</tspan>
+        <tspan x="427.5" dy="22">/ I²C</tspan>
+      </text>
+      <text x="427.5" y="149" fill="#6f6a61" font-size="17">REGRx01 Failed</text>
+      <line x1="495" y1="120" x2="518" y2="120" stroke="#1e3d68" stroke-width="3" marker-end="url(#arrow)"/>
+    </g>
+
+    <g>
+      <rect x="530" y="35" width="135" height="170" rx="14" fill="#fff" stroke="#b58a52" stroke-width="2"/>
+      <text x="597.5" y="76" fill="#1e3d68" font-size="21" font-weight="700">
+        <tspan x="597.5">工作模式与</tspan>
+        <tspan x="597.5" dy="22">结果寄存器</tspan>
+      </text>
+      <text x="597.5" y="149" fill="#6f6a61" font-size="18">结果不更新</text>
+      <line x1="665" y1="120" x2="688" y2="120" stroke="#1e3d68" stroke-width="3" marker-end="url(#arrow)"/>
+    </g>
+
+    <g>
+      <rect x="700" y="35" width="135" height="170" rx="14" fill="#e9f0f8" stroke="#1e3d68" stroke-width="2"/>
+      <text x="767.5" y="88" fill="#1e3d68" font-size="23" font-weight="700">数据解析</text>
+      <text x="767.5" y="141" fill="#6f6a61" font-size="18">
+        <tspan x="767.5">lux 数量级</tspan>
+        <tspan x="767.5" dy="19">错误</tspan>
+      </text>
+      <line x1="835" y1="120" x2="858" y2="120" stroke="#1e3d68" stroke-width="3" marker-end="url(#arrow)"/>
+    </g>
+
+    <g>
+      <rect x="870" y="35" width="135" height="170" rx="14" fill="#fff" stroke="#b58a52" stroke-width="2"/>
+      <text x="937.5" y="88" fill="#1e3d68" font-size="23" font-weight="700">光学路径</text>
+      <text x="937.5" y="141" fill="#6f6a61" font-size="18">
+        <tspan x="937.5">通信正常但</tspan>
+        <tspan x="937.5" dy="19">读数异常</tspan>
+      </text>
+    </g>
+  </g>
+</svg>
