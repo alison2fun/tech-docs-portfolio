@@ -6,10 +6,12 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="Understand how this repository runs Vale and MkDocs in GitHub Actions, then deploys only after validation succeeds.">
       
       
       
-        <link rel="prev" href="../information-architecture/">
+      
+        <link rel="prev" href="../configure-vale/">
       
       
         <link rel="next" href="../troubleshooting/">
@@ -23,7 +25,7 @@
     
     
       
-        <title>配置与数据读取 - 我的自动化文档作品集</title>
+        <title>Run Vale in GitHub Actions - 我的自动化文档作品集</title>
       
     
     
@@ -76,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#run-vale-in-github-actions" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              配置与数据读取
+              Run Vale in GitHub Actions
             
           </span>
         </div>
@@ -473,8 +475,6 @@
                 
   
   
-    
-  
   
   
     
@@ -485,11 +485,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
         
           
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
@@ -510,7 +510,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -528,7 +528,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../../hardware/" class="md-nav__link">
         
   
   
@@ -584,7 +584,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../information-architecture/" class="md-nav__link">
+      <a href="../../hardware/information-architecture/" class="md-nav__link">
         
   
   
@@ -609,37 +609,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    配置与数据读取
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../hardware/configure-and-read-lux/" class="md-nav__link">
         
   
   
@@ -655,203 +628,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        读取路径
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="读取路径">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#read-path-overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        数据读取任务流程
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        找到器件
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        启动测量
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        等待数据
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        读取结果
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        确认更新
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        检查完整性
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lux" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        换算 lux
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_14" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        参考代码
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_15" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        本页边界
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_16" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        资料来源
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="资料来源">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#source-opt4001-data" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OPT4001 Datasheet
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#source-opt4001-evm" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OPT4001YMNEVM User's Guide
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_17" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        继续阅读
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -864,7 +640,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../troubleshooting/" class="md-nav__link">
+      <a href="../../hardware/troubleshooting/" class="md-nav__link">
         
   
   
@@ -1861,6 +1637,8 @@
                 
   
   
+    
+  
   
   
     
@@ -1871,11 +1649,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" checked>
         
           
           <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
@@ -1896,7 +1674,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1914,7 +1692,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../english-documentation/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -1942,7 +1720,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../english-documentation/quick-start/" class="md-nav__link">
+      <a href="../quick-start/" class="md-nav__link">
         
   
   
@@ -1970,7 +1748,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../english-documentation/configure-vale/" class="md-nav__link">
+      <a href="../configure-vale/" class="md-nav__link">
         
   
   
@@ -1995,10 +1773,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../english-documentation/github-actions/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GitHub Actions
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -2014,6 +1819,452 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#current-workflow-at-a-glance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Current workflow at a glance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#before-you-change-the-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Before you change the workflow
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#read-the-workflow-triggers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Read the workflow triggers
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Read the workflow triggers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-the-workflow-has-no-path-filters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why the workflow has no path filters
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#read-the-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Read the permissions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understand-concurrency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Understand concurrency
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#read-the-validation-job" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Read the validation job
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Read the validation job">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#check-out-the-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Check out the repository
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-the-documentation-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Install the documentation environment
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inspect-the-writing-style-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inspect the writing-style step
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Inspect the writing-style step">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#understand-each-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Understand each input
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#understand-the-repository-wide-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Understand the repository-wide policy
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#read-the-build-gate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Read the build gate
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#read-the-deployment-gate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Read the deployment gate
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#review-the-current-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Review the current workflow
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verify-a-successful-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verify a successful run
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verify-a-controlled-failure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verify a controlled failure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#read-failures-by-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Read failures by layer
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Read failures by layer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-workflow-fails-before-the-writing-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The workflow fails before the writing check
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vale-reports-a-documentation-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vale reports a documentation error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vale-has-a-runtime-failure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vale has a runtime failure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vale-passes-but-mkdocs-fails" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vale passes but MkDocs fails
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validation-passes-but-deployment-fails" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validation passes but deployment fails
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keep-local-and-automated-checks-aligned" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Keep local and automated checks aligned
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-and-maintenance-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security and maintenance notes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#completion-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Completion check
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common problems
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common problems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-workflow-doesnt-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The workflow doesn't start
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vale-checks-the-wrong-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vale checks the wrong files
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vale-cant-find-a-style" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vale can't find a style
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-job-passes-when-vale-reports-an-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The job passes when Vale reports an error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local-checks-pass-but-the-automated-workflow-fails" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Local checks pass but the automated workflow fails
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deployment-starts-for-the-wrong-event" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deployment starts for the wrong event
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-boundaries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Project boundaries
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next steps
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sources
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2026,7 +2277,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../english-documentation/troubleshooting/" class="md-nav__link">
+      <a href="../troubleshooting/" class="md-nav__link">
         
   
   
@@ -3477,99 +3728,44 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#current-workflow-at-a-glance" class="md-nav__link">
     <span class="md-ellipsis">
       
-        读取路径
+        Current workflow at a glance
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="读取路径">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#before-you-change-the-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Before you change the workflow
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#read-the-workflow-triggers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Read the workflow triggers
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Read the workflow triggers">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#read-path-overview" class="md-nav__link">
+  <a href="#why-the-workflow-has-no-path-filters" class="md-nav__link">
     <span class="md-ellipsis">
       
-        数据读取任务流程
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        找到器件
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        启动测量
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        等待数据
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        读取结果
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        确认更新
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        检查完整性
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lux" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        换算 lux
+        Why the workflow has no path filters
       
     </span>
   </a>
@@ -3582,10 +3778,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_14" class="md-nav__link">
+  <a href="#read-the-permissions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        参考代码
+        Read the permissions
       
     </span>
   </a>
@@ -3593,10 +3789,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_15" class="md-nav__link">
+  <a href="#understand-concurrency" class="md-nav__link">
     <span class="md-ellipsis">
       
-        本页边界
+        Understand concurrency
       
     </span>
   </a>
@@ -3604,22 +3800,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_16" class="md-nav__link">
+  <a href="#read-the-validation-job" class="md-nav__link">
     <span class="md-ellipsis">
       
-        资料来源
+        Read the validation job
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="资料来源">
+    <nav class="md-nav" aria-label="Read the validation job">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#source-opt4001-data" class="md-nav__link">
+  <a href="#check-out-the-repository" class="md-nav__link">
     <span class="md-ellipsis">
       
-        OPT4001 Datasheet
+        Check out the repository
       
     </span>
   </a>
@@ -3627,10 +3823,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#source-opt4001-evm" class="md-nav__link">
+  <a href="#install-the-documentation-environment" class="md-nav__link">
     <span class="md-ellipsis">
       
-        OPT4001YMNEVM User's Guide
+        Install the documentation environment
       
     </span>
   </a>
@@ -3643,10 +3839,314 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_17" class="md-nav__link">
+  <a href="#inspect-the-writing-style-step" class="md-nav__link">
     <span class="md-ellipsis">
       
-        继续阅读
+        Inspect the writing-style step
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Inspect the writing-style step">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#understand-each-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Understand each input
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#understand-the-repository-wide-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Understand the repository-wide policy
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#read-the-build-gate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Read the build gate
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#read-the-deployment-gate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Read the deployment gate
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#review-the-current-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Review the current workflow
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verify-a-successful-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verify a successful run
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verify-a-controlled-failure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verify a controlled failure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#read-failures-by-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Read failures by layer
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Read failures by layer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-workflow-fails-before-the-writing-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The workflow fails before the writing check
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vale-reports-a-documentation-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vale reports a documentation error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vale-has-a-runtime-failure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vale has a runtime failure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vale-passes-but-mkdocs-fails" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vale passes but MkDocs fails
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validation-passes-but-deployment-fails" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validation passes but deployment fails
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keep-local-and-automated-checks-aligned" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Keep local and automated checks aligned
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-and-maintenance-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security and maintenance notes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#completion-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Completion check
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common problems
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common problems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-workflow-doesnt-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The workflow doesn't start
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vale-checks-the-wrong-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vale checks the wrong files
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vale-cant-find-a-style" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vale can't find a style
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-job-passes-when-vale-reports-an-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The job passes when Vale reports an error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local-checks-pass-but-the-automated-workflow-fails" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Local checks pass but the automated workflow fails
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deployment-starts-for-the-wrong-event" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deployment starts for the wrong event
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-boundaries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Project boundaries
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next steps
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sources
       
     </span>
   </a>
@@ -3670,524 +4170,598 @@
 
 
 
-<h1 id="_1">配置与数据读取</h1>
-<div class="hardware-doc hardware-read-path-page">
-<p>OPT4001YMN 上电后不会立即持续产生新的环境光测量结果。</p>
-<p>主控需要先找到器件、启动测量、等待转换完成，再读取结果寄存器，并将原始数据换算为 lux。</p>
-<p>本页按照一次完整的数据读取任务组织这些信息：</p>
-<div class="highlight"><pre><span></span><code>找到器件
-→ 启动测量
-→ 等待数据
-→ 读取结果
-→ 确认更新
-→ 检查完整性
-→ 换算 lux
-</code></pre></div>
+<style>
+@media screen and (max-width: 44.984375em) {
+  .md-main__inner,
+  .md-content {
+    box-sizing: border-box;
+    min-width: 0;
+    width: 100%;
+    max-width: 100vw;
+  }
+
+  .md-content__inner {
+    box-sizing: border-box;
+    width: calc(100vw - 2rem) !important;
+    max-width: calc(100vw - 2rem) !important;
+    margin-right: 1rem !important;
+    margin-left: 1rem !important;
+    padding: 1rem 0;
+  }
+
+  .md-typeset .admonition,
+  .md-typeset .md-typeset__scrollwrap {
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+
+  .md-typeset p code {
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+}
+</style>
+
+<h1 id="run-vale-in-github-actions">Run Vale in GitHub Actions</h1>
+<p>This guide explains how this repository runs documentation checks in GitHub
+Actions and prevents deployment when validation fails.</p>
+<p>The current workflow uses the same documentation directory and repository
+configuration as the local Vale check. It also runs an MkDocs strict build
+before the deployment job can start.</p>
+<p>Complete <a href="../quick-start/">Set up local documentation checks with Vale</a> and
+<a href="../configure-vale/">Configure Vale for a documentation repository</a> before
+using this page.</p>
 <div class="admonition info">
-<p class="admonition-title">验证状态</p>
-<p>本页根据 TI <a href="https://www.ti.com/lit/ds/symlink/opt4001.pdf">《OPT4001 Datasheet》</a>和
-<a href="https://www.ti.com/lit/ug/sbou278/sbou278.pdf">《OPT4001YMNEVM User's Guide》</a>整理。</p>
-<p>工作模式、I²C 地址、寄存器字段和 lux 换算公式已经过官方资料核对。
-示例流程和代码尚未在 OPT4001YMNEVM 实物或目标 MCU 上运行。</p>
+<p class="admonition-title">Validation status</p>
+<p>The workflow structure and inputs on this page were checked against the
+repository's current <code>.github/workflows/ci.yml</code>, the official GitHub
+Actions documentation, and the official Vale Action documentation.</p>
+<p><a href="https://github.com/alison2fun/tech-docs-portfolio/actions/runs/30780106488">Documentation CI run #36</a>
+completed successfully for commit <code>9d050a7</code>. Its validation job completed
+the Vale and MkDocs steps, and the dependent deployment job also passed.</p>
+<p>The current workflow hasn't been tested with a controlled error-level Vale
+violation. Its failure path is therefore documented from the configuration
+and official Action behavior, not marked as an observed end-to-end result.</p>
 </div>
-<h2 id="_2">读取路径</h2>
-<p>一次完整读取包含以下步骤：</p>
+<h2 id="current-workflow-at-a-glance">Current workflow at a glance</h2>
+<p>The repository keeps validation and deployment in one workflow file:</p>
+<div class="highlight"><pre><span></span><code>.github/workflows/ci.yml
+</code></pre></div>
+<p>The workflow follows this path:</p>
+<div class="highlight"><pre><span></span><code>Pull request, push to main, or manual run
+-&gt; Validate documentation
+   -&gt; Check out the repository
+   -&gt; Install documentation dependencies
+   -&gt; Run Vale on docs
+   -&gt; Run mkdocs build --strict
+-&gt; Push to main and validation succeeded
+   -&gt; Deploy documentation
+</code></pre></div>
+<p>The workflow produces different results for different events.</p>
+<table>
+<thead>
+<tr>
+<th>Event</th>
+<th>Validation</th>
+<th>Deployment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pull request</td>
+<td>Runs</td>
+<td>Doesn't run</td>
+</tr>
+<tr>
+<td>Push to <code>main</code></td>
+<td>Runs</td>
+<td>Runs after validation succeeds</td>
+</tr>
+<tr>
+<td>Manual run</td>
+<td>Runs</td>
+<td>Doesn't run</td>
+</tr>
+</tbody>
+</table>
+<p>The workflow doesn't define path filters. A pull request or push to <code>main</code> can
+therefore start validation even when the change is outside <code>docs/</code>.</p>
+<h2 id="before-you-change-the-workflow">Before you change the workflow</h2>
+<p>Confirm that the equivalent local commands work from the repository root:</p>
+<div class="highlight"><pre><span></span><code>vale<span class="w"> </span>docs
+mkdocs<span class="w"> </span>build<span class="w"> </span>--strict
+</code></pre></div>
+<p>Then inspect the active Vale configuration:</p>
+<div class="highlight"><pre><span></span><code>vale<span class="w"> </span>ls-config
+</code></pre></div>
+<p>This repository depends on these committed inputs:</p>
+<div class="highlight"><pre><span></span><code>.vale.ini
+docs/
+styles/
+requirements-docs.txt
+.github/workflows/ci.yml
+</code></pre></div>
+<p>The Vale rules are already committed under <code>styles/</code>. The workflow doesn't run
+<code>vale sync</code> because <code>.vale.ini</code> doesn't declare external <code>Packages</code>.</p>
+<h2 id="read-the-workflow-triggers">Read the workflow triggers</h2>
+<p>The current trigger block is:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">on</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">push</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">branches</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main</span>
+<span class="w">  </span><span class="nt">pull_request</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">workflow_dispatch</span><span class="p">:</span>
+</code></pre></div>
+<p>Each event has a separate purpose.</p>
+<table>
+<thead>
+<tr>
+<th>Event</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>pull_request</code></td>
+<td>Check a proposed repository change before merge</td>
+</tr>
+<tr>
+<td><code>push</code> to <code>main</code></td>
+<td>Validate the new main-branch state and allow deployment</td>
+</tr>
+<tr>
+<td><code>workflow_dispatch</code></td>
+<td>Allow a manual validation run</td>
+</tr>
+</tbody>
+</table>
+<p>The deployment job adds its own condition, so defining <code>workflow_dispatch</code>
+doesn't grant a manual run permission to deploy.</p>
+<h3 id="why-the-workflow-has-no-path-filters">Why the workflow has no path filters</h3>
+<p>The current file doesn't restrict execution to documentation paths. This keeps
+the validation behavior simple: every pull request and every push to <code>main</code>
+runs the same gate.</p>
+<p>Path filters could reduce unnecessary runs, but they would also change when a
+required check appears. GitHub documents that a skipped required workflow can
+remain pending and block a pull request. Add filters only after reviewing the
+repository's branch protection settings.</p>
+<h2 id="read-the-permissions">Read the permissions</h2>
+<p>The workflow starts with read-only repository access:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">permissions</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">contents</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">read</span>
+</code></pre></div>
+<p>The validation job adds permission to create a GitHub check:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">permissions</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">contents</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">read</span>
+<span class="w">  </span><span class="nt">checks</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">write</span>
+</code></pre></div>
+<p>This permission matches the Vale step's <code>github-check</code> reporter.</p>
+<p>The deployment job has a separate permission boundary:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">permissions</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">contents</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">write</span>
+</code></pre></div>
+<p>It needs write access because <code>mkdocs gh-deploy --force</code> publishes the built
+site to the deployment branch. The validation job doesn't receive this write
+permission.</p>
+<h2 id="understand-concurrency">Understand concurrency</h2>
+<p>The workflow defines:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">concurrency</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">group</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">documentation-${{ github.workflow }}-${{ github.event_name }}-${{ github.ref }}</span>
+<span class="w">  </span><span class="nt">cancel-in-progress</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</code></pre></div>
+<p>The group separates runs by workflow, event, and Git reference. When a newer
+run enters the same group, GitHub cancels the older in-progress run.</p>
+<p>This prevents multiple outdated documentation runs for the same event and
+reference from continuing at the same time.</p>
+<h2 id="read-the-validation-job">Read the validation job</h2>
+<p>The <code>validate</code> job runs on <code>ubuntu-latest</code> and contains five task steps:</p>
+<div class="highlight"><pre><span></span><code>Checkout
+-&gt; Set up Python 3.12
+-&gt; Install requirements-docs.txt
+-&gt; Run Vale
+-&gt; Build MkDocs in strict mode
+</code></pre></div>
+<h3 id="check-out-the-repository">Check out the repository</h3>
+<p>The runner starts without the repository files, so the first step checks them
+out:</p>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Checkout repository</span>
+<span class="w">  </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v4</span>
+</code></pre></div>
+<p>The current workflow uses the <code>v4</code> tag, not a full commit hash. This is an
+existing implementation boundary. GitHub recommends pinning an Action to a
+full-length commit hash when an immutable reference is required.</p>
+<h3 id="install-the-documentation-environment">Install the documentation environment</h3>
+<p>The workflow uses Python 3.12 and caches dependencies using the documentation
+requirements file:</p>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Set up Python</span>
+<span class="w">  </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/setup-python@v5</span>
+<span class="w">  </span><span class="nt">with</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">python-version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;3.12&quot;</span>
+<span class="w">    </span><span class="nt">cache</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pip</span>
+<span class="w">    </span><span class="nt">cache-dependency-path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">requirements-docs.txt</span>
+
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Install documentation dependencies</span>
+<span class="w">  </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python -m pip install --requirement requirements-docs.txt</span>
+</code></pre></div>
+<p>This step prepares MkDocs and its plugins. The Vale Action manages its own Vale
+installation in the next step.</p>
+<h2 id="inspect-the-writing-style-step">Inspect the writing-style step</h2>
+<p>The repository uses the official Vale Action:</p>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Check writing style with Vale</span>
+<span class="w">  </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">vale-cli/vale-action@85f9f7f2c5f449ac0ae5b66662961bae3f77ca6a</span><span class="w"> </span><span class="c1"># v2.1.2</span>
+<span class="w">  </span><span class="nt">with</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3.15.1</span>
+<span class="w">    </span><span class="nt">files</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">docs</span>
+<span class="w">    </span><span class="nt">fail_on_error</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">filter_mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nofilter</span>
+<span class="w">    </span><span class="nt">reporter</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">github-check</span>
+</code></pre></div>
+<p>Unlike the checkout and Python setup steps, this Action uses a full commit
+hash. The release comment preserves the readable version reference.</p>
+<h3 id="understand-each-input">Understand each input</h3>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th>Current value</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>version</code></td>
+<td><code>3.15.1</code></td>
+<td>Installs the specified Vale command-line tool version in the Action environment</td>
+</tr>
+<tr>
+<td><code>files</code></td>
+<td><code>docs</code></td>
+<td>Checks the full documentation source directory</td>
+</tr>
+<tr>
+<td><code>fail_on_error</code></td>
+<td><code>true</code></td>
+<td>Returns a failure when the reporter receives an error-level finding</td>
+</tr>
+<tr>
+<td><code>filter_mode</code></td>
+<td><code>nofilter</code></td>
+<td>Reports findings from the complete selected file set</td>
+</tr>
+<tr>
+<td><code>reporter</code></td>
+<td><code>github-check</code></td>
+<td>Publishes the result as a GitHub check</td>
+</tr>
+</tbody>
+</table>
+<p>The official Vale Action documentation states that <code>files: docs</code> is
+equivalent to running <code>vale docs</code>. It also states that <code>fail_on_error: true</code>
+changes the reporter's exit behavior when error-level findings occur.</p>
+<h3 id="understand-the-repository-wide-policy">Understand the repository-wide policy</h3>
+<p><code>filter_mode: nofilter</code> applies the check to the complete selected source, not
+only lines changed in a pull request.</p>
+<p>This policy has two effects:</p>
+<ul>
+<li>one consistent standard applies to all files under <code>docs/</code>;</li>
+<li>a pre-existing error elsewhere in <code>docs/</code> can block an unrelated change.</li>
+</ul>
+<p>Warnings and suggestions remain visible because <code>.vale.ini</code> uses
+<code>MinAlertLevel = suggestion</code>. They don't fail the Action unless the reporting
+rule uses the <code>error</code> level.</p>
+<h2 id="read-the-build-gate">Read the build gate</h2>
+<p>The validation job runs the strict build after Vale:</p>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Build documentation</span>
+<span class="w">  </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mkdocs build --strict</span>
+</code></pre></div>
+<p>This step checks the complete MkDocs configuration and content build. Because
+the steps use the default success condition, a failed Vale step prevents the
+strict build step from running.</p>
+<p>The validation job passes only when its required steps complete successfully.</p>
+<h2 id="read-the-deployment-gate">Read the deployment gate</h2>
+<p>The deployment job contains two controls:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">deploy</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">if</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">github.event_name == &#39;push&#39; &amp;&amp; github.ref == &#39;refs/heads/main&#39;</span>
+<span class="w">  </span><span class="nt">needs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">validate</span>
+</code></pre></div>
+<p><code>if</code> limits deployment to pushes on <code>main</code>. <code>needs: validate</code> makes deployment
+wait for the validation job.</p>
+<p>Together, these controls mean:</p>
+<div class="highlight"><pre><span></span><code>Pull request -&gt; Validate only
+Manual run -&gt; Validate only
+Push to main -&gt; Validate -&gt; Deploy
+Validation failure -&gt; No deployment
+</code></pre></div>
+<p>The deployment job runs its own checkout, Python setup, dependency installation,
+and <code>mkdocs gh-deploy --force</code> command. Validation and deployment therefore
+remain separate jobs with separate permissions.</p>
+<h2 id="review-the-current-workflow">Review the current workflow</h2>
+<p>The following excerpt keeps the actual structure and values that control the
+quality gate:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Documentation CI</span>
+
+<span class="nt">on</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">push</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">branches</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main</span>
+<span class="w">  </span><span class="nt">pull_request</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">workflow_dispatch</span><span class="p">:</span>
+
+<span class="nt">permissions</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">contents</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">read</span>
+
+<span class="nt">jobs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">validate</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Validate documentation</span>
+<span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+<span class="w">    </span><span class="nt">permissions</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">contents</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">read</span>
+<span class="w">      </span><span class="nt">checks</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">write</span>
+<span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Checkout repository</span>
+<span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v4</span>
+
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Set up Python</span>
+<span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/setup-python@v5</span>
+<span class="w">        </span><span class="nt">with</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">python-version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;3.12&quot;</span>
+<span class="w">          </span><span class="nt">cache</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pip</span>
+<span class="w">          </span><span class="nt">cache-dependency-path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">requirements-docs.txt</span>
+
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Install documentation dependencies</span>
+<span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python -m pip install --requirement requirements-docs.txt</span>
+
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Check writing style with Vale</span>
+<span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">vale-cli/vale-action@85f9f7f2c5f449ac0ae5b66662961bae3f77ca6a</span><span class="w"> </span><span class="c1"># v2.1.2</span>
+<span class="w">        </span><span class="nt">with</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3.15.1</span>
+<span class="w">          </span><span class="nt">files</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">docs</span>
+<span class="w">          </span><span class="nt">fail_on_error</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">          </span><span class="nt">filter_mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nofilter</span>
+<span class="w">          </span><span class="nt">reporter</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">github-check</span>
+
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Build documentation</span>
+<span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mkdocs build --strict</span>
+
+<span class="w">  </span><span class="nt">deploy</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">if</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">github.event_name == &#39;push&#39; &amp;&amp; github.ref == &#39;refs/heads/main&#39;</span>
+<span class="w">    </span><span class="nt">needs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">validate</span>
+</code></pre></div>
+<p>Read the complete
+<a href="https://github.com/alison2fun/tech-docs-portfolio/blob/main/.github/workflows/ci.yml">current workflow</a>
+before modifying it. The omitted deployment steps remain in the source file.</p>
+<h2 id="verify-a-successful-run">Verify a successful run</h2>
+<p>The current public evidence is
+<a href="https://github.com/alison2fun/tech-docs-portfolio/actions/runs/30780106488">Documentation CI run #36</a>
+for commit <code>9d050a7</code> on <code>main</code>.</p>
+<p>The public run data confirms:</p>
+<table>
+<thead>
+<tr>
+<th>Job or step</th>
+<th>Observed result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Validate documentation</code> job</td>
+<td>Success</td>
+</tr>
+<tr>
+<td><code>Check writing style with Vale</code> step</td>
+<td>Success</td>
+</tr>
+<tr>
+<td><code>Build documentation</code> step</td>
+<td>Success</td>
+</tr>
+<tr>
+<td><code>Deploy documentation</code> job</td>
+<td>Success</td>
+</tr>
+</tbody>
+</table>
+<p>This run proves that the committed workflow could load the repository, finish
+the configured Vale check, complete the strict build, and deploy that commit.</p>
+<p>It doesn't include this uncommitted English page. The page needs a new Actions
+run after publication before its CI status can be marked as observed.</p>
+<!--
+Add assets/english-docs/vale-ci-success.png only after capturing a current,
+non-sensitive screenshot that shows the workflow name, validation job, Vale
+step, and success status. The linked run remains the primary evidence.
+-->
+
+<h2 id="verify-a-controlled-failure">Verify a controlled failure</h2>
+<p>A successful run doesn't prove that an error-level documentation finding
+fails the current workflow end to end.</p>
+<p>Use a temporary test file and the existing <code>MyStyle.Spacing</code> error rule:</p>
 <ol>
-<li>使用 I²C 地址 <code>0x45</code> 访问 OPT4001YMN；</li>
-<li>将器件从 Power-down 切换到 Continuous；</li>
-<li>等待一次新的转换完成；</li>
-<li>从寄存器 <code>0x00</code> 开始读取结果；</li>
-<li>使用 Counter 判断样本是否更新；</li>
-<li>使用 CRC 检查读取过程中的 bit 错误；</li>
-<li>将 Exponent 和 Mantissa 换算为 lux。</li>
+<li>create a test branch;</li>
+<li>add a temporary Markdown file under <code>docs/</code> with the controlled
+   missing-space pattern used in the local rule test;</li>
+<li>confirm locally that <code>vale</code> reports <code>MyStyle.Spacing</code> at the <code>error</code> level;</li>
+<li>commit and push only the temporary test branch;</li>
+<li>open the Actions run and confirm that the Vale step and validation job fail;</li>
+<li>correct the text, push again, and confirm that validation passes;</li>
+<li>remove the temporary test before merge.</li>
 </ol>
-<h3 id="read-path-overview">数据读取任务流程</h3>
-<p><img alt="OPT4001YMN 数据读取路径" src="../../../assets/opt4001/opt4001-read-task-flow.svg" /></p>
-<p><em>图 1：OPT4001YMN 数据读取路径。根据 TI <a href="https://www.ti.com/lit/ds/symlink/opt4001.pdf">《OPT4001 Datasheet》</a>的工作模式、I²C 编程和寄存器定义整理。该图表示读取任务，不是芯片内部框图。</em></p>
-<h3 id="_3">找到器件</h3>
-<p>OPT4001YMN 使用固定的 7-bit I²C 地址：</p>
-<div class="highlight"><pre><span></span><code>0x45
-</code></pre></div>
-<p>这个地址用于定位 I²C 总线上的 OPT4001YMN。</p>
-<p>器件内部还包含多组寄存器。当前读取任务主要使用以下地址：</p>
-<table>
-<thead>
-<tr>
-<th>地址</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>0x0A</code></td>
-<td>配置量程、转换时间和工作模式</td>
-</tr>
-<tr>
-<td><code>0x0B</code></td>
-<td>配置 Burst Read</td>
-</tr>
-<tr>
-<td><code>0x0C</code></td>
-<td>查看转换完成状态</td>
-</tr>
-<tr>
-<td><code>0x00</code></td>
-<td>读取 Exponent 和 Mantissa 高 12 位</td>
-</tr>
-<tr>
-<td><code>0x01</code></td>
-<td>读取 Mantissa 低 8 位、Counter 和 CRC</td>
-</tr>
-</tbody>
-</table>
-<p>两类地址承担不同作用：</p>
-<div class="highlight"><pre><span></span><code>0x45
-→ 定位 I²C 总线上的器件
-
-0x00、0x01、0x0A……
-→ 定位器件内部的寄存器
-</code></pre></div>
-<p>多数 MCU 的 I²C 接口接收 7-bit 地址，此时应传入 <code>0x45</code>。</p>
-<p><code>0x8A</code> 和 <code>0x8B</code> 是将 <code>0x45</code> 左移并加入读写位后形成的地址字节。只有底层接口明确要求完整地址字节时，才应使用这种形式。</p>
-<h4 id="_4">设置寄存器指针</h4>
-<p>读取某个寄存器前，主控需要先写入目标寄存器地址：</p>
-<div class="highlight"><pre><span></span><code>器件地址 0x45 + Write
-→ Register Address
-</code></pre></div>
-<p>随后发起读取：</p>
-<div class="highlight"><pre><span></span><code>器件地址 0x45 + Read
-→ MSByte
-→ LSByte
-</code></pre></div>
-<p>OPT4001 的寄存器宽度为 16 bit，发送顺序为高字节在前、低字节在后。</p>
-<h4 id="i2c">I²C 寄存器读取过程</h4>
-<p><img alt="OPT4001YMN 的 I²C 寄存器读取过程" src="../../../assets/opt4001/opt4001-i2c-register-read.svg" /></p>
-<p><em>图 2：OPT4001YMN 的 I²C 寄存器读取过程。根据 TI <a href="https://www.ti.com/lit/ds/symlink/opt4001.pdf">《OPT4001 Datasheet》</a>第 21—24 页重绘。该图用于说明地址层级和数据顺序，不表示完整电气时序。</em></p>
-<p>器件会保留当前寄存器指针。重复读取同一个寄存器时，不需要每次重新设置；
-切换到其他寄存器时，再写入新的寄存器地址。</p>
-<h3 id="_5">启动测量</h3>
-<p>OPT4001YMN 上电后默认处于 Power-down。</p>
-<p>Power-down 状态下：</p>
-<ul>
-<li>器件不进行主动光感测和转换；</li>
-<li>结果寄存器不会持续更新；</li>
-<li>器件仍然响应 I²C 访问。</li>
-</ul>
-<p>因此，能够读取配置寄存器，并不代表器件已经开始测量。</p>
-<p>测量相关配置位于寄存器 <code>0x0A</code>：</p>
-<table>
-<thead>
-<tr>
-<th>字段</th>
-<th style="text-align: right;">默认值</th>
-<th>本页使用</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>RANGE</code></td>
-<td style="text-align: right;"><code>0xC</code>，<code>Auto-range</code></td>
-<td>保持默认</td>
-</tr>
-<tr>
-<td><code>CONVERSION_TIME</code></td>
-<td style="text-align: right;"><code>0x8</code>，100 ms</td>
-<td>保持默认</td>
-</tr>
-<tr>
-<td><code>OPERATING_MODE</code></td>
-<td style="text-align: right;"><code>0</code>，Power-down</td>
-<td>修改为 <code>3</code></td>
-</tr>
-</tbody>
-</table>
-<p>将 <code>OPERATING_MODE</code> 从 <code>0</code> 修改为 <code>3</code> 后，器件进入 Continuous 模式：</p>
-<div class="highlight"><pre><span></span><code>Power-down
-OPERATING_MODE = 0
-
-        ↓
-
-Continuous
-OPERATING_MODE = 3
-</code></pre></div>
-<p>Continuous 模式下，OPT4001 按照配置的 Conversion Time 持续测量，并更新输出寄存器。</p>
-<p>修改 <code>OPERATING_MODE</code> 时，建议采用读—改—写：</p>
-<div class="highlight"><pre><span></span><code>读取寄存器 0x0A
-→ 只修改 OPERATING_MODE
-→ 写回寄存器 0x0A
-</code></pre></div>
-<p>这样可以保留同一寄存器中的量程、转换时间和其他配置字段。</p>
-<h4 id="conversion-time">Conversion Time</h4>
-<p>Conversion Time 表示一次测量从开始到结果寄存器完成更新所需的时间。</p>
-<p>默认值为：</p>
-<div class="highlight"><pre><span></span><code>CONVERSION_TIME = 0x8
-转换时间约为 100 ms
-</code></pre></div>
-<p>器件支持从 600 μs 到 800 ms 的 12 档转换时间。较短的转换时间可以更快更新结果；有效测量分辨率还会受到转换时间和当前量程影响。</p>
-<p>本页沿用默认的 100 ms，不对不同转换时间的实际性能作验证结论。</p>
-<details class="note">
-<summary>其他转换时间</summary>
-<table>
-<thead>
-<tr>
-<th style="text-align: right;">字段值</th>
-<th style="text-align: right;">转换时间</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: right;"><code>0</code></td>
-<td style="text-align: right;">600 μs</td>
-</tr>
-<tr>
-<td style="text-align: right;"><code>1</code></td>
-<td style="text-align: right;">1 ms</td>
-</tr>
-<tr>
-<td style="text-align: right;"><code>2</code></td>
-<td style="text-align: right;">1.8 ms</td>
-</tr>
-<tr>
-<td style="text-align: right;"><code>3</code></td>
-<td style="text-align: right;">3.4 ms</td>
-</tr>
-<tr>
-<td style="text-align: right;"><code>4</code></td>
-<td style="text-align: right;">6.5 ms</td>
-</tr>
-<tr>
-<td style="text-align: right;"><code>5</code></td>
-<td style="text-align: right;">12.7 ms</td>
-</tr>
-<tr>
-<td style="text-align: right;"><code>6</code></td>
-<td style="text-align: right;">25 ms</td>
-</tr>
-<tr>
-<td style="text-align: right;"><code>7</code></td>
-<td style="text-align: right;">50 ms</td>
-</tr>
-<tr>
-<td style="text-align: right;"><code>8</code></td>
-<td style="text-align: right;">100 ms</td>
-</tr>
-<tr>
-<td style="text-align: right;"><code>9</code></td>
-<td style="text-align: right;">200 ms</td>
-</tr>
-<tr>
-<td style="text-align: right;"><code>10</code></td>
-<td style="text-align: right;">400 ms</td>
-</tr>
-<tr>
-<td style="text-align: right;"><code>11</code></td>
-<td style="text-align: right;">800 ms</td>
-</tr>
-</tbody>
-</table>
-</details>
-<p>OPT4001 还提供两种 One-shot 模式。本页只讨论与首次连续读取直接相关的 Continuous。</p>
-<h3 id="_6">等待数据</h3>
-<p>切换到 Continuous 后，需要等待新的转换完成，再读取结果寄存器。</p>
-<p>可以使用两种方式判断读取时机。</p>
-<h4 id="_7">按时间等待</h4>
-<p>使用默认的 100 ms Conversion Time 时，主控应为第一次转换预留足够时间。</p>
-<p>不应在写入工作模式后立即将当前结果寄存器内容当成新样本。</p>
-<p>具体等待时间还需要考虑：</p>
-<ul>
-<li>当前 Conversion Time；</li>
-<li>MCU 和总线调度；</li>
-<li>应用允许的采样周期。</li>
-</ul>
-<h4 id="_8">检查状态</h4>
-<p>寄存器 <code>0x0C</code> 中的 <code>CONVERSION_READY_FLAG</code> 表示转换状态：</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: right;">值</th>
-<th>状态</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: right;"><code>0</code></td>
-<td>转换仍在进行</td>
-</tr>
-<tr>
-<td style="text-align: right;"><code>1</code></td>
-<td>转换已经完成</td>
-</tr>
-</tbody>
-</table>
-<p>基本读取顺序可以写成：</p>
-<div class="highlight"><pre><span></span><code>读取 0x0C
-→ CONVERSION_READY_FLAG = 1
-→ 读取结果寄存器
-</code></pre></div>
-<p>读取寄存器 <code>0x0C</code> 会清除 <code>CONVERSION_READY_FLAG</code>，因此程序应在读取后保存并处理该状态。</p>
-<h3 id="_9">读取结果</h3>
-<p>最新测量结果分布在两个连续的 16-bit 寄存器中。</p>
-<h4 id="0x00">寄存器 0x00</h4>
-<table>
-<thead>
-<tr>
-<th>位</th>
-<th>字段</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>D15:D12</code></td>
-<td><code>EXPONENT</code></td>
-<td>表示当前满量程范围</td>
-</tr>
-<tr>
-<td><code>D11:D0</code></td>
-<td><code>RESULT_MSB</code></td>
-<td>Mantissa 的高 12 位</td>
-</tr>
-</tbody>
-</table>
-<h4 id="0x01">寄存器 0x01</h4>
-<table>
-<thead>
-<tr>
-<th>位</th>
-<th>字段</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>D15:D8</code></td>
-<td><code>RESULT_LSB</code></td>
-<td>Mantissa 的低 8 位</td>
-</tr>
-<tr>
-<td><code>D7:D4</code></td>
-<td><code>COUNTER</code></td>
-<td>记录样本更新</td>
-</tr>
-<tr>
-<td><code>D3:D0</code></td>
-<td><code>CRC</code></td>
-<td>检查读取数据中的 bit 错误</td>
-</tr>
-</tbody>
-</table>
-<h4 id="_10">结果寄存器位字段</h4>
-<p><img alt="OPT4001 结果寄存器 0x00 和 0x01" src="../../../assets/opt4001/opt4001-result-registers.svg" /></p>
-<p><em>图 3：OPT4001 结果寄存器 <code>0x00</code> 和 <code>0x01</code>。根据 TI <a href="https://www.ti.com/lit/ds/symlink/opt4001.pdf">《OPT4001 Datasheet》</a>第 27 页重绘。</em></p>
-<p>一组完整结果需要读取 4 个字节：</p>
-<div class="highlight"><pre><span></span><code>0x00 MSByte
-0x00 LSByte
-0x01 MSByte
-0x01 LSByte
-</code></pre></div>
-<h4 id="burst-read">Burst Read</h4>
-<p>寄存器 <code>0x0B</code> 中的 <code>I2C_BURST</code> 默认值为 <code>1</code>，即上电后默认启用 Burst Read。</p>
-<p>启用后，每完成一次 16-bit 寄存器读取，寄存器指针自动增加 <code>1</code>：</p>
-<div class="highlight"><pre><span></span><code>设置寄存器指针为 0x00
-→ 读取 0x00 的 2 个字节
-→ 指针自动移动到 0x01
-→ 读取 0x01 的 2 个字节
-</code></pre></div>
-<p>因此，主控可以从 <code>0x00</code> 开始连续读取 4 个字节，取得一组完整测量结果。</p>
-<p>Burst Read 的作用是减少重复设置寄存器指针产生的 I²C 开销。</p>
-<p>Datasheet 没有明确将 Burst Read 描述为两个结果寄存器的原子锁存机制，因此本页不作这一保证。</p>
-<h3 id="_11">确认更新</h3>
-<p><code>COUNTER</code> 是寄存器 <code>0x01</code> 中的 4-bit 滚动计数器。</p>
-<p>它具有以下行为：</p>
-<ul>
-<li>上电后从 <code>0</code> 开始；</li>
-<li>每完成一次成功测量后递增；</li>
-<li>到达 <code>15</code> 后回到 <code>0</code>；</li>
-<li>随后继续循环。</li>
-</ul>
-<p>Counter 可以帮助主控判断结果寄存器是否持续更新。</p>
-<p>例如：</p>
-<table>
-<thead>
-<tr>
-<th>现象</th>
-<th>判断</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>lux 不变，Counter 改变</td>
-<td>传感器仍在测量，当前环境光可能较稳定</td>
-</tr>
-<tr>
-<td>lux 和 Counter 都改变</td>
-<td>传感器正在更新新的测量结果</td>
-</tr>
-<tr>
-<td>Counter 长时间不变</td>
-<td>继续检查工作模式、转换状态和读取逻辑</td>
-</tr>
-</tbody>
-</table>
-<p>Counter 只能帮助判断样本更新情况，不能单独证明 lux 计算或通信内容一定正确。</p>
-<h3 id="_12">检查完整性</h3>
-<p><code>CRC</code> 位于寄存器 <code>0x01</code> 的低 4 bit。</p>
-<p>OPT4001 在每次测量后更新 CRC，主控可以使用它检查输出数据读取过程中是否出现 bit 错误。</p>
-<div class="highlight"><pre><span></span><code>Counter
-→ 判断样本是否更新
-
-CRC
-→ 检查读取数据是否完整
-</code></pre></div>
-<p>CRC 的计算涉及 Exponent、Mantissa 和 Counter 中的多组 bit。完整算法见 <a href="https://www.ti.com/lit/ds/symlink/opt4001.pdf">《OPT4001 Datasheet》</a>第 27 页。</p>
-<p>本页不重新简化 CRC 算法，避免给出未经验证的实现。</p>
-<h3 id="lux">换算 lux</h3>
-<p>OPT4001 使用 Exponent 和 Mantissa 表示测量结果：</p>
-<ul>
-<li><code>EXPONENT</code> 为 4 bit；</li>
-<li><code>MANTISSA</code> 为 20 bit；</li>
-<li>Mantissa 分布在 <code>RESULT_MSB</code> 和 <code>RESULT_LSB</code> 中。</li>
-</ul>
-<h4 id="mantissa">组合 Mantissa</h4>
-<div class="highlight"><pre><span></span><code>MANTISSA = (RESULT_MSB &lt;&lt; 8) + RESULT_LSB
-</code></pre></div>
-<h4 id="adc-code">恢复 ADC code</h4>
-<div class="highlight"><pre><span></span><code>ADC_CODES = MANTISSA &lt;&lt; EXPONENT
-</code></pre></div>
-<p>也可以写为：</p>
-<div class="highlight"><pre><span></span><code>ADC_CODES = MANTISSA × 2^EXPONENT
-</code></pre></div>
-<h4 id="picostar-lux">计算 PicoStar lux</h4>
-<p>当前器件为 OPT4001YMN / PicoStar，使用以下系数：</p>
-<div class="highlight"><pre><span></span><code>lux = ADC_CODES × 312.5 × 10⁻⁶
-</code></pre></div>
-<p>等价于：</p>
-<div class="highlight"><pre><span></span><code>lux = ADC_CODES × 0.0003125
-</code></pre></div>
-<p>SOT-5X3 使用不同的换算系数，不能直接套用当前公式。</p>
-<h4 id="_13">计算示例</h4>
-<p>以下数值只用于说明计算过程，不是实测结果。</p>
-<p>假设读取到：</p>
-<div class="highlight"><pre><span></span><code>EXPONENT   = 1
-RESULT_MSB = 0x003
-RESULT_LSB = 0xE8
-</code></pre></div>
-<p>组合 Mantissa：</p>
-<div class="highlight"><pre><span></span><code>MANTISSA
-= (0x003 &lt;&lt; 8) + 0xE8
-= 1000
-</code></pre></div>
-<p>恢复 ADC code：</p>
-<div class="highlight"><pre><span></span><code>ADC_CODES
-= 1000 &lt;&lt; 1
-= 2000
-</code></pre></div>
-<p>换算为 lux：</p>
-<div class="highlight"><pre><span></span><code>lux
-= 2000 × 0.0003125
-= 0.625 lux
-</code></pre></div>
-<p>Mantissa 需要 20 bit，经过 Exponent 左移后，ADC code 最多需要 28 bit。</p>
-<p>实现计算时，应在左移前使用至少 32-bit 的无符号类型，避免中间结果溢出。</p>
-<h2 id="_14">参考代码</h2>
-<p>下面的代码只负责解析已经读取到的寄存器 <code>0x00</code> 和 <code>0x01</code>。</p>
-<p>它不包含：</p>
-<ul>
-<li>I²C 初始化；</li>
-<li>寄存器读写；</li>
-<li>工作模式配置；</li>
-<li>Ready Flag 轮询；</li>
-<li>特定 MCU 的 HAL 接口。</li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdint.h&gt;</span>
-
-<span class="cm">/**</span>
-<span class="cm"> * Convert OPT4001YMN output registers to lux.</span>
-<span class="cm"> *</span>
-<span class="cm"> * This function only parses Register 0x00 and Register 0x01.</span>
-<span class="cm"> * It does not perform I2C communication.</span>
-<span class="cm"> */</span>
-<span class="kt">double</span><span class="w"> </span><span class="nf">opt4001_ymn_result_to_lux</span><span class="p">(</span>
-<span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">result_reg_0</span><span class="p">,</span>
-<span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">result_reg_1</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">exponent</span><span class="w"> </span><span class="o">=</span>
-<span class="w">        </span><span class="p">(</span><span class="kt">uint8_t</span><span class="p">)((</span><span class="n">result_reg_0</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">12</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mh">0x0Fu</span><span class="p">);</span>
-
-<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">result_msb</span><span class="w"> </span><span class="o">=</span>
-<span class="w">        </span><span class="p">(</span><span class="kt">uint32_t</span><span class="p">)(</span><span class="n">result_reg_0</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mh">0x0FFFu</span><span class="p">);</span>
-
-<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">result_lsb</span><span class="w"> </span><span class="o">=</span>
-<span class="w">        </span><span class="p">(</span><span class="kt">uint32_t</span><span class="p">)((</span><span class="n">result_reg_1</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">8</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mh">0x00FFu</span><span class="p">);</span>
-
-<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">mantissa</span><span class="w"> </span><span class="o">=</span>
-<span class="w">        </span><span class="p">(</span><span class="n">result_msb</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">8</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">result_lsb</span><span class="p">;</span>
-
-<span class="w">    </span><span class="cm">/*</span>
-<span class="cm">     * Mantissa is 20 bit and Exponent can be up to 8.</span>
-<span class="cm">     * Use a 32-bit type before shifting.</span>
-<span class="cm">     */</span>
-<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">adc_codes</span><span class="w"> </span><span class="o">=</span>
-<span class="w">        </span><span class="n">mantissa</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">exponent</span><span class="p">;</span>
-
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="n">adc_codes</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">0.0003125</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
-<p>Counter 和 CRC 可以这样提取：</p>
-<div class="highlight"><pre><span></span><code><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">counter</span><span class="w"> </span><span class="o">=</span>
-<span class="w">    </span><span class="p">(</span><span class="kt">uint8_t</span><span class="p">)((</span><span class="n">result_reg_1</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mh">0x0Fu</span><span class="p">);</span>
-
-<span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">crc</span><span class="w"> </span><span class="o">=</span>
-<span class="w">    </span><span class="p">(</span><span class="kt">uint8_t</span><span class="p">)(</span><span class="n">result_reg_1</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mh">0x0Fu</span><span class="p">);</span>
-</code></pre></div>
-<p>该代码根据 <a href="https://www.ti.com/lit/ds/symlink/opt4001.pdf">《OPT4001 Datasheet》</a>中的寄存器字段和 lux 公式整理，尚未经过编译、目标 MCU 运行或实物验证。</p>
-<h2 id="_15">本页边界</h2>
-<p>本页：</p>
-<ul>
-<li>只讨论 OPT4001YMN / PicoStar；</li>
-<li>使用固定的 7-bit 地址 <code>0x45</code>；</li>
-<li>使用 PicoStar 的 lux 换算系数；</li>
-<li>说明 Continuous 模式下的基本读取路径；</li>
-<li>不提供特定 MCU 的完整驱动。</li>
-</ul>
-<p>本页不包含：</p>
-<ul>
-<li>SOT-5X3 的地址选择和 INT 功能；</li>
-<li>完整 FIFO 使用方法；</li>
-<li>阈值检测；</li>
-<li>完整 CRC 实现；</li>
-<li>One-shot 的完整控制流程；</li>
-<li>已经过硬件验证的轮询周期和代码结果。</li>
-</ul>
-<h2 id="_16">资料来源</h2>
-<h3 id="source-opt4001-data"><a href="https://www.ti.com/lit/ds/symlink/opt4001.pdf">OPT4001 Datasheet</a></h3>
-<p>文档编号：SBOS993A，revised December 2022</p>
-<ul>
-<li>工作模式：第 13—15 页；</li>
-<li>Conversion Time 和 lux 换算：第 18—19 页；</li>
-<li>I²C 地址和寄存器读取：第 21—24 页；</li>
-<li>结果寄存器、Counter 和 CRC：第 26—27 页；</li>
-<li>配置寄存器 <code>0x0A</code>：第 31 页；</li>
-<li>Burst Read 和状态寄存器：第 32—33 页。</li>
-</ul>
-<h3 id="source-opt4001-evm"><a href="https://www.ti.com/lit/ug/sbou278/sbou278.pdf">OPT4001YMNEVM User's Guide</a></h3>
-<p>文档编号：SBOU278，December 2021</p>
-<ul>
-<li>GUI 中的结果寄存器和配置寄存器：第 17 页。</li>
-</ul>
-<h2 id="_17">继续阅读</h2>
-<ul>
-<li><a href="../../../02-hardware/">Quick Start：首次采集</a></li>
-<li><a href="../information-architecture/">评估系统与光学硬件结构</a></li>
-<li><a href="../troubleshooting/">故障排查</a></li>
-</ul>
+<div class="admonition warning">
+<p class="admonition-title">Pending end-to-end evidence</p>
+<p>This controlled failure hasn't been run in the current GitHub Actions
+workflow. The expected failure follows from the configured
+<code>fail_on_error: true</code> behavior, but it remains unverified in this repository.</p>
 </div>
+<p>Don't publish the deliberate error on <code>main</code> and don't replace the controlled
+rule with invented output.</p>
+<h2 id="read-failures-by-layer">Read failures by layer</h2>
+<p>Start with the first failed step, not the final job label.</p>
+<h3 id="the-workflow-fails-before-the-writing-check">The workflow fails before the writing check</h3>
+<p>Typical locations include workflow parsing, checkout, Python setup, and
+dependency installation.</p>
+<p>Check:</p>
+<ul>
+<li>the first failed step;</li>
+<li>Action references;</li>
+<li>workflow syntax;</li>
+<li>repository permissions;</li>
+<li><code>requirements-docs.txt</code>.</li>
+</ul>
+<p>Vale hasn't made a documentation decision when it never starts.</p>
+<h3 id="vale-reports-a-documentation-error">Vale reports a documentation error</h3>
+<p>Vale completes and reports a file, location, message, and rule.</p>
+<p>Check whether the content violates the repository policy. Change the rule only
+after confirming that the policy or rule is wrong.</p>
+<h3 id="vale-has-a-runtime-failure">Vale has a runtime failure</h3>
+<p>The Action starts, but Vale can't load a configuration, style, vocabulary, or
+selected file.</p>
+<p>Check:</p>
+<ul>
+<li>whether <code>.vale.ini</code> is committed at the repository root;</li>
+<li>whether <code>StylesPath</code> resolves to the committed <code>styles/</code> directory;</li>
+<li>path spelling and capitalization;</li>
+<li>the <code>files: docs</code> input;</li>
+<li>the Vale version and Action log.</li>
+</ul>
+<h3 id="vale-passes-but-mkdocs-fails">Vale passes but MkDocs fails</h3>
+<p>Vale and MkDocs answer different questions. Vale checks prose rules. The strict
+build checks whether the documentation site can be built with the configured
+navigation, extensions, templates, and links that MkDocs validates.</p>
+<p>Inspect the <code>Build documentation</code> step and correct the reported site problem.</p>
+<h3 id="validation-passes-but-deployment-fails">Validation passes but deployment fails</h3>
+<p>The quality gate completed, but the publishing job failed later.</p>
+<p>Check the deployment job's checkout, permissions, dependencies, Git
+configuration, and <code>mkdocs gh-deploy --force</code> output.</p>
+<h2 id="keep-local-and-automated-checks-aligned">Keep local and automated checks aligned</h2>
+<p>The current relationship is:</p>
+<table>
+<thead>
+<tr>
+<th>Local</th>
+<th>GitHub Actions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>vale docs</code></td>
+<td><code>files: docs</code></td>
+</tr>
+<tr>
+<td>Repository <code>.vale.ini</code></td>
+<td>The checked-out <code>.vale.ini</code></td>
+</tr>
+<tr>
+<td>Repository <code>styles/</code></td>
+<td>The checked-out <code>styles/</code> directory</td>
+</tr>
+<tr>
+<td>Vale 3.13.0 in the current local environment</td>
+<td>Vale 3.15.1 requested by the Action</td>
+</tr>
+<tr>
+<td><code>mkdocs build --strict</code></td>
+<td><code>mkdocs build --strict</code></td>
+</tr>
+</tbody>
+</table>
+<p>The documentation scope and MkDocs command match. The Vale versions don't.
+When the results differ, compare version behavior before changing a rule or
+document.</p>
+<h2 id="security-and-maintenance-notes">Security and maintenance notes</h2>
+<p>The Vale Action uses a full commit hash. The current checkout and Python setup
+steps use major-version tags:</p>
+<div class="highlight"><pre><span></span><code>actions/checkout@v4
+actions/setup-python@v5
+</code></pre></div>
+<p>GitHub identifies a full-length commit hash as the immutable way to reference
+an Action. Converting the remaining Action references to verified commit hashes is a
+separate workflow-hardening change and isn't part of this documentation update.</p>
+<p>Review workflow and prose changes in focused diffs when practical. Small diffs
+make trigger, permission, and dependency changes easier to audit.</p>
+<h2 id="completion-check">Completion check</h2>
+<p>You understand the current workflow when you can:</p>
+<ul>
+<li>identify <code>.github/workflows/ci.yml</code> as the active workflow file;</li>
+<li>explain its three triggers;</li>
+<li>explain why validation has <code>checks: write</code>;</li>
+<li>map <code>vale docs</code> to <code>files: docs</code>;</li>
+<li>explain <code>fail_on_error: true</code> and <code>filter_mode: nofilter</code>;</li>
+<li>explain why the strict build belongs in the validation job;</li>
+<li>show that deployment requires a successful validation job;</li>
+<li>open the real successful run;</li>
+<li>identify the controlled failure as pending evidence;</li>
+<li>describe the local and Action-managed Vale version difference.</li>
+</ul>
+<h2 id="common-problems">Common problems</h2>
+<h3 id="the-workflow-doesnt-start">The workflow doesn't start</h3>
+<p>Confirm that the workflow file exists under <code>.github/workflows/</code>, the event
+matches the current action, and GitHub Actions is enabled for the repository.</p>
+<p>For a push, confirm that the target branch is <code>main</code>. This workflow doesn't
+define path filters.</p>
+<h3 id="vale-checks-the-wrong-files">Vale checks the wrong files</h3>
+<p>Compare the local <code>vale docs</code> command with the Action's <code>files: docs</code> input.
+Also confirm the workflow starts from the repository checkout root.</p>
+<h3 id="vale-cant-find-a-style">Vale can't find a style</h3>
+<p>Confirm that <code>.vale.ini</code>, <code>styles/</code>, custom rule files, and vocabulary files
+were committed. Linux path matching is case-sensitive.</p>
+<h3 id="the-job-passes-when-vale-reports-an-error">The job passes when Vale reports an error</h3>
+<p>Confirm that the reporting rule uses the <code>error</code> level and that the workflow
+still includes:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">fail_on_error</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="nt">filter_mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nofilter</span>
+</code></pre></div>
+<p>Also confirm that the affected file is under <code>docs/</code>.</p>
+<h3 id="local-checks-pass-but-the-automated-workflow-fails">Local checks pass but the automated workflow fails</h3>
+<p>Compare the Vale versions, checked paths, active configuration, committed
+styles, and first failed log message. The current local and automated Vale
+versions differ.</p>
+<h3 id="deployment-starts-for-the-wrong-event">Deployment starts for the wrong event</h3>
+<p>Confirm that the deployment job retains both its <code>if</code> condition and
+<code>needs: validate</code> dependency.</p>
+<h2 id="project-boundaries">Project boundaries</h2>
+<p>This guide covers:</p>
+<ul>
+<li>the repository's current combined validation and deployment workflow;</li>
+<li>pull request, main-branch push, and manual triggers;</li>
+<li>the Vale Action inputs;</li>
+<li>MkDocs strict build validation;</li>
+<li>the validation-to-deployment gate;</li>
+<li>observed successful-run evidence;</li>
+<li>the pending controlled-failure test;</li>
+<li>local and automated check alignment.</li>
+</ul>
+<p>This guide doesn't cover:</p>
+<ul>
+<li>branch protection administration;</li>
+<li>organization-wide GitHub Actions policies;</li>
+<li>self-hosted runners;</li>
+<li>automatic documentation fixes;</li>
+<li>deployment secrets;</li>
+<li>a completed controlled-failure run;</li>
+<li>the CI result for this uncommitted page.</li>
+</ul>
+<h2 id="next-steps">Next steps</h2>
+<p>Return to <a href="../configure-vale/">Configure Vale for a documentation repository</a>
+when the workflow runs successfully but the enabled rules or terminology need
+to change.</p>
+<p>Use <a href="../troubleshooting/">Troubleshooting</a> when local and GitHub Actions results
+don't match.</p>
+<h2 id="sources">Sources</h2>
+<ul>
+<li><a href="https://github.com/alison2fun/tech-docs-portfolio/blob/main/.github/workflows/ci.yml">Current repository workflow</a></li>
+<li><a href="https://github.com/alison2fun/tech-docs-portfolio/actions/runs/30780106488">Documentation CI run #36</a></li>
+<li><a href="https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax">GitHub Actions workflow syntax</a></li>
+<li><a href="https://docs.github.com/en/actions/reference/security/secure-use">GitHub secure use reference</a></li>
+<li><a href="https://github.com/vale-cli/vale-action">Official Vale GitHub Action</a></li>
+</ul>
 
 
 
 
 
 
+
+  
+  
 
 
 

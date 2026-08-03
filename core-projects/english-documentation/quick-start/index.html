@@ -6,33 +6,33 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="安装 OpenClaw CLI，完成模型配置，启动 Gateway，并在 Control UI 中发送第一条消息。">
+        <meta name="description" content="Install Vale, confirm the repository configuration, and run your first local documentation check.">
       
       
       
       
-        <link rel="prev" href="../03-api/">
+        <link rel="prev" href="../">
       
       
-        <link rel="next" href="../case-studies/">
+        <link rel="next" href="../configure-vale/">
       
       
         
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>OpenClaw 快速开始：安装 CLI 并发送第一条消息 - 我的自动化文档作品集</title>
+        <title>Set up local documentation checks with Vale - 我的自动化文档作品集</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -51,9 +51,9 @@
       
     
     
-      <link rel="stylesheet" href="../styles/kami-portfolio-20260709.css">
+      <link rel="stylesheet" href="../../../styles/kami-portfolio-20260709.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#openclaw-cli" class="md-skip">
+        <a href="#set-up-local-documentation-checks-with-vale" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +94,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="我的自动化文档作品集" class="md-header__button md-logo" aria-label="我的自动化文档作品集" data-md-component="logo">
+    <a href="../../.." title="我的自动化文档作品集" class="md-header__button md-logo" aria-label="我的自动化文档作品集" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              OpenClaw 快速开始：安装 CLI 并发送第一条消息
+              Set up local documentation checks with Vale
             
           </span>
         </div>
@@ -209,7 +209,7 @@
   
   
     <li class="md-tabs__item">
-      <a href=".." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
   
@@ -232,7 +232,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../portfolio/" class="md-tabs__link">
+        <a href="../../../portfolio/" class="md-tabs__link">
           
   
   
@@ -252,7 +252,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../case-studies/" class="md-tabs__link">
+        <a href="../../../case-studies/" class="md-tabs__link">
           
   
   
@@ -272,7 +272,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../posts/" class="md-tabs__link">
+        <a href="../../../posts/" class="md-tabs__link">
           
   
   
@@ -290,7 +290,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../about/" class="md-tabs__link">
+      <a href="../../../about/" class="md-tabs__link">
         
   
   
@@ -309,7 +309,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../%E7%AE%80%E5%8E%86/" class="md-tabs__link">
+      <a href="../../../%E7%AE%80%E5%8E%86/" class="md-tabs__link">
         
   
   
@@ -350,7 +350,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="我的自动化文档作品集" class="md-nav__button md-logo" aria-label="我的自动化文档作品集" data-md-component="logo">
+    <a href="../../.." title="我的自动化文档作品集" class="md-nav__button md-logo" aria-label="我的自动化文档作品集" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -368,7 +368,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -450,7 +450,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../portfolio/" class="md-nav__link">
+      <a href="../../../portfolio/" class="md-nav__link">
         
   
   
@@ -528,7 +528,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../core-projects/hardware/" class="md-nav__link">
+      <a href="../../hardware/" class="md-nav__link">
         
   
   
@@ -556,7 +556,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02-hardware/" class="md-nav__link">
+      <a href="../../../02-hardware/" class="md-nav__link">
         
   
   
@@ -584,7 +584,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../core-projects/hardware/information-architecture/" class="md-nav__link">
+      <a href="../../hardware/information-architecture/" class="md-nav__link">
         
   
   
@@ -612,7 +612,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../core-projects/hardware/configure-and-read-lux/" class="md-nav__link">
+      <a href="../../hardware/configure-and-read-lux/" class="md-nav__link">
         
   
   
@@ -640,7 +640,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../core-projects/hardware/troubleshooting/" class="md-nav__link">
+      <a href="../../hardware/troubleshooting/" class="md-nav__link">
         
   
   
@@ -726,7 +726,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mini-programs/" class="md-nav__link">
+      <a href="../../../mini-programs/" class="md-nav__link">
         
   
   
@@ -804,7 +804,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mini-programs/action/" class="md-nav__link">
+      <a href="../../../mini-programs/action/" class="md-nav__link">
         
   
   
@@ -882,7 +882,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mini-programs/action/user-guide/quick-start/" class="md-nav__link">
+      <a href="../../../mini-programs/action/user-guide/quick-start/" class="md-nav__link">
         
   
   
@@ -910,7 +910,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mini-programs/action/user-guide/create-task/" class="md-nav__link">
+      <a href="../../../mini-programs/action/user-guide/create-task/" class="md-nav__link">
         
   
   
@@ -938,7 +938,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mini-programs/action/user-guide/manage-progress/" class="md-nav__link">
+      <a href="../../../mini-programs/action/user-guide/manage-progress/" class="md-nav__link">
         
   
   
@@ -966,7 +966,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mini-programs/action/user-guide/faq/" class="md-nav__link">
+      <a href="../../../mini-programs/action/user-guide/faq/" class="md-nav__link">
         
   
   
@@ -994,7 +994,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mini-programs/action/user-guide/privacy/" class="md-nav__link">
+      <a href="../../../mini-programs/action/user-guide/privacy/" class="md-nav__link">
         
   
   
@@ -1080,7 +1080,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mini-programs/action/product/prd/" class="md-nav__link">
+      <a href="../../../mini-programs/action/product/prd/" class="md-nav__link">
         
   
   
@@ -1108,7 +1108,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mini-programs/action/product/system-flow-design/" class="md-nav__link">
+      <a href="../../../mini-programs/action/product/system-flow-design/" class="md-nav__link">
         
   
   
@@ -1136,7 +1136,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mini-programs/action/product/task-decomposition-interface-draft/" class="md-nav__link">
+      <a href="../../../mini-programs/action/product/task-decomposition-interface-draft/" class="md-nav__link">
         
   
   
@@ -1164,7 +1164,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mini-programs/action/product/data-privacy-boundaries/" class="md-nav__link">
+      <a href="../../../mini-programs/action/product/data-privacy-boundaries/" class="md-nav__link">
         
   
   
@@ -1250,7 +1250,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mini-programs/action/releases/prototype-iteration-record/" class="md-nav__link">
+      <a href="../../../mini-programs/action/releases/prototype-iteration-record/" class="md-nav__link">
         
   
   
@@ -1278,7 +1278,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mini-programs/action/releases/roadmap/" class="md-nav__link">
+      <a href="../../../mini-programs/action/releases/roadmap/" class="md-nav__link">
         
   
   
@@ -1322,7 +1322,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dot-collage/" class="md-nav__link">
+      <a href="../../../dot-collage/" class="md-nav__link">
         
   
   
@@ -1350,7 +1350,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../photo-background/" class="md-nav__link">
+      <a href="../../../photo-background/" class="md-nav__link">
         
   
   
@@ -1436,7 +1436,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01-automation/" class="md-nav__link">
+      <a href="../../../01-automation/" class="md-nav__link">
         
   
   
@@ -1464,7 +1464,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../install/" class="md-nav__link">
+      <a href="../../../install/" class="md-nav__link">
         
   
   
@@ -1492,7 +1492,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../style-guide/" class="md-nav__link">
+      <a href="../../../style-guide/" class="md-nav__link">
         
   
   
@@ -1520,7 +1520,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../github-actions-workflow/" class="md-nav__link">
+      <a href="../../../github-actions-workflow/" class="md-nav__link">
         
   
   
@@ -1548,7 +1548,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../core-projects/docs-engineering/validation-results/" class="md-nav__link">
+      <a href="../../docs-engineering/validation-results/" class="md-nav__link">
         
   
   
@@ -1576,7 +1576,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../troubleshooting/" class="md-nav__link">
+      <a href="../../../troubleshooting/" class="md-nav__link">
         
   
   
@@ -1604,7 +1604,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../changelog/" class="md-nav__link">
+      <a href="../../../changelog/" class="md-nav__link">
         
   
   
@@ -1612,204 +1612,6 @@
     
   
     更新记录
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
-        
-          
-          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    04 English Documentation｜Documentation Quality Pipeline
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_5">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    04 English Documentation｜Documentation Quality Pipeline
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../core-projects/english-documentation/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Project Overview
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../core-projects/english-documentation/quick-start/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Quick Start：Run Vale locally
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../core-projects/english-documentation/configure-vale/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Configure Vale
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../core-projects/english-documentation/github-actions/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    GitHub Actions
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../core-projects/english-documentation/troubleshooting/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Troubleshooting
   
 
     
@@ -1851,17 +1653,17 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" checked>
         
           
-          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
     
   
-    更多样本
+    04 English Documentation｜Documentation Quality Pipeline
   
 
     
@@ -1872,12 +1674,12 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2_6">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_5">
             <span class="md-nav__icon md-icon"></span>
             
   
-    更多样本
+    04 English Documentation｜Documentation Quality Pipeline
   
 
           </label>
@@ -1890,14 +1692,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../03-api/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    IoT 接口集成指南
+    Project Overview
   
 
     
@@ -1934,7 +1736,7 @@
   <span class="md-ellipsis">
     
   
-    OpenClaw Quick Start
+    Quick Start：Run Vale locally
   
 
     
@@ -1952,7 +1754,7 @@
   <span class="md-ellipsis">
     
   
-    OpenClaw Quick Start
+    Quick Start：Run Vale locally
   
 
     
@@ -1978,10 +1780,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#what-you-will-complete" class="md-nav__link">
     <span class="md-ellipsis">
       
-        这篇文档适合谁
+        What you will complete
       
     </span>
   </a>
@@ -1989,10 +1791,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#before-you-begin" class="md-nav__link">
     <span class="md-ellipsis">
       
-        完成后你将能够
+        Before you begin
       
     </span>
   </a>
@@ -2000,33 +1802,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#1-install-vale" class="md-nav__link">
     <span class="md-ellipsis">
       
-        开始前准备
+        1. Install Vale
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#1-openclaw-cli" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        步骤 1：安装 OpenClaw CLI
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="步骤 1：安装 OpenClaw CLI">
+    <nav class="md-nav" aria-label="1. Install Vale">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#expected-result" class="md-nav__link">
     <span class="md-ellipsis">
       
-        成功信号
+        Expected result
       
     </span>
   </a>
@@ -2039,22 +1830,44 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
+  <a href="#2-open-the-repository" class="md-nav__link">
     <span class="md-ellipsis">
       
-        步骤 2：完成首次配置
+        2. Open the repository
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="步骤 2：完成首次配置">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-confirm-the-committed-styles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Confirm the committed styles
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-confirm-the-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Confirm the configuration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Confirm the configuration">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#expected-result_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        成功信号
+        Expected result
       
     </span>
   </a>
@@ -2067,22 +1880,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-gateway" class="md-nav__link">
+  <a href="#5-run-the-first-check" class="md-nav__link">
     <span class="md-ellipsis">
       
-        步骤 3：确认 Gateway 正常运行
+        5. Run the first check
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="步骤 3：确认 Gateway 正常运行">
+    <nav class="md-nav" aria-label="5. Run the first check">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#expected-result_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        成功信号
+        Expected result
       
     </span>
   </a>
@@ -2095,22 +1908,77 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-control-ui" class="md-nav__link">
+  <a href="#6-read-the-result" class="md-nav__link">
     <span class="md-ellipsis">
       
-        步骤 4：打开 Control UI 并发送消息
+        6. Read the result
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="步骤 4：打开 Control UI 并发送消息">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#completion-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Completion check
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common problems
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common problems">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#vale-isnt-recognized" class="md-nav__link">
     <span class="md-ellipsis">
       
-        成功信号
+        vale isn't recognized
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vale-cant-find-valeini" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vale can't find .vale.ini
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vale-cant-find-a-style" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vale can't find a style
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vale-checks-no-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vale checks no files
       
     </span>
   </a>
@@ -2123,10 +1991,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#next-steps" class="md-nav__link">
     <span class="md-ellipsis">
       
-        没有成功时，从这里检查
+        Next steps
       
     </span>
   </a>
@@ -2134,21 +2002,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
+  <a href="#sources" class="md-nav__link">
     <span class="md-ellipsis">
       
-        下一步
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        资料来源
+        Sources
       
     </span>
   </a>
@@ -2159,6 +2016,204 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configure-vale/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configure Vale
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../github-actions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GitHub Actions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    更多样本
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    更多样本
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../03-api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IoT 接口集成指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../04-openclaw-quickstart/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OpenClaw Quick Start
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -2236,7 +2291,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../case-studies/" class="md-nav__link">
+      <a href="../../../case-studies/" class="md-nav__link">
         
   
   
@@ -2264,7 +2319,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../case-studies/mini-program-doc-set/" class="md-nav__link">
+      <a href="../../../case-studies/mini-program-doc-set/" class="md-nav__link">
         
   
   
@@ -2292,7 +2347,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../posts/docs-ci-publishing-gate/" class="md-nav__link">
+      <a href="../../../posts/docs-ci-publishing-gate/" class="md-nav__link">
         
   
   
@@ -2320,7 +2375,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../posts/hardware-datasheet-restructure/" class="md-nav__link">
+      <a href="../../../posts/hardware-datasheet-restructure/" class="md-nav__link">
         
   
   
@@ -2348,7 +2403,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../case-studies/portfolio-redesign/" class="md-nav__link">
+      <a href="../../../case-studies/portfolio-redesign/" class="md-nav__link">
         
   
   
@@ -2433,7 +2488,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../posts/" class="md-nav__link">
+      <a href="../../../posts/" class="md-nav__link">
         
   
   
@@ -2511,7 +2566,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../posts/portfolio-information-architecture/" class="md-nav__link">
+      <a href="../../../posts/portfolio-information-architecture/" class="md-nav__link">
         
   
   
@@ -2539,7 +2594,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../posts/quick-start-reader-success/" class="md-nav__link">
+      <a href="../../../posts/quick-start-reader-success/" class="md-nav__link">
         
   
   
@@ -2567,7 +2622,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../posts/api-onboarding-path/" class="md-nav__link">
+      <a href="../../../posts/api-onboarding-path/" class="md-nav__link">
         
   
   
@@ -2595,7 +2650,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../posts/documentation-as-qa/" class="md-nav__link">
+      <a href="../../../posts/documentation-as-qa/" class="md-nav__link">
         
   
   
@@ -2623,7 +2678,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../posts/multiple-reader-paths/" class="md-nav__link">
+      <a href="../../../posts/multiple-reader-paths/" class="md-nav__link">
         
   
   
@@ -2709,7 +2764,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../posts/choosing-docs-tools/" class="md-nav__link">
+      <a href="../../../posts/choosing-docs-tools/" class="md-nav__link">
         
   
   
@@ -2737,7 +2792,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../posts/preventing-stale-docs/" class="md-nav__link">
+      <a href="../../../posts/preventing-stale-docs/" class="md-nav__link">
         
   
   
@@ -2765,7 +2820,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../posts/maintainable-screenshots/" class="md-nav__link">
+      <a href="../../../posts/maintainable-screenshots/" class="md-nav__link">
         
   
   
@@ -2793,7 +2848,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../site-changelog/" class="md-nav__link">
+      <a href="../../../site-changelog/" class="md-nav__link">
         
   
   
@@ -2879,7 +2934,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../posts/ai-assisted-docs-boundaries/" class="md-nav__link">
+      <a href="../../../posts/ai-assisted-docs-boundaries/" class="md-nav__link">
         
   
   
@@ -3015,7 +3070,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../case-studies/github-hello-world/" class="md-nav__link">
+      <a href="../../../case-studies/github-hello-world/" class="md-nav__link">
         
   
   
@@ -3043,7 +3098,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../case-studies/stripe-checkout-quickstart/" class="md-nav__link">
+      <a href="../../../case-studies/stripe-checkout-quickstart/" class="md-nav__link">
         
   
   
@@ -3071,7 +3126,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../case-studies/esp-idf-get-started/" class="md-nav__link">
+      <a href="../../../case-studies/esp-idf-get-started/" class="md-nav__link">
         
   
   
@@ -3157,7 +3212,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../case-studies/vuejs-interactive-tutorial/" class="md-nav__link">
+      <a href="../../../case-studies/vuejs-interactive-tutorial/" class="md-nav__link">
         
   
   
@@ -3185,7 +3240,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../case-studies/mdn-first-website/" class="md-nav__link">
+      <a href="../../../case-studies/mdn-first-website/" class="md-nav__link">
         
   
   
@@ -3213,7 +3268,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../case-studies/apple-swiftui-tutorials/" class="md-nav__link">
+      <a href="../../../case-studies/apple-swiftui-tutorials/" class="md-nav__link">
         
   
   
@@ -3299,7 +3354,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../case-studies/tidb-docs-information-architecture/" class="md-nav__link">
+      <a href="../../../case-studies/tidb-docs-information-architecture/" class="md-nav__link">
         
   
   
@@ -3327,7 +3382,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../case-studies/docker-workshop/" class="md-nav__link">
+      <a href="../../../case-studies/docker-workshop/" class="md-nav__link">
         
   
   
@@ -3355,7 +3410,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../case-studies/kubernetes-basics/" class="md-nav__link">
+      <a href="../../../case-studies/kubernetes-basics/" class="md-nav__link">
         
   
   
@@ -3406,7 +3461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../about/" class="md-nav__link">
+      <a href="../../../about/" class="md-nav__link">
         
   
   
@@ -3433,7 +3488,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E7%AE%80%E5%8E%86/" class="md-nav__link">
+      <a href="../../../%E7%AE%80%E5%8E%86/" class="md-nav__link">
         
   
   
@@ -3480,10 +3535,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#what-you-will-complete" class="md-nav__link">
     <span class="md-ellipsis">
       
-        这篇文档适合谁
+        What you will complete
       
     </span>
   </a>
@@ -3491,10 +3546,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#before-you-begin" class="md-nav__link">
     <span class="md-ellipsis">
       
-        完成后你将能够
+        Before you begin
       
     </span>
   </a>
@@ -3502,33 +3557,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#1-install-vale" class="md-nav__link">
     <span class="md-ellipsis">
       
-        开始前准备
+        1. Install Vale
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#1-openclaw-cli" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        步骤 1：安装 OpenClaw CLI
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="步骤 1：安装 OpenClaw CLI">
+    <nav class="md-nav" aria-label="1. Install Vale">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#expected-result" class="md-nav__link">
     <span class="md-ellipsis">
       
-        成功信号
+        Expected result
       
     </span>
   </a>
@@ -3541,22 +3585,44 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
+  <a href="#2-open-the-repository" class="md-nav__link">
     <span class="md-ellipsis">
       
-        步骤 2：完成首次配置
+        2. Open the repository
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="步骤 2：完成首次配置">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-confirm-the-committed-styles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Confirm the committed styles
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-confirm-the-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Confirm the configuration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Confirm the configuration">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#expected-result_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        成功信号
+        Expected result
       
     </span>
   </a>
@@ -3569,22 +3635,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-gateway" class="md-nav__link">
+  <a href="#5-run-the-first-check" class="md-nav__link">
     <span class="md-ellipsis">
       
-        步骤 3：确认 Gateway 正常运行
+        5. Run the first check
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="步骤 3：确认 Gateway 正常运行">
+    <nav class="md-nav" aria-label="5. Run the first check">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#expected-result_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        成功信号
+        Expected result
       
     </span>
   </a>
@@ -3597,22 +3663,77 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-control-ui" class="md-nav__link">
+  <a href="#6-read-the-result" class="md-nav__link">
     <span class="md-ellipsis">
       
-        步骤 4：打开 Control UI 并发送消息
+        6. Read the result
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="步骤 4：打开 Control UI 并发送消息">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#completion-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Completion check
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common problems
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common problems">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#vale-isnt-recognized" class="md-nav__link">
     <span class="md-ellipsis">
       
-        成功信号
+        vale isn't recognized
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vale-cant-find-valeini" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vale can't find .vale.ini
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vale-cant-find-a-style" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vale can't find a style
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vale-checks-no-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vale checks no files
       
     </span>
   </a>
@@ -3625,10 +3746,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#next-steps" class="md-nav__link">
     <span class="md-ellipsis">
       
-        没有成功时，从这里检查
+        Next steps
       
     </span>
   </a>
@@ -3636,21 +3757,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
+  <a href="#sources" class="md-nav__link">
     <span class="md-ellipsis">
       
-        下一步
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        资料来源
+        Sources
       
     </span>
   </a>
@@ -3674,246 +3784,295 @@
 
 
 
-<h1 id="openclaw-cli">OpenClaw 快速开始：安装 CLI 并发送第一条消息</h1>
-<h2 id="_1">这篇文档适合谁</h2>
-<p>这篇文档适合第一次使用 OpenClaw，希望从命令行完成安装，并在浏览器中收到第一条模型回复的用户。</p>
-<p>读者需要能够在终端中运行基础命令，并且已经准备好模型服务商账户和 API Key。你不需要提前理解 OpenClaw 的完整架构，完成本文后，可以根据每一步的成功信号判断核心链路是否已经跑通。</p>
-<h2 id="_2">完成后你将能够</h2>
-<p>完成本文后，你将能够：</p>
+<style>
+@media screen and (max-width: 44.984375em) {
+  .md-main__inner,
+  .md-content {
+    box-sizing: border-box;
+    min-width: 0;
+    width: 100%;
+    max-width: 100vw;
+  }
+
+  .md-content__inner {
+    box-sizing: border-box;
+    width: calc(100vw - 2rem) !important;
+    max-width: calc(100vw - 2rem) !important;
+    margin-right: 1rem !important;
+    margin-left: 1rem !important;
+    padding: 1rem 0;
+  }
+
+  .md-typeset .admonition,
+  .md-typeset .md-typeset__scrollwrap {
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+
+  .md-typeset p code {
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+}
+</style>
+
+<h1 id="set-up-local-documentation-checks-with-vale">Set up local documentation checks with Vale</h1>
+<p>This Quick Start helps you run the first Vale check in a configured Markdown
+documentation repository.</p>
+<p>The path covers installing the Vale command-line tool, confirming that Vale can
+find the repository configuration, and scanning the documentation files.</p>
+<p><strong>Estimated time:</strong> 5–10 minutes, excluding package manager setup.</p>
+<h2 id="what-you-will-complete">What you will complete</h2>
+<p>By the end of this guide, you can:</p>
 <ul>
-<li>安装并验证 OpenClaw CLI 是否可用；</li>
-<li>配置模型服务商、API Key 和默认模型；</li>
-<li>确认 Gateway 正常运行；</li>
-<li>打开 Control UI；</li>
-<li>发送一条测试消息，并根据是否收到模型回复判断核心链路是否跑通。</li>
+<li>run <code>vale --version</code>;</li>
+<li>confirm that Vale loads the repository configuration;</li>
+<li>run Vale against the documentation directory;</li>
+<li>distinguish a content alert from a configuration or runtime failure.</li>
 </ul>
-<p><strong>预计用时：</strong> 5–10 分钟。首次下载、模型登录或网络速度可能延长操作时间。</p>
-<p><strong>完成标准：</strong> Control UI 成功返回一条模型回复。</p>
-<h2 id="_3">开始前准备</h2>
-<p>开始前，请确认你已经具备：</p>
-<ul>
-<li>一台 Windows、macOS 或 Linux 电脑；</li>
-<li>可以使用的 PowerShell 或终端；</li>
-<li>Node.js 24.15 或更高版本；</li>
-<li>稳定的网络连接；</li>
-<li>一个受支持模型服务商的账户和 API Key。</li>
-</ul>
-<p>本文统一采用 OpenClaw 官方推荐的 Node.js 24 路径。其他受支持版本和安装方式请查看<a href="https://docs.openclaw.ai/install/node">官方 Node.js 要求</a>。</p>
-<p>运行以下命令检查 Node.js 版本：</p>
-<div class="highlight"><pre><span></span><code>node<span class="w"> </span>--version
+<p>A working setup produces one of these results:</p>
+<div class="highlight"><pre><span></span><code>No alerts
 </code></pre></div>
-<p>终端应输出类似下面的版本号：</p>
-<div class="highlight"><pre><span></span><code>v24.15.0
+<p>or:</p>
+<div class="highlight"><pre><span></span><code>File path
+→ Line and column
+→ Alert message
+→ Rule name
 </code></pre></div>
-<p>版本低于要求时，请先更新 Node.js，再继续安装 OpenClaw。</p>
-<div class="admonition warning">
-<p class="admonition-title">保护 API Key</p>
-<p>后续配置过程中，只在 OpenClaw 的本地引导界面中输入 API Key。</p>
-<p>不要把真实 API Key 写入文档、命令示例、截图、GitHub 仓库或公开的问题反馈中。</p>
+<p>Both results confirm that Vale scanned the documentation. A configuration or
+runtime error means that the setup still needs attention.</p>
+<div class="admonition info">
+<p class="admonition-title">Validation status</p>
+<p>The installation commands and return codes on this page were checked
+against the official Vale documentation.</p>
+<p>In the current Windows repository, <code>vale --version</code>, <code>vale ls-config</code>, and
+<code>vale docs</code> were run with Vale 3.13.0. The repository paths and committed
+styles were also checked locally.</p>
+<p>The macOS and Linux installation commands come from the official Vale
+installation guide and haven't been run in the author's environment. The
+GitHub Actions workflow currently requests Vale 3.15.1 and remains a
+separate CI validation environment.</p>
 </div>
-<hr />
-<h2 id="1-openclaw-cli">步骤 1：安装 OpenClaw CLI</h2>
-<p>根据你的操作系统选择安装方式。</p>
+<h2 id="before-you-begin">Before you begin</h2>
+<p>You need:</p>
+<ul>
+<li>a local copy of the documentation repository;</li>
+<li>a terminal or command prompt;</li>
+<li>permission to install a command-line tool;</li>
+<li>the package manager used by your operating system.</li>
+</ul>
+<p>You don't need to understand Vale rule syntax before completing this guide.</p>
+<p>Open the repository root before running the project commands. The root contains
+the Vale configuration, committed styles, and documentation source.</p>
+<div class="highlight"><pre><span></span><code>repository/
+├── .vale.ini
+├── docs/
+├── styles/
+└── mkdocs.yml
+</code></pre></div>
+<h2 id="1-install-vale">1. Install Vale</h2>
+<p>Choose the command for your operating system. The package manager must already
+be installed.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Windows</label><label for="__tabbed_1_2">macOS</label><label for="__tabbed_1_3">Linux</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>打开 PowerShell，运行：</p>
-<div class="highlight"><pre><span></span><code><span class="nb">iwr </span><span class="n">-useb</span> <span class="n">https</span><span class="p">://</span><span class="n">openclaw</span><span class="p">.</span><span class="n">ai</span><span class="p">/</span><span class="n">install</span><span class="p">.</span><span class="n">ps1</span> <span class="p">|</span> <span class="nb">iex</span>
+<p>Use Chocolatey:</p>
+<div class="highlight"><pre><span></span><code><span class="n">choco</span> <span class="n">install</span> <span class="n">vale</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<p>打开 Terminal，运行：</p>
-<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://openclaw.ai/install.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>bash
+<p>Use Homebrew:</p>
+<div class="highlight"><pre><span></span><code>brew<span class="w"> </span>install<span class="w"> </span>vale
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<p>打开终端，运行：</p>
-<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://openclaw.ai/install.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>bash
+<p>Use Snap:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>snap<span class="w"> </span>install<span class="w"> </span>vale
 </code></pre></div>
 </div>
 </div>
 </div>
-<p>以上命令来自 <a href="https://docs.openclaw.ai/install">OpenClaw 官方安装文档</a>。</p>
-<p>安装完成后，运行：</p>
-<div class="highlight"><pre><span></span><code>openclaw<span class="w"> </span>--version
+<p>After installation, open a new terminal and check the Vale version:</p>
+<div class="highlight"><pre><span></span><code>vale<span class="w"> </span>--version
 </code></pre></div>
-<h3 id="_4">成功信号</h3>
-<p>终端输出 OpenClaw 的版本号。这表示：</p>
+<h3 id="expected-result">Expected result</h3>
+<p>The terminal prints the installed Vale version.</p>
+<div class="highlight"><pre><span></span><code>vale version ...
+</code></pre></div>
+<p>The exact version number depends on the installed release. The current Windows
+environment for this repository reports <code>vale version 3.13.0</code>.</p>
+<div class="admonition failure">
+<p class="admonition-title">If the command isn't found</p>
+<p>Close and reopen the terminal first.</p>
+<p>If <code>vale</code> is still unavailable, confirm that the installation completed and
+that the Vale executable is available on your system <code>PATH</code>.</p>
+</div>
+<h2 id="2-open-the-repository">2. Open the repository</h2>
+<p>Change to the root of the documentation repository.</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>path/to/tech-docs-portfolio
+</code></pre></div>
+<p>Replace the example path with the location of your local repository.</p>
+<p>Confirm that the current directory contains:</p>
+<div class="highlight"><pre><span></span><code>.vale.ini
+docs/
+styles/
+</code></pre></div>
+<p>The <code>.vale.ini</code> file is the repository-level entry point for Vale
+configuration. The <code>docs/</code> directory contains the Markdown files checked in
+this project. The <code>styles/</code> directory contains the rules and vocabulary used by
+the repository.</p>
+<div class="admonition warning">
+<p class="admonition-title">Run commands from the repository root</p>
+<p>Vale searches the current directory and its parent directories for a
+<code>.vale.ini</code> or <code>_vale.ini</code> file.</p>
+<p>Running the command from an unrelated directory may load another
+configuration or fail to find the project configuration.</p>
+</div>
+<h2 id="3-confirm-the-committed-styles">3. Confirm the committed styles</h2>
+<p>This repository doesn't declare a <code>Packages</code> setting in <code>.vale.ini</code>. The
+required Microsoft, Google, and custom <code>MyStyle</code> rules are already committed to
+<code>styles/</code>, together with the <code>Portfolio</code> vocabulary.</p>
+<p>You don't need to run <code>vale sync</code> for the current repository state. Running it
+would be appropriate only after the configuration declares a package that must
+be downloaded.</p>
+<p>Confirm that the repository includes these paths:</p>
+<div class="highlight"><pre><span></span><code>styles/
+├── Google/
+├── Microsoft/
+├── MyStyle/
+└── config/vocabularies/Portfolio/
+</code></pre></div>
+<h2 id="4-confirm-the-configuration">4. Confirm the configuration</h2>
+<p>Run:</p>
+<div class="highlight"><pre><span></span><code>vale<span class="w"> </span>ls-config
+</code></pre></div>
+<h3 id="expected-result_1">Expected result</h3>
+<p>Vale prints the active configuration as JSON.</p>
+<p>Check that the output refers to:</p>
 <ul>
-<li>OpenClaw CLI 已经安装；</li>
-<li>当前终端能够识别 <code>openclaw</code> 命令。</li>
+<li>the repository's <code>.vale.ini</code> file under <code>RootINI</code>;</li>
+<li>the repository's <code>styles/</code> directory under <code>Paths</code>;</li>
+<li>the <code>Portfolio</code> vocabulary;</li>
+<li><code>Vale</code>, <code>Microsoft</code>, <code>Google</code>, and <code>MyStyle</code> for Markdown and text files.</li>
 </ul>
-<p>这一步还不能证明模型配置和 Gateway 已经完成。由于本文尚未进行本机实测，这里不展示具体版本输出。</p>
-<!-- 完成实测后，在此补充脱敏后的真实版本输出。 -->
-
-<div class="admonition tip">
-<p class="admonition-title">终端提示找不到命令</p>
-<p>关闭当前终端并重新打开，然后再次运行：</p>
-<div class="highlight"><pre><span></span><code>openclaw<span class="w"> </span>--version
+<p>The exact absolute paths depend on the location of your local repository.</p>
+<div class="admonition failure">
+<p class="admonition-title">If Vale loads the wrong configuration</p>
+<p>Confirm that the terminal is open at the repository root.</p>
+<p>You can also specify the configuration explicitly:</p>
+<div class="highlight"><pre><span></span><code>vale<span class="w"> </span>--config<span class="o">=</span><span class="s2">&quot;.vale.ini&quot;</span><span class="w"> </span>docs
 </code></pre></div>
-<p>安装程序可能已经更新环境变量，但当前终端还没有重新加载。</p>
 </div>
-<hr />
-<h2 id="2">步骤 2：完成首次配置</h2>
-<p>首次配置会引导你选择模型服务商、输入 API Key，并把 Gateway 安装为本地后台服务。</p>
-<p>运行：</p>
-<div class="highlight"><pre><span></span><code>openclaw<span class="w"> </span>onboard<span class="w"> </span>--install-daemon
+<p>Don't continue until Vale can load the intended project configuration.</p>
+<h2 id="5-run-the-first-check">5. Run the first check</h2>
+<p>From the repository root, run:</p>
+<div class="highlight"><pre><span></span><code>vale<span class="w"> </span>docs
 </code></pre></div>
-<p>按照引导完成配置。</p>
+<p>Vale scans the supported files under <code>docs/</code> using the active repository
+configuration.</p>
+<h3 id="expected-result_2">Expected result</h3>
+<p>Vale produces one of the following outcomes.</p>
+<h4 id="no-alerts">No alerts</h4>
+<p>The command completes without listing content alerts.</p>
+<p>This means that Vale scanned the selected files and didn't find an enabled
+rule violation.</p>
+<h4 id="content-alerts">Content alerts</h4>
+<p>Vale lists the affected file, location, severity, message, and rule.</p>
+<p>Example structure:</p>
+<div class="highlight"><pre><span></span><code>docs/example.md
+  12:8  warning  Replace the discouraged term.  Project.Terms
+</code></pre></div>
+<p>This means that the setup is working and a documentation rule found an issue.
+The example illustrates the output structure; it isn't output captured from
+this repository.</p>
+<p>The current repository displays suggestions and warnings because
+<code>MinAlertLevel</code> is set to <code>suggestion</code>. The command can still return code <code>0</code>
+when it finds no error-level alerts.</p>
+<h4 id="runtime-error">Runtime error</h4>
+<p>Vale reports that it can't load a configuration, locate a style, read a file,
+or complete the check.</p>
+<p>A runtime error means that the local setup isn't complete.</p>
+<!--
+Add assets/english-docs/vale-first-local-check.png only after a current,
+non-sensitive screenshot has been captured from this repository. The image
+must show the repository context, command, and real Vale result.
+-->
+
+<h2 id="6-read-the-result">6. Read the result</h2>
+<p>Vale uses return codes to distinguish the result type.</p>
 <table>
 <thead>
 <tr>
-<th>引导内容</th>
-<th>操作</th>
+<th style="text-align: right;">Return code</th>
+<th>Meaning</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>模型服务商</td>
-<td>选择你已经拥有账户和 API Key 的服务商</td>
+<td style="text-align: right;"><code>0</code></td>
+<td>No linting errors were found</td>
 </tr>
 <tr>
-<td>API Key</td>
-<td>输入自己的 Key，不要使用文档中的示例值</td>
+<td style="text-align: right;"><code>1</code></td>
+<td>One or more linting errors were found</td>
 </tr>
 <tr>
-<td>默认模型</td>
-<td>选择当前账户有权访问的模型</td>
-</tr>
-<tr>
-<td>安装 Gateway 服务</td>
-<td>确认安装</td>
-</tr>
-<tr>
-<td>Channels、Skills 或插件</td>
-<td>Quick Start 阶段可以暂时跳过</td>
+<td style="text-align: right;"><code>2</code></td>
+<td>A runtime error occurred</td>
 </tr>
 </tbody>
 </table>
-<p>不同版本中的提示文字可能略有变化。请确认选择结果与上表一致，不需要要求界面逐字相同。</p>
-<div class="admonition warning">
-<p class="admonition-title">输入凭据时</p>
+<p>A return code of <code>1</code> can still confirm that the installation and repository
+configuration are working. It means Vale completed the check and found content
+that violates an error-level rule.</p>
+<p>A return code of <code>2</code> indicates a setup or execution problem that must be
+resolved before the content result can be trusted.</p>
+<h2 id="completion-check">Completion check</h2>
+<p>You have completed this Quick Start when all of the following are true:</p>
 <ul>
-<li>不要截图包含 API Key 的页面；</li>
-<li>不要把 API Key 粘贴到聊天、文档或 GitHub Issue；</li>
-<li>屏幕共享时，先关闭或遮挡凭据输入区域。</li>
+<li><code>vale --version</code> returns an installed version;</li>
+<li><code>vale ls-config</code> loads the intended repository configuration;</li>
+<li><code>vale docs</code> scans the documentation directory;</li>
+<li>the command doesn't stop with a runtime error;</li>
+<li>you can identify whether the result contains no alerts or one or more content
+  alerts.</li>
 </ul>
-</div>
-<h3 id="_5">成功信号</h3>
-<p>配置引导正常结束，并返回终端。</p>
-<p>对读者而言，这表示本地配置已经写入。Gateway 是否真正运行，需要在下一步单独检查。</p>
-<!-- 完成实测后，在此插入 onboarding 完成后的终端截图。截图中不能出现 API Key。 -->
-
-<hr />
-<h2 id="3-gateway">步骤 3：确认 Gateway 正常运行</h2>
-<p>Gateway 是 OpenClaw 在本地运行的服务，负责连接模型、会话和 Control UI。</p>
-<p>运行：</p>
-<div class="highlight"><pre><span></span><code>openclaw<span class="w"> </span>gateway<span class="w"> </span>status
+<p>You don't need to change the repository configuration to complete this guide.</p>
+<h2 id="common-problems">Common problems</h2>
+<h3 id="vale-isnt-recognized"><code>vale</code> isn't recognized</h3>
+<p>Confirm that Vale was installed successfully and is available on your system
+<code>PATH</code>. Reopen the terminal after installation.</p>
+<h3 id="vale-cant-find-valeini">Vale can't find <code>.vale.ini</code></h3>
+<p>Run the command from the repository root.</p>
+<p>If necessary, provide the configuration path explicitly:</p>
+<div class="highlight"><pre><span></span><code>vale<span class="w"> </span>--config<span class="o">=</span><span class="s2">&quot;.vale.ini&quot;</span><span class="w"> </span>docs
 </code></pre></div>
-<h3 id="_6">成功信号</h3>
-<p>输出中应显示 Gateway 正在运行。不同版本的字段可能不同，常见的成功信号包括：</p>
-<div class="highlight"><pre><span></span><code>Runtime: running
-Connectivity probe: ok
-</code></pre></div>
-<p>同时，Gateway 应监听本地端口 <code>18789</code>。</p>
-<p>这一步可以证明：</p>
+<h3 id="vale-cant-find-a-style">Vale can't find a style</h3>
+<p>Check the configured <code>StylesPath</code> and confirm that the committed <code>styles/</code>
+directory is present.</p>
+<p>This repository doesn't require <code>vale sync</code> in its current state because it
+doesn't declare Vale packages.</p>
+<h3 id="vale-checks-no-files">Vale checks no files</h3>
+<p>Confirm that:</p>
 <ul>
-<li>Gateway 进程已经启动；</li>
-<li>本地健康检查通过；</li>
-<li>Control UI 已经具备连接 Gateway 的条件。</li>
+<li>the documentation directory is correct;</li>
+<li>the directory contains supported Markdown files;</li>
+<li><code>.vale.ini</code> enables styles for the relevant file extension;</li>
+<li>the command doesn't exclude the files through a glob or ignore setting.</li>
 </ul>
-<p>它暂时不能证明模型配置一定有效。最终结果需要通过一条真实回复确认。</p>
-<!-- 完成实测后，在此插入 openclaw gateway status 的真实输出截图。 -->
-
-<hr />
-<h2 id="4-control-ui">步骤 4：打开 Control UI 并发送消息</h2>
-<p>运行：</p>
-<div class="highlight"><pre><span></span><code>openclaw<span class="w"> </span>dashboard
-</code></pre></div>
-<p>OpenClaw 会在浏览器中打开 Control UI。</p>
-<p>浏览器没有自动打开时，手动访问：</p>
-<div class="highlight"><pre><span></span><code>http://127.0.0.1:18789/
-</code></pre></div>
-<p>在聊天输入框中发送一条测试消息，例如：</p>
-<div class="highlight"><pre><span></span><code>请用一句话介绍你自己。
-</code></pre></div>
-<h3 id="_7">成功信号</h3>
-<p>Control UI 返回一条模型生成的回复。</p>
-<p>这表示下面的核心链路已经跑通：</p>
-<p><img alt="OpenClaw CLI 经过本地配置、Gateway 和 Control UI，最终收到模型回复" src="../assets/openclaw-first-message-flow.svg" /></p>
-<p><em>收到一条真实模型回复，才表示这条核心链路已经完成基本连通。</em></p>
-<div class="admonition success">
-<p class="admonition-title">你已经完成 Quick Start</p>
-<p>收到第一条真实回复后，OpenClaw 的安装、模型配置、Gateway 和 Control UI 已经完成基本连通。</p>
-</div>
-<!-- 完成实测后，在此插入 Control UI 收到第一条回复的截图。 -->
-
-<hr />
-<h2 id="_8">没有成功时，从这里检查</h2>
-<p>选择与你当前现象一致的标签。</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:4"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><input id="__tabbed_2_4" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">找不到 OpenClaw 命令</label><label for="__tabbed_2_2">Gateway 没有运行</label><label for="__tabbed_2_3">Control UI 无法打开</label><label for="__tabbed_2_4">页面打开，但没有模型回复</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>先关闭并重新打开终端，然后运行：</p>
-<div class="highlight"><pre><span></span><code>openclaw<span class="w"> </span>--version
-</code></pre></div>
-<p>仍然无法识别命令时，再检查 Node.js：</p>
-<div class="highlight"><pre><span></span><code>node<span class="w"> </span>--version
-</code></pre></div>
-<p>确认 Node.js 版本满足要求后，重新执行对应系统的安装命令。</p>
-</div>
-<div class="tabbed-block">
-<p>再次检查状态：</p>
-<div class="highlight"><pre><span></span><code>openclaw<span class="w"> </span>gateway<span class="w"> </span>status
-</code></pre></div>
-<p>然后运行诊断：</p>
-<div class="highlight"><pre><span></span><code>openclaw<span class="w"> </span>doctor
-</code></pre></div>
-<p>根据诊断结果修复配置，再重新检查 Gateway 状态。</p>
-<p>分享诊断结果前，请删除 API Key、访问令牌、本地用户名和其他个人信息。</p>
-</div>
-<div class="tabbed-block">
-<p>先确认 Gateway 正常运行：</p>
-<div class="highlight"><pre><span></span><code>openclaw<span class="w"> </span>gateway<span class="w"> </span>status
-</code></pre></div>
-<p>然后手动打开：</p>
-<div class="highlight"><pre><span></span><code>http://127.0.0.1:18789/
-</code></pre></div>
-<p>Gateway 未运行时，Control UI 通常无法建立连接。</p>
-</div>
-<div class="tabbed-block">
-<p>页面能够打开，只能说明本地 Control UI 可以访问。</p>
-<p>没有收到模型回复时，重点检查：</p>
-<ol>
-<li>模型服务商是否选择正确；</li>
-<li>API Key 是否有效；</li>
-<li>当前账户是否有权使用所选模型；</li>
-<li>默认模型是否已经配置。</li>
-</ol>
-<p>重新进入配置：</p>
-<div class="highlight"><pre><span></span><code>openclaw<span class="w"> </span>configure
-</code></pre></div>
-<p>完成修改后，再次发送测试消息。</p>
-</div>
-</div>
-</div>
-<hr />
-<h2 id="_9">下一步</h2>
-<p>完成第一次对话后，可以继续：</p>
+<h2 id="next-steps">Next steps</h2>
+<p>Continue to
+<a href="../configure-vale/">Configure Vale for a documentation repository</a> to
+understand the active styles, vocabulary, and alert levels.</p>
+<p>To automate the same check after a push or pull request, continue to
+<a href="../github-actions/">Run Vale in GitHub Actions</a>.</p>
+<p>Use <a href="../troubleshooting/">Troubleshooting</a> when the local command, active
+configuration, or automated result doesn't match the expected outcome.</p>
+<h2 id="sources">Sources</h2>
 <ul>
-<li><a href="https://docs.openclaw.ai/channels">连接 Telegram、Slack 或其他消息渠道</a></li>
-<li><a href="https://docs.openclaw.ai/concepts/models">修改默认模型和模型服务商</a></li>
-<li><a href="https://docs.openclaw.ai/cli">查看 OpenClaw CLI 命令参考</a></li>
-<li><a href="https://docs.openclaw.ai/gateway/troubleshooting">排查 Gateway 和 Control UI 问题</a></li>
-</ul>
-<h2 id="_10">资料来源</h2>
-<p>本文中的命令与流程已于 2026-07-27 对照官方资料核验，尚未在 Windows、macOS 或 Linux 上完成端到端实测。</p>
-<ul>
-<li><a href="https://docs.openclaw.ai/start/getting-started">Getting Started</a></li>
-<li><a href="https://docs.openclaw.ai/install">Install OpenClaw</a></li>
-<li><a href="https://docs.openclaw.ai/install/node">Node.js requirements</a></li>
-<li><a href="https://docs.openclaw.ai/cli/gateway">Gateway CLI</a></li>
-<li><a href="https://docs.openclaw.ai/gateway/troubleshooting">Gateway troubleshooting</a></li>
+<li><a href="https://vale.sh/docs/install">Install Vale</a></li>
+<li><a href="https://vale.sh/docs/cli">Vale command-line options and return codes</a></li>
+<li><a href="https://vale.sh/docs/vale-ini">Vale configuration search process</a></li>
 </ul>
 
 
@@ -3975,16 +4134,16 @@ Connectivity probe: ok
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js"></script>
       
-        <script src="../javascripts/mermaid-init.js"></script>
+        <script src="../../../javascripts/mermaid-init.js"></script>
       
-        <script src="../javascripts/download-links.js"></script>
+        <script src="../../../javascripts/download-links.js"></script>
       
     
   </body>
