@@ -8,7 +8,7 @@ hide:
 
 这里仅收录我自己的项目。每篇复盘解释项目怎样发现问题、做出取舍、调整结构并核对结果；最终交付物仍放在[核心作品](../portfolio.md)中。
 
-## 三个核心项目
+## 核心项目复盘
 
 <div class="listing-grid">
 
@@ -28,8 +28,8 @@ hide:
 
     <article class="listing-card listing-card-featured">
         <div class="listing-kicker">技术理解 · 完整复盘</div>
-        <h2><a href="../posts/hardware-datasheet-restructure/">从硬件 PDF 到开发者文档</a></h2>
-        <p>沿着一次传感器读取任务，把分散的 SPI 时序、寄存器字段和初始化示例重新接起来。</p>
+        <h2><a href="../posts/hardware-datasheet-restructure/">从官方资料到开发者文档集</a></h2>
+        <p>以 OPT4001YMNEVM 为真实对象，把 Datasheet 和 EVM User's Guide 中分散的信息重新接到开发者任务上。</p>
         <div class="listing-tags"><span>硬件文档</span><span>Datasheet</span><span>读者任务</span></div>
     </article>
 

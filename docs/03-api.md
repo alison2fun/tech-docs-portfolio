@@ -4,7 +4,7 @@
 
 这篇文档模拟一个 IoT 设备数据接口的集成说明。
 
-场景很具体：开发者需要通过 RESTful API 获取光感传感器 `XYZ-2024` 的实时遥测数据，包括光照强度、电池电量和采集时间。
+场景很具体：开发者需要通过 RESTful API 获取一台光感设备的实时遥测数据，包括光照强度、电池电量和采集时间。
 
 我写这页时，重点想练习 API 文档里最常见的几件事：
 
@@ -32,7 +32,7 @@ API 文档很容易写成字段堆叠。我的目标是让读者不只是看到�
 | `AppID`        | 客户端应用 ID，用于获取访问令牌                     |
 | `Secret`       | 客户端密钥，用于完成 OAuth 2.0 鉴权               |
 | `access_token` | 调用业务 API 时需要携带的访问令牌                   |
-| `device_id`    | 设备唯一标识符，例如 `XYZ-2024-001`             |
+| `device_id`    | 设备唯一标识符，例如 `ambient-light-001`         |
 | Base URL       | API 服务地址，例如 `https://api.example.com` |
 
 ## 认证鉴权
@@ -95,15 +95,15 @@ GET /v1/devices/{device_id}/telemetry
 
 | 参数名         | 位置    | 类型      | 必选 | 描述                        |
 | ----------- | ----- | ------- | -- | ------------------------- |
-| `device_id` | Path  | String  | 是  | 设备唯一标识符，例如 `XYZ-2024-001` |
+| `device_id` | Path  | String  | 是  | 设备唯一标识符，例如 `ambient-light-001` |
 | `limit`     | Query | Integer | 否  | 返回数据条数，默认值为 `10`          |
 
 ### 请求示例
 
-下面示例获取设备 `XYZ-2024-001` 的最新 10 条遥测数据。
+下面示例获取设备 `ambient-light-001` 的最新 10 条遥测数据。
 
 ```bash
-curl -X GET "https://api.example.com/v1/devices/XYZ-2024-001/telemetry?limit=10" \
+curl -X GET "https://api.example.com/v1/devices/ambient-light-001/telemetry?limit=10" \
   -H "Authorization: Bearer <access_token>" \
   -H "Content-Type: application/json"
 ```
@@ -117,7 +117,7 @@ curl -X GET "https://api.example.com/v1/devices/XYZ-2024-001/telemetry?limit=10"
   "code": 200,
   "message": "success",
   "data": {
-    "device_id": "XYZ-2024-001",
+    "device_id": "ambient-light-001",
     "timestamp": 1678886400,
     "sensors": {
       "light_intensity": 450,

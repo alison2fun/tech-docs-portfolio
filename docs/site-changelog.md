@@ -2,6 +2,18 @@
 
 这个页面记录作品集站点本身的结构、内容和交互更新。项目文档质量自动化流水线的更新记录仍保留在 [更新记录](changelog.md)。
 
+## v2.2.0 - 英文核心项目与证据同步
+
+发布日期：2026-08-03
+
+### 主要改动
+
+* 新增 Documentation Quality Pipeline 英文核心项目，完成 Project Overview、Quick Start、Configure Vale、GitHub Actions 和 Troubleshooting；
+* 将首页和作品总览从三个核心项目调整为四个，并补充英文技术写作阅读路径；
+* 同步关于我、写作样稿和在线简历中的英文项目状态与入口；
+* 用 OPT4001YMNEVM 真实官方资料重建硬件核心项目，并更新相关介绍、简历和复盘入口；
+* 保留本地检查、已有 GitHub Actions 成功记录和待验证 CI 路径之间的证据边界。
+
 ## v2.1.0 - 阅读路径与语气调整
 
 发布日期：2026-07-10

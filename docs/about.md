@@ -23,9 +23,9 @@ hide:
 
 ## 中英文技术资料
 
-这个作品集目前以中文为主，服务国内技术文档和资料开发岗位。我的英文能力有两类现有证据：CET-6 612，以及硕士阶段对 120+ 篇英文论文的阅读和分析经历。
+这个作品集目前以中文为主，服务国内技术文档和资料开发岗位。我的英文能力现在有三类证据：CET-6 612、硕士阶段对 120+ 篇英文论文的阅读和分析经历，以及已经完成的英文技术文档项目 [Documentation Quality Pipeline](core-projects/english-documentation/index.md)。
 
-英文 Quick Start 和英文项目概览仍在计划中，因此暂时不把它们列为已完成样稿。
+这套英文项目基于当前仓库真实使用的 Vale、MkDocs 和 GitHub Actions 配置，包含 Project Overview、Quick Start、配置说明、GitHub Actions 工作流说明和故障排查。页面中的本地检查已经重新运行；尚未完成的受控 CI 失败测试也保留了明确边界。
 
 ## 简历概览
 

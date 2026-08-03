@@ -6,9 +6,9 @@ hide:
 
 # 作品总览
 
-这页优先展示三个核心项目。它们分别对应一条求职证据链：读懂复杂技术资料、围绕用户任务设计文档、让文档可以持续检查和发布。模拟项目和个人产品会继续明确标注。
+这页优先展示四个核心项目。它们分别对应四条求职证据链：读懂复杂技术资料、围绕用户任务设计文档、让文档可以持续检查和发布，以及使用英文组织完整的技术文档项目。模拟项目和个人产品会继续明确标注。
 
-## 三个核心项目
+## 四个核心项目
 
 <div class="warm-portal">
 
@@ -16,19 +16,19 @@ hide:
 
         <div class="solid-card card-wide">
             <div class="portfolio-card-layout">
-                <img src="../assets/thumb-hardware-doc.svg" alt="硬件数据手册重构缩略图" class="portfolio-thumb">
+                <img src="../assets/thumb-hardware-doc.svg" alt="OPT4001YMNEVM 开发者文档集缩略图" class="portfolio-thumb">
                 <div>
                     <div class="card-header">
                         <span class="serif-num">01</span>
                         <span class="card-label">技术理解 · Hardware Docs</span>
                     </div>
-                    <h3 class="card-title">硬件数据手册重构</h3>
-                    <p class="card-desc">把模拟芯片资料中的 SPI 时序、寄存器信息和驱动配置，改写成开发者更容易查找和使用的 Web 文档。</p>
+                    <h3 class="card-title">OPT4001YMNEVM 开发者文档重构</h3>
+                    <p class="card-desc">基于 TI OPT4001 Datasheet 和 EVM User's Guide，将分散的板卡结构、首次采集、I²C、结果寄存器和故障信息，重组为一套面向开发者的 Web 文档。</p>
                     <div class="portfolio-context">
-                        <span><strong>解决的问题：</strong>减少开发者翻找 PDF、手抄参数和拼接初始化顺序的成本。</span>
-                        <span><strong>主要交付物：</strong>项目概览、SPI 时序图、寄存器表、C 初始化示例和信息架构说明。</span>
-                        <span><strong>能证明的能力：</strong>硬件资料理解、技术信息提取、图表与代码说明、开发者任务组织。</span>
-                        <span><strong>项目边界：</strong>基于虚构传感器 <code>XYZ-2024</code> 的模拟重构案例。</span>
+                        <span><strong>解决的问题：</strong>两份官方资料按照不同逻辑组织，开发者需要来回查找板卡连接、操作步骤和器件配置。</span>
+                        <span><strong>主要交付物：</strong>项目概览、Quick Start、评估系统说明、配置与数据读取、故障排查。</span>
+                        <span><strong>能证明的能力：</strong>跨文档事实核对、硬件资料理解、图表与代码说明、开发者任务组织。</span>
+                        <span><strong>项目边界：</strong>技术事实来自 TI 官方资料；尚未使用真实硬件完成独立验证。</span>
                     </div>
                     <div class="action-link-group">
                         <a href="../core-projects/hardware/" class="action-link action-link-primary">进入项目 &rarr;</a>
@@ -78,6 +78,34 @@ hide:
                     </div>
                     <div class="action-link-group">
                         <a href="../01-automation/" class="action-link action-link-primary">进入项目 &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="solid-card card-wide">
+            <div class="portfolio-card-layout">
+                <img src="../assets/thumb-docs-as-code.svg" alt="Documentation Quality Pipeline workflow thumbnail" class="portfolio-thumb">
+                <div>
+                    <div class="card-header">
+                        <span class="serif-num">04</span>
+                        <span class="card-label">English Documentation · Docs-as-Code</span>
+                    </div>
+                    <h3 class="card-title">Documentation Quality Pipeline</h3>
+                    <p class="card-desc">A task-based English documentation project for running Vale locally, configuring repository rules, and automating documentation checks with GitHub Actions.</p>
+                    <p>
+                        <span class="doc-badge">English Technical Writing</span>
+                        <span class="doc-badge">Docs-as-Code</span>
+                        <span class="doc-badge">Vale</span>
+                        <span class="doc-badge">GitHub Actions</span>
+                    </p>
+                    <div class="portfolio-context">
+                        <span><strong>Reader task:</strong> Run a local documentation check and understand how the repository repeats it in CI.</span>
+                        <span><strong>Current deliverable:</strong> Project Overview, local Vale Quick Start, configuration guide, GitHub Actions guide, and troubleshooting guide.</span>
+                        <span><strong>Evidence boundary:</strong> All five pages pass the current local Vale check and strict MkDocs build. The published Actions run predates these pages, and the controlled CI failure test remains pending.</span>
+                    </div>
+                    <div class="action-link-group">
+                        <a href="../core-projects/english-documentation/" class="action-link action-link-primary">View project &rarr;</a>
                     </div>
                 </div>
             </div>

@@ -1771,6 +1771,16 @@ body[data-md-color-scheme="slate"] .md-typeset table:not([class]) td {
   aspect-ratio: 16 / 5;
 }
 
+.card-wide .portfolio-thumb[src$="thumb-hardware-doc.svg"],
+.md-typeset .card-wide img.portfolio-thumb[src$="thumb-hardware-doc.svg"] {
+  aspect-ratio: 16 / 7;
+}
+
+.card-wide .portfolio-thumb[src$="thumb-mini-programs.png"],
+.md-typeset .card-wide img.portfolio-thumb[src$="thumb-mini-programs.png"] {
+  aspect-ratio: 4 / 3;
+}
+
 .portfolio-thumb[src$="thumb-mini-programs.png"] {
   object-position: center 42%;
 }

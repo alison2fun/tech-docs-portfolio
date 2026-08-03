@@ -59,7 +59,7 @@ nav:
 
   - 核心作品:
       - 作品总览: portfolio.md
-      - 01 技术理解｜硬件数据手册重构:
+      - 01 技术理解｜OPT4001YMNEVM 开发者文档:
           - 项目概览: core-projects/hardware/index.md
           - Quick Start：首次采集: 02-hardware.md
           - 理解评估系统: core-projects/hardware/information-architecture.md
@@ -93,6 +93,12 @@ nav:
           - 验证结果: core-projects/docs-engineering/validation-results.md
           - 故障排查: troubleshooting.md
           - 更新记录: changelog.md
+      - 04 English Documentation｜Documentation Quality Pipeline:
+          - Project Overview: core-projects/english-documentation/index.md
+          - Quick Start：Run Vale locally: core-projects/english-documentation/quick-start.md
+          - Configure Vale: core-projects/english-documentation/configure-vale.md
+          - GitHub Actions: core-projects/english-documentation/github-actions.md
+          - Troubleshooting: core-projects/english-documentation/troubleshooting.md
       - 更多样本:
           - IoT 接口集成指南: 03-api.md
           - OpenClaw Quick Start: 04-openclaw-quickstart.md
@@ -101,7 +107,7 @@ nav:
       - 案例总览: case-studies/index.md
       - 从一页说明书到产品文档集: case-studies/mini-program-doc-set.md
       - 从局部检查到验证后发布: posts/docs-ci-publishing-gate.md
-      - 从硬件 PDF 到开发者文档: posts/hardware-datasheet-restructure.md
+      - 从官方资料到开发者文档集: posts/hardware-datasheet-restructure.md
       - 作品集改版复盘: case-studies/portfolio-redesign.md
 
   - 写作与方法:
