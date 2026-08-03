@@ -2,9 +2,11 @@
 
 > 急着要白底、蓝底、红底照片？上传一张图，选个底色，马上制作。
 
-![版本](https://img.shields.io/badge/版本-v1.0.0-brightgreen)
-![文档风格](https://img.shields.io/badge/风格-轻量工具文档-ff69b4)
-![工具链](https://img.shields.io/badge/工具链-微信小程序%20·%20AI%20Engine%20·%20图像处理-blue)
+<div class="static-badges" aria-label="项目标签">
+  <span class="static-badge static-badge--sage">版本 · v1.0.0</span>
+  <span class="static-badge static-badge--clay">风格 · 轻量工具文档</span>
+  <span class="static-badge">工具链 · 微信小程序 / AI Engine / 图像处理</span>
+</div>
 
 ---
 
@@ -256,7 +258,7 @@
 如需查看其他小程序文档，可以点击：
 
 1. [小程序产品总览](mini-programs.md)
-2. [微步 ACTION 用户文档](05-miniprogram-task-decomposer/index.md)
+2. [微步 ACTION 产品文档集](mini-programs/action/index.md)
 3. [PopDots 波点拼贴图片生成器](dot-collage.md)
 
 ---

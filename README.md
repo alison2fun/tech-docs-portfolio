@@ -16,11 +16,11 @@
 
 | 文档 | 一句话说明 | 传送门 |
 |---|---|---|
-| 快速上手 | 3 分钟完成第一次拆解 | [点我跳转](https://alison2fun.github.io/tech-docs-portfolio/05-miniprogram-task-decomposer/quickstart/) |
-| 用户手册 | 完整功能操作说明 | [点我跳转](https://alison2fun.github.io/tech-docs-portfolio/05-miniprogram-task-decomposer/) |
-| API 参考 | 接口定义 + 错误码速查 | [点我跳转](https://alison2fun.github.io/tech-docs-portfolio/05-miniprogram-task-decomposer/api-reference/) |
-| PRD 需求文档 | 功能逻辑 + 状态流转图 | [点我跳转](https://alison2fun.github.io/tech-docs-portfolio/05-miniprogram-task-decomposer/prd/) |
-| 版本日志 | 更新记录 + 已知限制 | [点我跳转](https://alison2fun.github.io/tech-docs-portfolio/05-miniprogram-task-decomposer/release-notes/) |
+| 产品概览 | 一分钟了解问题、流程和证据边界 | [点我跳转](https://alison2fun.github.io/tech-docs-portfolio/mini-programs/action/) |
+| 快速开始 | 完成第一次任务拆解与进度操作 | [点我跳转](https://alison2fun.github.io/tech-docs-portfolio/mini-programs/action/user-guide/quick-start/) |
+| 接口设计稿 | 查看任务拆解接口的字段、结构和待确认项 | [点我跳转](https://alison2fun.github.io/tech-docs-portfolio/mini-programs/action/product/task-decomposition-interface-draft/) |
+| PRD 需求文档 | 查看功能需求、验收标准与非目标范围 | [点我跳转](https://alison2fun.github.io/tech-docs-portfolio/mini-programs/action/product/prd/) |
+| 迭代与计划 | 查看原型、文档重构和后续产品判断 | [点我跳转](https://alison2fun.github.io/tech-docs-portfolio/mini-programs/action/releases/prototype-iteration-record/) |
 
 ---
 

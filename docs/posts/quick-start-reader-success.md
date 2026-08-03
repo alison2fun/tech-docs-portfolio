@@ -1,6 +1,6 @@
 # 如何写一篇让读者真正跑通的 Quick Start
 
-<div class="post-meta">思考与经验 · 任务型文档 · 2026-07</div>
+<div class="post-meta">写作与方法 · 任务型文档 · 2026-07</div>
 
 如果说作品集信息架构是在设计读者的阅读路径，那么 Quick Start 设计的是读者的第一次成功路径。
 
@@ -102,6 +102,6 @@ Quick Start 最容易缺失的是一个具体明确的完成标准，这是我�
 对技术文档工程师来说，写好 Quick Start 的关键就是站在读者第一次接触产品的那个时刻，替 TA 减少犹豫、猜测和失败后的无助。前置条件、最短路径、可验证结果、错误处理和下一步引导，这些都可以让读者得到一次真正的“Quick Start”。
 
 <div class="bottom-pager">
-    <a href="../" class="pager-link">返回思考与经验</a>
+    <a href="../" class="pager-link">返回写作与方法</a>
     <a href="../../install/" class="pager-link pager-link-primary">查看对应 Quick Start 文档</a>
 </div>

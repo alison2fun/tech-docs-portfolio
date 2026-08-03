@@ -54,6 +54,6 @@ GitHub Hello World 可以完全在网页中完成，因此环境差异较少。�
 案例的价值在于观察结构，不能把同样的步骤密度直接套用到所有产品。
 
 <div class="bottom-pager">
-    <a href="../" class="pager-link">返回案例总览</a>
+    <a href="../../posts/" class="pager-link">返回写作与方法</a>
     <a href="../stripe-checkout-quickstart/" class="pager-link pager-link-primary">下一篇：Stripe Checkout Quickstart</a>
 </div>

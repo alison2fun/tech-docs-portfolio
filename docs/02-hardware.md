@@ -1,199 +1,248 @@
-# 芯片数据手册重构：把静态 PDF 改成开发者友好的 Web 文档
+# 快速开始：采集第一组环境光数据
 
-## 项目背景
+<div class="hardware-doc" markdown>
 
-硬件数据手册通常很厚，动不动几百页。里面有寄存器、时序图、电气参数、通信协议、配置说明。信息都在，但开发者真正用起来时，经常还是很痛苦。
+本页帮助第一次使用 OPT4001YMNEVM 的读者完成首次环境光数据采集。
 
-我在整理这个案例时，想模拟一个真实场景：
+完成后，EVM GUI 中应显示实时 lux 数值，曲线区域持续出现新的数据点。
 
-软件工程师需要基于某个传感器芯片写驱动。
-他手里有一份 PDF 数据手册，但他真正关心的是：
+预计用时：5—10 分钟，不包括软件安装。
 
-* SPI 怎么读写；
-* 寄存器地址是什么；
-* 每个 bit 控制什么功能；
-* 初始化代码应该怎么写；
-* 配置完之后怎样确认逻辑没错。
+!!! info "验证状态"
 
-如果这些信息散在 PDF 的不同章节里，开发者就会不断翻页、搜索、截图、手敲参数。效率低，也容易出错。
+    本页根据 TI [《OPT4001YMNEVM User's Guide》](https://www.ti.com/lit/ug/sbou278/sbou278.pdf)和[《OPT4001 Datasheet》](https://www.ti.com/lit/ds/symlink/opt4001.pdf)整理。操作步骤、界面状态和错误提示均有官方资料依据。
 
-所以我把这个案例当成一次“资料重构”练习：把静态 PDF 里的关键信息，整理成更适合开发者阅读和复用的 Web 文档。
+    作者目前没有 OPT4001YMNEVM 实物，尚未独立复现软件安装、硬件连接和数据采集过程。页面中的界面图片来自 TI 官方文档，不代表作者的实测结果。
 
-## 原始痛点
+## 完成后你将看到
 
-我主要关注 3 个问题。
+完成本页操作后，应获得以下结果：
 
-### 1. 信息检索成本高
+- OPTMBEVM 母板已通过 USB 连接电脑；
+- Windows 已识别评估板对应的两个 COM 端口；
+- EVM GUI 已正常启动；
+- `Operation Select` 已设为 `Continuous`；
+- EVM GUI 显示 lux 数值，曲线持续更新。
 
-PDF 数据手册里通常会有大量寄存器和配置说明。
-开发者想找一个寄存器地址，可能要在目录、表格、正文之间来回跳。
+## 开始前准备
 
-如果文档没有清楚的结构，`Ctrl + F` 只能解决一部分问题。关键词搜到了，也不一定能马上理解上下文。
+| 项目 | 要求 |
+| --- | --- |
+| 评估套件 | OPT4001YMNEVM |
+| 板卡状态 | OPT4001YMN coupon board 已插入 OPTMBEVM 母板 |
+| 连接线 | USB-A 转 USB-C 线 |
+| 电脑 | Windows 电脑 |
+| 软件 | 已安装 OPT4001 EVM GUI（基于 TI Latte） |
 
-### 2. 时序图不够友好
+本页从硬件检查开始，假设 EVM GUI 已经安装完成。
 
-很多数据手册里的时序图是截图或静态图片。
-开发者想看清楚片选、时钟、MOSI、MISO 的关系时，经常需要放大缩小。
+软件可从 [TI OPT4001EVM 官方产品页](https://www.ti.com/tool/OPT4001EVM)获取。官方指南第 7—11 页提供了完整安装过程；本页不重复安装向导中的每一步操作。
 
-如果要把时序逻辑讲给别人，截图也不方便修改。
+## 首次采集路径
 
-### 3. 寄存器信息难以复用
-
-寄存器地址、bit 位、默认值、访问权限这些内容，如果只存在图片或大段正文里，开发者复制和核对都很麻烦。
-
-手动输入 bit 位配置，很容易出现位移错误、地址错误或配置遗漏。
-
-## 重构目标
-
-这次重构的目标很明确：
-
-让开发者更快找到信息、更容易理解通信流程，也能更安全地复制关键配置。
-
-我把原始资料拆成 3 类内容：
-
-* **协议时序**：用 Mermaid 把通信过程画出来；
-* **寄存器定义**：用结构化表格整理地址、bit 位和访问权限；
-* **驱动代码示例**：用 C 代码展示如何把寄存器配置落到实际初始化流程里。
-
-这样处理之后，文档不只是“说明芯片有什么功能”，还能帮助开发者更快开始写代码。
-
-## 重构案例：光感传感器 XYZ-2024
-
-下面用一个模拟的光感传感器 `XYZ-2024` 作为示例，展示我会如何重构一份芯片手册。
-
-## 1. 协议时序可视化
-
-原始 PDF 里的 SPI 读取流程，如果只用截图展示，读者需要自己理解每一步发生了什么。
-
-我改用 Mermaid sequence diagram，把一次 SPI 读取拆成几个阶段：
-
-* 拉低片选；
-* 发送寄存器地址；
-* 读取数据；
-* 拉高片选，结束传输。
-
-```mermaid
-sequenceDiagram
-    participant MCU as 主控 Master
-    participant Sensor as 传感器 Slave
-
-    Note over MCU, Sensor: 1. 启动传输：CS Low
-    MCU->>Sensor: CS = 0，拉低片选
-
-    Note over MCU, Sensor: 2. 发送寄存器地址：0x10
-    MCU->>Sensor: MOSI: 0x10，写入寄存器地址
-    Sensor-->>MCU: MISO: High-Z
-
-    Note over MCU, Sensor: 3. 读取数据
-    MCU->>Sensor: CLK toggling
-    Sensor->>MCU: MISO: 0xA5，返回数据字节
-
-    Note over MCU, Sensor: 4. 结束传输：CS High
-    MCU->>Sensor: CS = 1，拉高片选
+```text
+检查 coupon board
+→ 连接 USB
+→ 确认母板被 Windows 识别
+→ 启动 EVM GUI
+→ 选择 Continuous
+→ 点击 Start Capture
+→ 查看 lux 数值和曲线
 ```
 
-这个改法的好处是：时序图可以直接维护在 Markdown 里。
-如果后续协议流程有变化，不需要重新截图，只要改 Mermaid 代码。
+## 步骤 1：检查 coupon board
 
-## 2. 寄存器定义重构
+OPT4001YMNEVM 出厂时，coupon board 通常已经插在母板上。完成首次采集不需要将它拆下。
 
-寄存器说明是芯片手册里最容易让人眼花的部分。
+开始连接 USB 前，确认：
 
-我会优先把寄存器名称、地址、默认值、bit 定义和访问权限拆出来，让开发者一眼看到最关键的信息。
+1. coupon board 已完整插入母板插座；
+2. 安装方向与官方图片一致；
+3. flex coupon board 没有被按压或弯折。
 
-### `CTRL_REG1` 控制寄存器 1
+![OPT4001YMN coupon board 插入 OPTMBEVM 母板后的状态](assets/opt4001/opt4001-coupon-installed.png){ .opt4001-quickstart-figure }
 
-| 字段    | 说明                         |
-| ----- | -------------------------- |
-| 寄存器名称 | `CTRL_REG1`                |
-| 地址    | `0x20`                     |
-| 默认值   | `0x00`                     |
-| 作用    | 控制传感器复位、休眠、输出数据速率和 X/Y 轴使能 |
+*OPT4001YMN coupon board 的安装位置。来源：TI [《OPT4001YMNEVM User's Guide》](https://www.ti.com/lit/ug/sbou278/sbou278.pdf)，Figure 4-1，第 19 页。*
 
-### Bit 定义
+!!! warning "拿取 coupon board"
 
-| Bit    |     7 |     6 |  5 |  4 |      3 |      2 |    1 |    0 |
-| ------ | ----: | ----: | -: | -: | -----: | -----: | ---: | ---: |
-| Name   | RESET | SLEEP |  - |  - | ODR[1] | ODR[0] | X_EN | Y_EN |
-| Access |    RW |    RW |  R |  R |     RW |     RW |   RW |   RW |
+    需要插拔 coupon board 时，只握住 rigid coupon board。
 
-### 字段说明
+    不要按压 flex coupon board。柔性 PCB 较薄，受到压力可能损坏。操作评估板时还应遵守基本的静电防护要求。
 
-| 字段         | 说明                 |
-| ---------- | ------------------ |
-| `RESET`    | 软件复位。写入 `1` 后触发复位。 |
-| `SLEEP`    | 休眠模式控制位。           |
-| `ODR[1:0]` | 输出数据速率选择。          |
-| `X_EN`     | 启用 X 轴数据输出。        |
-| `Y_EN`     | 启用 Y 轴数据输出。        |
+### 成功时你会看到
 
-### `ODR[1:0]` 取值
+Coupon board 稳固插入母板，安装方向与图片一致，flex PCB 没有受到挤压。
 
-| 值    | 输出数据速率     |
-| ---- | ---------- |
-| `00` | Power Down |
-| `01` | 10 Hz      |
-| `10` | 100 Hz     |
-| `11` | Reserved   |
+### 如果不确定
 
-这个表格拆完之后，开发者不需要在大段正文里找 bit 位含义，也更容易把配置映射到代码里。
+暂时不要连接 USB。先对照图片重新确认板卡方向，并检查插针是否完整进入插座。
 
-## 3. 驱动代码示例
+关于三块板分别承担什么作用，见[评估系统与光学硬件结构](core-projects/hardware/information-architecture.md#board-structure)。
 
-寄存器表解决“查信息”的问题，代码示例解决“怎么用”的问题。
+## 步骤 2：连接评估板
 
-下面示例展示如何初始化传感器，并设置 100 Hz 采样率。
+1. 将 USB-C 接头插入 OPTMBEVM 母板；
+2. 将 USB-A 接头插入 Windows 电脑；
+3. 等待 Windows 完成设备识别。
 
-```c
-// 示例：初始化传感器，设置 100 Hz 采样率
-void Sensor_Init(void) {
-    uint8_t ctrl_val = 0;
+![OPT4001YMNEVM 通过 USB 连接电脑](assets/opt4001/opt4001-usb-connection.png){ .opt4001-quickstart-figure .opt4001-quickstart-compact }
 
-    // 设置 ODR = 100 Hz，Bit 3:2 = 10
-    ctrl_val |= (0x02 << 2);
+*OPT4001YMNEVM 的 USB 连接方式。来源：TI [《OPT4001YMNEVM User's Guide》](https://www.ti.com/lit/ug/sbou278/sbou278.pdf)，Figure 3-9，第 11 页。*
 
-    // 启用 X/Y 轴，Bit 1:0 = 11
-    ctrl_val |= 0x03;
+### 成功时你会看到
 
-    // 写入 CTRL_REG1，地址为 0x20
-    SPI_Write(0x20, ctrl_val);
-}
+- OPTMBEVM 母板上的绿色 LED 亮起；
+- Windows 设备管理器中出现两个 COM 端口。
+
+![Windows 设备管理器识别出两个 COM 端口](assets/opt4001/opt4001-com-ports.png){ .opt4001-quickstart-figure .opt4001-quickstart-medium }
+
+*评估板正常枚举后，Windows 设备管理器中出现两个 COM 端口。来源：TI [《OPT4001YMNEVM User's Guide》](https://www.ti.com/lit/ug/sbou278/sbou278.pdf)，Figure 3-10，第 12 页。*
+
+### 如果没有出现上述结果
+
+依次检查：
+
+1. USB 线两端是否完全插入；
+2. 母板绿色 LED 是否亮起；
+3. Windows 设备管理器中是否出现未正确安装的设备；
+4. 重新连接 USB 后，设备列表是否发生变化。
+
+如果 Windows 提示找不到驱动，请先查看官方指南第 28—34 页的驱动说明。该部分针对 Windows 7，不应直接作为所有 Windows 版本的通用处理方法。
+
+## 步骤 3：启动 EVM GUI
+
+在 Windows 开始菜单中启动 OPT4001 EVM GUI（基于 TI Latte）。
+
+等待软件加载并打开 OPT4001 主操作界面。
+
+![OPT4001 EVM GUI 主操作界面](assets/opt4001/opt4001-gui-main-screen.png){ .opt4001-quickstart-figure }
+
+*OPT4001 EVM GUI 主操作界面。来源：TI [《OPT4001YMNEVM User's Guide》](https://www.ti.com/lit/ug/sbou278/sbou278.pdf)，Figure 3-11，第 13 页。*
+
+### 成功时你会看到
+
+OPT4001 主操作界面正常打开，页面中没有显示母板连接错误。
+
+### 如果出现 `OPT4001 Connection Problem`
+
+该提示表示 EVM GUI 没有检测到 OPTMBEVM 母板。
+
+先检查：
+
+1. USB 是否仍然连接；
+2. 母板绿色 LED 是否亮起；
+3. Windows 是否识别出两个 COM 端口。
+
+确认硬件连接后，关闭并重新启动 EVM GUI。
+
+## 步骤 4：开始连续采集
+
+在 EVM GUI 主界面中：
+
+1. 打开 `Operation Select`；
+2. 选择 `Continuous`；
+3. 点击 `Start Capture`。
+
+![在 OPT4001 EVM GUI 中开始连续采集](assets/opt4001/opt4001-gui-capture-running.png){ .opt4001-quickstart-figure }
+
+*在 `Operation Select` 中选择 `Continuous`，再点击 `Start Capture`。EVM GUI 随后显示 lux 数据和实时曲线。来源：TI [《OPT4001YMNEVM User's Guide》](https://www.ti.com/lit/ug/sbou278/sbou278.pdf)，Figure 3-13，第 14 页。*
+
+`Continuous` 会让 OPT4001 持续进行环境光测量并更新结果。Quick Start 不展开其中的寄存器配置和数据换算过程。
+
+### 成功时你会看到
+
+- EVM GUI 中出现 lux 数值；
+- 曲线区域持续增加新的测量点。
+
+### 如果出现 `REGRx01 Failed`
+
+该错误表示母板未能正常读取 OPT4001 IC 或 coupon board。
+
+先检查：
+
+1. coupon board 是否已经插入母板；
+2. coupon board 的安装方向是否正确。
+
+检查时只握住 rigid coupon board，不要按压 flex PCB。
+
+## 完成标准
+
+满足以下条件，即可认为已经完成首次采集：
+
+- [ ] EVM GUI 已正常打开；
+- [ ] `Operation Select` 已设为 `Continuous`；
+- [ ] 已点击 `Start Capture`；
+- [ ] EVM GUI 中出现 lux 数值；
+- [ ] 曲线持续出现新的数据点。
+
+本页的完成标准是“EVM GUI 已经显示持续更新的测量结果”。
+
+## 常见问题
+
+### EVM GUI 找不到母板
+
+#### 现象
+
+启动软件后出现 `OPT4001 Connection Problem`。
+
+#### 先检查
+
+- USB 连接；
+- 母板绿色 LED；
+- Windows 设备管理器中的两个 COM 端口。
+
+这类问题发生在电脑、USB 和母板之间。此时还不能据此判断 OPT4001YMN 传感器是否正常。
+
+### 出现 `REGRx01 Failed`
+
+#### 现象
+
+EVM GUI 可以启动，但 Latte Scripts 窗口显示：
+
+```text
+Operation I2C Register Read for command [REGRx01] Failed
 ```
 
-### 配置逻辑说明
+#### 先检查
 
-这段代码对应前面的寄存器定义：
+- coupon board 是否已经插入；
+- coupon board 方向是否正确。
 
-| 代码                          | 对应寄存器字段         | 含义               |
-| --------------------------- | --------------- | ---------------- |
-| `(0x02 << 2)`               | `ODR[1:0]`      | 设置输出数据速率为 100 Hz |
-| `0x03`                      | `X_EN` + `Y_EN` | 同时启用 X 轴和 Y 轴    |
-| `SPI_Write(0x20, ctrl_val)` | `CTRL_REG1`     | 将配置写入控制寄存器       |
+这类问题发生在母板与 coupon board 或传感器之间。
 
-我会尽量把代码和寄存器表放在一起解释。
-这样读者不只是复制代码，也能理解每一行对应哪个 bit 位。
+更完整的检查顺序见[故障排查](core-projects/hardware/troubleshooting.md)。
 
-## 重构前后对比
+## 资料来源
 
-| 维度    | 原始 PDF 手册  | 重构后的 Web 文档             |
-| ----- | ---------- | ----------------------- |
-| 信息查找  | 依赖目录和全文搜索  | 按协议、寄存器、代码示例拆分          |
-| 时序说明  | 静态截图，不易修改  | Mermaid 图，可维护、可复用       |
-| 寄存器说明 | 表格密集，阅读成本高 | 拆成基本信息、bit 定义、字段说明      |
-| 代码落地  | 需要开发者自行推导  | 提供初始化示例和配置解释            |
-| 后续维护  | 修改成本高      | Markdown + Mermaid 方便迭代 |
+### [OPT4001YMNEVM User's Guide](https://www.ti.com/lit/ug/sbou278/sbou278.pdf)
 
-## 这次重构保留了哪些判断
+文档编号：SBOU278，December 2021
 
-原始资料按照器件结构展开，Web 文档改成按照开发者任务展开。SPI 时序、寄存器字段和初始化代码仍然来自同一组模拟规格，只是被重新放进一次读取任务里。
+- coupon board 安装与操作注意事项：第 6 页；
+- 软件获取与安装：第 7—11 页；
+- USB 连接和绿色 LED：第 11 页；
+- 两个 COM 端口：第 12 页；
+- EVM GUI 启动与母板连接错误：第 13 页；
+- `Continuous`、`Start Capture` 和 lux 曲线：第 14 页。
 
-我用流程图解释顺序，用表格承担查找，用代码示例连接寄存器配置。读者需要回到原始资料核对时，也能知道应该查哪一类信息。
+### [OPT4001 Datasheet](https://www.ti.com/lit/ds/symlink/opt4001.pdf)
 
-## 下一步阅读
+文档编号：SBOS993A，revised December 2022
 
-如果你想继续查看其他文档作品，可以阅读：
+- Power-down 与 Continuous 工作模式：第 13 页；
+- `OPERATING_MODE` 字段：第 31 页。
 
-1. [文档质量自动化流水线](01-automation.md)：查看我如何设计文档工程化案例；
-2. [IoT 接口文档](03-api.md)：查看 API / 接口说明写法；
-3. [OpenClaw 快速入门](04-openclaw-quickstart.md)：查看 Quick Start 类型文档；
-4. [写作样稿](writing-samples/index.md)：查看更多技术写作样稿规划。
+## 关于这篇 Quick Start
+
+这篇文档先定义“第一次成功”的完成标准：在 EVM GUI 中看到实时 lux 数值和持续更新的曲线。再从这个结果倒推准备条件、操作步骤、可观察结果，以及失败时最先需要检查的位置。
+
+关于这一写作方法的完整复盘，见[《如何写一篇让读者真正跑通的 Quick Start》](posts/quick-start-reader-success.md)。
+
+## 继续阅读
+
+- [评估系统与光学硬件结构](core-projects/hardware/information-architecture.md)
+- [配置测量并读取 lux 数据](core-projects/hardware/configure-and-read-lux.md)
+- [故障排查](core-projects/hardware/troubleshooting.md)
+
+</div>

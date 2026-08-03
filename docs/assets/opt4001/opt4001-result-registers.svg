@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 520" role="img" aria-labelledby="title desc">
+  <title id="title">OPT4001 结果寄存器 0x00 和 0x01</title>
+  <desc id="desc">寄存器零包含四位 EXPONENT 和十二位 RESULT_MSB。寄存器一包含八位 RESULT_LSB、四位 COUNTER 和四位 CRC。</desc>
+  <style>
+    text { font-family: "Noto Sans SC", "Microsoft YaHei", "PingFang SC", sans-serif; }
+    .reg { fill: #183b66; font-size: 28px; font-weight: 700; }
+    .field { fill: #183b66; font-size: 25px; font-weight: 700; }
+    .bits { fill: #5f6470; font-size: 20px; }
+    .boundary { fill: #5f6470; font-size: 18px; }
+  </style>
+  <rect x="20" y="20" width="1080" height="480" rx="18" fill="#fbfaf6" stroke="#d9c7a8" stroke-width="2"/>
+
+  <text x="56" y="72" class="reg">Register 0x00</text>
+  <text x="56" y="116" class="boundary">D15</text>
+  <text x="298" y="116" class="boundary" text-anchor="end">D12</text>
+  <text x="318" y="116" class="boundary" text-anchor="start">D11</text>
+  <text x="1030" y="116" class="boundary">D0</text>
+  <rect x="56" y="128" width="1008" height="108" rx="10" fill="#ffffff" stroke="#183b66" stroke-width="2"/>
+  <rect x="56" y="128" width="252" height="108" rx="10" fill="#e8f0f8"/>
+  <line x1="308" y1="128" x2="308" y2="236" stroke="#183b66" stroke-width="2"/>
+  <text x="182" y="174" class="field" text-anchor="middle">EXPONENT</text>
+  <text x="182" y="211" class="bits" text-anchor="middle">D15:D12 · 4 bit</text>
+  <text x="686" y="174" class="field" text-anchor="middle">RESULT_MSB</text>
+  <text x="686" y="211" class="bits" text-anchor="middle">D11:D0 · 12 bit</text>
+
+  <text x="56" y="302" class="reg">Register 0x01</text>
+  <text x="56" y="346" class="boundary">D15</text>
+  <text x="550" y="346" class="boundary" text-anchor="end">D8</text>
+  <text x="570" y="346" class="boundary" text-anchor="start">D7</text>
+  <text x="802" y="346" class="boundary" text-anchor="end">D4</text>
+  <text x="822" y="346" class="boundary" text-anchor="start">D3</text>
+  <text x="1030" y="346" class="boundary">D0</text>
+  <rect x="56" y="358" width="1008" height="108" rx="10" fill="#ffffff" stroke="#183b66" stroke-width="2"/>
+  <rect x="56" y="358" width="504" height="108" rx="10" fill="#e8f0f8"/>
+  <rect x="560" y="358" width="252" height="108" fill="#f2ecdf"/>
+  <line x1="560" y1="358" x2="560" y2="466" stroke="#183b66" stroke-width="2"/>
+  <line x1="812" y1="358" x2="812" y2="466" stroke="#183b66" stroke-width="2"/>
+  <text x="308" y="404" class="field" text-anchor="middle">RESULT_LSB</text>
+  <text x="308" y="441" class="bits" text-anchor="middle">D15:D8 · 8 bit</text>
+  <text x="686" y="404" class="field" text-anchor="middle">COUNTER</text>
+  <text x="686" y="441" class="bits" text-anchor="middle">D7:D4 · 4 bit</text>
+  <text x="938" y="404" class="field" text-anchor="middle">CRC</text>
+  <text x="938" y="441" class="bits" text-anchor="middle">D3:D0 · 4 bit</text>
+</svg>

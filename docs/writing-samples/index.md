@@ -18,7 +18,7 @@ hide:
         <div class="work-index-list">
             <a href="../install/" class="work-index-item"><span>Quick Start</span><strong>搭建本地文档质量检查环境</strong></a>
             <a href="../troubleshooting/" class="work-index-item"><span>Troubleshooting</span><strong>文档质量流水线故障排查</strong></a>
-            <a href="../04-openclaw-quickstart/" class="work-index-item"><span>Developer Quick Start · 模拟</span><strong>OpenClaw 开发者快速入门</strong></a>
+            <a href="../04-openclaw-quickstart/" class="work-index-item"><span>Developer Quick Start · 官方资料核验</span><strong>OpenClaw 快速开始：安装 CLI 并发送第一条消息</strong></a>
         </div>
     </section>
 
@@ -39,7 +39,7 @@ hide:
         <div class="work-index-list">
             <a href="../03-api/" class="work-index-item"><span>API Guide · 模拟</span><strong>IoT 接口集成指南</strong></a>
             <a href="../02-hardware/" class="work-index-item"><span>Hardware Reference · 模拟</span><strong>XYZ-2024 数据手册重构</strong></a>
-            <a href="../05-miniprogram-task-decomposer/api-reference/" class="work-index-item"><span>API Reference · 原型</span><strong>微步 ACTION API 参考</strong></a>
+            <a href="../mini-programs/action/product/task-decomposition-interface-draft/" class="work-index-item"><span>Cloud Function · 小程序内部</span><strong>微步 ACTION 任务拆解云函数调用说明</strong></a>
         </div>
     </section>
 
@@ -48,9 +48,9 @@ hide:
         <p>同一个产品需要面向不同读者解释范围、操作、接口、变化和已知限制。</p>
         <div class="work-index-list">
             <a href="../mini-programs/" class="work-index-item"><span>Product Overview</span><strong>三个小程序产品总览</strong></a>
-            <a href="../05-miniprogram-task-decomposer/" class="work-index-item"><span>User Guide</span><strong>微步 ACTION 用户文档</strong></a>
-            <a href="../05-miniprogram-task-decomposer/prd/" class="work-index-item"><span>PRD · 原型</span><strong>微步 ACTION 产品需求文档</strong></a>
-            <a href="../05-miniprogram-task-decomposer/release-notes/" class="work-index-item"><span>Release Notes · 原型</span><strong>微步 ACTION 版本日志</strong></a>
+            <a href="../mini-programs/action/" class="work-index-item"><span>Product Overview · 原型</span><strong>微步 ACTION 产品概览</strong></a>
+            <a href="../mini-programs/action/user-guide/quick-start/" class="work-index-item"><span>User Guide · 原型截图</span><strong>拆解并推进第一个任务</strong></a>
+            <a href="../mini-programs/action/product/prd/" class="work-index-item"><span>PRD · 原型需求稿</span><strong>微步 ACTION 产品需求文档</strong></a>
             <a href="../dot-collage/" class="work-index-item"><span>Screenshot Guide</span><strong>PopDots 波点拼贴帮助</strong></a>
             <a href="../photo-background/" class="work-index-item"><span>Screenshot Guide</span><strong>照片换底色小程序帮助</strong></a>
         </div>
@@ -69,5 +69,5 @@ hide:
 
 <div class="bottom-pager">
     <a href="../portfolio/" class="pager-link">返回作品总览</a>
-    <a href="../posts/" class="pager-link pager-link-primary">下一篇：思考与经验</a>
+    <a href="../posts/" class="pager-link pager-link-primary">下一篇：写作与方法</a>
 </div>

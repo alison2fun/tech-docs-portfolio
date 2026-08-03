@@ -2,9 +2,11 @@
 
 > 最近 INS 上很火的波点拼贴图，想不想也来一张？
 
-![版本](https://img.shields.io/badge/版本-v1.0.7-brightgreen)
-![文档风格](https://img.shields.io/badge/风格-波普拼贴风-ff69b4)
-![工具链](https://img.shields.io/badge/工具链-微信小程序%20·%20Canvas%20·%20图像生成-blue)
+<div class="static-badges" aria-label="项目标签">
+  <span class="static-badge static-badge--sage">版本 · v1.0.7</span>
+  <span class="static-badge static-badge--clay">风格 · 波普拼贴</span>
+  <span class="static-badge">工具链 · 微信小程序 / Canvas / 图像生成</span>
+</div>
 
 ---
 
@@ -383,7 +385,7 @@ PopDots 就是拿来做这种图的。
 如需查看其他小程序文档，可以点击：
 
 1. [小程序产品总览](mini-programs.md)
-2. [微步 ACTION 用户文档](05-miniprogram-task-decomposer/index.md)
+2. [微步 ACTION 产品文档集](mini-programs/action/index.md)
 3. [照片换底色小程序](photo-background.md)
 
 ---

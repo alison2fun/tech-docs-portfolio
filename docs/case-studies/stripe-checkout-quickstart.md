@@ -57,6 +57,6 @@ Stripe 页面包含大量可切换语言和动态示例，这种体验依赖成�
 更值得保留的是背后的原则：先让读者完成一次有限成功，再逐步开放复杂能力。
 
 <div class="bottom-pager">
-    <a href="../" class="pager-link">返回案例总览</a>
+    <a href="../../posts/" class="pager-link">返回写作与方法</a>
     <a href="../esp-idf-get-started/" class="pager-link pager-link-primary">下一篇：ESP-IDF 快速入门</a>
 </div>

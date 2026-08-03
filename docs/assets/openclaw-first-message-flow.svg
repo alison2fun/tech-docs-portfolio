@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 260" role="img" aria-labelledby="title desc">
+  <title id="title">OpenClaw 首条消息核心链路</title>
+  <desc id="desc">OpenClaw CLI 依次连接本地配置和模型凭据、Gateway、Control UI，最终收到模型回复。</desc>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#1b365d"/>
+    </marker>
+    <style>
+      .eyebrow {
+        font: 600 13px Consolas, "Cascadia Code", "Noto Sans Mono CJK SC", monospace;
+        letter-spacing: 1.2px;
+        fill: #8a673d;
+      }
+      .title {
+        font: 600 24px Georgia, "Noto Serif CJK SC", "Songti SC", serif;
+        fill: #1b365d;
+      }
+      .step {
+        font: 600 17px "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        fill: #1b365d;
+      }
+      .detail {
+        font: 14px "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        fill: #4f5864;
+      }
+      .code {
+        font: 13px Consolas, "Cascadia Code", "Noto Sans Mono CJK SC", monospace;
+        fill: #1b365d;
+      }
+      .line {
+        fill: none;
+        stroke: #1b365d;
+        stroke-width: 2.5;
+        marker-end: url(#arrow);
+      }
+    </style>
+  </defs>
+
+  <rect width="1180" height="260" rx="18" fill="#f5f4ed"/>
+  <text x="40" y="38" class="eyebrow">OPENCLAW · FIRST MESSAGE PATH</text>
+  <text x="40" y="72" class="title">从安装 CLI 到收到第一条模型回复</text>
+
+  <path d="M200 145 H246" class="line"/>
+  <path d="M460 145 H506" class="line"/>
+  <path d="M676 145 H722" class="line"/>
+  <path d="M892 145 H938" class="line"/>
+
+  <g>
+    <rect x="40" y="104" width="160" height="82" rx="11" fill="#fffdf7" stroke="#1b365d" stroke-width="2"/>
+    <text x="120" y="138" class="step" text-anchor="middle">OpenClaw CLI</text>
+    <text x="120" y="163" class="detail" text-anchor="middle">安装完成</text>
+  </g>
+
+  <g>
+    <rect x="246" y="96" width="214" height="98" rx="11" fill="#e8eef6" stroke="#1b365d" stroke-width="2"/>
+    <text x="353" y="133" class="step" text-anchor="middle">本地配置</text>
+    <text x="353" y="160" class="detail" text-anchor="middle">模型 + API Key</text>
+  </g>
+
+  <g>
+    <rect x="506" y="104" width="170" height="82" rx="11" fill="#fffdf7" stroke="#1b365d" stroke-width="2"/>
+    <text x="591" y="138" class="step" text-anchor="middle">Gateway</text>
+    <text x="591" y="163" class="code" text-anchor="middle">running · probe ok</text>
+  </g>
+
+  <g>
+    <rect x="722" y="104" width="170" height="82" rx="11" fill="#fffdf7" stroke="#1b365d" stroke-width="2"/>
+    <text x="807" y="138" class="step" text-anchor="middle">Control UI</text>
+    <text x="807" y="163" class="code" text-anchor="middle">localhost:18789</text>
+  </g>
+
+  <g>
+    <rect x="938" y="96" width="202" height="98" rx="11" fill="#fff7df" stroke="#b38a58" stroke-width="2.5"/>
+    <text x="1039" y="133" class="step" text-anchor="middle">模型回复</text>
+    <text x="1039" y="160" class="detail" text-anchor="middle">Quick Start 完成</text>
+  </g>
+
+  <text x="1140" y="228" class="eyebrow" text-anchor="end">SUCCESS = A REAL MODEL RESPONSE</text>
+</svg>

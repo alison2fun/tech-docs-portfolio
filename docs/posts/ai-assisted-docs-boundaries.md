@@ -58,6 +58,6 @@ AI 很适合处理已经有明确依据、但需要整理的内容。
 如果答案还不清楚，我会继续查资料或把不确定性写出来。起稿速度可以被工具提高，准确性仍然需要一条可回溯的证据链。
 
 <div class="bottom-pager">
-    <a href="../" class="pager-link">返回思考与经验</a>
+    <a href="../" class="pager-link">返回写作与方法</a>
     <a href="../hardware-datasheet-restructure/" class="pager-link pager-link-primary">下一篇：重构硬件数据手册</a>
 </div>

@@ -168,7 +168,7 @@ curl -X GET "https://api.example.com/v1/devices/XYZ-2024-001/telemetry?limit=10"
 
 如果你想继续查看其他文档作品，可以阅读：
 
-1. [硬件数据手册重构](02-hardware.md)：查看我如何把芯片手册重构为开发者友好的 Web 文档；
-2. [OpenClaw 快速入门](04-openclaw-quickstart.md)：查看 Quick Start 类型文档；
+1. [OPT4001YMNEVM 快速开始](02-hardware.md)：查看我如何把官方硬件资料整理成第一次采集的任务路径；
+2. [OpenClaw 快速开始：安装 CLI 并发送第一条消息](04-openclaw-quickstart.md)：查看 Quick Start 类型文档；
 3. [文档质量自动化流水线](01-automation.md)：查看文档工程化案例；
 4. [写作样稿](writing-samples/index.md)：查看更多技术写作样稿规划。

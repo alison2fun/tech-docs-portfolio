@@ -29,6 +29,6 @@
 教程结尾还需要把读者送到更完整的内容。第一次体验、深入学习和 API 参考各有任务，入口清楚以后，读者才知道下一段路应该去哪里。
 
 <div class="bottom-pager">
-    <a href="../" class="pager-link">返回案例总览</a>
+    <a href="../../posts/" class="pager-link">返回写作与方法</a>
     <a href="../mdn-first-website/" class="pager-link pager-link-primary">下一篇：MDN 你的第一个网站</a>
 </div>

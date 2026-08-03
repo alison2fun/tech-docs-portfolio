@@ -45,7 +45,7 @@ ESP-IDF 快速入门没有把这些步骤压成一条不分条件的长列表，
 3. 长流程先提供阶段概览，再展开具体步骤。
 4. 操作系统和工具差异适合拆成独立路径。
 
-我的[硬件数据手册重构](../02-hardware.md)主要处理寄存器与 SPI 时序，还没有覆盖完整工具链安装。若继续扩展为开发板 Quick Start，这四项会成为新的结构要求。
+我的 [OPT4001YMNEVM 快速开始](../02-hardware.md)把连接评估板、启动 GUI 和采集第一组数据组织成一条可检查的任务路径。软件在当前 Windows 环境中的下载和兼容情况仍需通过实机验证。
 
 ## 小项目不必照搬全部分支
 
@@ -54,6 +54,6 @@ ESP-IDF 快速入门没有把这些步骤压成一条不分条件的长列表，
 对于规模较小的项目，可以先给出一条默认环境的最短路径，再把其他系统和 IDE 作为分支。大型 SDK 则需要像 ESP-IDF 一样，把版本、目标和平台选择做成长期维护的导航能力。
 
 <div class="bottom-pager">
-    <a href="../" class="pager-link">返回案例总览</a>
+    <a href="../../posts/" class="pager-link">返回写作与方法</a>
     <a href="../vuejs-interactive-tutorial/" class="pager-link pager-link-primary">下一篇：Vue 互动教程</a>
 </div>

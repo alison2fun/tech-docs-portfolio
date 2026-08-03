@@ -27,6 +27,6 @@ Docker Workshop 给这段学习安排了约 45 分钟，并把目标写得很具
 如果教程较长，总时长、阶段目标和每章的下一步会直接影响读者是否愿意继续。这些信息本身就在帮助读者安排学习路径。
 
 <div class="bottom-pager">
-    <a href="../" class="pager-link">返回案例总览</a>
+    <a href="../../posts/" class="pager-link">返回写作与方法</a>
     <a href="../kubernetes-basics/" class="pager-link pager-link-primary">下一篇：Kubernetes Basics</a>
 </div>

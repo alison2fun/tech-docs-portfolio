@@ -47,13 +47,13 @@
 
 ## 我如何应用到产品文档中
 
-[微步 ACTION 用户文档](../05-miniprogram-task-decomposer/index.md)、[PopDots 帮助文档](../dot-collage.md)和[照片换底色小程序](../photo-background.md)都使用了实际原型截图。
+[微步 ACTION 快速开始](../mini-programs/action/user-guide/quick-start.md)、[PopDots 帮助文档](../dot-collage.md)和[照片换底色小程序](../photo-background.md)都使用了实际原型截图。
 
 这些页面展示的是个人原型和文档整理过程。它们让我练习一个具体判断：什么时候图片能缩短寻找路径，什么时候文字更稳定。
 
 截图型文档的维护成本无法消失。减少无必要截图、控制每张图的信息范围，并把文件和步骤建立对应关系，可以让下一次更新更容易开始。
 
 <div class="bottom-pager">
-    <a href="../" class="pager-link">返回思考与经验</a>
+    <a href="../" class="pager-link">返回写作与方法</a>
     <a href="../multiple-reader-paths/" class="pager-link pager-link-primary">下一篇：为不同读者设计路径</a>
 </div>

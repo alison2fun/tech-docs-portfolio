@@ -46,6 +46,6 @@
 设计多条路径不意味着维护多套互相重复的内容。更稳妥的做法，是让事实集中、任务分流、页面之间建立清楚链接。读者可以走不同路线，最终看到的证据仍然一致。
 
 <div class="bottom-pager">
-    <a href="../" class="pager-link">返回思考与经验</a>
+    <a href="../" class="pager-link">返回写作与方法</a>
     <a href="../../portfolio/" class="pager-link pager-link-primary">下一步：查看文档作品</a>
 </div>

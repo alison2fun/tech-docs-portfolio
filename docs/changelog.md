@@ -6,6 +6,32 @@
 
 更新记录让读者看见这个文档项目怎样变化，也给后续维护留下可以追溯的线索。
 
+## 2026-07-16
+
+### 修改
+
+- 将只检查 `test.md` 的 CI 扩展为扫描 `docs/` 中的 44 个 Markdown 文件；
+- 将 Vale 检查、MkDocs 严格构建和站点发布合并进一条有依赖关系的工作流；
+- 设置 Pull Request 只验证、`main` push 验证通过后再发布；
+- 固定 Vale Action、Vale 版本和顶层 MkDocs Material 依赖；
+- 增加项目词汇表，并保留 Microsoft、Google 和自定义规则快照；
+- 保留原项目概览，并新增流水线复盘文章，记录 Agent 分工、设计取舍、验证证据和已知限制；
+- 更新 GitHub Actions Workflow 页面，使说明与真实配置一致。
+
+### 验证
+
+- 在 `385d72c` 快照上复现 44 文件、20 error、100 warning、196 suggestion；
+- 在 `d204aef` 快照上复现 44 文件、0 error、69 warning、181 suggestion；
+- 使用 MkDocs Material 9.7.6 完成严格构建；
+- Pull Request 运行验证成功并跳过部署；
+- `main` 运行验证和部署均成功。
+
+### 边界
+
+- 当前未公开核验分支保护和 required checks；
+- `checkout@v4` 与 `setup-python@v5` 尚未固定到完整 SHA；
+- warning 和 suggestion 继续显示，但暂不阻断个人网站发布。
+
 ## 2026-06-11
 
 ### 新增
@@ -33,7 +59,8 @@
 
 ## 后续计划
 
-- 补充 GitHub Actions Workflow 页面；
+- 按规则类型和核心页面优先级继续审查 warning 与 suggestion；
+- 处理 GitHub Actions 中的 Node.js 20 弃用 warning；
 - 优化故障排查页面中的真实错误示例；
 - 为核心页面增加内部链接；
 - 为 Start Here、项目概览和快速开始制作英文最小版本；
@@ -44,6 +71,7 @@
 如果你想继续了解这个项目，建议按以下顺序阅读：
 
 1. [项目概览](01-automation.md)：了解项目背景、解决方案和整体工作流；
-2. [快速开始](install.md)：搭建本地文档质量检查环境；
-3. [写作风格指南](style-guide.md)：了解本项目采用的写作规则；
-4. [故障排查](troubleshooting.md)：查看常见问题和排查方式。
+2. [GitHub Actions Workflow](github-actions-workflow.md)：查看真实配置和验证证据；
+3. [快速开始](install.md)：搭建本地文档质量检查环境；
+4. [写作风格指南](style-guide.md)：了解本项目采用的写作规则；
+5. [故障排查](troubleshooting.md)：查看常见问题和排查方式。

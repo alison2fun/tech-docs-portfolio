@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 110 1120 270" role="img" aria-labelledby="title desc">
+  <title id="title">OPT4001YMN 配置寄存器 0x0A 简图</title>
+  <desc id="desc">显示 RANGE、CONVERSION_TIME 和 OPERATING_MODE 的默认值，以及 Continuous 模式所需的 OPERATING_MODE 值。</desc>
+  <rect width="1120" height="430" rx="22" fill="#fbfaf6"/>
+  <g font-family="system-ui, sans-serif">
+    <rect x="56" y="132" width="1008" height="86" rx="14" fill="#eef3f8" stroke="#1e3d68" stroke-width="2"/>
+    <line x1="392" y1="132" x2="392" y2="218" stroke="#1e3d68" stroke-width="2"/>
+    <line x1="728" y1="132" x2="728" y2="218" stroke="#1e3d68" stroke-width="2"/>
+
+    <text x="76" y="158" fill="#6f6a61" font-size="15">D13:D10</text>
+    <text x="76" y="190" fill="#1e3d68" font-size="22" font-weight="700">RANGE</text>
+    <text x="266" y="190" fill="#9a6b2f" font-size="20" font-weight="700">0xC</text>
+
+    <text x="412" y="158" fill="#6f6a61" font-size="15">D9:D6</text>
+    <text x="412" y="190" fill="#1e3d68" font-size="22" font-weight="700">CONVERSION_TIME</text>
+    <text x="650" y="190" fill="#9a6b2f" font-size="20" font-weight="700">0x8</text>
+
+    <text x="748" y="158" fill="#6f6a61" font-size="15">D5:D4</text>
+    <text x="748" y="190" fill="#1e3d68" font-size="22" font-weight="700">OPERATING_MODE</text>
+    <text x="1006" y="190" fill="#9a6b2f" font-size="20" font-weight="700">0</text>
+
+    <rect x="56" y="246" width="1008" height="112" rx="14" fill="#fff" stroke="#d8c8ae" stroke-width="2"/>
+    <text x="80" y="282" fill="#1e3d68" font-size="19" font-weight="700">上电默认</text>
+    <text x="230" y="282" fill="#252525" font-size="19">Auto-range</text>
+    <text x="512" y="282" fill="#252525" font-size="19">100 ms</text>
+    <text x="790" y="282" fill="#252525" font-size="19">Power-down</text>
+
+    <line x1="80" y1="302" x2="1040" y2="302" stroke="#e2ddd2" stroke-width="1"/>
+    <text x="80" y="338" fill="#1e3d68" font-size="19" font-weight="700">连续采集</text>
+    <text x="230" y="338" fill="#6f6a61" font-size="19">保持 0xC</text>
+    <text x="512" y="338" fill="#6f6a61" font-size="19">保持 0x8</text>
+    <text x="790" y="338" fill="#9a6b2f" font-size="19" font-weight="700">修改为 3 / Continuous</text>
+  </g>
+
+</svg>

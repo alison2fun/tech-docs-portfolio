@@ -48,13 +48,13 @@
 
 ## 我如何验证重构结果
 
-[硬件数据手册重构](../02-hardware.md)是一个基于虚构器件的模拟案例，不代表真实产品交付。它用来展示我如何处理 SPI 时序、寄存器表、bit 定义和 C 初始化示例。
+[OPT4001YMNEVM 快速开始](../02-hardware.md)已改为基于 TI 官方 Datasheet 和 EVM User's Guide 的任务型文档。操作步骤和预期现象有官方资料依据，但尚未由作者在真实硬件上独立复现。
 
 我会沿着开发者任务反向检查页面：只看这一组文档，能否找到开始所需的参数，能否解释代码里的每一个关键值，能否判断一次读取是否成功。
 
 如果读者还需要频繁跳回原始 PDF 才能完成基本操作，说明重构只完成了格式转换，任务路径仍然缺了一段。
 
 <div class="bottom-pager">
-    <a href="../" class="pager-link">返回思考与经验</a>
-    <a href="../api-onboarding-path/" class="pager-link pager-link-primary">下一篇：API 接入路径</a>
+    <a href="../../core-projects/hardware/" class="pager-link">返回项目概览</a>
+    <a href="../../case-studies/" class="pager-link pager-link-primary">返回案例总览</a>
 </div>

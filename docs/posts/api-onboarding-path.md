@@ -51,6 +51,6 @@
 一篇接入文档完成以后，我会从空白环境重新走一遍流程。能够复制示例、替换必要参数、识别成功结果，并知道失败后去哪里，是我判断这条路径是否成立的标准。
 
 <div class="bottom-pager">
-    <a href="../" class="pager-link">返回思考与经验</a>
+    <a href="../" class="pager-link">返回写作与方法</a>
     <a href="../documentation-as-qa/" class="pager-link pager-link-primary">下一篇：文档如何暴露产品问题</a>
 </div>

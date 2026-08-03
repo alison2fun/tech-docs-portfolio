@@ -74,11 +74,8 @@ flowchart LR
 Vale 处理可以重复检查的术语与格式，GitHub Actions 把检查接入提交过程，MkDocs 负责导航、搜索和发布。这样安排以后，文档从写完一页继续走到检查、反馈、修复和更新。
 
 
-## 推荐阅读路径
+## 继续查看
 
-如果你是第一次阅读这个项目，建议按以下顺序查看：
-
-1. [快速开始](install.md)：先搭建本地文档质量检查环境；
-2. [写作风格指南](style-guide.md)：了解本项目采用的写作规则；
-3. [故障排查](troubleshooting.md)：查看常见问题和排查方式；
-4. [更新记录](changelog.md)：了解这个文档项目的迭代记录。
+- [查看项目交付物](install.md)
+- [阅读项目复盘](posts/docs-ci-publishing-gate.md)
+- [返回核心作品](portfolio.md)

@@ -27,6 +27,6 @@ TiDB 文档中心同时保留了产品分类导航和任务入口。我打开首
 对于长期维护的产品，版本选择、发布历史、反馈和贡献入口同样属于阅读路径。它们决定读者是否敢把当前页面当成可靠依据。
 
 <div class="bottom-pager">
-    <a href="../" class="pager-link">返回案例总览</a>
+    <a href="../../posts/" class="pager-link">返回写作与方法</a>
     <a href="../docker-workshop/" class="pager-link pager-link-primary">下一篇：Docker Workshop</a>
 </div>

@@ -57,6 +57,6 @@ Changelog 如果只写“优化文档”“修复问题”，读者很难知道�
 文档会过期是一件正常的事。维护能力体现在变化发生以后，我们能否知道该检查哪里，以及如何让读者看见变化。
 
 <div class="bottom-pager">
-    <a href="../" class="pager-link">返回思考与经验</a>
+    <a href="../" class="pager-link">返回写作与方法</a>
     <a href="../maintainable-screenshots/" class="pager-link pager-link-primary">下一篇：截图型文档维护</a>
 </div>

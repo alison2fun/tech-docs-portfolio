@@ -27,6 +27,6 @@ MDN 把这个目标拆成五段：规划外观、编写 HTML、添加 CSS、加�
 这样写出来的教程更容易被执行。读者学到的概念，也会和亲手做出的页面绑在一起。
 
 <div class="bottom-pager">
-    <a href="../" class="pager-link">返回案例总览</a>
+    <a href="../../posts/" class="pager-link">返回写作与方法</a>
     <a href="../apple-swiftui-tutorials/" class="pager-link pager-link-primary">下一篇：SwiftUI 教程</a>
 </div>

@@ -187,14 +187,15 @@ vale -v
 ### 本地检查和 GitHub Actions 检查有什么区别？
 
 本地检查用于作者在提交前提前发现问题。
-GitHub Actions 检查用于在提交后自动验证文档质量，避免不符合规则的内容进入主分支。
+GitHub Actions 检查用于在提交后提供统一验证结果。是否阻止未通过的 Pull Request 合并，还取决于仓库的分支保护和 required checks 配置。
 
-两者配合使用，可以减少人工审查中的重复性工作。
+两者配合使用，让本地反馈和远端验证采用同一套规则。
 
 ## 下一步
 
 完成本地检查环境搭建后，你可以继续阅读：
 
 1. [写作风格指南](style-guide.md)：了解本项目采用的写作规则；
-2. [故障排查](troubleshooting.md)：查看常见问题和排查方法；
-3. [更新记录](changelog.md)：了解这个文档项目的迭代记录。
+2. [GitHub Actions Workflow](github-actions-workflow.md)：了解检查与发布怎样衔接；
+3. [故障排查](troubleshooting.md)：查看常见问题和排查方法；
+4. [更新记录](changelog.md)：了解这个文档项目的迭代记录。
