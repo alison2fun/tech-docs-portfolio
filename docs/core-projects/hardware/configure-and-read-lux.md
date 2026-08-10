@@ -6,17 +6,7 @@ OPT4001YMN 上电后不会立即持续产生新的环境光测量结果。
 
 主控需要先找到器件、启动测量、等待转换完成，再读取结果寄存器，并将原始数据换算为 lux。
 
-本页按照一次完整的数据读取任务组织这些信息：
-
-```text
-找到器件
-→ 启动测量
-→ 等待数据
-→ 读取结果
-→ 确认更新
-→ 检查完整性
-→ 换算 lux
-```
+本页按照“找到器件 → 启动测量 → 等待数据 → 读取结果 → 验证结果 → 换算 lux”的任务顺序组织这些信息。
 
 !!! info "验证状态"
 
@@ -26,25 +16,14 @@ OPT4001YMN 上电后不会立即持续产生新的环境光测量结果。
     工作模式、I²C 地址、寄存器字段和 lux 换算公式已经过官方资料核对。
     示例流程和代码尚未在 OPT4001YMNEVM 实物或目标 MCU 上运行。
 
-## 读取路径
+<span id="read-path-overview"></span>
 
-一次完整读取包含以下步骤：
-
-1. 使用 I²C 地址 `0x45` 访问 OPT4001YMN；
-2. 将器件从 Power-down 切换到 Continuous；
-3. 等待一次新的转换完成；
-4. 从寄存器 `0x00` 开始读取结果；
-5. 使用 Counter 判断样本是否更新；
-6. 使用 CRC 检查读取过程中的 bit 错误；
-7. 将 Exponent 和 Mantissa 换算为 lux。
-
-### 数据读取任务流程 { #read-path-overview }
-
-![OPT4001YMN 数据读取路径](../../assets/opt4001/opt4001-read-task-flow.svg)
+![OPT4001YMN 数据读取路径](../../assets/opt4001/opt4001-read-task-flow.svg){ .doc-figure .figure--large .figure--diagram }
 
 *图 1：OPT4001YMN 数据读取路径。根据 TI [《OPT4001 Datasheet》](https://www.ti.com/lit/ds/symlink/opt4001.pdf)的工作模式、I²C 编程和寄存器定义整理。该图表示读取任务，不是芯片内部框图。*
+{: .figure-caption }
 
-### 找到器件
+## 找到器件
 
 OPT4001YMN 使用固定的 7-bit I²C 地址：
 
@@ -78,7 +57,7 @@ OPT4001YMN 使用固定的 7-bit I²C 地址：
 
 `0x8A` 和 `0x8B` 是将 `0x45` 左移并加入读写位后形成的地址字节。只有底层接口明确要求完整地址字节时，才应使用这种形式。
 
-#### 设置寄存器指针
+### 设置寄存器指针
 
 读取某个寄存器前，主控需要先写入目标寄存器地址：
 
@@ -97,16 +76,17 @@ OPT4001YMN 使用固定的 7-bit I²C 地址：
 
 OPT4001 的寄存器宽度为 16 bit，发送顺序为高字节在前、低字节在后。
 
-#### I²C 寄存器读取过程
+### I²C 寄存器读取过程
 
-![OPT4001YMN 的 I²C 寄存器读取过程](../../assets/opt4001/opt4001-i2c-register-read.svg)
+![OPT4001YMN 的 I²C 寄存器读取过程](../../assets/opt4001/opt4001-i2c-register-read.svg){ .doc-figure .figure--large .figure--diagram }
 
 *图 2：OPT4001YMN 的 I²C 寄存器读取过程。根据 TI [《OPT4001 Datasheet》](https://www.ti.com/lit/ds/symlink/opt4001.pdf)第 21—24 页重绘。该图用于说明地址层级和数据顺序，不表示完整电气时序。*
+{: .figure-caption }
 
 器件会保留当前寄存器指针。重复读取同一个寄存器时，不需要每次重新设置；
 切换到其他寄存器时，再写入新的寄存器地址。
 
-### 启动测量
+## 启动测量
 
 OPT4001YMN 上电后默认处于 Power-down。
 
@@ -150,7 +130,7 @@ Continuous 模式下，OPT4001 按照配置的 Conversion Time 持续测量，�
 
 这样可以保留同一寄存器中的量程、转换时间和其他配置字段。
 
-#### Conversion Time
+### Conversion Time
 
 Conversion Time 表示一次测量从开始到结果寄存器完成更新所需的时间。
 
@@ -184,13 +164,13 @@ CONVERSION_TIME = 0x8
 
 OPT4001 还提供两种 One-shot 模式。本页只讨论与首次连续读取直接相关的 Continuous。
 
-### 等待数据
+## 等待数据
 
 切换到 Continuous 后，需要等待新的转换完成，再读取结果寄存器。
 
 可以使用两种方式判断读取时机。
 
-#### 按时间等待
+### 按时间等待
 
 使用默认的 100 ms Conversion Time 时，主控应为第一次转换预留足够时间。
 
@@ -202,7 +182,7 @@ OPT4001 还提供两种 One-shot 模式。本页只讨论与首次连续读取�
 - MCU 和总线调度；
 - 应用允许的采样周期。
 
-#### 检查状态
+### 检查状态
 
 寄存器 `0x0C` 中的 `CONVERSION_READY_FLAG` 表示转换状态：
 
@@ -221,18 +201,18 @@ OPT4001 还提供两种 One-shot 模式。本页只讨论与首次连续读取�
 
 读取寄存器 `0x0C` 会清除 `CONVERSION_READY_FLAG`，因此程序应在读取后保存并处理该状态。
 
-### 读取结果
+## 读取结果
 
 最新测量结果分布在两个连续的 16-bit 寄存器中。
 
-#### 寄存器 0x00
+### 寄存器 0x00
 
 | 位 | 字段 | 作用 |
 | --- | --- | --- |
 | `D15:D12` | `EXPONENT` | 表示当前满量程范围 |
 | `D11:D0` | `RESULT_MSB` | Mantissa 的高 12 位 |
 
-#### 寄存器 0x01
+### 寄存器 0x01
 
 | 位 | 字段 | 作用 |
 | --- | --- | --- |
@@ -240,11 +220,12 @@ OPT4001 还提供两种 One-shot 模式。本页只讨论与首次连续读取�
 | `D7:D4` | `COUNTER` | 记录样本更新 |
 | `D3:D0` | `CRC` | 检查读取数据中的 bit 错误 |
 
-#### 结果寄存器位字段
+### 结果寄存器位字段
 
-![OPT4001 结果寄存器 0x00 和 0x01](../../assets/opt4001/opt4001-result-registers.svg)
+![OPT4001 结果寄存器 0x00 和 0x01](../../assets/opt4001/opt4001-result-registers.svg){ .doc-figure .figure--large .figure--diagram }
 
 *图 3：OPT4001 结果寄存器 `0x00` 和 `0x01`。根据 TI [《OPT4001 Datasheet》](https://www.ti.com/lit/ds/symlink/opt4001.pdf)第 27 页重绘。*
+{: .figure-caption }
 
 一组完整结果需要读取 4 个字节：
 
@@ -255,7 +236,7 @@ OPT4001 还提供两种 One-shot 模式。本页只讨论与首次连续读取�
 0x01 LSByte
 ```
 
-#### Burst Read
+### Burst Read
 
 寄存器 `0x0B` 中的 `I2C_BURST` 默认值为 `1`，即上电后默认启用 Burst Read。
 
@@ -274,7 +255,7 @@ Burst Read 的作用是减少重复设置寄存器指针产生的 I²C 开销。
 
 Datasheet 没有明确将 Burst Read 描述为两个结果寄存器的原子锁存机制，因此本页不作这一保证。
 
-### 确认更新
+## 验证结果
 
 `COUNTER` 是寄存器 `0x01` 中的 4-bit 滚动计数器。
 
@@ -297,8 +278,6 @@ Counter 可以帮助主控判断结果寄存器是否持续更新。
 
 Counter 只能帮助判断样本更新情况，不能单独证明 lux 计算或通信内容一定正确。
 
-### 检查完整性
-
 `CRC` 位于寄存器 `0x01` 的低 4 bit。
 
 OPT4001 在每次测量后更新 CRC，主控可以使用它检查输出数据读取过程中是否出现 bit 错误。
@@ -315,7 +294,7 @@ CRC 的计算涉及 Exponent、Mantissa 和 Counter 中的多组 bit。完整算
 
 本页不重新简化 CRC 算法，避免给出未经验证的实现。
 
-### 换算 lux
+## 换算 lux
 
 OPT4001 使用 Exponent 和 Mantissa 表示测量结果：
 
@@ -323,41 +302,17 @@ OPT4001 使用 Exponent 和 Mantissa 表示测量结果：
 - `MANTISSA` 为 20 bit；
 - Mantissa 分布在 `RESULT_MSB` 和 `RESULT_LSB` 中。
 
-#### 组合 Mantissa
-
-```text
-MANTISSA = (RESULT_MSB << 8) + RESULT_LSB
-```
-
-#### 恢复 ADC code
-
-```text
-ADC_CODES = MANTISSA << EXPONENT
-```
-
-也可以写为：
-
-```text
-ADC_CODES = MANTISSA × 2^EXPONENT
-```
-
-#### 计算 PicoStar lux
-
 当前器件为 OPT4001YMN / PicoStar，使用以下系数：
 
 ```text
+MANTISSA = (RESULT_MSB << 8) + RESULT_LSB
+ADC_CODES = MANTISSA × 2^EXPONENT
 lux = ADC_CODES × 312.5 × 10⁻⁶
-```
-
-等价于：
-
-```text
-lux = ADC_CODES × 0.0003125
 ```
 
 SOT-5X3 使用不同的换算系数，不能直接套用当前公式。
 
-#### 计算示例
+### 计算示例
 
 以下数值只用于说明计算过程，不是实测结果。
 
@@ -445,55 +400,29 @@ double opt4001_ymn_result_to_lux(
 }
 ```
 
-Counter 和 CRC 可以这样提取：
-
-```c
-const uint8_t counter =
-    (uint8_t)((result_reg_1 >> 4) & 0x0Fu);
-
-const uint8_t crc =
-    (uint8_t)(result_reg_1 & 0x0Fu);
-```
-
 该代码根据 [《OPT4001 Datasheet》](https://www.ti.com/lit/ds/symlink/opt4001.pdf)中的寄存器字段和 lux 公式整理，尚未经过编译、目标 MCU 运行或实物验证。
 
-## 本页边界
+!!! note "本页边界"
 
-本页：
+    本页只讨论 OPT4001YMN / PicoStar 在 Continuous 模式下的基本读取路径，使用固定的 7-bit 地址 `0x45` 和 PicoStar lux 系数。它不覆盖 SOT-5X3 的 ADDR 与 INT、完整 FIFO、阈值检测、完整 CRC 实现或特定 MCU 驱动。示例代码尚未经过编译和实物验证。
 
-- 只讨论 OPT4001YMN / PicoStar；
-- 使用固定的 7-bit 地址 `0x45`；
-- 使用 PicoStar 的 lux 换算系数；
-- 说明 Continuous 模式下的基本读取路径；
-- 不提供特定 MCU 的完整驱动。
+??? note "资料来源"
 
-本页不包含：
+    <span id="source-opt4001-data"></span>
 
-- SOT-5X3 的地址选择和 INT 功能；
-- 完整 FIFO 使用方法；
-- 阈值检测；
-- 完整 CRC 实现；
-- One-shot 的完整控制流程；
-- 已经过硬件验证的轮询周期和代码结果。
+    **[OPT4001 Datasheet](https://www.ti.com/lit/ds/symlink/opt4001.pdf)**，SBOS993A，revised December 2022
 
-## 资料来源
+    - 工作模式：第 13—15 页；
+    - Conversion Time 和 lux 换算：第 18—19 页；
+    - I²C 地址和寄存器读取：第 21—24 页；
+    - 结果寄存器、Counter 和 CRC：第 26—27 页；
+    - 配置与状态寄存器：第 31—33 页。
 
-### [OPT4001 Datasheet](https://www.ti.com/lit/ds/symlink/opt4001.pdf) { #source-opt4001-data }
+    <span id="source-opt4001-evm"></span>
 
-文档编号：SBOS993A，revised December 2022
+    **[OPT4001YMNEVM User's Guide](https://www.ti.com/lit/ug/sbou278/sbou278.pdf)**，SBOU278，December 2021
 
-- 工作模式：第 13—15 页；
-- Conversion Time 和 lux 换算：第 18—19 页；
-- I²C 地址和寄存器读取：第 21—24 页；
-- 结果寄存器、Counter 和 CRC：第 26—27 页；
-- 配置寄存器 `0x0A`：第 31 页；
-- Burst Read 和状态寄存器：第 32—33 页。
-
-### [OPT4001YMNEVM User's Guide](https://www.ti.com/lit/ug/sbou278/sbou278.pdf) { #source-opt4001-evm }
-
-文档编号：SBOU278，December 2021
-
-- GUI 中的结果寄存器和配置寄存器：第 17 页。
+    - GUI 中的结果寄存器和配置寄存器：第 17 页。
 
 ## 继续阅读
 

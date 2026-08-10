@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="140" viewBox="0 0 320 140" role="img" aria-labelledby="title desc">
+  <title id="title">Documentation Quality Pipeline English document set</title>
+  <desc id="desc">Five task-based English documents arranged around a shared documentation workflow.</desc>
+  <rect width="320" height="140" rx="6" fill="#f5f4ed"/>
+  <text x="18" y="24" fill="#1b365d" font-family="Georgia, serif" font-size="12" font-weight="700">ENGLISH DOCUMENTATION</text>
+  <text x="18" y="39" fill="#6f6b63" font-family="Consolas, monospace" font-size="7">TASK-BASED · REPOSITORY-ALIGNED</text>
+  <g font-family="Georgia, serif" font-size="8" fill="#1b365d">
+    <rect x="18" y="52" width="88" height="26" rx="5" fill="#e8eef6" stroke="#1b365d"/>
+    <text x="62" y="68" text-anchor="middle" font-weight="700">Quick Start</text>
+    <rect x="116" y="52" width="88" height="26" rx="5" fill="#fffdf7" stroke="#b38a58"/>
+    <text x="160" y="68" text-anchor="middle">Configure Vale</text>
+    <rect x="214" y="52" width="88" height="26" rx="5" fill="#e8eef6" stroke="#1b365d"/>
+    <text x="258" y="68" text-anchor="middle" font-weight="700">GitHub Actions</text>
+    <rect x="67" y="91" width="88" height="26" rx="5" fill="#fffdf7" stroke="#b38a58"/>
+    <text x="111" y="107" text-anchor="middle">Overview</text>
+    <rect x="165" y="91" width="88" height="26" rx="5" fill="#fffdf7" stroke="#b38a58"/>
+    <text x="209" y="107" text-anchor="middle">Troubleshooting</text>
+  </g>
+  <g stroke="#b38a58" stroke-width="1.5" fill="none">
+    <path d="M62 78 V84 H111 V91"/>
+    <path d="M160 78 V84 H111"/>
+    <path d="M258 78 V84 H209 V91"/>
+    <path d="M204 65 H214"/>
+    <path d="M155 104 H165"/>
+  </g>
+</svg>

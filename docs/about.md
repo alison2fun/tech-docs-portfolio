@@ -21,9 +21,11 @@ hide:
 
 工具在这个过程中承担具体工作：Markdown 保持结构可维护，MkDocs Material 统一导航与搜索，Vale 检查术语和格式，GitHub Actions 记录检查与发布过程，Mermaid 让流程图可以跟随文档一起修改。
 
-## 中英文技术资料
+## 英文技术写作与项目
 
-这个作品集目前以中文为主，服务国内技术文档和资料开发岗位。我的英文能力现在有三类证据：CET-6 612、硕士阶段对 120+ 篇英文论文的阅读和分析经历，以及已经完成的英文技术文档项目 [Documentation Quality Pipeline](core-projects/english-documentation/index.md)。
+这个作品集目前以中文为主，也已经包含一套完整的英文技术文档项目 [Documentation Quality Pipeline](core-projects/english-documentation/index.md)。我的英文能力有三类证据：CET-6 612、硕士阶段对 120+ 篇英文论文的阅读和分析经历，以及这套已经完成的英文项目。
+
+写英文文档时，我参考 Google Developer Documentation Style Guide 和 Microsoft Writing Style Guide，重点检查标题大小写、术语一致性、句子长度和任务导向表达。仓库中的 Vale 同时启用了 Google、Microsoft 和自定义规则，使本地检查与 CI 使用同一套标准。
 
 这套英文项目基于当前仓库真实使用的 Vale、MkDocs 和 GitHub Actions 配置，包含 Project Overview、Quick Start、配置说明、GitHub Actions 工作流说明和故障排查。页面中的本地检查已经重新运行；尚未完成的受控 CI 失败测试也保留了明确边界。
 

@@ -12,9 +12,10 @@
 
 进入“新行动”页面后，你会先看到一个空白任务页。这里先不急着想完整计划，先把眼前想完成的一件事写下来。
 
-![空白任务页](../images/quick-start-empty-sharp.png){ .action-screenshot }
+![空白任务页](../images/quick-start-empty-sharp.png){ .doc-figure .figure--small .figure--screenshot }
 
 *图 1：进入“新行动”后，页面会先停在一个空白任务页，等你写下当前最想推进的一件事。*
+{: .figure-caption }
 
 ## 步骤 1：写下任务
 
@@ -26,9 +27,10 @@
 
 写入内容后，点击下方按钮，让系统开始处理这句任务。
 
-![输入任务后的页面](../images/quick-start-task-entered-sharp.png){ .action-screenshot }
+![输入任务后的页面](../images/quick-start-task-entered-sharp.png){ .doc-figure .figure--small .figure--screenshot }
 
 *图 2：写入“上架小程序”后，页面已经有了一个明确目标。下一步就是把它拆成可以执行的小步骤。*
+{: .figure-caption }
 
 这里不用一次把所有细节都写全。只要先把任务写出来，后面再继续补充或调整，也比一直停在空白页里更容易开始。
 
@@ -43,9 +45,10 @@
 - 初始进度条；
 - 页面下方的提醒和反馈区域。
 
-![生成五个步骤后的页面](../images/quick-start-generated-steps-sharp.png){ .action-screenshot }
+![生成五个步骤后的页面](../images/quick-start-generated-steps-sharp.png){ .doc-figure .figure--small .figure--screenshot }
 
 *图 3：原任务已经被拆成 5 个步骤。此时进度还是 0%，因为任务虽然被拆开了，但还没有真正开始执行。*
+{: .figure-caption }
 
 如果步骤太大、太空，或者已经偏离原任务，这时候就该回去修改任务描述，而不是硬着头皮往下做。
 
@@ -53,9 +56,10 @@
 
 完成一个步骤后，点击它左侧的勾选框。页面会把这一步标记为已完成，并同步更新顶部进度。
 
-![完成两个步骤后的页面](../images/quick-start-progress-40-sharp.png){ .action-screenshot }
+![完成两个步骤后的页面](../images/quick-start-progress-40-sharp.png){ .doc-figure .figure--small .figure--screenshot }
 
 *图 4：完成两个步骤后，任务进度更新为 40%。这时用户不仅看到“做完了什么”，也能直观看到任务往前走了多少。*
+{: .figure-caption }
 
 这也是这个原型里最重要、很有成就感的体验点。任务不只被“拆开”，我们还能看到它被一项一项地推进。
 
@@ -72,9 +76,10 @@
 
 继续把剩下的步骤完成后，页面会给出任务完成反馈，并弹出这次任务的结果页。
 
-![任务完成弹窗](../images/quick-start-complete-sharp.png){ .action-screenshot }
+![任务完成弹窗](../images/quick-start-complete-sharp.png){ .doc-figure .figure--small .figure--screenshot }
 
 *图 5：当 5 个步骤全部完成后，页面会弹出任务完成反馈。到这里，一句原本模糊的任务，已经完整走完了一次从输入到完成的闭环。*
+{: .figure-caption }
 
 点击**收下战利品**，结束这次任务。
 

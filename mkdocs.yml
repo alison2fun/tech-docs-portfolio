@@ -1,4 +1,4 @@
-site_name: 我的自动化文档作品集
+site_name: 梁卓雯｜技术文档作品集
 
 # 1. 优化主题色与导航体验
 theme:
@@ -42,7 +42,7 @@ markdown_extensions:
   - md_in_html               # 允许在 HTML 标签内写 Markdown
   - tables                   # 确保表格正常渲染
   - toc:
-      toc_depth: 3           # 生成 H2–H3；样式层按页面决定是否展示 H3
+      toc_depth: 2           # 右侧目录只展示页面主任务，避免结构标签挤占导航
   - admonition               # 支持 Note/Warning 等提示块
   - pymdownx.details         # 支持 ??? 可展开/折叠提示块
   - pymdownx.tabbed:
@@ -100,8 +100,13 @@ nav:
           - GitHub Actions: core-projects/english-documentation/github-actions.md
           - Troubleshooting: core-projects/english-documentation/troubleshooting.md
       - 更多样本:
-          - IoT 接口集成指南: 03-api.md
+          - 光照测量 API 文档案例:
+              - 项目概览: 03-api/index.md
+              - 使用指南：获取最新光照数据: 03-api/usage-guide.md
+              - 光照测量 API Reference: 03-api/api-reference.md
           - OpenClaw Quick Start: 04-openclaw-quickstart.md
+          - 写作样稿索引: writing-samples/index.md
+          - 全部样稿: writing-samples/all.md
 
   - 案例复盘:
       - 案例总览: case-studies/index.md
