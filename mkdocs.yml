@@ -125,19 +125,6 @@ nav:
           - 站点更新记录: site-changelog.md
       - AI 辅助写作的边界:
           - AI 辅助技术文档的边界在哪里: posts/ai-assisted-docs-boundaries.md
-      - 优秀文档拆解:
-          - Quick Start 类:
-              - GitHub Hello World: case-studies/github-hello-world.md
-              - Stripe Checkout Quickstart: case-studies/stripe-checkout-quickstart.md
-              - ESP-IDF Quick Start: case-studies/esp-idf-get-started.md
-          - 学习路径类:
-              - Vue 互动教程: case-studies/vuejs-interactive-tutorial.md
-              - MDN 第一个网站: case-studies/mdn-first-website.md
-              - SwiftUI 教程: case-studies/apple-swiftui-tutorials.md
-          - 大型文档系统类:
-              - TiDB 文档中心: case-studies/tidb-docs-information-architecture.md
-              - Docker Workshop: case-studies/docker-workshop.md
-              - Kubernetes Basics: case-studies/kubernetes-basics.md
 
   - 关于: about.md
 
