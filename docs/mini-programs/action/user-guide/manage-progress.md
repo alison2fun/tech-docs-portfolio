@@ -12,9 +12,10 @@
 - `1/5` 表示已经完成了 1 个步骤；
 - `0/5` 表示任务已经创建，但还没有开始推进。
 
-![成就箱任务列表](../images/achievement-list-sharp.png){ .action-screenshot }
+![成就箱任务列表](../images/achievement-list-sharp.png){ .doc-figure .figure--small .figure--screenshot }
 
 *图 1：成就箱会把“已完成”和“仍在推进中的任务”放在同一个列表里。先看卡片右侧的状态，就能很快判断这张任务卡现在停在哪一步。*
+{: .figure-caption }
 
 如果你只是想找回之前的任务，先扫一眼右侧状态，通常就够了。
 
@@ -29,9 +30,10 @@
 - 当前完成数；
 - 这项任务已经生成的步骤清单。
 
-![任务详情页面](../images/achievement-detail-sharp.png){ .action-screenshot }
+![任务详情页面](../images/achievement-detail-sharp.png){ .doc-figure .figure--small .figure--screenshot }
 
 *图 2：打开任务详情后，页面会把这项任务目前做到哪里直接摊开来。上方能看到当前是 `0/5`，下方能看到已经生成的行动步骤。*
+{: .figure-caption }
 
 如果只是暂时想看看，不继续做，点右上角的关闭按钮就可以回到成就箱列表。
 

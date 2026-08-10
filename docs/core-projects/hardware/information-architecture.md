@@ -38,9 +38,10 @@ PC EVM GUI
 配置命令沿这条路径到达传感器。测量完成后，结果再经过 MSP430 和 USB
 返回 EVM GUI，并显示为 lux 数值和曲线。
 
-![OPT4001YMNEVM 系统组成和数据路径](../../assets/opt4001/opt4001-system-overview.svg)
+![OPT4001YMNEVM 系统组成和数据路径](../../assets/opt4001/opt4001-system-overview.svg){ .doc-figure .figure--large .figure--diagram }
 
 *图 1：OPT4001YMNEVM 系统组成和数据路径。根据 TI [《OPT4001YMNEVM User's Guide》](https://www.ti.com/lit/ug/sbou278/sbou278.pdf)第 3 页和第 5 页重绘。该图不表示实际 PCB 走线和机械比例。*
+{: .figure-caption }
 
 ## 板卡结构 { #board-structure }
 
@@ -58,9 +59,10 @@ OPTMBEVM motherboard
 → OPT4001YMN
 ```
 
-![OPT4001YMNEVM 的板卡结构](../../assets/opt4001/opt4001-evm-three-boards.png)
+![OPT4001YMNEVM 的板卡结构](../../assets/opt4001/opt4001-evm-three-boards.png){ .doc-figure .figure--large .figure--photo }
 
 *图 2：OPT4001YMNEVM 的板卡结构。来源：TI [《OPT4001YMNEVM User's Guide》](https://www.ti.com/lit/ug/sbou278/sbou278.pdf)，Figure 4-1，第 19 页。*
+{: .figure-caption }
 
 各部分承担不同的作用：
 
@@ -129,9 +131,10 @@ OPT4001YMN 的感光区域与器件焊盘位于同一侧。
 器件焊接到 flex PCB 后，感光区域朝向电路板，因此环境光需要通过
 flex PCB 上的开孔到达传感器。
 
-![OPT4001YMN 的光学路径](../../assets/opt4001/opt4001-optical-path.svg)
+![OPT4001YMN 的光学路径](../../assets/opt4001/opt4001-optical-path.svg){ .doc-figure .figure--medium .figure--diagram }
 
 *图 3：OPT4001YMN 的光学路径。根据 TI [《OPT4001 Datasheet》](https://www.ti.com/lit/ds/symlink/opt4001.pdf) Figure 9-6 和 Figure 9-9 重绘。该图为结构示意，不表示实际尺寸和视场角。*
+{: .figure-caption }
 
 因此，评估结果不仅依赖供电和 I²C 通信，还依赖以下条件：
 

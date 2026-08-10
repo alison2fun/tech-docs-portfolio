@@ -63,11 +63,10 @@ PopDots 就是拿来做这种图的。
 - 插画图；
 - 任意你想加工成拼贴风的图片。
 
-<p style="text-align: center;">
-  <img src="../images/popdots-upload.png" alt="PopDots 上传主图界面" />
-  <br>
-  <small>▲ 点击「传主图」，上传你想处理的照片</small>
-</p>
+![PopDots 上传主图界面](images/popdots-upload.png){ .doc-figure .figure--small .figure--screenshot }
+
+*▲ 点击「传主图」，上传你想处理的照片*
+{: .figure-caption }
 
 > **Tip：什么样的图更容易出效果？**  
 > 主体清楚、边缘明显、颜色对比比较好的图片，更容易做出有层次的拼贴效果。
@@ -87,11 +86,10 @@ PopDots 就是拿来做这种图的。
 模板适合快速出图。  
 如果你想自己控制画面，可以继续进入 **排版 & 底图** 和 **笔刷** 做细调。
 
-<p style="text-align: center;">
-  <img src="../images/popdots-template.png" alt="PopDots 模板选择界面" />
-  <br>
-  <small>▲ 先选模板，快速定下整张图的风格</small>
-</p>
+![PopDots 模板选择界面](images/popdots-template.png){ .doc-figure .figure--small .figure--screenshot }
+
+*▲ 先选模板，快速定下整张图的风格*
+{: .figure-caption }
 
 ---
 
@@ -125,11 +123,10 @@ PopDots 就是拿来做这种图的。
 - 让主体更大或更小
 - 决定画面是偏“人物主导”还是偏“背景主导”
 
-<p style="text-align: center;">
-  <img src="../images/popdots-layout.png" alt="PopDots 排版设置界面" />
-  <br>
-  <small>▲ 可以调整主图位置和主图占比</small>
-</p>
+![PopDots 排版设置界面](images/popdots-layout.png){ .doc-figure .figure--small .figure--screenshot }
+
+*▲ 可以调整主图位置和主图占比*
+{: .figure-caption }
 
 ### 3.2 调整底图样式
 
@@ -149,11 +146,10 @@ PopDots 就是拿来做这种图的。
 - 图案线条粗细
 - 图案倾斜角度
 
-<p style="text-align: center;">
-  <img src="../images/popdots-background-pattern.png" alt="PopDots 底图图案设置界面" />
-  <br>
-  <small>▲ 底图支持网格、波点、条纹，并可继续调颜色和参数</small>
-</p>
+![PopDots 底图图案设置界面](images/popdots-background-pattern.png){ .doc-figure .figure--small .figure--screenshot }
+
+*▲ 底图支持网格、波点、条纹，并可继续调颜色和参数*
+{: .figure-caption }
 
 ### 3.3 自定义底图与双面镂空
 
@@ -184,11 +180,10 @@ PopDots 就是拿来做这种图的。
 - **经典圆点**
 - **Y2K 星星**
 
-<p style="text-align: center;">
-  <img src="../images/popdots-brush-type.png" alt="PopDots 笔刷类型选择界面" />
-  <br>
-  <small>▲ 笔刷支持文字、经典圆点和 Y2K 星星</small>
-</p>
+![PopDots 笔刷类型选择界面](images/popdots-brush-type.png){ .doc-figure .figure--small .figure--screenshot }
+
+*▲ 笔刷支持文字、经典圆点和 Y2K 星星*
+{: .figure-caption }
 
 如果你想做那种“满屏有元素飘着”的感觉，圆点和星星会很好用。  
 如果你想做更个人化一点的图，可以直接输入字母、emoji 或符号。
@@ -202,11 +197,10 @@ PopDots 就是拿来做这种图的。
 - 是否有边框
 - 是否使用立体投影特效
 
-<p style="text-align: center;">
-  <img src="../images/popdots-brush-settings.png" alt="PopDots 笔刷设置界面" />
-  <br>
-  <small>▲ 笔刷大小、浮动差异和投影效果都可以调整</small>
-</p>
+![PopDots 笔刷设置界面](images/popdots-brush-settings.png){ .doc-figure .figure--small .figure--screenshot }
+
+*▲ 笔刷大小、浮动差异和投影效果都可以调整*
+{: .figure-caption }
 
 > **Tip：怎么更容易出片？**  
 > 先少量添加，再慢慢加。  
@@ -243,11 +237,10 @@ PopDots 就是拿来做这种图的。
 - 在放大状态下处理细节；
 - 点击 **重置视图** 回到默认预览状态。
 
-<p style="text-align: center;">
-  <img src="../images/popdots-preview-zoom.png" alt="PopDots 预览缩放与橡皮擦界面" />
-  <br>
-  <small>▲ 放大后更适合精细涂抹，也方便用橡皮擦修边</small>
-</p>
+![PopDots 预览缩放与橡皮擦界面](images/popdots-preview-zoom.png){ .doc-figure .figure--small .figure--screenshot }
+
+*▲ 放大后更适合精细涂抹，也方便用橡皮擦修边*
+{: .figure-caption }
 
 ### 5.4 撤销、盲盒、清空
 
@@ -257,11 +250,10 @@ PopDots 就是拿来做这种图的。
 - **盲盒**：随机生成新的装饰效果，适合没有灵感的时候试手气；
 - **清空**：清除当前装饰内容，重新开始这一轮创作。
 
-<p style="text-align: center;">
-  <img src="../images/popdots-toolbox.png" alt="PopDots 撤销盲盒清空工具栏" />
-  <br>
-  <small>▲ 撤销、盲盒、清空可以帮助你更轻松地试不同效果</small>
-</p>
+![PopDots 撤销盲盒清空工具栏](images/popdots-toolbox.png){ .doc-figure .figure--small .figure--screenshot }
+
+*▲ 撤销、盲盒、清空可以帮助你更轻松地试不同效果*
+{: .figure-caption }
 
 如果你懒得一点点想，盲盒会特别有意思。  
 点一下，有时候会给你意外灵感。
@@ -277,33 +269,30 @@ PopDots 就是拿来做这种图的。
 这种效果适合人像、头像和偏清新的照片。
 背景留出大色块，再用星星做装饰，看起来会更像 INS 上那种轻复古拼贴图。
 
-<p style="text-align: center;">
-  <img src="../images/popdots-result-star-girl.jpg" alt="PopDots 星星拼贴人像成图示例" />
-  <br>
-  <small>▲ 星星、低饱和底色和人像照片组合效果</small>
-</p>
+![PopDots 星星拼贴人像成图示例](images/popdots-result-star-girl.jpg){ .doc-figure .figure--small .figure--photo }
+
+*▲ 星星、低饱和底色和人像照片组合效果*
+{: .figure-caption }
 
 ### 6.2 圆环波点效果
 
 这种效果更适合旅行照、海边照、户外照片。
 圆环分布在画面四周，可以保留照片主体，同时让图片多一点设计感。
 
-<p style="text-align: center;">
-  <img src="../images/popdots-result-sea-ring.jpg" alt="PopDots 圆环波点旅行照成图示例" />
-  <br>
-  <small>▲ 圆环、留白和照片主体组合效果</small>
-</p>
+![PopDots 圆环波点旅行照成图示例](images/popdots-result-sea-ring.jpg){ .doc-figure .figure--small .figure--photo }
+
+*▲ 圆环、留白和照片主体组合效果*
+{: .figure-caption }
 
 ### 6.3 条纹拼贴效果
 
 这种效果适合做头像、封面或更强烈的视觉图。
 可以用上下分区、条纹底图和圆环装饰，做出更明显的拼贴感。
 
-<p style="text-align: center;">
-  <img src="../images/popdots-result-bird-collage.png" alt="PopDots 条纹拼贴成图示例" />
-  <br>
-  <small>▲ 条纹、色块和圆环组合的拼贴效果</small>
-</p>
+![PopDots 条纹拼贴成图示例](images/popdots-result-bird-collage.png){ .doc-figure .figure--small .figure--photo }
+
+*▲ 条纹、色块和圆环组合的拼贴效果*
+{: .figure-caption }
 
 如果你想做出类似 INS 上那种很火的拼贴图，可以先从这几个方向试：
 

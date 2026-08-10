@@ -52,11 +52,10 @@
 * 头像照片；
 * 需要更换背景的人像照片。
 
-<p style="text-align: center;">
-  <img src="../images/bg-upload-blue.png" alt="照片换底色神器上传照片界面" />
-  <br>
-  <small>▲ 上传照片后，可以先预览当前背景效果</small>
-</p>
+![照片换底色神器上传照片界面](images/bg-upload-blue.png){ .doc-figure .figure--small .figure--screenshot }
+
+*▲ 上传照片后，可以先预览当前背景效果*
+{: .figure-caption }
 
 > **Tip：什么照片更适合？**
 > 人物边缘清楚、背景不太复杂、光线均匀的照片，处理效果通常更稳定。
@@ -77,19 +76,17 @@
 | 天空蓝 | 更柔和的蓝底照片            |
 | 更多  | 渐变色、推荐纯色、自定义 HEX 色值 |
 
-<p style="text-align: center;">
-  <img src="../images/bg-select-red.png" alt="选择中国红背景色界面" />
-  <br>
-  <small>▲ 点击颜色圆点，即可切换照片背景</small>
-</p>
+![选择中国红背景色界面](images/bg-select-red.png){ .doc-figure .figure--small .figure--screenshot }
+
+*▲ 点击颜色圆点，即可切换照片背景*
+{: .figure-caption }
 
 如果预设颜色不够用，点击 **更多**，可以打开更多颜色面板。
 
-<p style="text-align: center;">
-  <img src="../images/bg-more-colors.png" alt="更多颜色选择面板" />
-  <br>
-  <small>▲ 更多颜色里可以选择渐变、推荐纯色，也可以输入 HEX 色值</small>
-</p>
+![更多颜色选择面板](images/bg-more-colors.png){ .doc-figure .figure--small .figure--screenshot }
+
+*▲ 更多颜色里可以选择渐变、推荐纯色，也可以输入 HEX 色值*
+{: .figure-caption }
 
 ---
 
@@ -99,11 +96,10 @@
 
 小程序会进入处理状态，等待几秒即可生成新的照片。
 
-<p style="text-align: center;">
-  <img src="../images/bg-processing.png" alt="照片换底色处理中界面" />
-  <br>
-  <small>▲ 处理中，请等待照片生成完成</small>
-</p>
+![照片换底色处理中界面](images/bg-processing.png){ .doc-figure .figure--small .figure--screenshot }
+
+*▲ 处理中，请等待照片生成完成*
+{: .figure-caption }
 
 处理完成后，会进入制作结果页面。
 
@@ -121,11 +117,10 @@
 * 文件大小；
 * 画质比例。
 
-<p style="text-align: center;">
-  <img src="../images/bg-size-quality.png" alt="尺寸与压缩设置界面" />
-  <br>
-  <small>▲ 可以选择原图、自定义、一寸、二寸，并调整画质</small>
-</p>
+![尺寸与压缩设置界面](images/bg-size-quality.png){ .doc-figure .figure--small .figure--screenshot }
+
+*▲ 可以选择原图、自定义、一寸、二寸，并调整画质*
+{: .figure-caption }
 
 你可以双指缩放，也可以单指拖动，调整图片在预览框中的位置。
 
