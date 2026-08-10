@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Diagnose local Vale failures, configuration problems, and GitHub Actions issues by starting from observable symptoms.">
+        <meta name="description" content="Diagnose the main local Vale and GitHub Actions failures from observable symptoms.">
       
       
       
@@ -25,7 +25,7 @@
     
     
       
-        <title>Troubleshoot Vale and CI checks - 我的自动化文档作品集</title>
+        <title>Troubleshoot Vale and CI checks - 梁卓雯｜技术文档作品集</title>
       
     
     
@@ -94,7 +94,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="我的自动化文档作品集" class="md-header__button md-logo" aria-label="我的自动化文档作品集" data-md-component="logo">
+    <a href="../../.." title="梁卓雯｜技术文档作品集" class="md-header__button md-logo" aria-label="梁卓雯｜技术文档作品集" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -108,7 +108,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            我的自动化文档作品集
+            梁卓雯｜技术文档作品集
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -350,13 +350,13 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="我的自动化文档作品集" class="md-nav__button md-logo" aria-label="我的自动化文档作品集" data-md-component="logo">
+    <a href="../../.." title="梁卓雯｜技术文档作品集" class="md-nav__button md-logo" aria-label="梁卓雯｜技术文档作品集" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    我的自动化文档作品集
+    梁卓雯｜技术文档作品集
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -1864,17 +1864,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#diagnostic-path" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Diagnostic path
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#quick-diagnosis" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1886,10 +1875,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#collect-evidence-first" class="md-nav__link">
+  <a href="#vale-command-not-found" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Collect evidence first
+        Vale command not found
       
     </span>
   </a>
@@ -1897,220 +1886,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#local-vale-problems" class="md-nav__link">
+  <a href="#configuration-not-found" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Local Vale problems
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Local Vale problems">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#vale-is-unavailable" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Vale is unavailable
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#configuration-isnt-found" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configuration isn't found
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#the-wrong-configuration-loads" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        The wrong configuration loads
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#styles-arent-available" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Styles aren't available
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#no-files-are-checked" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        No files are checked
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#the-custom-rule-doesnt-run" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        The custom rule doesn't run
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#alerts-dont-match-the-policy" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Alerts don't match the policy
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#interpret-vale-return-codes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Interpret Vale return codes
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#github-actions-problems" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        GitHub Actions problems
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="GitHub Actions problems">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#the-workflow-doesnt-start" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        The workflow doesn't start
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#vale-never-runs" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Vale never runs
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#configuration-is-missing-in-the-workflow" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configuration is missing in the workflow
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#local-and-automated-results-differ" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Local and automated results differ
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#error-findings-dont-fail-the-job" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Error findings don't fail the job
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#reporter-permissions-fail" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Reporter permissions fail
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mkdocs-fails-after-vale" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        MkDocs fails after Vale
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#deployment-fails-after-validation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Deployment fails after validation
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#compare-evidence-directly" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Compare evidence directly
+        Configuration not found
       
     </span>
   </a>
@@ -2118,132 +1897,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#run-a-controlled-test" class="md-nav__link">
+  <a href="#style-or-vocabulary-not-found" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Run a controlled test
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Run a controlled test">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-select-the-existing-rule" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. Select the existing rule
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-create-a-temporary-fixture" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Create a temporary fixture
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-verify-the-local-failure" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Verify the local failure
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-correct-the-fixture" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. Correct the fixture
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-verify-the-automated-failure" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5. Verify the automated failure
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-remove-the-fixture" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6. Remove the fixture
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#still-unresolved" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Still unresolved
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Still unresolved">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#local-environment" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Local environment
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#github-actions-environment" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        GitHub Actions environment
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#completion-check" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Completion check
+        Style or vocabulary not found
       
     </span>
   </a>
@@ -2251,10 +1908,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#project-boundaries" class="md-nav__link">
+  <a href="#no-files-checked" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Project boundaries
+        No files checked
       
     </span>
   </a>
@@ -2262,10 +1919,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#related-documentation" class="md-nav__link">
+  <a href="#custom-rule-fails-to-run" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Related documentation
+        Custom rule fails to run
       
     </span>
   </a>
@@ -2273,10 +1930,43 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sources" class="md-nav__link">
+  <a href="#local-check-passes-but-ci-fails" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Sources
+        Local check passes but CI fails
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ci-ignores-error-level-findings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CI ignores error-level findings
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-or-deployment-failures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Build or deployment failures
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#collect-evidence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Collect evidence
       
     </span>
   </a>
@@ -2356,6 +2046,56 @@
   
   
   
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6_1" id="__nav_2_6_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    光照测量 API 文档案例
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_6_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    光照测量 API 文档案例
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../../03-api/" class="md-nav__link">
         
@@ -2364,7 +2104,7 @@
   <span class="md-ellipsis">
     
   
-    IoT 接口集成指南
+    项目概览
   
 
     
@@ -2385,6 +2125,70 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../03-api/usage-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    使用指南：获取最新光照数据
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../03-api/api-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    光照测量 API Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../04-openclaw-quickstart/" class="md-nav__link">
         
   
@@ -2393,6 +2197,62 @@
     
   
     OpenClaw Quick Start
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../writing-samples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    写作样稿索引
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../writing-samples/all/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    全部样稿
   
 
     
@@ -3238,17 +3098,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#diagnostic-path" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Diagnostic path
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#quick-diagnosis" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3260,10 +3109,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#collect-evidence-first" class="md-nav__link">
+  <a href="#vale-command-not-found" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Collect evidence first
+        Vale command not found
       
     </span>
   </a>
@@ -3271,220 +3120,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#local-vale-problems" class="md-nav__link">
+  <a href="#configuration-not-found" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Local Vale problems
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Local Vale problems">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#vale-is-unavailable" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Vale is unavailable
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#configuration-isnt-found" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configuration isn't found
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#the-wrong-configuration-loads" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        The wrong configuration loads
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#styles-arent-available" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Styles aren't available
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#no-files-are-checked" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        No files are checked
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#the-custom-rule-doesnt-run" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        The custom rule doesn't run
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#alerts-dont-match-the-policy" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Alerts don't match the policy
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#interpret-vale-return-codes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Interpret Vale return codes
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#github-actions-problems" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        GitHub Actions problems
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="GitHub Actions problems">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#the-workflow-doesnt-start" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        The workflow doesn't start
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#vale-never-runs" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Vale never runs
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#configuration-is-missing-in-the-workflow" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configuration is missing in the workflow
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#local-and-automated-results-differ" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Local and automated results differ
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#error-findings-dont-fail-the-job" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Error findings don't fail the job
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#reporter-permissions-fail" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Reporter permissions fail
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mkdocs-fails-after-vale" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        MkDocs fails after Vale
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#deployment-fails-after-validation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Deployment fails after validation
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#compare-evidence-directly" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Compare evidence directly
+        Configuration not found
       
     </span>
   </a>
@@ -3492,132 +3131,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#run-a-controlled-test" class="md-nav__link">
+  <a href="#style-or-vocabulary-not-found" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Run a controlled test
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Run a controlled test">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-select-the-existing-rule" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. Select the existing rule
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-create-a-temporary-fixture" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Create a temporary fixture
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-verify-the-local-failure" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Verify the local failure
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-correct-the-fixture" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. Correct the fixture
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-verify-the-automated-failure" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5. Verify the automated failure
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-remove-the-fixture" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6. Remove the fixture
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#still-unresolved" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Still unresolved
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Still unresolved">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#local-environment" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Local environment
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#github-actions-environment" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        GitHub Actions environment
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#completion-check" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Completion check
+        Style or vocabulary not found
       
     </span>
   </a>
@@ -3625,10 +3142,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#project-boundaries" class="md-nav__link">
+  <a href="#no-files-checked" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Project boundaries
+        No files checked
       
     </span>
   </a>
@@ -3636,10 +3153,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#related-documentation" class="md-nav__link">
+  <a href="#custom-rule-fails-to-run" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Related documentation
+        Custom rule fails to run
       
     </span>
   </a>
@@ -3647,10 +3164,43 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sources" class="md-nav__link">
+  <a href="#local-check-passes-but-ci-fails" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Sources
+        Local check passes but CI fails
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ci-ignores-error-level-findings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CI ignores error-level findings
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-or-deployment-failures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Build or deployment failures
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#collect-evidence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Collect evidence
       
     </span>
   </a>
@@ -3674,82 +3224,10 @@
 
 
 
-<style>
-@media screen and (max-width: 44.984375em) {
-  .md-main__inner,
-  .md-content {
-    box-sizing: border-box;
-    min-width: 0;
-    width: 100%;
-    max-width: 100vw;
-  }
-
-  .md-content__inner {
-    box-sizing: border-box;
-    width: calc(100vw - 2rem) !important;
-    max-width: calc(100vw - 2rem) !important;
-    margin-right: 1rem !important;
-    margin-left: 1rem !important;
-    padding: 1rem 0;
-  }
-
-  .md-typeset .admonition,
-  .md-typeset .md-typeset__scrollwrap,
-  .md-typeset .mermaid {
-    box-sizing: border-box;
-    max-width: 100%;
-  }
-
-  .md-typeset p code {
-    white-space: normal;
-    overflow-wrap: anywhere;
-  }
-}
-</style>
-
+<div class="english-doc">
 <h1 id="troubleshoot-vale-and-ci-checks">Troubleshoot Vale and CI checks</h1>
-<p>Use this guide when a local Vale command or the Documentation CI workflow
-doesn't produce the expected result.</p>
-<p>Start with the first observable failure. Don't change rules, paths, or workflow
-permissions until you know which stage failed.</p>
-<p>This guide covers the repository's local Vale check and the GitHub Actions
-workflow that runs Vale, builds the MkDocs site, and deploys after validation.</p>
-<div class="admonition info">
-<p class="admonition-title">Validation status</p>
-<p>The commands on this page were checked with Vale 3.13.0 in the current
-local repository. <code>vale ls-config</code>, <code>vale ls-vars</code>, <code>vale ls-dirs</code>,
-<code>--no-global</code>, and the documented return-code categories were exercised
-locally.</p>
-<p>A controlled local test verified the existing <code>MyStyle.Spacing</code> error rule:
-the matching form returned <code>1</code>, and the corrected form returned <code>0</code>. A
-missing configuration path produced a runtime error and returned <code>2</code>.</p>
-<p><a href="https://github.com/alison2fun/tech-docs-portfolio/actions/runs/30780106488">Documentation CI run #36</a>
-verifies the current successful workflow path. The current workflow hasn't
-completed a controlled error-level failure test, so that path remains
-pending evidence.</p>
-</div>
-<h2 id="diagnostic-path">Diagnostic path</h2>
-<p>Use the first failed question to select the next section.</p>
-<div class="mermaid">
-flowchart TD
-    A["Can the terminal run Vale?"] -->|No| B["Check installation and PATH"]
-    A -->|Yes| C["Does Vale load the project configuration?"]
-    C -->|No| D["Check the repository root and .vale.ini"]
-    C -->|Yes| E["Are committed styles available?"]
-    E -->|No| F["Check StylesPath and styles files"]
-    E -->|Yes| G["Does Vale scan the intended files?"]
-    G -->|No| H["Check docs path, file pattern, and ignores"]
-    G -->|Yes| RULE["Does the intended rule run?"]
-    RULE -->|No| J["Check active styles, level, and scope"]
-    RULE -->|Yes| K["Does GitHub Actions start?"]
-    K -->|No| L["Check event, branch, and workflow state"]
-    K -->|Yes| M["Does the run reach the Vale step?"]
-    M -->|No| N["Check workflow setup and the first failed step"]
-    M -->|Yes| O["Compare local and automated environments"]
-</div>
-
-<p><strong>Figure 1. Diagnostic path for local and automated documentation checks</strong></p>
-<p><em>The diagram locates a failure stage; it doesn't identify the cause by itself.</em></p>
+<p>Start with the first observable failure. Don't change rules, paths, and
+workflow settings at the same time.</p>
 <h2 id="quick-diagnosis">Quick diagnosis</h2>
 <table>
 <thead>
@@ -3760,667 +3238,185 @@ flowchart TD
 </thead>
 <tbody>
 <tr>
-<td>The shell can't find <code>vale</code></td>
-<td>Vale is unavailable</td>
+<td>The terminal can't run <code>vale</code></td>
+<td><a href="#vale-command-not-found">Vale command not found</a></td>
 </tr>
 <tr>
-<td>Vale reports no configuration</td>
-<td>Configuration isn't found</td>
+<td>Vale can't locate <code>.vale.ini</code></td>
+<td><a href="#configuration-not-found">Configuration not found</a></td>
 </tr>
 <tr>
-<td>Vale loads unexpected settings</td>
-<td>The wrong configuration loads</td>
+<td>Vale reports a missing style or vocabulary</td>
+<td><a href="#style-or-vocabulary-not-found">Style or vocabulary not found</a></td>
 </tr>
 <tr>
-<td>Vale can't find a style or vocabulary</td>
-<td>Styles aren't available</td>
+<td>The command finishes without checking Markdown</td>
+<td><a href="#no-files-checked">No files checked</a></td>
 </tr>
 <tr>
-<td>Vale checks no Markdown files</td>
-<td>No files are checked</td>
+<td>A test string doesn't trigger <code>MyStyle.Spacing</code></td>
+<td><a href="#custom-rule-fails-to-run">Custom rule fails to run</a></td>
 </tr>
 <tr>
-<td>A controlled phrase doesn't trigger <code>MyStyle.Spacing</code></td>
-<td>The custom rule doesn't run</td>
+<td>Local output and GitHub Actions differ</td>
+<td><a href="#local-check-passes-but-ci-fails">Local check passes but CI fails</a></td>
 </tr>
 <tr>
-<td>Vale reports overlapping or unexpected feedback</td>
-<td>Alerts don't match the policy</td>
-</tr>
-<tr>
-<td>No Documentation CI run appears</td>
-<td>The workflow doesn't start</td>
-</tr>
-<tr>
-<td>The job fails before the Vale step</td>
-<td>Vale never runs</td>
-</tr>
-<tr>
-<td>Local checks pass but the workflow fails</td>
-<td>Local and automated results differ</td>
-</tr>
-<tr>
-<td>Error-level findings don't fail the job</td>
-<td>The failure policy isn't applied</td>
-</tr>
-<tr>
-<td>Vale succeeds but the site build fails</td>
-<td>MkDocs fails after Vale</td>
-</tr>
-<tr>
-<td>Validation succeeds but publication fails</td>
-<td>Deployment fails after validation</td>
+<td>CI stays green after an error-level finding</td>
+<td><a href="#ci-ignores-error-level-findings">CI ignores error-level findings</a></td>
 </tr>
 </tbody>
 </table>
-<h2 id="collect-evidence-first">Collect evidence first</h2>
-<p>Run these commands from the repository root:</p>
-<div class="highlight"><pre><span></span><code>vale<span class="w"> </span>--version
-vale<span class="w"> </span>ls-config
-vale<span class="w"> </span>ls-vars
-vale<span class="w"> </span>ls-dirs
-vale<span class="w"> </span>docs
-</code></pre></div>
-<p>They identify:</p>
-<ul>
-<li>the installed Vale version;</li>
-<li>the active project configuration;</li>
-<li>supported Vale environment variables and their current values;</li>
-<li>default configuration directories;</li>
-<li>the result of the normal repository check.</li>
-</ul>
-<p>Record the command, working directory, first error message, return code,
-affected file, and reporting rule.</p>
-<p>For a GitHub Actions problem, also record:</p>
-<ul>
-<li>the workflow name and run link;</li>
-<li>the event and branch;</li>
-<li>the tested commit;</li>
-<li>the first failed job and step;</li>
-<li>the relevant log lines.</li>
-</ul>
-<p>The final red or green status doesn't identify the failed layer by itself.</p>
-<h2 id="local-vale-problems">Local Vale problems</h2>
-<h3 id="vale-is-unavailable">Vale is unavailable</h3>
-<p><strong>Symptom</strong></p>
-<p>The shell reports that <code>vale</code> can't be found or recognized.</p>
-<p><strong>Check</strong></p>
-<p>Run:</p>
-<div class="highlight"><pre><span></span><code>vale<span class="w"> </span>--version
-</code></pre></div>
-<p>If the shell can't start Vale:</p>
-<ol>
-<li>confirm that installation completed;</li>
-<li>close and reopen the terminal;</li>
-<li>confirm that the executable directory is on <code>PATH</code>;</li>
-<li>confirm that the expected user account installed Vale;</li>
-<li>try the same command in another terminal.</li>
-</ol>
-<p><strong>Fix</strong></p>
-<p>Install Vale with the package method selected for the operating system, or add
-the existing Vale executable directory to <code>PATH</code>.</p>
-<p><strong>Verification</strong></p>
-<p><code>vale --version</code> prints a version instead of a shell-level command error. Then
-run <code>vale ls-config</code> from the repository root.</p>
-<h3 id="configuration-isnt-found">Configuration isn't found</h3>
-<p><strong>Symptom</strong></p>
-<p>Vale starts but reports a missing configuration or can't begin the repository
-check.</p>
-<p><strong>Check</strong></p>
-<ol>
-<li>confirm that the terminal is at the repository root;</li>
-<li>confirm that <code>.vale.ini</code> exists at the root;</li>
-<li>check its spelling and capitalization;</li>
-<li>run <code>vale ls-config</code>;</li>
-<li>select the repository configuration explicitly:</li>
-</ol>
-<div class="highlight"><pre><span></span><code>vale<span class="w"> </span>--config<span class="o">=</span><span class="s2">&quot;.vale.ini&quot;</span><span class="w"> </span>docs
-</code></pre></div>
-<p>The current repository uses <code>.vale.ini</code> and <code>docs</code>, not the placeholder paths
-from a generic example.</p>
-<p><strong>Fix</strong></p>
-<p>Run Vale from the repository root or use the verified relative path with
-<code>--config</code>. Don't copy another configuration file into a different directory
-to hide a working-directory mistake.</p>
-<p><strong>Verification</strong></p>
-<p><code>vale ls-config</code> reports the repository's <code>.vale.ini</code>, <code>styles/</code>, <code>Portfolio</code>
-vocabulary, and enabled styles.</p>
-<h3 id="the-wrong-configuration-loads">The wrong configuration loads</h3>
-<p><strong>Symptom</strong></p>
-<p>Vale runs, but its active styles, vocabulary, alert levels, or paths don't
-match <code>.vale.ini</code>.</p>
-<p><strong>Check</strong></p>
-<div class="highlight"><pre><span></span><code>vale<span class="w"> </span>ls-config
-vale<span class="w"> </span>ls-vars
-</code></pre></div>
-<p>Compare:</p>
-<ul>
-<li><code>RootINI</code>;</li>
-<li><code>StylesPath</code>;</li>
-<li><code>MinAlertLevel</code>;</li>
-<li><code>BasedOnStyles</code>;</li>
-<li><code>Vocab</code>;</li>
-<li><code>VALE_CONFIG_PATH</code>;</li>
-<li><code>VALE_STYLES_PATH</code>.</li>
-</ul>
-<p>Run a diagnostic check without global configuration:</p>
-<div class="highlight"><pre><span></span><code>vale<span class="w"> </span>--no-global<span class="w"> </span>--config<span class="o">=</span><span class="s2">&quot;.vale.ini&quot;</span><span class="w"> </span>docs
-</code></pre></div>
-<p>Vale 3.13.0 in the current environment supports this command.</p>
-<p><strong>Fix</strong></p>
-<p>Remove or correct the unintended environment variable or global setting. Keep
-project behavior in the repository configuration so local and automated checks
-can reproduce it.</p>
-<p><strong>Verification</strong></p>
-<p><code>vale ls-config</code> shows the intended paths, <code>Portfolio</code> vocabulary, and
-<code>Vale, Microsoft, Google, MyStyle</code> styles.</p>
-<h3 id="styles-arent-available">Styles aren't available</h3>
-<p><strong>Symptom</strong></p>
-<p>Vale loads <code>.vale.ini</code> but can't find a style, vocabulary, or custom rule.</p>
-<p><strong>Check</strong></p>
-<p>The current configuration expects:</p>
-<div class="highlight"><pre><span></span><code>styles/
-|-- Google/
-|-- Microsoft/
-|-- MyStyle/
-|   `-- Spacing.yml
-`-- config/
-    `-- vocabularies/
-        `-- Portfolio/
-            |-- accept.txt
-            `-- reject.txt
-</code></pre></div>
-<p>Confirm that:</p>
-<ul>
-<li><code>StylesPath</code> resolves to the committed <code>styles/</code> directory;</li>
-<li>the directories and files exist in the current checkout;</li>
-<li>rule files use the <code>.yml</code> extension;</li>
-<li>path capitalization matches;</li>
-<li>the vocabulary files exist.</li>
-</ul>
-<p>The repository doesn't declare <code>Packages</code>, so its normal path doesn't include
-<code>vale sync</code>. Use <code>vale sync</code> only if a later <code>.vale.ini</code> adds packages.</p>
-<p><strong>Fix</strong></p>
-<p>Restore missing committed resources or correct <code>StylesPath</code>. Don't recreate a
-missing style from memory.</p>
-<p><strong>Verification</strong></p>
-<p>Run:</p>
-<div class="highlight"><pre><span></span><code>vale<span class="w"> </span>ls-config
-vale<span class="w"> </span>docs
-</code></pre></div>
-<p>Vale reaches the content check without a missing-style runtime error.</p>
-<h3 id="no-files-are-checked">No files are checked</h3>
-<p><strong>Symptom</strong></p>
-<p>Vale completes without a clear runtime error, but the intended Markdown files
-don't appear in the result.</p>
-<p><strong>Check</strong></p>
-<ol>
-<li>confirm that <code>docs/</code> exists and contains Markdown files;</li>
-<li>run one known file:</li>
-</ol>
-<div class="highlight"><pre><span></span><code>vale<span class="w"> </span>docs/core-projects/english-documentation/quick-start.md
-</code></pre></div>
-<ol>
-<li>confirm that <code>.vale.ini</code> applies to <code>*.{md,txt}</code>;</li>
-<li>confirm the command runs from the repository root;</li>
-<li>check path spelling and capitalization;</li>
-<li>check command-line globs and repository ignore files.</li>
-</ol>
-<p>The current <code>.vale.ini</code> doesn't define <code>TokenIgnores</code> or <code>BlockIgnores</code>.</p>
-<p><strong>Fix</strong></p>
-<p>Use the verified <code>docs</code> path and narrow any glob or ignore expression that
-excludes an intended file. Don't replace <code>vale docs</code> with <code>vale .</code> until you
-know which additional files the wider command includes.</p>
-<p><strong>Verification</strong></p>
-<p>The single-file check and <code>vale docs</code> both reach the intended Markdown source.</p>
-<h3 id="the-custom-rule-doesnt-run">The custom rule doesn't run</h3>
-<p><strong>Symptom</strong></p>
-<p>Vale scans a test file, but the missing-space pattern doesn't trigger
-<code>MyStyle.Spacing</code>.</p>
-<p><strong>Check</strong></p>
-<ol>
-<li>confirm that <code>styles/MyStyle/Spacing.yml</code> exists;</li>
-<li>confirm that <code>MyStyle</code> appears in <code>BasedOnStyles</code>;</li>
-<li>confirm that the rule hasn't been turned off;</li>
-<li>confirm that <code>MinAlertLevel</code> doesn't hide the rule level;</li>
-<li>confirm that the test file matches <code>*.{md,txt}</code>;</li>
-<li>keep the test outside code blocks, URLs, and ignored syntax;</li>
-<li>run <code>vale ls-config</code>;</li>
-<li>isolate one controlled violation in a temporary Markdown file.</li>
-</ol>
-<p><strong>Fix</strong></p>
-<p>Restore the enabled style or correct the rule scope and test fixture. Don't
-lower unrelated levels or turn off other styles to simplify the test.</p>
-<p><strong>Verification</strong></p>
-<p>The controlled local test must report:</p>
-<ul>
-<li><code>MyStyle.Spacing</code>;</li>
-<li>level <code>error</code>;</li>
-<li>the expected file and location;</li>
-<li>return code <code>1</code>.</li>
-</ul>
-<p>After adding the required space, the targeted alert disappears and the file
-returns <code>0</code>.</p>
-<h3 id="alerts-dont-match-the-policy">Alerts don't match the policy</h3>
-<p><strong>Symptom</strong></p>
-<p>Vale reports feedback that doesn't match the repository's writing decision, or
-several rules report the same passage.</p>
-<p><strong>Check</strong></p>
-<ol>
-<li>identify the exact reporting rules;</li>
-<li>inspect <code>vale ls-config</code>;</li>
-<li>check whether Microsoft and Google rules overlap;</li>
-<li>check whether a global configuration adds a style;</li>
-<li>determine whether the term belongs in <code>Portfolio/accept.txt</code>;</li>
-<li>reproduce the alert in the smallest possible temporary file.</li>
-</ol>
-<p><strong>Fix</strong></p>
-<p>Choose the narrowest justified change:</p>
-<ul>
-<li>correct the document;</li>
-<li>add a verified project term to the vocabulary;</li>
-<li>narrow the rule scope;</li>
-<li>remove an unintended style;</li>
-<li>turn off one rule with a documented project decision.</li>
-</ul>
-<p>Don't add a broad ignore for one unclear result.</p>
-<p><strong>Verification</strong></p>
-<p>The passage produces actionable feedback, and normal nearby content remains
-checked.</p>
-<h3 id="interpret-vale-return-codes">Interpret Vale return codes</h3>
-<p>The current local environment produced these categories:</p>
+<p>Vale return codes help separate content findings from execution failures:</p>
 <table>
 <thead>
 <tr>
 <th style="text-align: right;">Return code</th>
-<th>Observed meaning</th>
+<th>Meaning</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: right;"><code>0</code></td>
-<td>The targeted file contained no error-level result</td>
+<td>No error-level lint finding</td>
 </tr>
 <tr>
 <td style="text-align: right;"><code>1</code></td>
-<td>The controlled <code>MyStyle.Spacing</code> error was reported</td>
+<td>One or more error-level lint findings</td>
 </tr>
 <tr>
 <td style="text-align: right;"><code>2</code></td>
-<td>Vale couldn't load an explicitly selected missing configuration file</td>
+<td>Runtime or configuration failure</td>
 </tr>
 </tbody>
 </table>
-<p>Use the return code with the first message:</p>
-<div class="highlight"><pre><span></span><code>Return code 1
--&gt; Vale completed the check
--&gt; Review the reported document or rule
-
-Return code 2
--&gt; Vale couldn&#39;t complete the check
--&gt; Fix the environment, path, configuration, or style
-</code></pre></div>
-<p>Not every nonzero result indicates a broken installation.</p>
-<h2 id="github-actions-problems">GitHub Actions problems</h2>
-<h3 id="the-workflow-doesnt-start">The workflow doesn't start</h3>
+<h2 id="vale-command-not-found">Vale command not found</h2>
 <p><strong>Symptom</strong></p>
-<p>A pull request, push to <code>main</code>, or manual action produces no new Documentation
-CI run.</p>
+<p>The terminal reports that <code>vale</code> isn't recognized or can't be found.</p>
 <p><strong>Check</strong></p>
 <ol>
-<li>confirm that <code>.github/workflows/ci.yml</code> exists on the tested branch;</li>
-<li>inspect the <code>on:</code> block;</li>
-<li>confirm that the event matches <code>pull_request</code>, a push to <code>main</code>, or
-   <code>workflow_dispatch</code>;</li>
-<li>confirm that GitHub Actions is enabled;</li>
-<li>check whether the workflow was manually turned off;</li>
-<li>check the commit message for a workflow skip instruction;</li>
-<li>check whether a pull request has a merge conflict.</li>
+<li>Run <code>vale --version</code> in a new terminal.</li>
+<li>Confirm that installation completed.</li>
+<li>Confirm that the executable is available on <code>PATH</code>.</li>
 </ol>
-<p>The current workflow doesn't define path filters. A changed-file mismatch is
-therefore not a cause in the current implementation.</p>
 <p><strong>Fix</strong></p>
-<p>Correct the event, branch, or workflow state. Don't add broader permissions to
-solve a trigger problem.</p>
-<p><strong>Verification</strong></p>
-<p>The intended event creates a run named <code>Documentation CI</code> with the expected
-branch, commit, and event.</p>
-<h3 id="vale-never-runs">Vale never runs</h3>
+<p>Reinstall Vale with the platform package manager, then reopen the terminal.</p>
+<p><strong>Verify</strong></p>
+<p><code>vale --version</code> prints an installed version.</p>
+<h2 id="configuration-not-found">Configuration not found</h2>
 <p><strong>Symptom</strong></p>
-<p>The workflow starts, but <code>Validate documentation</code> fails before <code>Check writing
-style with Vale</code>.</p>
-<p><strong>Check</strong></p>
-<p>Open the run and locate the first failed step:</p>
-<div class="highlight"><pre><span></span><code>Parse workflow
--&gt; Start runner
--&gt; Checkout repository
--&gt; Set up Python
--&gt; Install documentation dependencies
--&gt; Run Vale
-</code></pre></div>
-<p>Check the YAML syntax, Action reference, checkout permissions,
-<code>requirements-docs.txt</code>, and first relevant log message.</p>
-<p><strong>Fix</strong></p>
-<p>Correct the first failed workflow stage. Don't edit Vale rules when the Vale
-step never started.</p>
-<p><strong>Verification</strong></p>
-<p>The next run reaches <code>Check writing style with Vale</code>.</p>
-<h3 id="configuration-is-missing-in-the-workflow">Configuration is missing in the workflow</h3>
-<p><strong>Symptom</strong></p>
-<p>Vale works locally, but the workflow can't find <code>.vale.ini</code>, <code>styles/</code>, the
-vocabulary, or <code>docs/</code>.</p>
+<p>Vale reports that it can't find a configuration, or it loads a configuration
+from another directory.</p>
 <p><strong>Check</strong></p>
 <ol>
-<li>confirm that the files were committed and pushed;</li>
-<li>confirm that checkout succeeded;</li>
-<li>compare path spelling and capitalization;</li>
-<li>confirm that <code>StylesPath = styles</code> resolves from the repository root;</li>
-<li>confirm <code>files: docs</code> matches the local command;</li>
-<li>confirm that required styles aren't present only in an uncommitted local
-   directory.</li>
+<li>Confirm that the terminal is at the repository root.</li>
+<li>Confirm that <code>.vale.ini</code> exists.</li>
+<li>Run <code>vale ls-config</code> and inspect <code>RootINI</code>.</li>
 </ol>
-<p>This repository commits its style resources and doesn't use package
-synchronization in the workflow.</p>
 <p><strong>Fix</strong></p>
-<p>Commit the missing resources or correct the relative path. Keep the workflow
-self-contained through checked-out repository files.</p>
-<p><strong>Verification</strong></p>
-<p>The Vale step loads the intended configuration and reaches a content result.</p>
-<h3 id="local-and-automated-results-differ">Local and automated results differ</h3>
+<p>Return to the repository root or specify the configuration explicitly.</p>
+<div class="highlight"><pre><span></span><code>vale<span class="w"> </span>--config<span class="o">=</span><span class="s2">&quot;.vale.ini&quot;</span><span class="w"> </span>docs
+</code></pre></div>
+<p><strong>Verify</strong></p>
+<p><code>vale ls-config</code> resolves the repository <code>.vale.ini</code> and <code>styles/</code> directory.</p>
+<h2 id="style-or-vocabulary-not-found">Style or vocabulary not found</h2>
 <p><strong>Symptom</strong></p>
-<p>The local check passes, but the Vale step fails or reports different files and
-rules.</p>
-<p>Compare the current environments:</p>
-<table>
-<thead>
-<tr>
-<th>Item</th>
-<th>Local</th>
-<th>GitHub Actions</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Vale version</td>
-<td>3.13.0 in the current environment</td>
-<td>3.15.1 requested by the Action</td>
-</tr>
-<tr>
-<td>Working directory</td>
-<td>Local repository root</td>
-<td>Checked-out runner workspace</td>
-</tr>
-<tr>
-<td>Configuration</td>
-<td>Active <code>.vale.ini</code> plus possible global settings</td>
-<td>Checked-out <code>.vale.ini</code></td>
-</tr>
-<tr>
-<td>Styles</td>
-<td>Local and committed files</td>
-<td>Committed <code>styles/</code> files</td>
-</tr>
-<tr>
-<td>File system</td>
-<td>Windows</td>
-<td><code>ubuntu-latest</code> runner</td>
-</tr>
-<tr>
-<td>Checked scope</td>
-<td><code>vale docs</code></td>
-<td><code>files: docs</code></td>
-</tr>
-<tr>
-<td>Failure policy</td>
-<td>Vale process return code</td>
-<td><code>fail_on_error: true</code> and <code>nofilter</code></td>
-</tr>
-</tbody>
-</table>
-<p>Also check uncommitted files, case-sensitive paths, environment variables, and
-the first log message.</p>
+<p>Vale reports that Microsoft, Google, <code>MyStyle</code>, or the <code>Portfolio</code> vocabulary
+is unavailable.</p>
+<p><strong>Check</strong></p>
+<ol>
+<li>Confirm <code>StylesPath = styles</code> in <code>.vale.ini</code>.</li>
+<li>Confirm the named directory exists under <code>styles/</code>.</li>
+<li>Check capitalization against the committed path.</li>
+</ol>
 <p><strong>Fix</strong></p>
-<p>Align the configuration, committed resources, scope, and failure policy.
-Investigate the version difference before changing content or rules.</p>
-<p><strong>Verification</strong></p>
-<p>The same controlled fixture produces the same rule-level decision locally and
-in the workflow.</p>
-<h3 id="error-findings-dont-fail-the-job">Error findings don't fail the job</h3>
+<p>Restore the missing committed style or correct the configured name. Don't run
+<code>vale sync</code> unless the repository has been changed to declare a package.</p>
+<p><strong>Verify</strong></p>
+<p><code>vale ls-config</code> lists the expected styles and vocabulary.</p>
+<h2 id="no-files-checked">No files checked</h2>
 <p><strong>Symptom</strong></p>
-<p>The Vale output contains an error-level finding, but the validation job remains
+<p><code>vale docs</code> produces no file output even though the directory contains
+Markdown.</p>
+<p><strong>Check</strong></p>
+<ol>
+<li>Confirm that <code>docs/</code> is the intended target.</li>
+<li>Confirm <code>[*.{md,txt}]</code> exists in <code>.vale.ini</code>.</li>
+<li>Run Vale against one known Markdown file.</li>
+</ol>
+<p><strong>Fix</strong></p>
+<p>Correct the target path or file pattern instead of weakening the active rules.</p>
+<p><strong>Verify</strong></p>
+<p>The known file produces either a clean scan or a content alert, not an empty
+selection caused by the wrong path.</p>
+<h2 id="custom-rule-fails-to-run">Custom rule fails to run</h2>
+<p><strong>Symptom</strong></p>
+<p>Mixed-language text without a space doesn't trigger <code>MyStyle.Spacing</code>.</p>
+<p><strong>Check</strong></p>
+<ol>
+<li>Confirm <code>MyStyle</code> appears in <code>BasedOnStyles</code>.</li>
+<li>Confirm <code>styles/MyStyle/Spacing.yml</code> exists.</li>
+<li>Test one matching string and one corrected string in a temporary file.</li>
+</ol>
+<p><strong>Fix</strong></p>
+<p>Restore the style reference or correct the rule pattern. Keep the change
+focused on the behavior under test.</p>
+<p><strong>Verify</strong></p>
+<p><code>中文Vale</code> reports <code>MyStyle.Spacing</code>, while <code>中文 Vale</code> doesn't.</p>
+<h2 id="local-check-passes-but-ci-fails">Local check passes but CI fails</h2>
+<p><strong>Symptom</strong></p>
+<p><code>vale docs</code> passes locally, but the GitHub Actions validation job fails.</p>
+<p><strong>Check</strong></p>
+<ol>
+<li>Compare local Vale 3.13.0 with the CI-requested Vale 3.15.1.</li>
+<li>Confirm that <code>.vale.ini</code>, <code>styles/</code>, and the changed document are committed.</li>
+<li>Inspect the first failing workflow step and message.</li>
+</ol>
+<p><strong>Fix</strong></p>
+<p>Reproduce the failing command from the repository root with the committed
+files. Correct the environment or repository difference shown by the first
+failure.</p>
+<p><strong>Verify</strong></p>
+<p>The same repository state completes both the local command and the automated
+validation job.</p>
+<h2 id="ci-ignores-error-level-findings">CI ignores error-level findings</h2>
+<p><strong>Symptom</strong></p>
+<p>Vale reports an error-level finding, but the workflow step or job remains
 successful.</p>
 <p><strong>Check</strong></p>
-<p>The current workflow must retain:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">with</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">files</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">docs</span>
-<span class="w">  </span><span class="nt">fail_on_error</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-<span class="w">  </span><span class="nt">filter_mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nofilter</span>
-<span class="w">  </span><span class="nt">reporter</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">github-check</span>
-</code></pre></div>
-<p>Also check the rule level, reporter output, workflow
-<code>continue-on-error</code>, and whether the finding is under <code>docs/</code>.</p>
-<p>For a direct Vale command, confirm that it doesn't use <code>--no-exit</code>.</p>
+<ol>
+<li>Confirm the workflow uses <code>fail_on_error: true</code>.</li>
+<li>Confirm <code>filter_mode: nofilter</code> and <code>files: docs</code> are still present.</li>
+<li>Confirm the reported finding is <code>error</code>, not <code>warning</code> or <code>suggestion</code>.</li>
+</ol>
 <p><strong>Fix</strong></p>
-<p>Restore the intended failure policy. Don't use <code>continue-on-error: true</code> for a
-required quality gate unless the repository treats the check as
-informational.</p>
-<p><strong>Verification</strong></p>
-<p>Run one controlled error on a test branch. The Vale step and validation job
-should fail, then pass after correction.</p>
-<p>This end-to-end test remains pending for the current workflow.</p>
-<h3 id="reporter-permissions-fail">Reporter permissions fail</h3>
-<p><strong>Symptom</strong></p>
-<p>Vale completes, but the workflow can't create the <code>github-check</code> result.</p>
-<p><strong>Check</strong></p>
-<p>The validation job currently grants:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">permissions</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">contents</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">read</span>
-<span class="w">  </span><span class="nt">checks</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">write</span>
-</code></pre></div>
-<p>Confirm the selected reporter, triggering event, fork context, repository
-policy, and authorization message in the Action log.</p>
-<p><strong>Fix</strong></p>
-<p>Grant only the permission required by the verified reporter, or choose a
-reporter that matches the contribution model. Don't give the whole workflow
-broad write access.</p>
-<p><strong>Verification</strong></p>
-<p>The Vale step completes and creates its intended check without an authorization
-error.</p>
-<h3 id="mkdocs-fails-after-vale">MkDocs fails after Vale</h3>
-<p><strong>Symptom</strong></p>
-<p><code>Check writing style with Vale</code> succeeds, but <code>Build documentation</code> fails.</p>
-<p><strong>Check</strong></p>
-<p>Open the strict build log and locate the first MkDocs error. Vale and MkDocs
-validate different properties:</p>
+<p>Restore the intended Vale Action inputs. Don't raise unrelated rule severity
+only to test the workflow.</p>
+<p><strong>Verify</strong></p>
+<p>A controlled error-level fixture fails the Vale step, and the corrected fixture
+passes. This controlled CI test is still pending for the current project.</p>
+<h2 id="build-or-deployment-failures">Build or deployment failures</h2>
+<p>If Vale passes but MkDocs fails, run <code>mkdocs build --strict</code> locally and fix the
+first build error. If validation succeeds but deployment fails, inspect the
+deployment job condition, <code>contents: write</code> permission, and the first failing
+deployment step. Keep full deployment diagnosis outside the Vale recovery
+paths above.</p>
+<h2 id="collect-evidence">Collect evidence</h2>
+<p>If the issue remains unresolved, record only the evidence needed to reproduce
+the failing layer:</p>
 <ul>
-<li>Vale checks prose rules;</li>
-<li>MkDocs checks whether the configured documentation site builds.</li>
+<li>Vale version;</li>
+<li>exact command;</li>
+<li>active configuration path;</li>
+<li>first error message;</li>
+<li>GitHub Actions run link, when CI is involved.</li>
 </ul>
-<p>Run the same command locally:</p>
-<div class="highlight"><pre><span></span><code>mkdocs<span class="w"> </span>build<span class="w"> </span>--strict
-</code></pre></div>
-<p><strong>Fix</strong></p>
-<p>Correct the reported navigation, extension, template, Markdown, or link issue.
-Don't change a Vale rule to fix an MkDocs failure.</p>
-<p><strong>Verification</strong></p>
-<p>Both the Vale and strict build steps succeed in <code>Validate documentation</code>.</p>
-<h3 id="deployment-fails-after-validation">Deployment fails after validation</h3>
-<p><strong>Symptom</strong></p>
-<p>The validation job succeeds, but <code>Deploy documentation</code> fails on a push to
-<code>main</code>.</p>
-<p><strong>Check</strong></p>
-<p>Inspect the deployment job's checkout, Git author setup, Python environment,
-dependencies, <code>contents: write</code> permission, and <code>mkdocs gh-deploy --force</code>
-output.</p>
-<p><strong>Fix</strong></p>
-<p>Correct the first failed deployment step. The successful validation result
-doesn't prove that repository publication permissions are correct.</p>
-<p><strong>Verification</strong></p>
-<p>The deployment job completes after validation and the published site reflects
-the tested commit.</p>
-<h2 id="compare-evidence-directly">Compare evidence directly</h2>
-<p>Use this table when the cause remains unclear:</p>
-<table>
-<thead>
-<tr>
-<th>Question</th>
-<th>Local evidence</th>
-<th>Automated evidence</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Which Vale version ran?</td>
-<td><code>vale --version</code></td>
-<td>Vale step configuration and log</td>
-</tr>
-<tr>
-<td>Which configuration loaded?</td>
-<td><code>vale ls-config</code></td>
-<td>Checked-out <code>.vale.ini</code> and Vale log</td>
-</tr>
-<tr>
-<td>Which styles were available?</td>
-<td>Local <code>StylesPath</code></td>
-<td>Committed <code>styles/</code> directory</td>
-</tr>
-<tr>
-<td>Which files were selected?</td>
-<td><code>vale docs</code></td>
-<td><code>files: docs</code></td>
-</tr>
-<tr>
-<td>Which rule reported the issue?</td>
-<td>Terminal output</td>
-<td>GitHub check or Action log</td>
-</tr>
-<tr>
-<td>Which return status appeared?</td>
-<td>Shell return code</td>
-<td>Step and job conclusion</td>
-</tr>
-<tr>
-<td>Did Vale run?</td>
-<td>Local terminal</td>
-<td>First failed workflow step</td>
-</tr>
-</tbody>
-</table>
-<p>Change one variable at a time.</p>
-<h2 id="run-a-controlled-test">Run a controlled test</h2>
-<p>The repository has completed the local half of this test. The automated half
-remains pending.</p>
-<h3 id="1-select-the-existing-rule">1. Select the existing rule</h3>
-<p>Use <code>MyStyle.Spacing</code>, which is enabled at the <code>error</code> level and has a clear
-corrected form.</p>
-<h3 id="2-create-a-temporary-fixture">2. Create a temporary fixture</h3>
-<p>Create a temporary Markdown file under <code>docs/</code> with one missing-space pattern
-between Chinese and English text.</p>
-<p>Don't insert the error into a normal published page.</p>
-<h3 id="3-verify-the-local-failure">3. Verify the local failure</h3>
-<p>Run:</p>
-<div class="highlight"><pre><span></span><code>vale<span class="w"> </span>path/to/temporary-test.md<span class="w"> </span>--no-wrap
-</code></pre></div>
-<p>The completed local test reported <code>MyStyle.Spacing</code> and returned <code>1</code>.</p>
-<h3 id="4-correct-the-fixture">4. Correct the fixture</h3>
-<p>Add the required space and rerun the same command. The completed local test
-returned <code>0</code> after correction.</p>
-<h3 id="5-verify-the-automated-failure">5. Verify the automated failure</h3>
-<p>On a test branch, commit the temporary fixture and confirm that Documentation
-CI reports the same rule and fails the validation job.</p>
-<p>Correct the fixture, push again, and confirm recovery.</p>
-<p>This step hasn't been performed for the current workflow.</p>
-<h3 id="6-remove-the-fixture">6. Remove the fixture</h3>
-<p>Delete the temporary file before merge. Don't merge a deliberate failing state
-into <code>main</code>.</p>
-<!--
-Add local and GitHub Actions screenshots only after the automated controlled
-failure has been run. Each image must show the real file, rule, step, and
-status without exposing private paths, tokens, or unrelated account data.
--->
-
-<h2 id="still-unresolved">Still unresolved</h2>
-<p>Collect enough evidence for another maintainer to reproduce the issue.</p>
-<h3 id="local-environment">Local environment</h3>
-<p>Record:</p>
-<ul>
-<li>operating system and version;</li>
-<li>Vale version and installation method;</li>
-<li>repository commit and current working directory;</li>
-<li>normal Vale command;</li>
-<li><code>vale ls-config</code> output;</li>
-<li>relevant <code>vale ls-vars</code> output;</li>
-<li>full runtime message;</li>
-<li>affected file and rule;</li>
-<li>whether <code>--no-global</code> changes the result.</li>
-</ul>
-<h3 id="github-actions-environment">GitHub Actions environment</h3>
-<p>Record:</p>
-<ul>
-<li>workflow file and commit;</li>
-<li>workflow run link;</li>
-<li>event and branch or pull request;</li>
-<li>runner operating system;</li>
-<li>Action references and Vale version;</li>
-<li>job permissions;</li>
-<li>first failed step and relevant log lines;</li>
-<li>whether the same commit reproduces the issue locally.</li>
-</ul>
-<p>Remove tokens, private paths, and unrelated account information before sharing
-logs or screenshots.</p>
-<h2 id="completion-check">Completion check</h2>
-<p>The issue is resolved when:</p>
-<ul>
-<li>the failed stage has been identified;</li>
-<li>the change addresses the cause instead of hiding the result;</li>
-<li>the normal local check returns the expected decision;</li>
-<li>the workflow reaches the intended Vale step;</li>
-<li>local and automated results follow the documented policy;</li>
-<li>a controlled failure is detected where that path is under test;</li>
-<li>correcting the failure restores a passing result;</li>
-<li>temporary fixtures and deliberate errors are removed.</li>
-</ul>
-<h2 id="project-boundaries">Project boundaries</h2>
-<p>This guide covers:</p>
-<ul>
-<li>Vale command availability and configuration discovery;</li>
-<li>the repository's committed styles and vocabulary;</li>
-<li>Markdown file selection;</li>
-<li>custom rule activation and alert behavior;</li>
-<li>the current Documentation CI triggers and steps;</li>
-<li>local and automated result differences;</li>
-<li>controlled local failure and recovery evidence;</li>
-<li>the pending automated controlled-failure test.</li>
-</ul>
-<p>This guide doesn't cover:</p>
-<ul>
-<li>complete operating-system package-manager troubleshooting;</li>
-<li>advanced regular-expression debugging;</li>
-<li>GitHub organization administration;</li>
-<li>branch-protection configuration procedures;</li>
-<li>self-hosted runner maintenance;</li>
-<li>general network outage diagnosis;</li>
-<li>custom GitHub Action development;</li>
-<li>a completed controlled CI failure that hasn't occurred.</li>
-</ul>
-<h2 id="related-documentation">Related documentation</h2>
-<p>Return to <a href="../quick-start/">Set up local documentation checks with Vale</a> when
-Vale hasn't completed the first local check.</p>
-<p>Return to
-<a href="../configure-vale/">Configure Vale for a documentation repository</a> when the
-active styles, terminology, or alert policy need to change.</p>
-<p>Return to <a href="../github-actions/">Run Vale in GitHub Actions</a> when you need to
-review the current workflow and its successful-run evidence.</p>
-<h2 id="sources">Sources</h2>
-<ul>
-<li><a href="https://vale.sh/docs/cli">Vale command-line interface</a></li>
-<li><a href="https://vale.sh/docs/vale-ini">Vale configuration search and override behavior</a></li>
-<li><a href="https://github.com/vale-cli/vale-action">Official Vale GitHub Action</a></li>
-<li><a href="https://docs.github.com/en/actions/how-tos/troubleshoot-workflows">GitHub workflow troubleshooting</a></li>
-<li><a href="https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax">GitHub Actions workflow syntax</a></li>
-<li><a href="https://github.com/alison2fun/tech-docs-portfolio/blob/main/.github/workflows/ci.yml">Current repository workflow</a></li>
-<li><a href="https://github.com/alison2fun/tech-docs-portfolio/actions/runs/30780106488">Documentation CI run #36</a></li>
-</ul>
+<p>Continue with <a href="../configure-vale/">Configure Vale</a> for rule maintenance or
+<a href="../github-actions/">Run Vale in GitHub Actions</a> for workflow behavior.</p>
+<p>Sources: <a href="https://vale.sh/docs/cli">Vale CLI</a>,
+<a href="https://vale.sh/docs/vale-ini">Vale configuration</a>, and
+<a href="https://docs.github.com/en/actions/monitoring-and-troubleshooting-workflows/troubleshooting-workflows">GitHub Actions troubleshooting</a>.</p>
+</div>
 
 
 

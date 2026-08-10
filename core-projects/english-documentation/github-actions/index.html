@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Understand how this repository runs Vale and MkDocs in GitHub Actions, then deploys only after validation succeeds.">
+        <meta name="description" content="Understand the repository triggers, validation job, deployment gate, and current workflow evidence.">
       
       
       
@@ -25,7 +25,7 @@
     
     
       
-        <title>Run Vale in GitHub Actions - 我的自动化文档作品集</title>
+        <title>Run Vale in GitHub Actions - 梁卓雯｜技术文档作品集</title>
       
     
     
@@ -94,7 +94,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="我的自动化文档作品集" class="md-header__button md-logo" aria-label="我的自动化文档作品集" data-md-component="logo">
+    <a href="../../.." title="梁卓雯｜技术文档作品集" class="md-header__button md-logo" aria-label="梁卓雯｜技术文档作品集" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -108,7 +108,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            我的自动化文档作品集
+            梁卓雯｜技术文档作品集
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -350,13 +350,13 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="我的自动化文档作品集" class="md-nav__button md-logo" aria-label="我的自动化文档作品集" data-md-component="logo">
+    <a href="../../.." title="梁卓雯｜技术文档作品集" class="md-nav__button md-logo" aria-label="梁卓雯｜技术文档作品集" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    我的自动化文档作品集
+    梁卓雯｜技术文档作品集
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -1836,10 +1836,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#current-workflow-at-a-glance" class="md-nav__link">
+  <a href="#workflow-summary" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Current workflow at a glance
+        Workflow summary
       
     </span>
   </a>
@@ -1847,10 +1847,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#before-you-change-the-workflow" class="md-nav__link">
+  <a href="#triggers-and-permissions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Before you change the workflow
+        Triggers and permissions
       
     </span>
   </a>
@@ -1858,38 +1858,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#read-the-workflow-triggers" class="md-nav__link">
+  <a href="#validation-job" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Read the workflow triggers
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Read the workflow triggers">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#why-the-workflow-has-no-path-filters" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Why the workflow has no path filters
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#read-the-permissions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Read the permissions
+        Validation job
       
     </span>
   </a>
@@ -1897,10 +1869,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#understand-concurrency" class="md-nav__link">
+  <a href="#deployment-gate" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Understand concurrency
+        Deployment gate
       
     </span>
   </a>
@@ -1908,88 +1880,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#read-the-validation-job" class="md-nav__link">
+  <a href="#validation-evidence" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Read the validation job
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Read the validation job">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#check-out-the-repository" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Check out the repository
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#install-the-documentation-environment" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Install the documentation environment
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#inspect-the-writing-style-step" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Inspect the writing-style step
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Inspect the writing-style step">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#understand-each-input" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Understand each input
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#understand-the-repository-wide-policy" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Understand the repository-wide policy
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#read-the-build-gate" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Read the build gate
+        Validation evidence
       
     </span>
   </a>
@@ -1997,264 +1891,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#read-the-deployment-gate" class="md-nav__link">
+  <a href="#change-the-workflow-safely" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Read the deployment gate
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#review-the-current-workflow" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Review the current workflow
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#verify-a-successful-run" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Verify a successful run
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#verify-a-controlled-failure" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Verify a controlled failure
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#read-failures-by-layer" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Read failures by layer
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Read failures by layer">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#the-workflow-fails-before-the-writing-check" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        The workflow fails before the writing check
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#vale-reports-a-documentation-error" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Vale reports a documentation error
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#vale-has-a-runtime-failure" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Vale has a runtime failure
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#vale-passes-but-mkdocs-fails" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Vale passes but MkDocs fails
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#validation-passes-but-deployment-fails" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Validation passes but deployment fails
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#keep-local-and-automated-checks-aligned" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Keep local and automated checks aligned
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#security-and-maintenance-notes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Security and maintenance notes
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#completion-check" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Completion check
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#common-problems" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Common problems
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Common problems">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#the-workflow-doesnt-start" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        The workflow doesn't start
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#vale-checks-the-wrong-files" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Vale checks the wrong files
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#vale-cant-find-a-style" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Vale can't find a style
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#the-job-passes-when-vale-reports-an-error" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        The job passes when Vale reports an error
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#local-checks-pass-but-the-automated-workflow-fails" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Local checks pass but the automated workflow fails
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#deployment-starts-for-the-wrong-event" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Deployment starts for the wrong event
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#project-boundaries" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Project boundaries
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#next-steps" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Next steps
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sources" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Sources
+        Change the workflow safely
       
     </span>
   </a>
@@ -2362,6 +2002,56 @@
   
   
   
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6_1" id="__nav_2_6_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    光照测量 API 文档案例
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_6_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    光照测量 API 文档案例
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../../03-api/" class="md-nav__link">
         
@@ -2370,7 +2060,7 @@
   <span class="md-ellipsis">
     
   
-    IoT 接口集成指南
+    项目概览
   
 
     
@@ -2391,6 +2081,70 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../03-api/usage-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    使用指南：获取最新光照数据
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../03-api/api-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    光照测量 API Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../04-openclaw-quickstart/" class="md-nav__link">
         
   
@@ -2399,6 +2153,62 @@
     
   
     OpenClaw Quick Start
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../writing-samples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    写作样稿索引
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../writing-samples/all/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    全部样稿
   
 
     
@@ -3244,10 +3054,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#current-workflow-at-a-glance" class="md-nav__link">
+  <a href="#workflow-summary" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Current workflow at a glance
+        Workflow summary
       
     </span>
   </a>
@@ -3255,10 +3065,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#before-you-change-the-workflow" class="md-nav__link">
+  <a href="#triggers-and-permissions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Before you change the workflow
+        Triggers and permissions
       
     </span>
   </a>
@@ -3266,38 +3076,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#read-the-workflow-triggers" class="md-nav__link">
+  <a href="#validation-job" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Read the workflow triggers
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Read the workflow triggers">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#why-the-workflow-has-no-path-filters" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Why the workflow has no path filters
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#read-the-permissions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Read the permissions
+        Validation job
       
     </span>
   </a>
@@ -3305,10 +3087,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#understand-concurrency" class="md-nav__link">
+  <a href="#deployment-gate" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Understand concurrency
+        Deployment gate
       
     </span>
   </a>
@@ -3316,88 +3098,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#read-the-validation-job" class="md-nav__link">
+  <a href="#validation-evidence" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Read the validation job
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Read the validation job">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#check-out-the-repository" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Check out the repository
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#install-the-documentation-environment" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Install the documentation environment
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#inspect-the-writing-style-step" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Inspect the writing-style step
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Inspect the writing-style step">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#understand-each-input" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Understand each input
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#understand-the-repository-wide-policy" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Understand the repository-wide policy
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#read-the-build-gate" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Read the build gate
+        Validation evidence
       
     </span>
   </a>
@@ -3405,264 +3109,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#read-the-deployment-gate" class="md-nav__link">
+  <a href="#change-the-workflow-safely" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Read the deployment gate
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#review-the-current-workflow" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Review the current workflow
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#verify-a-successful-run" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Verify a successful run
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#verify-a-controlled-failure" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Verify a controlled failure
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#read-failures-by-layer" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Read failures by layer
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Read failures by layer">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#the-workflow-fails-before-the-writing-check" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        The workflow fails before the writing check
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#vale-reports-a-documentation-error" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Vale reports a documentation error
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#vale-has-a-runtime-failure" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Vale has a runtime failure
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#vale-passes-but-mkdocs-fails" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Vale passes but MkDocs fails
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#validation-passes-but-deployment-fails" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Validation passes but deployment fails
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#keep-local-and-automated-checks-aligned" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Keep local and automated checks aligned
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#security-and-maintenance-notes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Security and maintenance notes
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#completion-check" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Completion check
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#common-problems" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Common problems
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Common problems">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#the-workflow-doesnt-start" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        The workflow doesn't start
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#vale-checks-the-wrong-files" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Vale checks the wrong files
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#vale-cant-find-a-style" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Vale can't find a style
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#the-job-passes-when-vale-reports-an-error" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        The job passes when Vale reports an error
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#local-checks-pass-but-the-automated-workflow-fails" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Local checks pass but the automated workflow fails
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#deployment-starts-for-the-wrong-event" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Deployment starts for the wrong event
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#project-boundaries" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Project boundaries
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#next-steps" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Next steps
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sources" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Sources
+        Change the workflow safely
       
     </span>
   </a>
@@ -3686,225 +3136,70 @@
 
 
 
-<style>
-@media screen and (max-width: 44.984375em) {
-  .md-main__inner,
-  .md-content {
-    box-sizing: border-box;
-    min-width: 0;
-    width: 100%;
-    max-width: 100vw;
-  }
-
-  .md-content__inner {
-    box-sizing: border-box;
-    width: calc(100vw - 2rem) !important;
-    max-width: calc(100vw - 2rem) !important;
-    margin-right: 1rem !important;
-    margin-left: 1rem !important;
-    padding: 1rem 0;
-  }
-
-  .md-typeset .admonition,
-  .md-typeset .md-typeset__scrollwrap {
-    box-sizing: border-box;
-    max-width: 100%;
-  }
-
-  .md-typeset p code {
-    white-space: normal;
-    overflow-wrap: anywhere;
-  }
-}
-</style>
-
+<div class="english-doc">
 <h1 id="run-vale-in-github-actions">Run Vale in GitHub Actions</h1>
-<p>This guide explains how this repository runs documentation checks in GitHub
-Actions and prevents deployment when validation fails.</p>
-<p>The current workflow uses the same documentation directory and repository
-configuration as the local Vale check. It also runs an MkDocs strict build
-before the deployment job can start.</p>
-<p>Complete <a href="../quick-start/">Set up local documentation checks with Vale</a> and
-<a href="../configure-vale/">Configure Vale for a documentation repository</a> before
-using this page.</p>
+<p>The repository runs Vale and a strict MkDocs build in one validation job. A
+separate deployment job starts only after validation succeeds on a push to
+<code>main</code>.</p>
 <div class="admonition info">
-<p class="admonition-title">Validation status</p>
-<p>The workflow structure and inputs on this page were checked against the
-repository's current <code>.github/workflows/ci.yml</code>, the official GitHub
-Actions documentation, and the official Vale Action documentation.</p>
-<p><a href="https://github.com/alison2fun/tech-docs-portfolio/actions/runs/30780106488">Documentation CI run #36</a>
-completed successfully for commit <code>9d050a7</code>. Its validation job completed
-the Vale and MkDocs steps, and the dependent deployment job also passed.</p>
-<p>The current workflow hasn't been tested with a controlled error-level Vale
-violation. Its failure path is therefore documented from the configuration
-and official Action behavior, not marked as an observed end-to-end result.</p>
+<p class="admonition-title">Validation evidence</p>
+<p>All five English pages are published. The
+<a href="https://github.com/alison2fun/tech-docs-portfolio/actions/runs/30818428366">Documentation CI run for commit <code>68043a5</code></a>
+completed successfully. A controlled error-level failure and recovery has
+not yet been recorded.</p>
 </div>
-<h2 id="current-workflow-at-a-glance">Current workflow at a glance</h2>
-<p>The repository keeps validation and deployment in one workflow file:</p>
-<div class="highlight"><pre><span></span><code>.github/workflows/ci.yml
-</code></pre></div>
-<p>The workflow follows this path:</p>
-<div class="highlight"><pre><span></span><code>Pull request, push to main, or manual run
--&gt; Validate documentation
-   -&gt; Check out the repository
-   -&gt; Install documentation dependencies
-   -&gt; Run Vale on docs
-   -&gt; Run mkdocs build --strict
--&gt; Push to main and validation succeeded
-   -&gt; Deploy documentation
-</code></pre></div>
-<p>The workflow produces different results for different events.</p>
+<h2 id="workflow-summary">Workflow summary</h2>
+<pre class="mermaid"><code>flowchart LR
+    A[Pull request or push] --&gt; B[Validate documentation]
+    B --&gt; C[Run Vale on docs]
+    C --&gt; D[Build with MkDocs strict mode]
+    D --&gt; E{Push to main?}
+    E -- No --&gt; F[Report validation]
+    E -- Yes --&gt; G[Deploy site]</code></pre>
+<p>The workflow is stored in <code>.github/workflows/ci.yml</code>. It has no path filters,
+so repository changes can trigger documentation validation even when Markdown
+isn't the only changed content. This keeps the policy simple but can run more
+often than a filtered workflow.</p>
+<h2 id="triggers-and-permissions">Triggers and permissions</h2>
 <table>
 <thead>
 <tr>
-<th>Event</th>
-<th>Validation</th>
-<th>Deployment</th>
+<th>Question</th>
+<th>Current answer</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Pull request</td>
-<td>Runs</td>
-<td>Doesn't run</td>
+<td>Which events trigger the workflow?</td>
+<td>Pull requests, pushes to <code>main</code>, and manual dispatch</td>
 </tr>
 <tr>
-<td>Push to <code>main</code></td>
-<td>Runs</td>
-<td>Runs after validation succeeds</td>
+<td>Which event can deploy?</td>
+<td>A successful push to <code>main</code></td>
 </tr>
 <tr>
-<td>Manual run</td>
-<td>Runs</td>
-<td>Doesn't run</td>
+<td>What can the workflow read by default?</td>
+<td>Repository contents</td>
+</tr>
+<tr>
+<td>Which job can write?</td>
+<td>Only the deployment job receives <code>contents: write</code></td>
+</tr>
+<tr>
+<td>How are duplicate runs handled?</td>
+<td>Concurrency cancels an older run for the same workflow, event, and ref</td>
 </tr>
 </tbody>
 </table>
-<p>The workflow doesn't define path filters. A pull request or push to <code>main</code> can
-therefore start validation even when the change is outside <code>docs/</code>.</p>
-<h2 id="before-you-change-the-workflow">Before you change the workflow</h2>
-<p>Confirm that the equivalent local commands work from the repository root:</p>
-<div class="highlight"><pre><span></span><code>vale<span class="w"> </span>docs
-mkdocs<span class="w"> </span>build<span class="w"> </span>--strict
-</code></pre></div>
-<p>Then inspect the active Vale configuration:</p>
-<div class="highlight"><pre><span></span><code>vale<span class="w"> </span>ls-config
-</code></pre></div>
-<p>This repository depends on these committed inputs:</p>
-<div class="highlight"><pre><span></span><code>.vale.ini
-docs/
-styles/
-requirements-docs.txt
-.github/workflows/ci.yml
-</code></pre></div>
-<p>The Vale rules are already committed under <code>styles/</code>. The workflow doesn't run
-<code>vale sync</code> because <code>.vale.ini</code> doesn't declare external <code>Packages</code>.</p>
-<h2 id="read-the-workflow-triggers">Read the workflow triggers</h2>
-<p>The current trigger block is:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">on</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">push</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">branches</span><span class="p">:</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main</span>
-<span class="w">  </span><span class="nt">pull_request</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">workflow_dispatch</span><span class="p">:</span>
-</code></pre></div>
-<p>Each event has a separate purpose.</p>
-<table>
-<thead>
-<tr>
-<th>Event</th>
-<th>Purpose</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>pull_request</code></td>
-<td>Check a proposed repository change before merge</td>
-</tr>
-<tr>
-<td><code>push</code> to <code>main</code></td>
-<td>Validate the new main-branch state and allow deployment</td>
-</tr>
-<tr>
-<td><code>workflow_dispatch</code></td>
-<td>Allow a manual validation run</td>
-</tr>
-</tbody>
-</table>
-<p>The deployment job adds its own condition, so defining <code>workflow_dispatch</code>
-doesn't grant a manual run permission to deploy.</p>
-<h3 id="why-the-workflow-has-no-path-filters">Why the workflow has no path filters</h3>
-<p>The current file doesn't restrict execution to documentation paths. This keeps
-the validation behavior simple: every pull request and every push to <code>main</code>
-runs the same gate.</p>
-<p>Path filters could reduce unnecessary runs, but they would also change when a
-required check appears. GitHub documents that a skipped required workflow can
-remain pending and block a pull request. Add filters only after reviewing the
-repository's branch protection settings.</p>
-<h2 id="read-the-permissions">Read the permissions</h2>
-<p>The workflow starts with read-only repository access:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">permissions</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">contents</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">read</span>
-</code></pre></div>
-<p>The validation job adds permission to create a GitHub check:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">permissions</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">contents</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">read</span>
-<span class="w">  </span><span class="nt">checks</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">write</span>
-</code></pre></div>
-<p>This permission matches the Vale step's <code>github-check</code> reporter.</p>
-<p>The deployment job has a separate permission boundary:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">permissions</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">contents</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">write</span>
-</code></pre></div>
-<p>It needs write access because <code>mkdocs gh-deploy --force</code> publishes the built
-site to the deployment branch. The validation job doesn't receive this write
-permission.</p>
-<h2 id="understand-concurrency">Understand concurrency</h2>
-<p>The workflow defines:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">concurrency</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">group</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">documentation-${{ github.workflow }}-${{ github.event_name }}-${{ github.ref }}</span>
-<span class="w">  </span><span class="nt">cancel-in-progress</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-</code></pre></div>
-<p>The group separates runs by workflow, event, and Git reference. When a newer
-run enters the same group, GitHub cancels the older in-progress run.</p>
-<p>This prevents multiple outdated documentation runs for the same event and
-reference from continuing at the same time.</p>
-<h2 id="read-the-validation-job">Read the validation job</h2>
-<p>The <code>validate</code> job runs on <code>ubuntu-latest</code> and contains five task steps:</p>
-<div class="highlight"><pre><span></span><code>Checkout
--&gt; Set up Python 3.12
--&gt; Install requirements-docs.txt
--&gt; Run Vale
--&gt; Build MkDocs in strict mode
-</code></pre></div>
-<h3 id="check-out-the-repository">Check out the repository</h3>
-<p>The runner starts without the repository files, so the first step checks them
-out:</p>
-<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Checkout repository</span>
-<span class="w">  </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v4</span>
-</code></pre></div>
-<p>The current workflow uses the <code>v4</code> tag, not a full commit hash. This is an
-existing implementation boundary. GitHub recommends pinning an Action to a
-full-length commit hash when an immutable reference is required.</p>
-<h3 id="install-the-documentation-environment">Install the documentation environment</h3>
-<p>The workflow uses Python 3.12 and caches dependencies using the documentation
-requirements file:</p>
-<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Set up Python</span>
-<span class="w">  </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/setup-python@v5</span>
-<span class="w">  </span><span class="nt">with</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">python-version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;3.12&quot;</span>
-<span class="w">    </span><span class="nt">cache</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pip</span>
-<span class="w">    </span><span class="nt">cache-dependency-path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">requirements-docs.txt</span>
-
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Install documentation dependencies</span>
-<span class="w">  </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python -m pip install --requirement requirements-docs.txt</span>
-</code></pre></div>
-<p>This step prepares MkDocs and its plugins. The Vale Action manages its own Vale
-installation in the next step.</p>
-<h2 id="inspect-the-writing-style-step">Inspect the writing-style step</h2>
-<p>The repository uses the official Vale Action:</p>
+<p>The validation job also receives <code>checks: write</code> because the Vale reporter
+publishes check annotations. Every job doesn't receive write access.</p>
+<h2 id="validation-job">Validation job</h2>
+<p>The job checks out the repository, installs the pinned documentation
+dependency from <code>requirements-docs.txt</code>, runs Vale against <code>docs</code>, and then
+runs <code>mkdocs build --strict</code>.</p>
+<p>The writing-style step is:</p>
 <div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Check writing style with Vale</span>
-<span class="w">  </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">vale-cli/vale-action@85f9f7f2c5f449ac0ae5b66662961bae3f77ca6a</span><span class="w"> </span><span class="c1"># v2.1.2</span>
+<span class="w">  </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">vale-cli/vale-action@85f9f7f2c5f449ac0ae5b66662961bae3f77ca6a</span>
 <span class="w">  </span><span class="nt">with</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3.15.1</span>
 <span class="w">    </span><span class="nt">files</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">docs</span>
@@ -3912,363 +3207,75 @@ installation in the next step.</p>
 <span class="w">    </span><span class="nt">filter_mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nofilter</span>
 <span class="w">    </span><span class="nt">reporter</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">github-check</span>
 </code></pre></div>
-<p>Unlike the checkout and Python setup steps, this Action uses a full commit
-hash. The release comment preserves the readable version reference.</p>
-<h3 id="understand-each-input">Understand each input</h3>
-<table>
-<thead>
-<tr>
-<th>Input</th>
-<th>Current value</th>
-<th>Effect</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>version</code></td>
-<td><code>3.15.1</code></td>
-<td>Installs the specified Vale command-line tool version in the Action environment</td>
-</tr>
-<tr>
-<td><code>files</code></td>
-<td><code>docs</code></td>
-<td>Checks the full documentation source directory</td>
-</tr>
-<tr>
-<td><code>fail_on_error</code></td>
-<td><code>true</code></td>
-<td>Returns a failure when the reporter receives an error-level finding</td>
-</tr>
-<tr>
-<td><code>filter_mode</code></td>
-<td><code>nofilter</code></td>
-<td>Reports findings from the complete selected file set</td>
-</tr>
-<tr>
-<td><code>reporter</code></td>
-<td><code>github-check</code></td>
-<td>Publishes the result as a GitHub check</td>
-</tr>
-</tbody>
-</table>
-<p>The official Vale Action documentation states that <code>files: docs</code> is
-equivalent to running <code>vale docs</code>. It also states that <code>fail_on_error: true</code>
-changes the reporter's exit behavior when error-level findings occur.</p>
-<h3 id="understand-the-repository-wide-policy">Understand the repository-wide policy</h3>
-<p><code>filter_mode: nofilter</code> applies the check to the complete selected source, not
-only lines changed in a pull request.</p>
-<p>This policy has two effects:</p>
-<ul>
-<li>one consistent standard applies to all files under <code>docs/</code>;</li>
-<li>a pre-existing error elsewhere in <code>docs/</code> can block an unrelated change.</li>
-</ul>
-<p>Warnings and suggestions remain visible because <code>.vale.ini</code> uses
-<code>MinAlertLevel = suggestion</code>. They don't fail the Action unless the reporting
-rule uses the <code>error</code> level.</p>
-<h2 id="read-the-build-gate">Read the build gate</h2>
-<p>The validation job runs the strict build after Vale:</p>
-<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Build documentation</span>
-<span class="w">  </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mkdocs build --strict</span>
+<p>The action is pinned to a commit SHA. <code>files: docs</code> applies the repository
+policy to the documentation directory instead of one fixture file.
+<code>fail_on_error: true</code> and <code>filter_mode: nofilter</code> are intended to make
+error-level findings fail the step while still reporting the full selected
+scope.</p>
+<p>The next step runs:</p>
+<div class="highlight"><pre><span></span><code>mkdocs<span class="w"> </span>build<span class="w"> </span>--strict
 </code></pre></div>
-<p>This step checks the complete MkDocs configuration and content build. Because
-the steps use the default success condition, a failed Vale step prevents the
-strict build step from running.</p>
-<p>The validation job passes only when its required steps complete successfully.</p>
-<h2 id="read-the-deployment-gate">Read the deployment gate</h2>
-<p>The deployment job contains two controls:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">deploy</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">if</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">github.event_name == &#39;push&#39; &amp;&amp; github.ref == &#39;refs/heads/main&#39;</span>
-<span class="w">  </span><span class="nt">needs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">validate</span>
-</code></pre></div>
-<p><code>if</code> limits deployment to pushes on <code>main</code>. <code>needs: validate</code> makes deployment
-wait for the validation job.</p>
-<p>Together, these controls mean:</p>
-<div class="highlight"><pre><span></span><code>Pull request -&gt; Validate only
-Manual run -&gt; Validate only
-Push to main -&gt; Validate -&gt; Deploy
-Validation failure -&gt; No deployment
-</code></pre></div>
-<p>The deployment job runs its own checkout, Python setup, dependency installation,
-and <code>mkdocs gh-deploy --force</code> command. Validation and deployment therefore
-remain separate jobs with separate permissions.</p>
-<h2 id="review-the-current-workflow">Review the current workflow</h2>
-<p>The following excerpt keeps the actual structure and values that control the
-quality gate:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Documentation CI</span>
-
-<span class="nt">on</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">push</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">branches</span><span class="p">:</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main</span>
-<span class="w">  </span><span class="nt">pull_request</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">workflow_dispatch</span><span class="p">:</span>
-
-<span class="nt">permissions</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">contents</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">read</span>
-
-<span class="nt">jobs</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">validate</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Validate documentation</span>
-<span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
-<span class="w">    </span><span class="nt">permissions</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">contents</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">read</span>
-<span class="w">      </span><span class="nt">checks</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">write</span>
-<span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Checkout repository</span>
-<span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v4</span>
-
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Set up Python</span>
-<span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/setup-python@v5</span>
-<span class="w">        </span><span class="nt">with</span><span class="p">:</span>
-<span class="w">          </span><span class="nt">python-version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;3.12&quot;</span>
-<span class="w">          </span><span class="nt">cache</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pip</span>
-<span class="w">          </span><span class="nt">cache-dependency-path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">requirements-docs.txt</span>
-
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Install documentation dependencies</span>
-<span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python -m pip install --requirement requirements-docs.txt</span>
-
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Check writing style with Vale</span>
-<span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">vale-cli/vale-action@85f9f7f2c5f449ac0ae5b66662961bae3f77ca6a</span><span class="w"> </span><span class="c1"># v2.1.2</span>
-<span class="w">        </span><span class="nt">with</span><span class="p">:</span>
-<span class="w">          </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3.15.1</span>
-<span class="w">          </span><span class="nt">files</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">docs</span>
-<span class="w">          </span><span class="nt">fail_on_error</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-<span class="w">          </span><span class="nt">filter_mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nofilter</span>
-<span class="w">          </span><span class="nt">reporter</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">github-check</span>
-
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Build documentation</span>
-<span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mkdocs build --strict</span>
-
-<span class="w">  </span><span class="nt">deploy</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">if</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">github.event_name == &#39;push&#39; &amp;&amp; github.ref == &#39;refs/heads/main&#39;</span>
-<span class="w">    </span><span class="nt">needs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">validate</span>
-</code></pre></div>
-<p>Read the complete
-<a href="https://github.com/alison2fun/tech-docs-portfolio/blob/main/.github/workflows/ci.yml">current workflow</a>
-before modifying it. The omitted deployment steps remain in the source file.</p>
-<h2 id="verify-a-successful-run">Verify a successful run</h2>
-<p>The current public evidence is
-<a href="https://github.com/alison2fun/tech-docs-portfolio/actions/runs/30780106488">Documentation CI run #36</a>
-for commit <code>9d050a7</code> on <code>main</code>.</p>
-<p>The public run data confirms:</p>
-<table>
-<thead>
-<tr>
-<th>Job or step</th>
-<th>Observed result</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>Validate documentation</code> job</td>
-<td>Success</td>
-</tr>
-<tr>
-<td><code>Check writing style with Vale</code> step</td>
-<td>Success</td>
-</tr>
-<tr>
-<td><code>Build documentation</code> step</td>
-<td>Success</td>
-</tr>
-<tr>
-<td><code>Deploy documentation</code> job</td>
-<td>Success</td>
-</tr>
-</tbody>
-</table>
-<p>This run proves that the committed workflow could load the repository, finish
-the configured Vale check, complete the strict build, and deploy that commit.</p>
-<p>It doesn't include this uncommitted English page. The page needs a new Actions
-run after publication before its CI status can be marked as observed.</p>
-<!--
-Add assets/english-docs/vale-ci-success.png only after capturing a current,
-non-sensitive screenshot that shows the workflow name, validation job, Vale
-step, and success status. The linked run remains the primary evidence.
--->
-
-<h2 id="verify-a-controlled-failure">Verify a controlled failure</h2>
-<p>A successful run doesn't prove that an error-level documentation finding
-fails the current workflow end to end.</p>
-<p>Use a temporary test file and the existing <code>MyStyle.Spacing</code> error rule:</p>
+<p>Vale and MkDocs answer different questions. Vale checks enabled writing rules;
+the strict build checks navigation, Markdown processing, and site generation.</p>
+<h2 id="deployment-gate">Deployment gate</h2>
+<p>The deployment job has two conditions:</p>
 <ol>
-<li>create a test branch;</li>
-<li>add a temporary Markdown file under <code>docs/</code> with the controlled
-   missing-space pattern used in the local rule test;</li>
-<li>confirm locally that <code>vale</code> reports <code>MyStyle.Spacing</code> at the <code>error</code> level;</li>
-<li>commit and push only the temporary test branch;</li>
-<li>open the Actions run and confirm that the Vale step and validation job fail;</li>
-<li>correct the text, push again, and confirm that validation passes;</li>
-<li>remove the temporary test before merge.</li>
+<li>the event must be a push to <code>main</code>;</li>
+<li>the validation job must succeed.</li>
 </ol>
-<div class="admonition warning">
-<p class="admonition-title">Pending end-to-end evidence</p>
-<p>This controlled failure hasn't been run in the current GitHub Actions
-workflow. The expected failure follows from the configured
-<code>fail_on_error: true</code> behavior, but it remains unverified in this repository.</p>
-</div>
-<p>Don't publish the deliberate error on <code>main</code> and don't replace the controlled
-rule with invented output.</p>
-<h2 id="read-failures-by-layer">Read failures by layer</h2>
-<p>Start with the first failed step, not the final job label.</p>
-<h3 id="the-workflow-fails-before-the-writing-check">The workflow fails before the writing check</h3>
-<p>Typical locations include workflow parsing, checkout, Python setup, and
-dependency installation.</p>
-<p>Check:</p>
-<ul>
-<li>the first failed step;</li>
-<li>Action references;</li>
-<li>workflow syntax;</li>
-<li>repository permissions;</li>
-<li><code>requirements-docs.txt</code>.</li>
-</ul>
-<p>Vale hasn't made a documentation decision when it never starts.</p>
-<h3 id="vale-reports-a-documentation-error">Vale reports a documentation error</h3>
-<p>Vale completes and reports a file, location, message, and rule.</p>
-<p>Check whether the content violates the repository policy. Change the rule only
-after confirming that the policy or rule is wrong.</p>
-<h3 id="vale-has-a-runtime-failure">Vale has a runtime failure</h3>
-<p>The Action starts, but Vale can't load a configuration, style, vocabulary, or
-selected file.</p>
-<p>Check:</p>
-<ul>
-<li>whether <code>.vale.ini</code> is committed at the repository root;</li>
-<li>whether <code>StylesPath</code> resolves to the committed <code>styles/</code> directory;</li>
-<li>path spelling and capitalization;</li>
-<li>the <code>files: docs</code> input;</li>
-<li>the Vale version and Action log.</li>
-</ul>
-<h3 id="vale-passes-but-mkdocs-fails">Vale passes but MkDocs fails</h3>
-<p>Vale and MkDocs answer different questions. Vale checks prose rules. The strict
-build checks whether the documentation site can be built with the configured
-navigation, extensions, templates, and links that MkDocs validates.</p>
-<p>Inspect the <code>Build documentation</code> step and correct the reported site problem.</p>
-<h3 id="validation-passes-but-deployment-fails">Validation passes but deployment fails</h3>
-<p>The quality gate completed, but the publishing job failed later.</p>
-<p>Check the deployment job's checkout, permissions, dependencies, Git
-configuration, and <code>mkdocs gh-deploy --force</code> output.</p>
-<h2 id="keep-local-and-automated-checks-aligned">Keep local and automated checks aligned</h2>
-<p>The current relationship is:</p>
+<p>Pull requests and manual runs can validate documentation without publishing
+the site. The deployment job receives write permission only when it's needed
+to update the Pages branch.</p>
+<h2 id="validation-evidence">Validation evidence</h2>
 <table>
 <thead>
 <tr>
-<th>Local</th>
-<th>GitHub Actions</th>
+<th>Evidence</th>
+<th>What it proves</th>
+<th>Boundary</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>vale docs</code></td>
-<td><code>files: docs</code></td>
+<td>Successful run for <code>68043a5</code></td>
+<td>The published repository completed validation and deployment</td>
+<td>It doesn't prove the failure path</td>
 </tr>
 <tr>
-<td>Repository <code>.vale.ini</code></td>
-<td>The checked-out <code>.vale.ini</code></td>
+<td>Local <code>vale docs</code></td>
+<td>The working tree can load the committed configuration and styles</td>
+<td>Local Vale is 3.13.0; CI requests 3.15.1</td>
 </tr>
 <tr>
-<td>Repository <code>styles/</code></td>
-<td>The checked-out <code>styles/</code> directory</td>
+<td>Local strict build</td>
+<td>The current site builds before submission</td>
+<td>CI still runs in a separate Ubuntu environment</td>
 </tr>
 <tr>
-<td>Vale 3.13.0 in the current local environment</td>
-<td>Vale 3.15.1 requested by the Action</td>
-</tr>
-<tr>
-<td><code>mkdocs build --strict</code></td>
-<td><code>mkdocs build --strict</code></td>
+<td>Controlled error-level test</td>
+<td>Not yet recorded</td>
+<td>The gate's failure-and-recovery behavior remains pending evidence</td>
 </tr>
 </tbody>
 </table>
-<p>The documentation scope and MkDocs command match. The Vale versions don't.
-When the results differ, compare version behavior before changing a rule or
-document.</p>
-<h2 id="security-and-maintenance-notes">Security and maintenance notes</h2>
-<p>The Vale Action uses a full commit hash. The current checkout and Python setup
-steps use major-version tags:</p>
-<div class="highlight"><pre><span></span><code>actions/checkout@v4
-actions/setup-python@v5
-</code></pre></div>
-<p>GitHub identifies a full-length commit hash as the immutable way to reference
-an Action. Converting the remaining Action references to verified commit hashes is a
-separate workflow-hardening change and isn't part of this documentation update.</p>
-<p>Review workflow and prose changes in focused diffs when practical. Small diffs
-make trigger, permission, and dependency changes easier to audit.</p>
-<h2 id="completion-check">Completion check</h2>
-<p>You understand the current workflow when you can:</p>
-<ul>
-<li>identify <code>.github/workflows/ci.yml</code> as the active workflow file;</li>
-<li>explain its three triggers;</li>
-<li>explain why validation has <code>checks: write</code>;</li>
-<li>map <code>vale docs</code> to <code>files: docs</code>;</li>
-<li>explain <code>fail_on_error: true</code> and <code>filter_mode: nofilter</code>;</li>
-<li>explain why the strict build belongs in the validation job;</li>
-<li>show that deployment requires a successful validation job;</li>
-<li>open the real successful run;</li>
-<li>identify the controlled failure as pending evidence;</li>
-<li>describe the local and Action-managed Vale version difference.</li>
-</ul>
-<h2 id="common-problems">Common problems</h2>
-<h3 id="the-workflow-doesnt-start">The workflow doesn't start</h3>
-<p>Confirm that the workflow file exists under <code>.github/workflows/</code>, the event
-matches the current action, and GitHub Actions is enabled for the repository.</p>
-<p>For a push, confirm that the target branch is <code>main</code>. This workflow doesn't
-define path filters.</p>
-<h3 id="vale-checks-the-wrong-files">Vale checks the wrong files</h3>
-<p>Compare the local <code>vale docs</code> command with the Action's <code>files: docs</code> input.
-Also confirm the workflow starts from the repository checkout root.</p>
-<h3 id="vale-cant-find-a-style">Vale can't find a style</h3>
-<p>Confirm that <code>.vale.ini</code>, <code>styles/</code>, custom rule files, and vocabulary files
-were committed. Linux path matching is case-sensitive.</p>
-<h3 id="the-job-passes-when-vale-reports-an-error">The job passes when Vale reports an error</h3>
-<p>Confirm that the reporting rule uses the <code>error</code> level and that the workflow
-still includes:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">fail_on_error</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-<span class="nt">filter_mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nofilter</span>
-</code></pre></div>
-<p>Also confirm that the affected file is under <code>docs/</code>.</p>
-<h3 id="local-checks-pass-but-the-automated-workflow-fails">Local checks pass but the automated workflow fails</h3>
-<p>Compare the Vale versions, checked paths, active configuration, committed
-styles, and first failed log message. The current local and automated Vale
-versions differ.</p>
-<h3 id="deployment-starts-for-the-wrong-event">Deployment starts for the wrong event</h3>
-<p>Confirm that the deployment job retains both its <code>if</code> condition and
-<code>needs: validate</code> dependency.</p>
-<h2 id="project-boundaries">Project boundaries</h2>
-<p>This guide covers:</p>
-<ul>
-<li>the repository's current combined validation and deployment workflow;</li>
-<li>pull request, main-branch push, and manual triggers;</li>
-<li>the Vale Action inputs;</li>
-<li>MkDocs strict build validation;</li>
-<li>the validation-to-deployment gate;</li>
-<li>observed successful-run evidence;</li>
-<li>the pending controlled-failure test;</li>
-<li>local and automated check alignment.</li>
-</ul>
-<p>This guide doesn't cover:</p>
-<ul>
-<li>branch protection administration;</li>
-<li>organization-wide GitHub Actions policies;</li>
-<li>self-hosted runners;</li>
-<li>automatic documentation fixes;</li>
-<li>deployment secrets;</li>
-<li>a completed controlled-failure run;</li>
-<li>the CI result for this uncommitted page.</li>
-</ul>
-<h2 id="next-steps">Next steps</h2>
-<p>Return to <a href="../configure-vale/">Configure Vale for a documentation repository</a>
-when the workflow runs successfully but the enabled rules or terminology need
-to change.</p>
-<p>Use <a href="../troubleshooting/">Troubleshooting</a> when local and GitHub Actions results
-don't match.</p>
-<h2 id="sources">Sources</h2>
-<ul>
-<li><a href="https://github.com/alison2fun/tech-docs-portfolio/blob/main/.github/workflows/ci.yml">Current repository workflow</a></li>
-<li><a href="https://github.com/alison2fun/tech-docs-portfolio/actions/runs/30780106488">Documentation CI run #36</a></li>
-<li><a href="https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax">GitHub Actions workflow syntax</a></li>
-<li><a href="https://docs.github.com/en/actions/reference/security/secure-use">GitHub secure use reference</a></li>
-<li><a href="https://github.com/vale-cli/vale-action">Official Vale GitHub Action</a></li>
-</ul>
+<h2 id="change-the-workflow-safely">Change the workflow safely</h2>
+<ol>
+<li>identify the trigger, file scope, blocking result, or permission that needs
+   to change;</li>
+<li>edit one responsibility at a time;</li>
+<li>run <code>vale docs</code> and <code>mkdocs build --strict</code> locally;</li>
+<li>review the workflow diff for broadened permissions or changed deployment
+   conditions;</li>
+<li>use a pull request or manual run to inspect the validation result before
+   relying on it for publication.</li>
+</ol>
+<p>Don't change the rule severity or turn off strict mode only to obtain a green
+run. Use <a href="../troubleshooting/">Troubleshooting</a> to identify whether a failure
+comes from Vale, MkDocs, environment differences, or the deployment gate.</p>
+<p>Sources: <a href="https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions">GitHub Actions workflow syntax</a>,
+<a href="https://github.com/vale-cli/vale-action">Vale GitHub Action</a>, and
+<a href="https://www.mkdocs.org/user-guide/cli/">MkDocs command reference</a>.</p>
+</div>
 
 
 

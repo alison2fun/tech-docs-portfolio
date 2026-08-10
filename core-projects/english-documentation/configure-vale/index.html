@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Understand and update the Vale configuration, styles, vocabulary, and alert levels used by a Markdown documentation repository.">
+        <meta name="description" content="Read the active repository configuration, change a rule or vocabulary entry, and verify the result.">
       
       
       
@@ -25,7 +25,7 @@
     
     
       
-        <title>Configure Vale for a documentation repository - 我的自动化文档作品集</title>
+        <title>Configure Vale for a documentation repository - 梁卓雯｜技术文档作品集</title>
       
     
     
@@ -94,7 +94,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="我的自动化文档作品集" class="md-header__button md-logo" aria-label="我的自动化文档作品集" data-md-component="logo">
+    <a href="../../.." title="梁卓雯｜技术文档作品集" class="md-header__button md-logo" aria-label="梁卓雯｜技术文档作品集" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -108,7 +108,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            我的自动化文档作品集
+            梁卓雯｜技术文档作品集
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -350,13 +350,13 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="我的自动化文档作品集" class="md-nav__button md-logo" aria-label="我的自动化文档作品集" data-md-component="logo">
+    <a href="../../.." title="梁卓雯｜技术文档作品集" class="md-nav__button md-logo" aria-label="梁卓雯｜技术文档作品集" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    我的自动化文档作品集
+    梁卓雯｜技术文档作品集
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -1808,10 +1808,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-controls-a-vale-check" class="md-nav__link">
+  <a href="#current-configuration" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What controls a Vale check
+        Current configuration
       
     </span>
   </a>
@@ -1819,10 +1819,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#before-you-begin" class="md-nav__link">
+  <a href="#styles-and-vocabulary" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Before you begin
+        Styles and vocabulary
       
     </span>
   </a>
@@ -1830,10 +1830,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#read-the-repository-configuration" class="md-nav__link">
+  <a href="#the-custom-spacing-rule" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Read the repository configuration
+        The custom spacing rule
       
     </span>
   </a>
@@ -1841,10 +1841,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#inspect-the-active-configuration" class="md-nav__link">
+  <a href="#change-a-setting" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Inspect the active configuration
+        Change a setting
       
     </span>
   </a>
@@ -1852,264 +1852,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#follow-stylespath" class="md-nav__link">
+  <a href="#verify-the-change" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Follow StylesPath
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#understand-basedonstyles" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Understand BasedOnStyles
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#review-the-custom-spacing-rule" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Review the custom spacing rule
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configure-alert-levels" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configure alert levels
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#manage-project-terminology" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Manage project terminology
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#understand-packages-and-vale-sync" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Understand packages and vale sync
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#decide-whether-markdown-needs-an-ignore" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Decide whether Markdown needs an ignore
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#verify-the-existing-custom-rule" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Verify the existing custom rule
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Verify the existing custom rule">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-create-a-temporary-test-file" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. Create a temporary test file
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-run-the-targeted-check" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Run the targeted check
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#expected-result" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Expected result
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-add-the-required-space" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Add the required space
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#expected-result_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Expected result
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-remove-the-test-file" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. Remove the test file
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#change-the-configuration-with-controlled-checks" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Change the configuration with controlled checks
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#completion-check" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Completion check
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#common-problems" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Common problems
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Common problems">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#vale-loads-an-unexpected-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Vale loads an unexpected configuration
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#a-style-is-configured-but-not-found" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A style is configured but not found
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#a-new-rule-doesnt-run" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A new rule doesn't run
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#an-accepted-term-still-produces-an-alert" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        An accepted term still produces an alert
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#compare-local-and-automated-output" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Compare local and automated output
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#project-boundaries" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Project boundaries
+        Verify the change
       
     </span>
   </a>
@@ -2121,17 +1867,6 @@
     <span class="md-ellipsis">
       
         Next steps
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sources" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Sources
       
     </span>
   </a>
@@ -2267,6 +2002,56 @@
   
   
   
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6_1" id="__nav_2_6_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    光照测量 API 文档案例
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_6_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    光照测量 API 文档案例
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../../03-api/" class="md-nav__link">
         
@@ -2275,7 +2060,7 @@
   <span class="md-ellipsis">
     
   
-    IoT 接口集成指南
+    项目概览
   
 
     
@@ -2296,6 +2081,70 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../03-api/usage-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    使用指南：获取最新光照数据
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../03-api/api-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    光照测量 API Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../04-openclaw-quickstart/" class="md-nav__link">
         
   
@@ -2304,6 +2153,62 @@
     
   
     OpenClaw Quick Start
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../writing-samples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    写作样稿索引
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../writing-samples/all/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    全部样稿
   
 
     
@@ -3149,10 +3054,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-controls-a-vale-check" class="md-nav__link">
+  <a href="#current-configuration" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What controls a Vale check
+        Current configuration
       
     </span>
   </a>
@@ -3160,10 +3065,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#before-you-begin" class="md-nav__link">
+  <a href="#styles-and-vocabulary" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Before you begin
+        Styles and vocabulary
       
     </span>
   </a>
@@ -3171,10 +3076,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#read-the-repository-configuration" class="md-nav__link">
+  <a href="#the-custom-spacing-rule" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Read the repository configuration
+        The custom spacing rule
       
     </span>
   </a>
@@ -3182,10 +3087,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#inspect-the-active-configuration" class="md-nav__link">
+  <a href="#change-a-setting" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Inspect the active configuration
+        Change a setting
       
     </span>
   </a>
@@ -3193,264 +3098,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#follow-stylespath" class="md-nav__link">
+  <a href="#verify-the-change" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Follow StylesPath
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#understand-basedonstyles" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Understand BasedOnStyles
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#review-the-custom-spacing-rule" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Review the custom spacing rule
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configure-alert-levels" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configure alert levels
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#manage-project-terminology" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Manage project terminology
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#understand-packages-and-vale-sync" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Understand packages and vale sync
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#decide-whether-markdown-needs-an-ignore" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Decide whether Markdown needs an ignore
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#verify-the-existing-custom-rule" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Verify the existing custom rule
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Verify the existing custom rule">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-create-a-temporary-test-file" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. Create a temporary test file
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-run-the-targeted-check" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Run the targeted check
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#expected-result" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Expected result
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-add-the-required-space" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Add the required space
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#expected-result_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Expected result
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-remove-the-test-file" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. Remove the test file
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#change-the-configuration-with-controlled-checks" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Change the configuration with controlled checks
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#completion-check" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Completion check
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#common-problems" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Common problems
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Common problems">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#vale-loads-an-unexpected-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Vale loads an unexpected configuration
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#a-style-is-configured-but-not-found" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A style is configured but not found
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#a-new-rule-doesnt-run" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A new rule doesn't run
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#an-accepted-term-still-produces-an-alert" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        An accepted term still produces an alert
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#compare-local-and-automated-output" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Compare local and automated output
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#project-boundaries" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Project boundaries
+        Verify the change
       
     </span>
   </a>
@@ -3462,17 +3113,6 @@
     <span class="md-ellipsis">
       
         Next steps
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sources" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Sources
       
     </span>
   </a>
@@ -3496,91 +3136,12 @@
 
 
 
-<style>
-@media screen and (max-width: 44.984375em) {
-  .md-main__inner,
-  .md-content {
-    box-sizing: border-box;
-    min-width: 0;
-    width: 100%;
-    max-width: 100vw;
-  }
-
-  .md-content__inner {
-    box-sizing: border-box;
-    width: calc(100vw - 2rem) !important;
-    max-width: calc(100vw - 2rem) !important;
-    margin-right: 1rem !important;
-    margin-left: 1rem !important;
-    padding: 1rem 0;
-  }
-
-  .md-typeset .admonition,
-  .md-typeset .md-typeset__scrollwrap {
-    box-sizing: border-box;
-    max-width: 100%;
-  }
-
-  .md-typeset p code {
-    white-space: normal;
-    overflow-wrap: anywhere;
-  }
-}
-</style>
-
+<div class="english-doc">
 <h1 id="configure-vale-for-a-documentation-repository">Configure Vale for a documentation repository</h1>
-<p>This guide explains how this documentation repository controls Vale checks.</p>
-<p>The guide covers the active configuration, styles applied to Markdown files,
-project vocabulary, and a controlled test of one existing custom rule.</p>
-<p>This guide assumes that you have completed
-<a href="../quick-start/">Set up local documentation checks with Vale</a> and can run Vale
-from the repository root.</p>
-<div class="admonition info">
-<p class="admonition-title">Validation status</p>
-<p>The configuration keys and behavior on this page were checked against the
-official Vale documentation.</p>
-<p>The repository-specific paths, style names, vocabulary, and custom rule were
-checked against the current project files. A controlled test of
-<code>MyStyle.Spacing</code> was run locally with Vale 3.13.0.</p>
-<p>The test wasn't run in GitHub Actions. The CI workflow currently requests
-Vale 3.15.1, so CI evidence remains separate from this local result.</p>
-</div>
-<h2 id="what-controls-a-vale-check">What controls a Vale check</h2>
-<p>The repository uses four layers:</p>
-<div class="highlight"><pre><span></span><code>.vale.ini
-→ Selects resources and file-specific settings
-
-Styles
-→ Define repeatable writing rules
-
-Vocabulary
-→ Records accepted and rejected project terminology
-
-Command or workflow
-→ Selects the files to check and reports the result
-</code></pre></div>
-<p>This guide focuses on the first three layers. The GitHub Actions workflow is
-covered in a later page.</p>
-<h2 id="before-you-begin">Before you begin</h2>
-<p>You need:</p>
-<ul>
-<li>a local copy of this repository;</li>
-<li>Vale installed and available on your system <code>PATH</code>;</li>
-<li>permission to edit repository files;</li>
-<li>a text editor;</li>
-<li>a terminal open at the repository root.</li>
-</ul>
-<p>Confirm that Vale loads the current configuration:</p>
-<div class="highlight"><pre><span></span><code>vale<span class="w"> </span>ls-config
-</code></pre></div>
-<p>Then record the current repository result:</p>
-<div class="highlight"><pre><span></span><code>vale<span class="w"> </span>docs
-</code></pre></div>
-<p>This result is the baseline for evaluating a later configuration change.</p>
-<h2 id="read-the-repository-configuration">Read the repository configuration</h2>
-<p>The repository stores its Vale configuration at <code>.vale.ini</code> in the repository
-root.</p>
-<p>The current configuration is:</p>
+<p>This page focuses on three maintenance tasks: read the active configuration,
+change one repository setting, and verify both matching and non-matching text.</p>
+<h2 id="current-configuration">Current configuration</h2>
+<p>The repository entry point is <code>.vale.ini</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="na">StylesPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">styles</span>
 <span class="na">MinAlertLevel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">suggestion</span>
 <span class="na">Vocab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">Portfolio</span>
@@ -3588,350 +3149,129 @@ root.</p>
 <span class="k">[*.{md,txt}]</span>
 <span class="na">BasedOnStyles</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">Vale, Microsoft, Google, MyStyle</span>
 </code></pre></div>
-<p>The core settings apply to the configuration as a whole. The
-<code>[*.{md,txt}]</code> section applies its settings to Markdown and plain-text files.</p>
 <table>
 <thead>
 <tr>
 <th>Setting</th>
-<th>Current value</th>
-<th>Effect</th>
+<th>Current effect</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>StylesPath</code></td>
-<td><code>styles</code></td>
-<td>Loads repository rules and vocabulary resources from <code>styles/</code></td>
+<td><code>StylesPath = styles</code></td>
+<td>Loads rules committed under <code>styles/</code></td>
 </tr>
 <tr>
-<td><code>MinAlertLevel</code></td>
-<td><code>suggestion</code></td>
+<td><code>MinAlertLevel = suggestion</code></td>
 <td>Displays suggestions, warnings, and errors</td>
 </tr>
 <tr>
-<td><code>Vocab</code></td>
-<td><code>Portfolio</code></td>
-<td>Loads the project terminology list</td>
-</tr>
-<tr>
-<td>File pattern</td>
-<td><code>*.{md,txt}</code></td>
-<td>Applies the section to Markdown and text files</td>
+<td><code>Vocab = Portfolio</code></td>
+<td>Loads accepted and rejected project terminology</td>
 </tr>
 <tr>
 <td><code>BasedOnStyles</code></td>
-<td><code>Vale, Microsoft, Google, MyStyle</code></td>
-<td>Enables all rules in the listed styles</td>
+<td>Enables Vale, Microsoft, Google, and <code>MyStyle</code> for Markdown and text files</td>
 </tr>
 </tbody>
 </table>
-<p>The configuration doesn't define <code>Packages</code>, <code>TokenIgnores</code>, or
-<code>BlockIgnores</code>.</p>
-<h2 id="inspect-the-active-configuration">Inspect the active configuration</h2>
-<p>Run:</p>
+<p>Run this optional command to confirm which configuration Vale loaded:</p>
 <div class="highlight"><pre><span></span><code>vale<span class="w"> </span>ls-config
 </code></pre></div>
-<p>Vale prints the merged configuration as JSON. In the current local environment,
-the output confirms:</p>
-<ul>
-<li><code>RootINI</code> points to the repository's <code>.vale.ini</code>;</li>
-<li><code>Paths</code> includes the repository's <code>styles/</code> directory;</li>
-<li><code>Vocab</code> contains <code>Portfolio</code>;</li>
-<li><code>SBaseStyles</code> enables <code>Vale</code>, <code>Microsoft</code>, <code>Google</code>, and <code>MyStyle</code> for
-  <code>*.{md,txt}</code>.</li>
-</ul>
-<p>The output also lists Vale's user-level style directory. Absolute paths differ
-between computers, so verify the repository path instead of copying another
-user's output.</p>
-<div class="admonition tip">
-<p class="admonition-title">Compare repository and local behavior</p>
-<p>When two computers produce different results, compare <code>vale ls-config</code>
-before editing a rule. A global configuration or a different resource path
-can change the active settings.</p>
-</div>
-<p>For diagnosis, explicitly select the repository configuration:</p>
+<p>The <code>RootINI</code> and style paths should resolve to the current repository. Use an
+explicit path when the working directory is uncertain:</p>
 <div class="highlight"><pre><span></span><code>vale<span class="w"> </span>--config<span class="o">=</span><span class="s2">&quot;.vale.ini&quot;</span><span class="w"> </span>docs
 </code></pre></div>
-<p>The normal project command remains <code>vale docs</code> while configuration discovery
-works correctly.</p>
-<h2 id="follow-stylespath">Follow <code>StylesPath</code></h2>
-<p><code>StylesPath = styles</code> points Vale to the repository's committed rules and
-vocabulary resources.</p>
-<p>The current structure is:</p>
+<h2 id="styles-and-vocabulary">Styles and vocabulary</h2>
+<p>The repository commits its style snapshots and project vocabulary:</p>
 <div class="highlight"><pre><span></span><code>styles/
 ├── Google/
 ├── Microsoft/
 ├── MyStyle/
 │   └── Spacing.yml
-└── config/
-    └── vocabularies/
-        └── Portfolio/
-            ├── accept.txt
-            └── reject.txt
+└── config/vocabularies/Portfolio/
+    ├── accept.txt
+    └── reject.txt
 </code></pre></div>
-<p>The Microsoft and Google directories are committed snapshots. Committing them
-allows local checks and CI to read the same rule files. Upstream rule updates
-should be reviewed and committed as a separate change.</p>
-<h2 id="understand-basedonstyles">Understand <code>BasedOnStyles</code></h2>
-<p><code>BasedOnStyles</code> enables all rules contained in each listed style for files that
-match the section pattern.</p>
-<p>The current setting is:</p>
-<div class="highlight"><pre><span></span><code><span class="k">[*.{md,txt}]</span>
-<span class="na">BasedOnStyles</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">Vale, Microsoft, Google, MyStyle</span>
+<p>Add a valid product name or technical term to <code>accept.txt</code> when the repository
+should recognize its spelling. Add a consistently discouraged term to
+<code>reject.txt</code> only when the replacement policy is clear.</p>
+<p>This repository doesn't declare <code>Packages</code>. The required styles are already
+committed, so the current setup doesn't require <code>vale sync</code>. If a package is
+added later, document the source and review the downloaded rule changes before
+committing them.</p>
+<h2 id="the-custom-spacing-rule">The custom spacing rule</h2>
+<p><code>styles/MyStyle/Spacing.yml</code> checks whether Chinese characters touch Latin
+letters or digits without a space:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">extends</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">existence</span>
+<span class="nt">message</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;错误：中英文之间必须加空格&quot;</span>
+<span class="nt">level</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">error</span>
+<span class="nt">tokens</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;.*[</span><span class="se">\u4e00</span><span class="s">-</span><span class="se">\u9fa5</span><span class="s">][a-zA-Z0-9].*&quot;</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;.*[a-zA-Z0-9][</span><span class="se">\u4e00</span><span class="s">-</span><span class="se">\u9fa5</span><span class="s">].*&quot;</span>
 </code></pre></div>
-<p>The four styles have different roles:</p>
+<p>The rule is repository-specific and runs at <code>error</code> level. Microsoft and
+Google rules supply broader writing guidance. The project uses three severity
+levels deliberately:</p>
 <table>
 <thead>
 <tr>
-<th>Style</th>
-<th>Role in this repository</th>
+<th>Severity</th>
+<th>Repository use</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>Vale</code></td>
-<td>Provides Vale's built-in spelling, terminology, avoidance, and repetition rules</td>
-</tr>
-<tr>
-<td><code>Microsoft</code></td>
-<td>Reports wording and editorial style feedback from the committed snapshot</td>
-</tr>
-<tr>
-<td><code>Google</code></td>
-<td>Reports wording and editorial style feedback from the committed snapshot</td>
-</tr>
-<tr>
-<td><code>MyStyle</code></td>
-<td>Runs the repository's custom Chinese and Latin-character spacing rule</td>
-</tr>
-</tbody>
-</table>
-<p>Combining multiple editorial styles can produce overlapping feedback. This
-repository keeps warnings and suggestions visible for human review, while
-error-level results remain the blocking level.</p>
-<h2 id="review-the-custom-spacing-rule">Review the custom spacing rule</h2>
-<p>The repository contains one custom rule:</p>
-<div class="highlight"><pre><span></span><code>styles/MyStyle/Spacing.yml
-</code></pre></div>
-<p>The rule identifier is <code>MyStyle.Spacing</code>. It extends Vale's <code>existence</code> check,
-uses the <code>error</code> level, and detects a Chinese character placed directly beside
-an English letter or number.</p>
-<p>The rule protects one documented writing decision: add a space between Chinese
-prose and adjacent English terms or numbers.</p>
-<p>The rule file uses the required <code>.yml</code> extension. Vale doesn't load custom rule
-files that use <code>.yaml</code>.</p>
-<h2 id="configure-alert-levels">Configure alert levels</h2>
-<p>Vale supports three alert levels.</p>
-<table>
-<thead>
-<tr>
-<th>Level</th>
-<th>Meaning in this repository</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>suggestion</code></td>
-<td>Optional editorial feedback displayed for review</td>
+<td><code>error</code></td>
+<td>A rule that can block the current quality gate</td>
 </tr>
 <tr>
 <td><code>warning</code></td>
-<td>A likely style or consistency issue displayed for review</td>
+<td>A likely issue that deserves review</td>
 </tr>
 <tr>
-<td><code>error</code></td>
-<td>A rule violation that returns a nonzero Vale exit code</td>
+<td><code>suggestion</code></td>
+<td>Optional editorial guidance shown for author feedback</td>
 </tr>
 </tbody>
 </table>
-<p>The repository uses:</p>
-<div class="highlight"><pre><span></span><code><span class="na">MinAlertLevel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">suggestion</span>
+<h2 id="change-a-setting">Change a setting</h2>
+<p>Keep each configuration change focused:</p>
+<ol>
+<li>record the current <code>vale docs</code> result;</li>
+<li>change one rule, vocabulary entry, or <code>.vale.ini</code> setting;</li>
+<li>inspect <code>vale ls-config</code> if configuration loading changed;</li>
+<li>test one string that should match;</li>
+<li>test one string that shouldn't match;</li>
+<li>run <code>vale docs</code> and review the diff before committing.</li>
+</ol>
+<p>For example, a new accepted term should remove only the intended vocabulary
+alert. A spacing-rule change should still reject mixed-language text without spaces
+and allow the corrected form.</p>
+<h2 id="verify-the-change">Verify the change</h2>
+<p>Create a temporary Markdown file with one matching and one corrected example:</p>
+<div class="highlight"><pre><span></span><code>Matching text: 中文Vale
+Corrected text: 中文 Vale
 </code></pre></div>
-<p>Vale therefore displays all three levels. Warnings and suggestions don't
-produce a nonzero exit code. Errors do.</p>
-<p>Changing <code>MinAlertLevel</code> to <code>error</code> would hide warnings and suggestions from
-the command output. It wouldn't improve the underlying documents.</p>
-<p>Use alert levels to express policy. Don't lower a level only to make the check
-pass.</p>
-<h2 id="manage-project-terminology">Manage project terminology</h2>
-<p>The configuration loads this vocabulary:</p>
-<div class="highlight"><pre><span></span><code><span class="na">Vocab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">Portfolio</span>
+<p>Run the targeted check:</p>
+<div class="highlight"><pre><span></span><code>vale<span class="w"> </span>--config<span class="o">=</span><span class="s2">&quot;.vale.ini&quot;</span><span class="w"> </span>path/to/temporary-test.md<span class="w"> </span>--no-wrap
 </code></pre></div>
-<p>Vale reads it from:</p>
-<div class="highlight"><pre><span></span><code>styles/config/vocabularies/Portfolio/
-├── accept.txt
-└── reject.txt
-</code></pre></div>
-<p><code>accept.txt</code> currently records approved terms such as:</p>
-<div class="highlight"><pre><span></span><code>Datasheet
-OAuth
-OpenClaw
-Verilog
-Vue
-</code></pre></div>
-<p>These are examples from the current file, not a complete list.</p>
-<p><code>reject.txt</code> currently contains only a comment and doesn't define rejected
-terms. Don't document a rejected-term workflow as implemented until the file
-contains a reviewed entry and preferred replacement.</p>
-<p>Use one entry per line. Confirm the spelling and capitalization before adding a
-term. A vocabulary is appropriate for stable names and terminology; it isn't a
-substitute for a rule that needs context or a complex pattern.</p>
-<p>After changing the vocabulary, rerun:</p>
+<p>Verify that the matching text reports <code>MyStyle.Spacing</code> and that the corrected
+text doesn't. Then remove the temporary file and run the repository check:</p>
 <div class="highlight"><pre><span></span><code>vale<span class="w"> </span>docs
 </code></pre></div>
-<p>Confirm that the intended alert changed and unrelated rules still run.</p>
-<h2 id="understand-packages-and-vale-sync">Understand packages and <code>vale sync</code></h2>
-<p>The current <code>.vale.ini</code> doesn't declare <code>Packages</code>. The required Microsoft,
-Google, and custom rule files are already committed under <code>styles/</code>.</p>
-<p>For this repository, the normal configuration path doesn't include:</p>
-<div class="highlight"><pre><span></span><code>vale<span class="w"> </span>sync
-</code></pre></div>
-<p>If a future change adds a <code>Packages</code> setting, <code>vale sync</code> downloads those
-packages into the active <code>StylesPath</code>. Review the generated changes before
-committing them, and don't mix a package update with unrelated documentation
-edits.</p>
-<h2 id="decide-whether-markdown-needs-an-ignore">Decide whether Markdown needs an ignore</h2>
-<p>Vale supports Markdown directly. It ignores fenced code blocks, indented code
-blocks, inline code spans, and URLs by default.</p>
-<p>The current <code>.vale.ini</code> doesn't define <code>TokenIgnores</code> or <code>BlockIgnores</code>. Run a
-check before adding either key.</p>
-<p>Add an ignore only after you:</p>
-<ol>
-<li>reproduce the unwanted alert;</li>
-<li>confirm that the content should remain outside the writing rules;</li>
-<li>make the pattern as narrow as possible;</li>
-<li>test normal prose near the ignored content;</li>
-<li>document why the ignore exists.</li>
-</ol>
-<p>A broad ignore can hide a real documentation issue.</p>
-<h2 id="verify-the-existing-custom-rule">Verify the existing custom rule</h2>
-<p>A configuration rule needs both a matching and a non-matching test.</p>
-<h3 id="1-create-a-temporary-test-file">1. Create a temporary test file</h3>
-<p>Create a Markdown file that places a short Chinese phrase directly beside the
-English word <code>Vale</code>, without a space.</p>
-<p>Don't insert a deliberate failure into a published documentation page.</p>
-<h3 id="2-run-the-targeted-check">2. Run the targeted check</h3>
-<div class="highlight"><pre><span></span><code>vale<span class="w"> </span>path/to/temporary-test.md<span class="w"> </span>--no-wrap
-</code></pre></div>
-<h3 id="expected-result">Expected result</h3>
-<p>The local controlled test produced:</p>
-<ul>
-<li>rule: <code>MyStyle.Spacing</code>;</li>
-<li>level: <code>error</code>;</li>
-<li>return code: <code>1</code>.</li>
-</ul>
-<p>This result confirms that the rule loaded and detected the intended pattern.</p>
-<h3 id="3-add-the-required-space">3. Add the required space</h3>
-<p>Add a space between the Chinese phrase and <code>Vale</code>, then rerun the same command.</p>
-<h3 id="expected-result_1">Expected result</h3>
-<p>The targeted alert disappears. The controlled local test returned code <code>0</code>
-after the correction.</p>
-<h3 id="4-remove-the-test-file">4. Remove the test file</h3>
-<p>Delete the temporary file after recording the result. The controlled file used
-for this page was removed and isn't part of the published documentation.</p>
-<div class="admonition success">
-<p class="admonition-title">Configuration verification</p>
-<p>The local test verified that <code>MyStyle.Spacing</code>:</p>
-<ul>
-<li>loads from the committed <code>styles/</code> directory;</li>
-<li>triggers on the intended unspaced pattern;</li>
-<li>accepts the corrected form;</li>
-<li>changes the return code from <code>1</code> to <code>0</code> for the targeted file.</li>
-</ul>
-<p>This test doesn't verify the GitHub Actions environment.</p>
-</div>
-<!--
-Add assets/english-docs/vale-rule-before-after.png only after a current,
-non-sensitive screenshot has been captured from this controlled test. Do not
-fabricate terminal output.
--->
-
-<h2 id="change-the-configuration-with-controlled-checks">Change the configuration with controlled checks</h2>
-<p>Use this sequence for a repository configuration change:</p>
-<div class="highlight"><pre><span></span><code>Record the baseline
-→ Make one focused change
-→ Inspect vale ls-config
-→ Run a matching test
-→ Run a non-matching test
-→ Run vale docs
-→ Review the diff
-</code></pre></div>
-<p>Keep the change focused enough that the result can be attributed to one rule,
-vocabulary entry, or configuration setting.</p>
-<h2 id="completion-check">Completion check</h2>
-<p>You have completed this guide when you can:</p>
-<ul>
-<li>identify the active <code>.vale.ini</code>;</li>
-<li>explain where <code>StylesPath</code> points;</li>
-<li>identify the styles enabled for Markdown;</li>
-<li>distinguish a style from a vocabulary;</li>
-<li>explain how <code>MinAlertLevel</code> changes displayed results and exit behavior;</li>
-<li>explain why this repository doesn't currently run <code>vale sync</code>;</li>
-<li>inspect <code>MyStyle.Spacing</code>;</li>
-<li>verify a rule with matching and non-matching content.</li>
-</ul>
-<h2 id="common-problems">Common problems</h2>
-<h3 id="vale-loads-an-unexpected-configuration">Vale loads an unexpected configuration</h3>
-<p>Run <code>vale ls-config</code>, confirm <code>RootINI</code>, and check whether a global
-configuration adds or overrides settings.</p>
-<p>For diagnosis, run:</p>
-<div class="highlight"><pre><span></span><code>vale<span class="w"> </span>--config<span class="o">=</span><span class="s2">&quot;.vale.ini&quot;</span><span class="w"> </span>docs
-</code></pre></div>
-<h3 id="a-style-is-configured-but-not-found">A style is configured but not found</h3>
-<p>Confirm the <code>StylesPath</code>, style directory name, and <code>.yml</code> file extension. This
-repository uses committed style files, so also confirm that your local copy is
-complete.</p>
-<h3 id="a-new-rule-doesnt-run">A new rule doesn't run</h3>
-<p>Check whether:</p>
-<ul>
-<li>its style is listed in <code>BasedOnStyles</code>;</li>
-<li>the rule is explicitly turned off;</li>
-<li>the file matches <code>*.{md,txt}</code>;</li>
-<li>the rule scope matches the content;</li>
-<li><code>MinAlertLevel</code> hides the result.</li>
-</ul>
-<h3 id="an-accepted-term-still-produces-an-alert">An accepted term still produces an alert</h3>
-<p>Confirm that <code>Portfolio</code> is active, the term is in the correct <code>accept.txt</code>, and
-the capitalization matches. Identify the reporting rule before adding another
-exception.</p>
-<h3 id="compare-local-and-automated-output">Compare local and automated output</h3>
-<p>Compare the Vale version, working directory, selected configuration, checked
-path, command options, committed styles, and <code>vale ls-config</code> output.</p>
-<h2 id="project-boundaries">Project boundaries</h2>
-<p>This guide covers:</p>
-<ul>
-<li>the current project-level <code>.vale.ini</code>;</li>
-<li>Markdown and text style selection;</li>
-<li>alert levels and exit behavior;</li>
-<li>the <code>Portfolio</code> vocabulary;</li>
-<li>the current <code>MyStyle.Spacing</code> rule;</li>
-<li>a controlled local rule test.</li>
-</ul>
-<p>This guide doesn't cover:</p>
-<ul>
-<li>designing an organization-wide style guide;</li>
-<li>publishing Vale packages;</li>
-<li>advanced regular-expression development;</li>
-<li>complete automated rule-test suites;</li>
-<li>editor-specific integrations;</li>
-<li>GitHub Actions workflow syntax.</li>
-</ul>
+<p>Don't weaken the alert level or add a broad exception only to make the check
+pass. Confirm that the rule still detects the behavior it was created to
+prevent.</p>
 <h2 id="next-steps">Next steps</h2>
-<p>Continue to <a href="../github-actions/">Run Vale in GitHub Actions</a> to apply the
-repository checks to pushes and pull requests.</p>
-<p>Use <a href="../troubleshooting/">Troubleshooting</a> when the active configuration,
-repository styles, or automated environment doesn't produce the expected
-result.</p>
-<h2 id="sources">Sources</h2>
 <ul>
-<li><a href="https://vale.sh/docs/vale-ini">Vale configuration file</a></li>
-<li><a href="https://vale.sh/docs/keys/basedonstyles"><code>BasedOnStyles</code></a></li>
-<li><a href="https://vale.sh/docs/keys/minalertlevel"><code>MinAlertLevel</code></a></li>
-<li><a href="https://vale.sh/docs/keys/vocab">Vocabularies</a></li>
-<li><a href="https://vale.sh/docs/formats/markdown">Markdown support</a></li>
-<li><a href="https://vale.sh/docs/styles">Vale styles and rule files</a></li>
+<li>Review <a href="../github-actions/">Run Vale in GitHub Actions</a> before changing the automated check.</li>
+<li>Use <a href="../troubleshooting/">Troubleshooting</a> when a style, vocabulary, or custom rule doesn't load.</li>
 </ul>
+<p>Sources: <a href="https://vale.sh/docs/vale-ini">Vale configuration</a>,
+<a href="https://vale.sh/docs/styles">Vale styles</a>, and
+<a href="https://vale.sh/docs/keys/vocab">Vale vocabularies</a>.</p>
+</div>
 
 
 
