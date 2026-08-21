@@ -1,0 +1,4598 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../docs-ci-publishing-gate/">
+      
+      
+        <link rel="next" href="../hardware-datasheet-restructure/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>GitHub 英文文档写作复盘 - 梁卓雯｜技术文档作品集</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../styles/kami-portfolio-20260709.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#github" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="梁卓雯｜技术文档作品集" class="md-header__button md-logo" aria-label="梁卓雯｜技术文档作品集" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            梁卓雯｜技术文档作品集
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              GitHub 英文文档写作复盘
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-label="切换到夜间模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到夜间模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="切换到日间模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到日间模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../portfolio/" class="md-tabs__link">
+          
+  
+  
+  核心作品
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../case-studies/" class="md-tabs__link">
+          
+  
+  
+  复盘与方法
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../about/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  关于
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../%E7%AE%80%E5%8E%86/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  简历
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="梁卓雯｜技术文档作品集" class="md-nav__button md-logo" aria-label="梁卓雯｜技术文档作品集" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    梁卓雯｜技术文档作品集
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    核心作品
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    核心作品
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    作品总览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    01 技术理解｜OPT4001YMNEVM 开发者文档
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    01 技术理解｜OPT4001YMNEVM 开发者文档
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core-projects/hardware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    项目概览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-hardware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quick Start：首次采集
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core-projects/hardware/information-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    理解评估系统
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core-projects/hardware/configure-and-read-lux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    配置与数据读取
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core-projects/hardware/troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    故障排查
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    02 用户路径｜小程序产品文档集
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    02 用户路径｜小程序产品文档集
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mini-programs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    项目总览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_2" id="__nav_2_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    微步 ACTION：AI 任务拆解
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    微步 ACTION：AI 任务拆解
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mini-programs/action/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    产品概览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_2_2" id="__nav_2_3_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    用户指南
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_3_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    用户指南
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mini-programs/action/user-guide/quick-start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    原型快速体验
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mini-programs/action/user-guide/create-task/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    创建与拆解任务
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mini-programs/action/user-guide/manage-progress/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    管理任务与进度
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mini-programs/action/user-guide/faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    常见问题
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mini-programs/action/user-guide/privacy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    输入内容安全提醒
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_2_3" id="__nav_2_3_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    产品设计
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_3_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    产品设计
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mini-programs/action/product/prd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    产品需求文档（PRD）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mini-programs/action/product/system-flow-design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    系统流程设计
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mini-programs/action/product/task-decomposition-interface-draft/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    任务拆解云函数调用说明
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mini-programs/action/product/data-privacy-boundaries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数据与隐私边界
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_2_4" id="__nav_2_3_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    迭代与计划
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_3_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    迭代与计划
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mini-programs/action/releases/prototype-iteration-record/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    原型迭代记录
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mini-programs/action/releases/roadmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    产品路线图
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dot-collage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PopDots：波点拼贴图片生成器
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../photo-background/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    照片换底色小程序
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    03 文档工程｜文档质量自动化流水线
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    03 文档工程｜文档质量自动化流水线
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-automation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    项目概览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    快速开始
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../style-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    写作风格指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../github-actions-workflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GitHub Actions 工作流
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core-projects/docs-engineering/validation-results/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    验证结果
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    故障排查
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    更新记录
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    04 English Documentation｜English works
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    04 English Documentation｜English works
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core-projects/english-documentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    English work overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5_2" id="__nav_2_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GitHub REST API documentation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    GitHub REST API documentation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core-projects/english-documentation/github-rest-api/quickstart/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Get repository details with the GitHub REST API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core-projects/english-documentation/github-rest-api/troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshoot repository metadata requests
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5_3" id="__nav_2_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentation Quality Pipeline
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Documentation Quality Pipeline
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core-projects/english-documentation/documentation-quality-pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core-projects/english-documentation/quick-start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quick Start：Run Vale locally
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core-projects/english-documentation/configure-vale/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configure Vale
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core-projects/english-documentation/github-actions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GitHub Actions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core-projects/english-documentation/troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    更多样本
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    更多样本
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6_1" id="__nav_2_6_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    光照测量 API 文档案例
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_6_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    光照测量 API 文档案例
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    项目概览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-api/usage-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    使用指南：获取最新光照数据
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-api/api-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    光照测量 API Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-openclaw-quickstart/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OpenClaw Quick Start
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../writing-samples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    写作样稿索引
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../writing-samples/all/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    全部样稿
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    复盘与方法
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    复盘与方法
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../case-studies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    总览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    项目复盘
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    项目复盘
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs-ci-publishing-gate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    从局部检查到验证后发布
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GitHub 英文文档写作复盘
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GitHub 英文文档写作复盘
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 先告诉我“这页能帮我干什么”
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 用动词开头
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-action-result-verify" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 好用的结构：Action → Result → Verify
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-before-you-start-prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Before you start / Prerequisites 要克制
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 标题不要写“内容是什么”，尽量写“用户要做什么”
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Overview 的好结构
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-how-to-goal-preconditions-steps-result" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. How-to 的核心结构：Goal → Preconditions → Steps → Result
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Reference 是准确描述
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Troubleshooting 值得复用的症状语言
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. 条件、限制要提前写
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. 中文技术文档同样应该多用“短动作句”
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        沉淀物
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hardware-datasheet-restructure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    从官方资料到开发者文档集
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    项目概览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../case-studies/portfolio-redesign/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    作品集改版复盘
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../case-studies/mini-program-doc-set/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    从一页说明书到产品文档集（整理中）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    写作方法
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    写作方法
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_1" id="__nav_3_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    从项目中总结的方法
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    从项目中总结的方法
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ai-assisted-docs-boundaries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    怎样与 AI 协作写技术文档
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quick-start-reader-success/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    怎样写一篇可执行的 Quickstart
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting-diagnostic-writing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    怎样写一篇能完成诊断的 Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api-onboarding-path/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API 接入路径
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documentation-as-qa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    文档怎样暴露产品问题
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../preventing-stale-docs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    文档为什么会过期
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../maintainable-screenshots/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    截图型文档怎样维护
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../multiple-reader-paths/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    为不同读者设计阅读路径
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../choosing-docs-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    更多方法：选择文档工具
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_2" id="__nav_3_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    优秀文档拆解
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    优秀文档拆解
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../case-studies/github-rest-api-troubleshooting-breakdown/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GitHub REST API 故障排查
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../case-studies/stripe-checkout-quickstart/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stripe Checkout Quickstart
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../case-studies/cloudflare-workers-quick-start-breakdown/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cloudflare Workers Quick Start
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../case-studies/docker-daemon-troubleshooting-breakdown/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docker daemon 故障排查
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../case-studies/document-breakdowns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    全部拆解
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    关于
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%AE%80%E5%8E%86/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    简历
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 先告诉我“这页能帮我干什么”
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 用动词开头
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-action-result-verify" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 好用的结构：Action → Result → Verify
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-before-you-start-prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Before you start / Prerequisites 要克制
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 标题不要写“内容是什么”，尽量写“用户要做什么”
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Overview 的好结构
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-how-to-goal-preconditions-steps-result" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. How-to 的核心结构：Goal → Preconditions → Steps → Result
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Reference 是准确描述
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Troubleshooting 值得复用的症状语言
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. 条件、限制要提前写
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. 中文技术文档同样应该多用“短动作句”
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        沉淀物
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="github">GitHub 英文文档写作复盘</h1>
+<p>在写 GitHub 这两篇英文文档之前，我阅读了较多行业内的优秀文档。在这篇文章里，我想总结一些要点，作为以后写技术文档时使用的写作工具箱。</p>
+<h2 id="1">1. 先告诉我“这页能帮我干什么”</h2>
+<p>GitHub、Stripe、Cloudflare、TiDB 的任务型页面开头都很快进入目标，很少先写一大段产品背景。</p>
+<p>典型逻辑是：</p>
+<blockquote>
+<p><strong>This guide shows you how to + 动作 + 结果。</strong></p>
+</blockquote>
+<p>例如 Cloudflare 的 Getting Started 直接围绕“build your first Worker”，CLI 页面进一步明确目标是设置并部署第一个 Worker；Stripe 的 API 入门也直接告诉用户会完成第一次 API 请求。(<a href="https://developers.cloudflare.com/workers/get-started/?utm_source=chatgpt.com" title="Getting started · Cloudflare Workers docs">Cloudflare Docs</a>)</p>
+<p>这类表达可以复用。</p>
+<p><strong>英文：</strong></p>
+<ul>
+<li>
+<p>This guide shows you how to...</p>
+</li>
+<li>
+<p>This guide walks you through...</p>
+</li>
+<li>
+<p>In this guide, you will...</p>
+</li>
+<li>
+<p>Learn how to...</p>
+</li>
+<li>
+<p>Use this guide to...</p>
+</li>
+<li>
+<p>By the end of this guide, you will...</p>
+</li>
+<li>
+<p>This tutorial demonstrates how to...</p>
+</li>
+<li>
+<p>This article explains how to...</p>
+</li>
+</ul>
+<p>其中也会有一些细微差别：</p>
+<table>
+<thead>
+<tr>
+<th>表达</th>
+<th>更适合</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>This guide shows you how to...</code></td>
+<td>How-to / 普通指南</td>
+</tr>
+<tr>
+<td><code>This guide walks you through...</code></td>
+<td>有连续步骤的教程</td>
+</tr>
+<tr>
+<td><code>Learn how to...</code></td>
+<td>页面简介、导航卡片</td>
+</tr>
+<tr>
+<td><code>This article explains...</code></td>
+<td>Concept / Explanation</td>
+</tr>
+<tr>
+<td><code>This reference describes...</code></td>
+<td>Reference</td>
+</tr>
+<tr>
+<td><code>Use ... to ...</code></td>
+<td>非常直接的任务型标题/导语</td>
+</tr>
+</tbody>
+</table>
+<p><strong>中文对应：</strong></p>
+<ul>
+<li>
+<p>本文介绍如何……</p>
+</li>
+<li>
+<p>本文演示如何……</p>
+</li>
+<li>
+<p>本指南介绍如何……</p>
+</li>
+<li>
+<p>按照以下步骤……</p>
+</li>
+<li>
+<p>通过本文，你将完成……</p>
+</li>
+<li>
+<p>你将学习如何……</p>
+</li>
+<li>
+<p>使用本文的方法，你可以……</p>
+</li>
+</ul>
+<p>TiDB 就经常采用“本文档演示如何……”以及“通过学习本教程，你将……”这种写法，把预期结果提前。(<a href="https://docs.pingcap.com/zh/ai/quickstart-via-python/?utm_source=chatgpt.com" title="使用Python 快速上手TiDB + AI | TiDB 文档中心">PingCAP Docs</a>)</p>
+<hr />
+<h2 id="2">2. 用动词开头</h2>
+<p>Microsoft 的技术写作规范明确建议步骤使用<strong>祈使动词</strong>，每一步写成完整句子，而且整个 procedure 应尽可能短。(<a href="https://learn.microsoft.com/en-us/style-guide/checklists/procedures-and-instructions-checklist?utm_source=chatgpt.com" title="Procedures and instructions checklist">Microsoft Learn</a>)</p>
+<p>优秀文档里的步骤通常不写：</p>
+<blockquote>
+<p>Configuration of the environment</p>
+</blockquote>
+<p>写：</p>
+<blockquote>
+<p>Configure your environment.</p>
+</blockquote>
+<p>不写：</p>
+<blockquote>
+<p>API key configuration</p>
+</blockquote>
+<p>写：</p>
+<blockquote>
+<p>Configure your API key.</p>
+</blockquote>
+<h3 id="_1">值得积累的动作词</h3>
+<h4 id="_2">环境与准备</h4>
+<ul>
+<li>
+<p>install</p>
+</li>
+<li>
+<p>configure</p>
+</li>
+<li>
+<p>set up</p>
+</li>
+<li>
+<p>create</p>
+</li>
+<li>
+<p>enable</p>
+</li>
+<li>
+<p>obtain</p>
+</li>
+<li>
+<p>generate</p>
+</li>
+<li>
+<p>download</p>
+</li>
+<li>
+<p>clone</p>
+</li>
+<li>
+<p>open</p>
+</li>
+<li>
+<p>sign in</p>
+</li>
+</ul>
+<p>比如：</p>
+<ul>
+<li>
+<p>Install the CLI.</p>
+</li>
+<li>
+<p>Configure your environment.</p>
+</li>
+<li>
+<p>Create a project.</p>
+</li>
+<li>
+<p>Generate an API key.</p>
+</li>
+<li>
+<p>Set the environment variable.</p>
+</li>
+</ul>
+<h4 id="_3">执行</h4>
+<ul>
+<li>
+<p>run</p>
+</li>
+<li>
+<p>send</p>
+</li>
+<li>
+<p>call</p>
+</li>
+<li>
+<p>execute</p>
+</li>
+<li>
+<p>start</p>
+</li>
+<li>
+<p>deploy</p>
+</li>
+<li>
+<p>build</p>
+</li>
+<li>
+<p>connect</p>
+</li>
+<li>
+<p>request</p>
+</li>
+<li>
+<p>upload</p>
+</li>
+</ul>
+<p>比如：</p>
+<ul>
+<li>
+<p>Run the following command.</p>
+</li>
+<li>
+<p>Send a request to the endpoint.</p>
+</li>
+<li>
+<p>Deploy your application.</p>
+</li>
+<li>
+<p>Start the development server.</p>
+</li>
+</ul>
+<h4 id="_4">验证</h4>
+<p>这个是你特别应该增加的一组。</p>
+<ul>
+<li>
+<p>verify</p>
+</li>
+<li>
+<p>confirm</p>
+</li>
+<li>
+<p>check</p>
+</li>
+<li>
+<p>validate</p>
+</li>
+<li>
+<p>inspect</p>
+</li>
+</ul>
+<p>比如：</p>
+<ul>
+<li>
+<p>Verify the response.</p>
+</li>
+<li>
+<p>Confirm that the request succeeds.</p>
+</li>
+<li>
+<p>Check the returned status code.</p>
+</li>
+<li>
+<p>Verify that <code>full_name</code> matches the requested repository.</p>
+</li>
+</ul>
+<p>这就是你现在 GitHub API 文档里很适合强化的东西。</p>
+<p>技术文档不应该停在：</p>
+<blockquote>
+<p>Run this command.</p>
+</blockquote>
+<p>而应该继续：</p>
+<blockquote>
+<p>Run → Observe → Verify.</p>
+</blockquote>
+<hr />
+<h2 id="3-action-result-verify">3. 好用的结构：Action → Result → Verify</h2>
+<p>好的 Quickstart 会让用户不断确认：</p>
+<blockquote>
+<p><strong>我现在到底有没有做对？</strong></p>
+</blockquote>
+<p>Stripe 的 Quickstart 强调逐步实现和可运行代码，Cloudflare 则让用户从创建项目一路到开发和部署；TiDB 的示例同样会把配置值、运行结果等放在对应操作附近。(<a href="https://docs.stripe.com/quickstarts?utm_source=chatgpt.com" title="Quickstart guides">Stripe Docs</a>)</p>
+<p>可以形成自己的固定模板，例如：</p>
+<h3 id="step-2-send-the-request">Step 2. Send the request</h3>
+<p><strong>Action</strong></p>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>...
+</code></pre></div>
+<p><strong>Expected result</strong></p>
+<p>The API returns repository metadata in JSON format.</p>
+<p><strong>Verify</strong></p>
+<p>Confirm that:</p>
+<ul>
+<li>
+<p><code>full_name</code> matches the repository you requested.</p>
+</li>
+<li>
+<p><code>default_branch</code> contains the expected branch.</p>
+</li>
+</ul>
+<p>以后写任何 Quickstart，都可以首先考虑：</p>
+<blockquote>
+<p><strong>动作 → 用户看到什么 → 如何知道成功</strong></p>
+</blockquote>
+<hr />
+<h2 id="4-before-you-start-prerequisites">4. Before you start / Prerequisites 要克制</h2>
+<p>这些优秀文档的前置条件普遍很克制。</p>
+<p>Cloudflare 会直接说需要什么账号或工具；TiDB 和阿里云则把环境、版本、API Key、地域等真正影响任务完成的条件放在开始之前。(<a href="https://developers.cloudflare.com/learning-paths/workers/get-started/first-worker/?utm_source=chatgpt.com" title="First Worker · Cloudflare Learning Paths">Cloudflare Docs</a>)</p>
+<p>推荐结构：</p>
+<h3 id="before-you-start">Before you start</h3>
+<p>Make sure you have:</p>
+<ul>
+<li>
+<p>...</p>
+</li>
+<li>
+<p>...</p>
+</li>
+<li>
+<p>...</p>
+</li>
+</ul>
+<p>或者：</p>
+<h3 id="prerequisites">Prerequisites</h3>
+<p>Before you begin, you need:</p>
+<ul>
+<li>
+<p>...</p>
+</li>
+<li>
+<p>...</p>
+</li>
+</ul>
+<p>高频表达：</p>
+<ul>
+<li>
+<p>Before you begin,...</p>
+</li>
+<li>
+<p>Before you start,...</p>
+</li>
+<li>
+<p>Make sure you have...</p>
+</li>
+<li>
+<p>You need...</p>
+</li>
+<li>
+<p>This guide requires...</p>
+</li>
+<li>
+<p>You must have...</p>
+</li>
+<li>
+<p>Make sure that...</p>
+</li>
+<li>
+<p>Ensure that...</p>
+</li>
+</ul>
+<p>其中最好区分：</p>
+<p><strong>need</strong><br />
+普通要求。</p>
+<p><strong>must</strong><br />
+强制条件。</p>
+<p><strong>make sure / ensure</strong><br />
+要求用户检查状态。</p>
+<p>例如：</p>
+<blockquote>
+<p>Make sure that Git is installed.</p>
+</blockquote>
+<p>比：</p>
+<blockquote>
+<p>Git installation is required prior to proceeding with this tutorial.</p>
+</blockquote>
+<p>好很多。</p>
+<p>Microsoft 的整体写作建议也是偏向短句、直接表达、少限定语和少废话。(<a href="https://learn.microsoft.com/en-us/style-guide/global-communications/writing-tips?utm_source=chatgpt.com" title="Writing tips - Microsoft Style Guide">Microsoft Learn</a>)</p>
+<hr />
+<h2 id="5">5. 标题不要写“内容是什么”，尽量写“用户要做什么”</h2>
+<p>这是非常重要的区别。</p>
+<p>普通写法：</p>
+<blockquote>
+<p>API Key<br />
+Configuration<br />
+Repository<br />
+Deployment</p>
+</blockquote>
+<p>任务型文档更好的标题：</p>
+<blockquote>
+<p>Get your API key<br />
+Configure your environment<br />
+Create a repository<br />
+Deploy your application</p>
+</blockquote>
+<p>Stripe 的 Get Started 页面就是典型的：</p>
+<p><strong>Create → Set up → Get → Start</strong>。</p>
+<p>它实际上直接把整个阅读目录写成一条任务路径。(<a href="https://docs.stripe.com/get-started?locale=en-GB&amp;utm_source=chatgpt.com" title="Get started">Stripe Docs</a>)</p>
+<p>所以以后你的 Quickstart 标题可以尽量：</p>
+<blockquote>
+<p><strong>动词 + 对象</strong></p>
+</blockquote>
+<p>比如：</p>
+<ul>
+<li>
+<p>Install the CLI</p>
+</li>
+<li>
+<p>Create a project</p>
+</li>
+<li>
+<p>Configure authentication</p>
+</li>
+<li>
+<p>Send the request</p>
+</li>
+<li>
+<p>Check the response</p>
+</li>
+<li>
+<p>Deploy the Worker</p>
+</li>
+</ul>
+<p>而 Concept / Reference 才更多使用名词标题：</p>
+<ul>
+<li>
+<p>Authentication</p>
+</li>
+<li>
+<p>Request headers</p>
+</li>
+<li>
+<p>Response format</p>
+</li>
+<li>
+<p>Error codes</p>
+</li>
+<li>
+<p>Rate limits</p>
+</li>
+</ul>
+<p>这是一个很好的判断方法。</p>
+<hr />
+<h2 id="6-overview">6. Overview 的好结构</h2>
+<p>Cloudflare Workers 的 Overview 非常典型：先用极短的一句话说明<strong>是什么 + 可以做什么</strong>，然后再进入能力和概念。(<a href="https://developers.cloudflare.com/workers/?utm_source=chatgpt.com" title="Overview · Cloudflare Workers docs">Cloudflare Docs</a>)</p>
+<p>可以抽象成：</p>
+<!-- vale Microsoft.Contractions = NO -->
+
+<h3 id="what-it-is">What it is</h3>
+<blockquote>
+<p>X is a ... that lets you ...</p>
+</blockquote>
+<h3 id="what-you-can-do">What you can do</h3>
+<ul>
+<li>
+<p>...</p>
+</li>
+<li>
+<p>...</p>
+</li>
+<li>
+<p>...</p>
+</li>
+</ul>
+<h3 id="how-it-works">How it works</h3>
+<p>简单架构/流程。</p>
+<h3 id="next-steps">Next steps</h3>
+<ul>
+<li>
+<p>Get started</p>
+</li>
+<li>
+<p>Read the guide</p>
+</li>
+<li>
+<p>View the reference</p>
+</li>
+</ul>
+<!-- vale Microsoft.Contractions = YES -->
+
+<p>英文非常好用的表达：</p>
+<ul>
+<li>
+<p>X is a...</p>
+</li>
+<li>
+<p>X lets you...</p>
+</li>
+<li>
+<p>You can use X to...</p>
+</li>
+<li>
+<p>With X, you can...</p>
+</li>
+<li>
+<p>X provides...</p>
+</li>
+<li>
+<p>X supports...</p>
+</li>
+<li>
+<p>X consists of...</p>
+</li>
+<li>
+<p>X works by...</p>
+</li>
+<li>
+<p>Under the hood,...</p>
+</li>
+<li>
+<p>When you..., X...</p>
+</li>
+</ul>
+<p>注意：</p>
+<blockquote>
+<p><strong>Overview 不是把所有内容都解释完。</strong></p>
+</blockquote>
+<p>它主要解决：</p>
+<blockquote>
+<p>这是什么？<br />
+为什么和我有关？<br />
+大概怎么工作？<br />
+下一页去哪？</p>
+</blockquote>
+<hr />
+<h2 id="7-how-to-goal-preconditions-steps-result">7. How-to 的核心结构：Goal → Preconditions → Steps → Result</h2>
+<p>How-to 和 Quickstart 很像，但区别在于：</p>
+<p>Quickstart：</p>
+<blockquote>
+<p>第一次成功。</p>
+</blockquote>
+<p>How-to：</p>
+<blockquote>
+<p>完成一个具体任务。</p>
+</blockquote>
+<p>所以可以固定成：</p>
+<div class="highlight"><pre><span></span><code># Configure authentication
+
+介绍：完成什么任务。
+
+## Before you begin
+
+真正必要的条件。
+
+## Configure ...
+
+1. ...
+2. ...
+3. ...
+
+## Verify the configuration
+
+确认成功。
+
+## Next steps
+
+下一项相关任务。
+</code></pre></div>
+<p>非常常见的过渡词：</p>
+<ul>
+<li>
+<p>To...</p>
+</li>
+<li>
+<p>First,...</p>
+</li>
+<li>
+<p>Next,...</p>
+</li>
+<li>
+<p>Then,...</p>
+</li>
+<li>
+<p>After...</p>
+</li>
+<li>
+<p>Once...</p>
+</li>
+<li>
+<p>When...</p>
+</li>
+<li>
+<p>Finally,...</p>
+</li>
+</ul>
+<p>但要注意：<strong>不需要每个步骤都写 First / Next / Then。</strong></p>
+<p>编号已经表达顺序。</p>
+<p>所以：</p>
+<blockquote>
+<ol>
+<li>
+<p>First, open...</p>
+</li>
+<li>
+<p>Next, select...</p>
+</li>
+<li>
+<p>Then, enter...
+</p>
+</li>
+</ol>
+</blockquote>
+<p>其实有点啰嗦。</p>
+<p>直接：</p>
+<blockquote>
+<ol>
+<li>
+<p>Open...</p>
+</li>
+<li>
+<p>Select...</p>
+</li>
+<li>
+<p>Enter...
+</p>
+</li>
+</ol>
+</blockquote>
+<hr />
+<h2 id="8-reference">8. Reference 是准确描述</h2>
+<p>Stripe API Reference 很值得学这一点是，Reference 不是“带你做”，而是：</p>
+<blockquote>
+<p><strong>准确描述一个对象。</strong></p>
+</blockquote>
+<p>例如 API 对象一般是：</p>
+<div class="highlight"><pre><span></span><code>Object / Endpoint
+
+一句话定义
+
+Parameters
+Responses
+Example request
+Example response
+Errors
+</code></pre></div>
+<p>Stripe 会首先非常简洁地定义 API 对象是什么，再说明它与其他对象之间的关系。(<a href="https://docs.stripe.com/api/checkout/sessions?utm_source=chatgpt.com" title="Checkout Sessions | Stripe API Reference">Stripe Docs</a>)</p>
+<p>这种页面经常使用：</p>
+<ul>
+<li>
+<p>represents</p>
+</li>
+<li>
+<p>specifies</p>
+</li>
+<li>
+<p>identifies</p>
+</li>
+<li>
+<p>indicates</p>
+</li>
+<li>
+<p>determines</p>
+</li>
+<li>
+<p>controls</p>
+</li>
+<li>
+<p>contains</p>
+</li>
+<li>
+<p>returns</p>
+</li>
+<li>
+<p>accepts</p>
+</li>
+<li>
+<p>supports</p>
+</li>
+<li>
+<p>defaults to</p>
+</li>
+<li>
+<p>must be</p>
+</li>
+<li>
+<p>can be</p>
+</li>
+<li>
+<p>is required</p>
+</li>
+<li>
+<p>is optional</p>
+</li>
+</ul>
+<p>比如参数描述：</p>
+<blockquote>
+<p><code>limit</code> specifies the maximum number of items to return.</p>
+<p><code>owner</code> identifies the repository owner.</p>
+<p>The response contains...</p>
+<p>The API returns...</p>
+</blockquote>
+<p>这类表达比：</p>
+<blockquote>
+<p>This parameter is used to...</p>
+</blockquote>
+<p>通常更短。</p>
+<hr />
+<h2 id="9-troubleshooting">9. Troubleshooting 值得复用的症状语言</h2>
+<p>Troubleshooting 和普通 Guide 最大区别是，它从用户看到的问题出发。</p>
+<p>可以固定使用：</p>
+<h3 id="problem-symptom">Problem / Symptom</h3>
+<ul>
+<li>
+<p>The request fails with...</p>
+</li>
+<li>
+<p>You receive a <code>403</code> response.</p>
+</li>
+<li>
+<p>The command returns...</p>
+</li>
+<li>
+<p>The application doesn't start.</p>
+</li>
+<li>
+<p>You can't connect to...</p>
+</li>
+<li>
+<p>X is missing from the response.</p>
+</li>
+</ul>
+<h3 id="cause">Cause</h3>
+<ul>
+<li>
+<p>This usually happens when...</p>
+</li>
+<li>
+<p>This can occur if...</p>
+</li>
+<li>
+<p>A common cause is...</p>
+</li>
+<li>
+<p>The request fails because...</p>
+</li>
+<li>
+<p>This indicates that...</p>
+</li>
+</ul>
+<h3 id="check">Check</h3>
+<ul>
+<li>
+<p>Check whether...</p>
+</li>
+<li>
+<p>Verify that...</p>
+</li>
+<li>
+<p>Make sure that...</p>
+</li>
+<li>
+<p>Inspect...</p>
+</li>
+<li>
+<p>Run the following command to check...</p>
+</li>
+</ul>
+<h3 id="fix">Fix</h3>
+<ul>
+<li>
+<p>To resolve the issue,...</p>
+</li>
+<li>
+<p>To fix this problem,...</p>
+</li>
+<li>
+<p>Update...</p>
+</li>
+<li>
+<p>Replace...</p>
+</li>
+<li>
+<p>Reconfigure...</p>
+</li>
+<li>
+<p>Retry the request.</p>
+</li>
+</ul>
+<h3 id="verify">Verify</h3>
+<ul>
+<li>
+<p>Retry the request.</p>
+</li>
+<li>
+<p>Confirm that...</p>
+</li>
+<li>
+<p>You should now see...</p>
+</li>
+</ul>
+<p>因此，Troubleshooting 可以固定成：</p>
+<blockquote>
+<p><strong>Symptom → Cause → Check → Fix → Verify</strong></p>
+</blockquote>
+<hr />
+<h2 id="10">10. 条件、限制要提前写</h2>
+<p>这是阿里云和 TiDB 文档中特别明显的地方。</p>
+<p>例如 API Key、地域、TLS、版本要求等，如果不满足就根本做不了任务，它们会被放进<strong>前提条件、注意、重要</strong>这些位置，而不是用户执行到最后才告诉他。(<a href="https://help.aliyun.com/zh/model-studio/application-obtain-temporary-authentication-token?utm_source=chatgpt.com" title="生成临时API Key-大模型服务平台百炼(Model Studio) - 阿里云帮助文档">阿里云帮助中心</a>)</p>
+<p>英文很好用：</p>
+<ul>
+<li>
+<p>If...</p>
+</li>
+<li>
+<p>When...</p>
+</li>
+<li>
+<p>For...</p>
+</li>
+<li>
+<p>Only...</p>
+</li>
+<li>
+<p>Unless...</p>
+</li>
+<li>
+<p>Depending on...</p>
+</li>
+<li>
+<p>This feature is available only...</p>
+</li>
+<li>
+<p>X requires...</p>
+</li>
+<li>
+<p>X isn't supported...</p>
+</li>
+<li>
+<p>If you're using X,...</p>
+</li>
+</ul>
+<p>特别推荐 Microsoft 的一个原则：</p>
+<blockquote>
+<p><strong>如果一句话有重要条件，把条件尽量提前。</strong> (<a href="https://learn.microsoft.com/en-us/contribute/content/style-quick-start?utm_source=chatgpt.com" title="Microsoft Learn style guide - Quick start - Contributor guide">Microsoft Learn</a>)</p>
+</blockquote>
+<p>例如不要：</p>
+<blockquote>
+<p>Select <strong>Connect</strong> if you're using a public endpoint.</p>
+</blockquote>
+<p>改成：</p>
+<blockquote>
+<p>If you're using a public endpoint, select <strong>Connect</strong>.</p>
+</blockquote>
+<p>因为用户第一眼就知道：</p>
+<p><strong>这一条是不是我的情况。</strong></p>
+<hr />
+<h2 id="11">11. 中文技术文档同样应该多用“短动作句”</h2>
+<p>中文很容易出现这种 AI / 公文味：</p>
+<blockquote>
+<p>为了能够进一步完成对于相关 API 接口功能的调用，需要首先完成 API Key 的相关配置工作。</p>
+</blockquote>
+<p>完全可以改成：</p>
+<blockquote>
+<p>先配置 API Key。</p>
+</blockquote>
+<p>或者：</p>
+<blockquote>
+<p>调用 API 前，先配置 API Key。</p>
+</blockquote>
+<p>再比如：</p>
+<p>❌</p>
+<blockquote>
+<p>用户可以通过执行以下命令的方式来创建一个新的项目。</p>
+</blockquote>
+<p>✅</p>
+<blockquote>
+<p>运行以下命令创建项目。</p>
+</blockquote>
+<p>❌</p>
+<blockquote>
+<p>在完成上述操作之后，可以看到系统将返回如下所示的响应结果。</p>
+</blockquote>
+<p>✅</p>
+<blockquote>
+<p>请求成功后，系统返回以下响应。</p>
+</blockquote>
+<p>这其实就是中英文共通的原则：</p>
+<blockquote>
+<p><strong>删掉“进行、相关、通过……的方式、可以看到、完成上述操作之后”等空壳词。</strong></p>
+</blockquote>
+<hr />
+<h2 id="_5">沉淀物</h2>
+<h3 id="12">12. 技术写作基本词库</h3>
+<h4 id="_6">任务</h4>
+<p><code>create / configure / install / set up / enable / connect / send / run / deploy / update / delete</code></p>
+<h4 id="_7">查看</h4>
+<p><code>view / check / inspect / review / locate / find</code></p>
+<h4 id="_8">验证</h4>
+<p><code>verify / confirm / validate / test</code></p>
+<h4 id="_9">描述</h4>
+<p><code>provide / contain / include / represent / specify / indicate / identify</code></p>
+<h4 id="api">API</h4>
+<p><code>send / request / return / response / endpoint / parameter / header / payload / status code</code></p>
+<h4 id="_10">条件</h4>
+<p><code>require / support / available / optional / required / default</code></p>
+<h4 id="_11">排错</h4>
+<p><code>fail / error / issue / cause / check / resolve / retry</code></p>
+<p>仅仅把这些最基础的动词用准确，技术英语已经会比堆：</p>
+<blockquote>
+<p>utilize / facilitate / leverage / enable seamless...</p>
+</blockquote>
+<p>专业很多。</p>
+<hr />
+<h3 id="13">13. 五种万能骨架</h3>
+<p>以后拿到任何陌生产品，都可以先套这五种。</p>
+<p><strong>Overview</strong></p>
+<!-- vale Microsoft.Contractions = NO -->
+
+<blockquote>
+<p>What is it?<br />
+What can it do?<br />
+How does it work?<br />
+Where should I go next?</p>
+</blockquote>
+<!-- vale Microsoft.Contractions = YES -->
+
+<p><strong>Quickstart</strong></p>
+<blockquote>
+<p>Goal<br />
+Before you start<br />
+Step 1<br />
+Step 2<br />
+Step 3<br />
+Verify the result<br />
+Next steps</p>
+</blockquote>
+<p><strong>How-to</strong></p>
+<blockquote>
+<p>Goal<br />
+Prerequisites<br />
+Procedure<br />
+Expected result<br />
+Next task</p>
+</blockquote>
+<p><strong>Reference</strong></p>
+<blockquote>
+<p>Definition<br />
+Syntax / Endpoint<br />
+Parameters<br />
+Request<br />
+Response<br />
+Errors<br />
+Notes</p>
+</blockquote>
+<p><strong>Troubleshooting</strong></p>
+<blockquote>
+<p>Symptom<br />
+Cause<br />
+Check<br />
+Fix<br />
+Verify</p>
+</blockquote>
+<p><strong>看到一堆技术资料，不是跟着原资料的顺序重写，而是先判断用户处于什么任务，再选择对应的文档骨架。</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js"></script>
+      
+        <script src="../../javascripts/mermaid-init.js"></script>
+      
+        <script src="../../javascripts/download-links.js"></script>
+      
+    
+  </body>
+</html>
