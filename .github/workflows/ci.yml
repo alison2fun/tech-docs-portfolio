@@ -43,6 +43,7 @@ jobs:
           fail_on_error: true
           filter_mode: nofilter
           reporter: github-check
+          min_alert_level: error
 
       - name: Build documentation
         run: mkdocs build --strict

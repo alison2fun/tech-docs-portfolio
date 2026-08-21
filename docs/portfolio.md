@@ -6,7 +6,7 @@ hide:
 
 # 作品总览
 
-这里展示四个核心项目，分别是硬件资料重构、产品文档、文档工程以及英文技术写作。每个项目都可以直接进入成品页面，如果你对文档从原始材料到最后结果的过程感兴趣，可以参考[案例复盘](case-studies/index.md)。
+这里展示四个核心项目，分别是硬件资料重构、产品文档、文档工程以及英文技术写作。每个项目都可以直接进入成品页面；如果你对文档从原始材料到最后结果的过程感兴趣，可以参考[复盘与方法](case-studies/index.md)。
 
 其中，硬件项目基于德州仪器（TI）的真实产品资料；微信小程序来自我对用户需求的观察，并使用 AI 辅助制作；文档流水线工程运行在 GitHub 的当前仓库中。
 
@@ -107,27 +107,27 @@ hide:
 
         <div class="solid-card card-wide">
             <div class="portfolio-card-layout">
-                <img src="../assets/thumb-english-documentation.svg" alt="Documentation Quality Pipeline English document set thumbnail" class="portfolio-thumb portfolio-thumb--fill">
+                <img src="../assets/thumb-english-documentation.svg" alt="English documentation projects thumbnail" class="portfolio-thumb portfolio-thumb--fill">
                 <div>
                     <div class="card-header">
                         <span class="serif-num">04</span>
                         <span class="card-label">English Documentation · Docs-as-Code</span>
                     </div>
-                    <h3 class="card-title">Documentation Quality Pipeline</h3>
+                    <h3 class="card-title">English Documentation</h3>
                     <div class="portfolio-skill-tags" aria-label="Skills demonstrated">
                         <span class="doc-badge">English Technical Writing</span>
                         <span class="doc-badge">Task-based Docs</span>
                         <span class="doc-badge">Vale</span>
                     </div>
-                    <p class="card-desc">This five-page documentation set turns the workflow from Project 03 into an English task path. Readers start with a local Vale check, then move to repository rules, GitHub Actions, and troubleshooting.</p>
+                    <p class="card-desc">Two English projects cover a verified GitHub REST API task and the documentation pipeline used by this portfolio.</p>
                     <div class="portfolio-context">
-                        <span><strong>Reader task</strong> Run Vale locally, understand the active rules, and follow the same check in CI.</span>
-                        <span><strong>Published pages</strong> Project Overview, local Vale Quick Start, configuration guide, GitHub Actions guide, and troubleshooting guide.</span>
-                        <span><strong>Current evidence</strong> All five pages pass the current local Vale check and MkDocs strict build. A controlled CI failure-and-recovery test remains pending.</span>
+                        <span><strong>GitHub REST API sample</strong> Use GitHub CLI or curl to read repository metadata, then diagnose terminal and HTTP failures.</span>
+                        <span><strong>Documentation Quality Pipeline</strong> Run Vale locally, inspect repository rules, follow the GitHub Actions check, and troubleshoot failures.</span>
+                        <span><strong>Evidence boundary</strong> Each project records the tested environment, observed results, and cases that remain unverified.</span>
                     </div>
                     <div class="action-link-group">
-                        <a href="../core-projects/english-documentation/quick-start/" class="action-link action-link-primary">View Quick Start &rarr;</a>
-                        <a href="../core-projects/english-documentation/github-actions/" class="action-link">View GitHub Actions &rarr;</a>
+                        <a href="../core-projects/english-documentation/" class="action-link action-link-primary">View English works &rarr;</a>
+                        <a href="../core-projects/english-documentation/github-rest-api/quickstart/" class="action-link">View recommended sample &rarr;</a>
                     </div>
                 </div>
             </div>
@@ -157,5 +157,5 @@ hide:
 
 <div class="bottom-pager">
     <a href="../" class="pager-link">返回首页</a>
-    <a href="../case-studies/" class="pager-link pager-link-primary">下一步去看案例复盘</a>
+    <a href="../case-studies/" class="pager-link pager-link-primary">下一步：复盘与方法</a>
 </div>

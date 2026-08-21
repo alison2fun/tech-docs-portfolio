@@ -53,7 +53,11 @@ ESP-IDF 快速入门没有把这些步骤压成一条不分条件的长列表，
 
 对于规模较小的项目，可以先给出一条默认环境的最短路径，再把其他系统和 IDE 作为分支。大型 SDK 则需要像 ESP-IDF 一样，把版本、目标和平台选择做成长期维护的导航能力。
 
+## 我后来怎样使用
+
+在 [OPT4001YMNEVM 快速开始](../02-hardware.md)中，我先分开硬件准备、软件准备和连接结果，再让读者依次检查 coupon board、USB 连接、EVM GUI 与首次采集。当前文档只覆盖官方资料确认的 Windows 路径，其他平台和实际软件兼容性没有被扩写成未经验证的分支。
+
 <div class="bottom-pager">
-    <a href="../../posts/" class="pager-link">返回写作与方法</a>
+    <a href="../" class="pager-link">返回复盘与方法</a>
     <a href="../vuejs-interactive-tutorial/" class="pager-link pager-link-primary">下一篇：Vue 互动教程</a>
 </div>

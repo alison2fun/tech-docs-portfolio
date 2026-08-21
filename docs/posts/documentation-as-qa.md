@@ -48,7 +48,11 @@ API 文档尤其容易暴露问题。
 
 对我来说，文档的 QA 价值来自这种逐步追问。它让隐含知识变成可以检查的句子、步骤和示例，也让尚未解决的问题更早出现。
 
+## 我后来怎样使用
+
+在[微步 ACTION 数据与隐私边界](../mini-programs/action/product/data-privacy-boundaries.md)中，任务内容的发送、保存和用户控制被拆开说明；在[光照测量 API Reference](../03-api/api-reference.md)中，设备不存在和没有测量记录被拆成两种 404 结果。这些页面都把“缺少说明”继续追问到数据边界或接口契约，而没有由文档自行补出产品行为。
+
 <div class="bottom-pager">
-    <a href="../" class="pager-link">返回写作与方法</a>
+    <a href="../../case-studies/" class="pager-link">返回复盘与方法</a>
     <a href="../choosing-docs-tools/" class="pager-link pager-link-primary">下一篇：选择文档工具</a>
 </div>

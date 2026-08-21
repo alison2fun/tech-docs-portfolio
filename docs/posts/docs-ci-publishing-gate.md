@@ -189,7 +189,7 @@ Vale 在这条流程中只报告问题，不会自动修改文档。文档修改
 
 ---
 
-## 这套方案还没有证明什么
+## 当前限制
 
 目前没有公开核验分支保护和 required checks。
 
@@ -226,8 +226,20 @@ Vale Action 已固定到完整 commit SHA，`actions/checkout@v4` 和 `actions/s
 
 ---
 
-## 继续查看
+## 最终交付物
 
 - [查看项目概览](../01-automation.md)
+- [查看 Quick Start](../install.md)
+- [查看 GitHub Actions 工作流](../github-actions-workflow.md)
 - [查看验证结果](../core-projects/docs-engineering/validation-results.md)
-- [返回案例总览](../case-studies/index.md)
+
+## 相关方法
+
+- [文档为什么会过期](preventing-stale-docs.md)
+- [选择文档工具前，我会先问哪几个问题](choosing-docs-tools.md)
+- [怎样与 AI 协作写技术文档](ai-assisted-docs-boundaries.md)
+
+<div class="bottom-pager">
+    <a href="../../01-automation/" class="pager-link">返回项目概览</a>
+    <a href="../../case-studies/" class="pager-link pager-link-primary">返回复盘与方法</a>
+</div>

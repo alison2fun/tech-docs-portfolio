@@ -27,6 +27,6 @@
 我还会把预计时间当作内容设计的一部分。它能提醒作者检查章节体量，也能让读者更从容地安排一次学习。
 
 <div class="bottom-pager">
-    <a href="../../posts/" class="pager-link">返回写作与方法</a>
+    <a href="../" class="pager-link">返回复盘与方法</a>
     <a href="../tidb-docs-information-architecture/" class="pager-link pager-link-primary">下一篇：TiDB 文档中心</a>
 </div>

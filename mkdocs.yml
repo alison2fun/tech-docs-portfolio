@@ -54,6 +54,22 @@ markdown_extensions:
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
 
+# 旧入口、迁移页和完整拆解目录中的非重点文章仍需保留 URL，
+# 但不重复占用左侧主导航。
+not_in_nav: |
+  /05-miniprogram-task-decomposer/**
+  /case-studies/apple-swiftui-tutorials.md
+  /case-studies/docker-workshop.md
+  /case-studies/github-hello-world.md
+  /case-studies/kubernetes-basics.md
+  /case-studies/mdn-first-website.md
+  /case-studies/vuejs-interactive-tutorial.md
+  /mini-programs/action/releases/release-notes.md
+  /mini-programs/action/technical/**
+  /posts/index.md
+  /posts/portfolio-information-architecture.md
+  /site-changelog.md
+
 nav:
   - 首页: index.md
 
@@ -93,12 +109,17 @@ nav:
           - 验证结果: core-projects/docs-engineering/validation-results.md
           - 故障排查: troubleshooting.md
           - 更新记录: changelog.md
-      - 04 English Documentation｜Documentation Quality Pipeline:
-          - Project Overview: core-projects/english-documentation/index.md
-          - Quick Start：Run Vale locally: core-projects/english-documentation/quick-start.md
-          - Configure Vale: core-projects/english-documentation/configure-vale.md
-          - GitHub Actions: core-projects/english-documentation/github-actions.md
-          - Troubleshooting: core-projects/english-documentation/troubleshooting.md
+      - 04 English Documentation｜English works:
+          - English work overview: core-projects/english-documentation/index.md
+          - GitHub REST API documentation:
+              - Get repository details with the GitHub REST API: core-projects/english-documentation/github-rest-api/quickstart.md
+              - Troubleshoot repository metadata requests: core-projects/english-documentation/github-rest-api/troubleshooting.md
+          - Documentation Quality Pipeline:
+              - Project Overview: core-projects/english-documentation/documentation-quality-pipeline.md
+              - Quick Start：Run Vale locally: core-projects/english-documentation/quick-start.md
+              - Configure Vale: core-projects/english-documentation/configure-vale.md
+              - GitHub Actions: core-projects/english-documentation/github-actions.md
+              - Troubleshooting: core-projects/english-documentation/troubleshooting.md
       - 更多样本:
           - 光照测量 API 文档案例:
               - 项目概览: 03-api/index.md
@@ -108,28 +129,32 @@ nav:
           - 写作样稿索引: writing-samples/index.md
           - 全部样稿: writing-samples/all.md
 
-  - 案例复盘:
-      - 案例总览: case-studies/index.md
-      - 从一页说明书到产品文档集: case-studies/mini-program-doc-set.md
-      - 从局部检查到验证后发布: posts/docs-ci-publishing-gate.md
-      - 从官方资料到开发者文档集: posts/hardware-datasheet-restructure.md
-      - 作品集改版复盘: case-studies/portfolio-redesign.md
-
-  - 写作与方法:
-      - 文章总览: posts/index.md
-      - 写作与信息架构:
-          - 技术文档作品集为什么需要信息架构: posts/portfolio-information-architecture.md
-          - 如何写一篇让读者真正跑通的 Quick Start: posts/quick-start-reader-success.md
-          - API 文档如何写清楚接入路径: posts/api-onboarding-path.md
-          - 为什么写文档会提前暴露产品问题: posts/documentation-as-qa.md
-          - 为不同读者设计阅读路径: posts/multiple-reader-paths.md
-      - 文档工程与维护:
-          - 选择文档工具前先问什么: posts/choosing-docs-tools.md
-          - 文档为什么会过期: posts/preventing-stale-docs.md
-          - 截图型文档怎样避免迅速过期: posts/maintainable-screenshots.md
-          - 站点更新记录: site-changelog.md
-      - AI 辅助写作的边界:
-          - AI 辅助技术文档的边界在哪里: posts/ai-assisted-docs-boundaries.md
+  - 复盘与方法:
+      - 总览: case-studies/index.md
+      - 项目复盘:
+          - 从局部检查到验证后发布: posts/docs-ci-publishing-gate.md
+          - GitHub 英文文档写作复盘: posts/github-rest-api-english-docs-retrospective.md
+          - 从官方资料到开发者文档集: posts/hardware-datasheet-restructure.md
+          - 光照测量 API 文档案例: 03-api/index.md
+          - 作品集改版复盘: case-studies/portfolio-redesign.md
+          - 从一页说明书到产品文档集（整理中）: case-studies/mini-program-doc-set.md
+      - 写作方法:
+          - 从项目中总结的方法:
+              - 怎样与 AI 协作写技术文档: posts/ai-assisted-docs-boundaries.md
+              - 怎样写一篇可执行的 Quickstart: posts/quick-start-reader-success.md
+              - 怎样写一篇能完成诊断的 Troubleshooting: posts/troubleshooting-diagnostic-writing.md
+              - API 接入路径: posts/api-onboarding-path.md
+              - 文档怎样暴露产品问题: posts/documentation-as-qa.md
+              - 文档为什么会过期: posts/preventing-stale-docs.md
+              - 截图型文档怎样维护: posts/maintainable-screenshots.md
+              - 为不同读者设计阅读路径: posts/multiple-reader-paths.md
+              - 更多方法：选择文档工具: posts/choosing-docs-tools.md
+          - 优秀文档拆解:
+              - GitHub REST API 故障排查: case-studies/github-rest-api-troubleshooting-breakdown.md
+              - Stripe Checkout Quickstart: case-studies/stripe-checkout-quickstart.md
+              - Cloudflare Workers Quick Start: case-studies/cloudflare-workers-quick-start-breakdown.md
+              - Docker daemon 故障排查: case-studies/docker-daemon-troubleshooting-breakdown.md
+              - 全部拆解: case-studies/document-breakdowns.md
 
   - 关于: about.md
 
