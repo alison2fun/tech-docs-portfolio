@@ -54,9 +54,12 @@ hide:
   </section>
 
   <section class="sample-directory-section" aria-labelledby="english-documentation">
-    <h2 id="english-documentation">四　Documentation Quality Pipeline</h2>
+    <h2 id="english-documentation">四　English documentation</h2>
     <ol class="sample-directory-list">
-      <li><a href="../../core-projects/english-documentation/">Project overview</a></li>
+      <li><a href="../../core-projects/english-documentation/">English work overview</a></li>
+      <li><a href="../../core-projects/english-documentation/github-rest-api/quickstart/">Get repository details with the GitHub REST API</a></li>
+      <li><a href="../../core-projects/english-documentation/github-rest-api/troubleshooting/">Troubleshoot repository metadata requests</a></li>
+      <li><a href="../../core-projects/english-documentation/documentation-quality-pipeline/">Documentation Quality Pipeline project overview</a></li>
       <li><a href="../../core-projects/english-documentation/quick-start/">Set up local documentation checks with Vale</a></li>
       <li><a href="../../core-projects/english-documentation/configure-vale/">Configure Vale for a documentation repository</a></li>
       <li><a href="../../core-projects/english-documentation/github-actions/">Run Vale in GitHub Actions</a></li>

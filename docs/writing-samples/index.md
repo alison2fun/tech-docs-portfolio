@@ -21,8 +21,8 @@ hide:
         <p>展示准备信息、发送请求、检查结果和处理错误的完整调用路径。</p>
       </article>
       <article class="sample-feature-item">
-        <h3><a href="../core-projects/english-documentation/">Documentation Quality Pipeline</a></h3>
-        <p>英文项目概览，展示 Vale、MkDocs 与 GitHub Actions 组成的文档质量检查流程。</p>
+        <h3><a href="../core-projects/english-documentation/github-rest-api/quickstart/">Get repository details with the GitHub REST API</a></h3>
+        <p>英文 Quickstart，展示命令、平台差异、可观察结果和验证边界怎样组成一次完整请求。</p>
       </article>
     </div>
   </section>
@@ -60,7 +60,7 @@ hide:
           <li><a href="../core-projects/docs-engineering/validation-results/">文档质量检查验证结果</a></li>
           <li><a href="../troubleshooting/">文档质量流水线故障排查</a></li>
           <li><a href="../changelog/">文档项目更新记录</a></li>
-          <li><a href="../core-projects/english-documentation/">Documentation Quality Pipeline</a></li>
+          <li><a href="../core-projects/english-documentation/documentation-quality-pipeline/">Documentation Quality Pipeline</a></li>
           <li><a href="../core-projects/english-documentation/configure-vale/">Configure Vale for a documentation repository</a></li>
           <li><a href="../core-projects/english-documentation/github-actions/">Run Vale in GitHub Actions</a></li>
           <li><a href="../core-projects/english-documentation/troubleshooting/">Troubleshoot Vale and CI checks</a></li>

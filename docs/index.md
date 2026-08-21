@@ -29,7 +29,7 @@ hide:
         <a href="assets/resume-zhuowen-liang.pdf" class="home-action" download="梁卓雯-技术文档工程师-深圳.pdf" type="application/pdf" target="_blank" rel="noopener" data-download-pdf data-md-ignore>下载简历</a>
     </nav>
 
-    <p class="home-secondary-links"><a href="case-studies/">案例复盘</a> · <a href="posts/">写作与方法</a> · <a href="about/">关于</a></p>
+    <p class="home-secondary-links"><a href="case-studies/">复盘与方法</a> · <a href="about/">关于</a></p>
 
     <p class="home-tech-stack"><span>Powered by MkDocs Material</span><span>GitHub Actions</span><span>Vale</span><span>Mermaid.js</span><a href="site-changelog/">v2.3.0</a></p>
 
@@ -69,9 +69,9 @@ hide:
 
     [进入项目](01-automation.md)
 
-- **04 English Documentation｜Documentation Quality Pipeline**
+- **04 English Documentation｜English works**
 
-    This five-page English documentation set explains how to run Vale locally, configure repository rules, add the check to GitHub Actions, and troubleshoot failures.
+    Two English projects cover a small GitHub REST API task and a five-page Documentation Quality Pipeline. Start with the API Quickstart, then follow its companion Troubleshooting page.
 
     <span class="doc-badge">English Technical Writing</span>
     <span class="doc-badge">Task-based Docs</span>
@@ -86,7 +86,7 @@ hide:
 - **想看我怎样读硬件资料**，从 [OPT4001YMNEVM 开发者文档](core-projects/hardware/index.md)开始
 - **想看我怎样围绕用户任务写文档**，从[小程序产品文档集](mini-programs.md)开始
 - **想看文档怎样进入检查和发布流程**，从[文档质量自动化流水线](01-automation.md)开始
-- **想看英文技术写作**，从 [Documentation Quality Pipeline](core-projects/english-documentation/index.md)开始
+- **想看英文技术写作**，从 [English documentation](core-projects/english-documentation/index.md)开始
 
 ## 项目做完以后
 
@@ -94,7 +94,7 @@ hide:
 
 - [从局部检查到验证后发布](posts/docs-ci-publishing-gate.md)
 - [从官方资料到开发者文档集](posts/hardware-datasheet-restructure.md)
-- [如何写一篇让读者真正跑通的 Quick Start](posts/quick-start-reader-success.md)
+- [GitHub 英文文档写作复盘](posts/github-rest-api-english-docs-retrospective.md)
 
 ## 如果你想继续了解我
 

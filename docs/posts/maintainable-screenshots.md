@@ -45,7 +45,7 @@
 * 夜间模式下边界是否清楚；
 * 图片替代文本是否说明内容和用途。
 
-## 我如何应用到产品文档中
+## 我后来怎样使用
 
 [微步 ACTION 快速开始](../mini-programs/action/user-guide/quick-start.md)、[PopDots 帮助文档](../dot-collage.md)和[照片换底色小程序](../photo-background.md)都使用了实际原型截图。
 
@@ -54,6 +54,6 @@
 截图型文档的维护成本无法消失。减少无必要截图、控制每张图的信息范围，并把文件和步骤建立对应关系，可以让下一次更新更容易开始。
 
 <div class="bottom-pager">
-    <a href="../" class="pager-link">返回写作与方法</a>
+    <a href="../../case-studies/" class="pager-link">返回复盘与方法</a>
     <a href="../multiple-reader-paths/" class="pager-link pager-link-primary">下一篇：为不同读者设计路径</a>
 </div>

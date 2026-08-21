@@ -27,6 +27,6 @@ Kubernetes Basics 用六个模块建立操作顺序：创建集群、部署应�
 模块化教程也需要明确边界。基础练习解决第一次理解，后续页面再带读者进入本地集群和更具体的场景。
 
 <div class="bottom-pager">
-    <a href="../../posts/" class="pager-link">返回写作与方法</a>
+    <a href="../" class="pager-link">返回复盘与方法</a>
     <a href="../../portfolio/" class="pager-link pager-link-primary">继续查看作品总览</a>
 </div>

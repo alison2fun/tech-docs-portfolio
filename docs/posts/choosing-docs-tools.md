@@ -49,6 +49,6 @@
 工具评估最后应该落到一组约束：读者任务、作者能力、评审方式、更新频率、质量检查和维护成本。把这些条件写出来，比单独比较功能列表更容易得到可解释的选择。
 
 <div class="bottom-pager">
-    <a href="../" class="pager-link">返回写作与方法</a>
+    <a href="../../case-studies/" class="pager-link">返回复盘与方法</a>
     <a href="../preventing-stale-docs/" class="pager-link pager-link-primary">下一篇：文档为什么会过期</a>
 </div>

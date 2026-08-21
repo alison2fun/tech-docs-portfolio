@@ -26,7 +26,11 @@ TiDB 文档中心同时保留了产品分类导航和任务入口。我打开首
 
 对于长期维护的产品，版本选择、发布历史、反馈和贡献入口同样属于阅读路径。它们决定读者是否敢把当前页面当成可靠依据。
 
+## 我后来怎样使用
+
+在[小程序产品文档集](../mini-programs.md)中，我没有把用户操作、产品设计和迭代计划继续放在同一页，而是先按读者任务分成用户指南、产品设计、迭代与计划，再在每组内提供具体页面。作品集本身也采用同样的入口分工：核心作品展示结果，“复盘与方法”记录项目过程和写作方法。
+
 <div class="bottom-pager">
-    <a href="../../posts/" class="pager-link">返回写作与方法</a>
+    <a href="../" class="pager-link">返回复盘与方法</a>
     <a href="../docker-workshop/" class="pager-link pager-link-primary">下一篇：Docker Workshop</a>
 </div>

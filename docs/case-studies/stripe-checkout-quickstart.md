@@ -1,62 +1,83 @@
-# Stripe Checkout Quickstart 如何压缩一条复杂集成路径
+# Stripe Checkout Quickstart：把第一次付款串成一条路径
 
-> **案例性质**：公开文档观察，不代表我参与过 Stripe Docs 的编写或维护。本文基于 2026 年 7 月可访问页面进行分析。
+[查看 Stripe Checkout Quickstart](https://docs.stripe.com/checkout/quickstart)
 
-**分析对象**：
+## 网页步骤
 
-* [Stripe Checkout Quickstart](https://docs.stripe.com/checkout/quickstart)
-* [Stripe API Reference](https://docs.stripe.com/api)
+Stripe 有一条主任务路径，页面会支持多种编程语言和框架。读者可以先选择自己的技术栈页面，再显示对应的代码。
 
-支付接入同时涉及服务端、客户端、密钥、产品价格、跳转和测试数据。Stripe Checkout Quickstart 的目标很集中：让开发者先完成一个由 Stripe 托管的支付页面。
+| 阶段 | 网页让读者做什么 | 完成后得到什么 |
+| --- | --- | --- |
+| 1. 安装 SDK | 安装对应语言的 Stripe 库 | 项目能够调用 Stripe |
+| 2. 创建 Checkout Session | 在服务端增加一个创建会话的接口 | 服务端得到 Checkout 页面 URL |
+| 3. 定义商品 | 设置商品、价格和货币 | Stripe 知道这次要卖什么 |
+| 4. 选择付款模式 | 选择一次性付款、订阅或仅保存付款方式 | Stripe 知道怎样处理付款 |
+| 5. 设置成功地址 | 提供付款成功后的返回 URL | Stripe 知道付款后把用户送到哪里 |
+| 6. 跳转到 Checkout | 使用 Session 返回的 URL | 顾客进入 Stripe 托管的付款页 |
+| 7. 添加成功页面 | 显示付款完成信息 | 顾客知道操作已经完成 |
+| 8. 添加订单预览和按钮 | 让顾客检查订单并开始付款 | 网站拥有完整的入口 |
+| 9. 配置密钥 | 将测试密钥放进环境变量 | 应用可以安全连接 Stripe |
+| 10. 运行应用 | 启动客户端和服务端 | 可以在浏览器里测试流程 |
+| 11. 使用测试卡付款 | 分别测试成功、验证和拒付情况 | 证明集成真的可以运行 |
 
-## 页面围绕一个可以运行的结果组织
+上述步骤后，页面会显示祝贺信息，告诉读者基本的 Checkout 集成已经可以工作。
 
-文档先说明最终交互：用户在商家页面点击按钮，被重定向到 Stripe 托管的结账页。
+## 可以学习之处
 
-后续步骤都服务于这个结果，包括安装 SDK、创建 Checkout Session、定义商品、配置成功地址、增加按钮和运行应用。
+### 开头就让读者看到最终场景
 
-复杂产品能力被暂时放到主路径之外。读者先得到一个可以测试的集成，再继续处理外观、税费、客户数据和履约。
+这篇文章在开头就告知读者最后的成功场景。比如：会得到一个结账按钮，有一个付款页面，实行一次测试付款后，会得到一个付款成功的页面。
 
-## 语言切换减少了示例翻译成本
+### 新概念出现时，立即解释用途
 
-同一个任务可以根据 Node、Ruby、Java、Python、PHP、Go 和 .NET 等语言显示对应安装方式与代码。
+文档在出现 Checkout Session 这个新的概念时，马上进行解释，极大降低了读者的理解成本。
 
-这种设计避免让读者自行把一种语言的概念翻译到自己的技术栈。文档结构保持一致，代码和依赖跟随语言变化。
+> A Checkout Session controls what your customer sees on the payment page, such as line items, the order amount and currency, and acceptable payment methods.
 
-它也带来维护要求：不同语言示例需要保持行为一致，版本号、参数和安全提示不能各自漂移。
+这是一个可以学习的 Quick Start 写作方法：
 
-## 安全说明出现在使用密钥的地方
+1. 读者遇到一个新对象；
+2. 文档说明该对象解决什么问题；
+3. 读者立刻使用它。
 
-Quickstart 不只告诉读者把密钥放进代码，还会提示不要把密钥公开，并链接到密钥最佳实践。
+### 安全提醒放在相关步骤附近
 
-安全信息贴近具体动作，比统一放在页面末尾更容易被看见。对于 Token、密码和设备凭证，说明出现的位置本身就是文档设计的一部分。
+例如，页面在配置 API 密钥时提醒读者使用环境变量，不要把密钥直接写进代码。
 
-## 测试数据让成功和失败都可以被验证
+> `# Don't put any keys in code. See https://docs.stripe.com/keys-best-practices.`
+>
+> `# Find your keys at https://dashboard.stripe.com/apikeys.`
 
-页面提供测试卡号，用于模拟支付成功、需要 3DS 验证和支付被拒绝等场景。
+提醒出现的位置很重要。读者刚要执行有风险的操作，就能看到对应限制，比集中放在文末更有效。
 
-读者可以主动观察不同结果，而不只验证“正常路径能打开”。这让 Quick Start 和测试指南之间有了自然连接。
+### 成功之后才展开拓展内容
 
-完成基础集成后，页面使用明确的完成提示，再引导到界面定制和税费等后续任务。主路径有终点，扩展路径也有入口。
+Stripe 先给出明确的完成提示，才介绍接下来的扩展功能，如外观、税费、配送地址和客户数据。这些都放在成功节点之后，不会妨碍整个主任务流程。
 
-## 我会保留的三个处理
+读者因此知道：到这里已经完成基本任务，后面的内容可以按需继续。
 
-对我的 API 文档来说，最值得借鉴的是四件事：
+## 英文写作方法
 
-* 先定义一个完整但有限的集成结果；
-* 让示例贴近读者使用的语言或工具；
-* 在敏感操作旁放置安全提醒；
-* 提供可触发的成功与失败测试数据。
+### 大量使用“动词 + 对象”推动步骤
 
-我的[光照测量 API 文档案例](../03-api/index.md)目前是虚构场景，只能展示认证、请求、响应和错误处理的结构。下一步若接入可运行的测试服务，还需要像 Stripe 一样补充真实测试数据和结果验证。
+- Install the Stripe library
+- Create a Checkout Session
+- Define a product
+- Choose a mode
+- Add a Checkout button
+- Run the application
+- Try it out
 
-## 复杂度需要克制
+### 积累句型
 
-Stripe 页面包含大量可切换语言和动态示例，这种体验依赖成熟的文档平台与持续维护。小团队未必需要复制全部交互。
+说明动作和目的：
 
-更值得保留的是背后的原则：先让读者完成一次有限成功，再逐步开放复杂能力。
+- Add an endpoint that creates a Checkout Session.
+- Specify a URL for the success page.
+- Use the returned URL to redirect the customer to Checkout.
+- Use the following test card to simulate a successful payment.
 
 <div class="bottom-pager">
-    <a href="../../posts/" class="pager-link">返回写作与方法</a>
-    <a href="../esp-idf-get-started/" class="pager-link pager-link-primary">下一篇：ESP-IDF 快速入门</a>
+    <a href="../github-rest-api-troubleshooting-breakdown/" class="pager-link">上一篇：GitHub REST API 故障排查</a>
+    <a href="../cloudflare-workers-quick-start-breakdown/" class="pager-link pager-link-primary">下一篇：Cloudflare Workers Quick Start</a>
 </div>
