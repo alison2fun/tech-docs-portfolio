@@ -4,7 +4,7 @@
 
 ## 项目说明
 
-这个项目基于 TI 的 [《OPT4001 Datasheet》](https://www.ti.com/lit/ds/symlink/opt4001.pdf)和 [《OPT4001YMNEVM User's Guide》](https://www.ti.com/lit/ug/sbou278/sbou278.pdf)，把分散在两份官方资料中的板卡结构、首次采集、I²C 读写、结果寄存器和故障信息，重组为 4 篇任务导向型的文档。
+OPT4001 是 TI 的一款环境光传感器。在此项目中，我基于 TI 的 [《OPT4001 Datasheet》](https://www.ti.com/lit/ds/symlink/opt4001.pdf)和 [《OPT4001YMNEVM User's Guide》](https://www.ti.com/lit/ug/sbou278/sbou278.pdf)，把分散在两份官方资料中的板卡结构、首次采集、I²C 读写、结果寄存器和故障信息，重组为 4 篇任务导向型的文档。
 
 这套文档面向第一次使用 OPT4001YMNEVM，并希望继续理解底层逻辑的开发者。它集中处理两个问题：
 
