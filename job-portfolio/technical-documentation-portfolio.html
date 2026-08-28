@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>梁卓雯｜Technical Documentation Portfolio</title>
+  <style>
+    @font-face { font-family: "KaiPDF"; src: url("file:///C:/Windows/Fonts/simkai.ttf"); }
+    @font-face { font-family: "YaHeiPDF"; src: url("file:///C:/Windows/Fonts/msyh.ttc"); }
+    :root {
+      --paper:#f5f4ed; --ivory:#faf9f5; --sand:#e8e6dc; --line:#dedbd0;
+      --ink:#141413; --muted:#504e49; --stone:#6b6a64; --blue:#1b365d;
+      --blue-soft:#eef2f7; --green-soft:#e8efe9; --amber-soft:#f3ecdc;
+      --red-soft:#f3e7e3;
+    }
+    * { box-sizing:border-box; }
+    @page { size:A4; margin:0; }
+    html, body { margin:0; padding:0; background:#d8d6ce; color:var(--ink); }
+    body { font-family:"YaHeiPDF","Microsoft YaHei",sans-serif; font-size:9.6pt; line-height:1.52; }
+    .page {
+      width:210mm; height:297mm; margin:0 auto; padding:12mm 15mm 13mm;
+      background:var(--paper); position:relative; overflow:hidden; page-break-after:always;
+    }
+    .page:last-child { page-break-after:auto; }
+    h1,h2,h3,p,figure { margin-top:0; }
+    h1,h2,h3,.serif { font-family:"KaiPDF","KaiTi",serif; font-weight:400; }
+    h1 { color:var(--blue); font-size:30pt; line-height:1.12; margin-bottom:8pt; letter-spacing:.3pt; }
+    h2 { font-size:18pt; line-height:1.2; margin-bottom:7pt; }
+    h3 { font-size:13pt; line-height:1.25; margin-bottom:5pt; }
+    p { margin-bottom:7pt; }
+    a { color:var(--blue); text-decoration:none; }
+    .eyebrow { color:var(--blue); font-size:8.5pt; letter-spacing:1.2pt; text-transform:uppercase; margin-bottom:8pt; }
+    .kicker { color:var(--muted); font-size:11pt; margin-bottom:18pt; }
+    .lead { font-size:11pt; line-height:1.68; max-width:148mm; color:#33332f; }
+    .section-title { border-left:2.5pt solid var(--blue); padding-left:8pt; margin:0 0 11pt; }
+    .rule { border-top:.6pt solid var(--line); margin:8pt 0 12pt; }
+    .tag-row { display:flex; flex-wrap:wrap; gap:5pt; margin:15pt 0 22pt; }
+    .tag { background:var(--blue-soft); color:var(--blue); border:.5pt solid #d0dce9; border-radius:11pt; padding:3pt 8pt; font-size:8.2pt; }
+    .route { display:grid; grid-template-columns:1fr 22pt 1fr 22pt 1fr; align-items:center; margin-top:18pt; }
+    .route-step { border:.7pt solid var(--line); background:var(--ivory); border-radius:9pt; padding:12pt; text-align:center; }
+    .route-step strong { display:block; color:var(--blue); font-size:12pt; font-weight:500; margin-bottom:3pt; }
+    .arrow { text-align:center; color:var(--blue); font-size:16pt; }
+    .grid-2 { display:grid; grid-template-columns:1fr 1fr; gap:10pt; }
+    .card { background:var(--ivory); border:.6pt solid var(--line); border-radius:9pt; padding:13pt 14pt; break-inside:avoid; }
+    .cap-card { min-height:102mm; display:flex; flex-direction:column; }
+    .cap-card .num { color:#9a7440; font-size:8.5pt; letter-spacing:1pt; }
+    .cap-card h3 { color:var(--blue); font-family:Georgia,"Times New Roman",serif; font-size:15pt; margin-top:5pt; }
+    .cap-card dl { margin:5pt 0 0; }
+    .cap-card dt { color:var(--stone); font-size:8pt; margin-top:7pt; }
+    .cap-card dd { margin:1pt 0 0; line-height:1.48; }
+    .project-head { display:grid; grid-template-columns:1fr 42mm; gap:12pt; align-items:start; }
+    .project-no { color:#9a7440; letter-spacing:1pt; font-size:8.5pt; }
+    .project-title { color:var(--blue); font-family:Georgia,"KaiPDF",serif; font-size:22pt; line-height:1.14; margin:3pt 0 7pt; }
+    .project-summary { color:var(--muted); line-height:1.58; }
+    .fact-box { background:var(--blue-soft); border-left:2.5pt solid var(--blue); border-radius:5pt; padding:9pt 10pt; }
+    .fact-box strong { color:var(--blue); font-weight:500; }
+    .diagram { margin:11pt 0 8pt; padding:8pt; border:.6pt solid var(--line); border-radius:9pt; background:var(--ivory); text-align:center; }
+    .diagram img { display:block; width:100%; height:132mm; object-fit:contain; }
+    .diagram--short img { height:87mm; }
+    .caption { color:var(--stone); font-size:8pt; text-align:center; margin:4pt 0 0; }
+    .deliverables { display:grid; grid-template-columns:repeat(4,1fr); gap:7pt; margin:8pt 0 11pt; }
+    .deliverable { border-top:2pt solid var(--blue); background:var(--ivory); padding:8pt; min-height:28mm; }
+    .deliverable strong { display:block; color:var(--blue); font-weight:500; margin-bottom:3pt; }
+    .boundary { color:var(--muted); font-size:8.5pt; border-top:.5pt solid var(--line); padding-top:7pt; }
+    .api-layout { display:grid; grid-template-columns:1.12fr .88fr; gap:10pt; margin-top:11pt; }
+    .path-card { background:var(--ivory); border:.6pt solid var(--line); border-radius:9pt; padding:11pt; }
+    .path-card + .path-card { margin-top:8pt; }
+    .path-card h3 { color:var(--blue); font-family:Georgia,"Times New Roman",serif; }
+    ul { margin:4pt 0 0 15pt; padding:0; }
+    li { margin-bottom:4pt; }
+    .screenshot { background:#fff; border:.6pt solid var(--line); border-radius:9pt; padding:7pt; }
+    .screenshot img { display:block; width:100%; height:89mm; object-fit:contain; }
+    .evidence { display:grid; grid-template-columns:repeat(3,1fr); gap:7pt; margin-top:10pt; }
+    .evidence div { background:var(--blue-soft); border-radius:6pt; padding:8pt; font-size:8.4pt; }
+    .evidence strong { color:var(--blue); display:block; font-weight:500; margin-bottom:2pt; }
+    .pipeline { background:var(--ivory); border:.6pt solid var(--line); border-radius:9pt; padding:12pt; margin:12pt 0; }
+    .pipeline img { display:block; width:100%; height:83mm; object-fit:contain; }
+    .ops-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:9pt; }
+    .ops-grid .card { min-height:50mm; }
+    .ops-grid h3 { color:var(--blue); font-family:Georgia,"Times New Roman",serif; }
+    .product-layout { display:grid; grid-template-columns:92mm 1fr; gap:12pt; align-items:start; margin-top:10pt; }
+    .product-image { background:var(--ivory); border:.6pt solid var(--line); border-radius:9pt; overflow:hidden; height:91mm; }
+    .product-image img { width:100%; height:100%; object-fit:cover; object-position:center 35%; display:block; }
+    .audience-card { border-left:2pt solid var(--blue); padding:3pt 0 4pt 9pt; margin-bottom:9pt; }
+    .audience-card h3 { color:var(--blue); margin-bottom:3pt; }
+    .contact-band { position:absolute; left:15mm; right:15mm; bottom:13mm; border-top:.8pt solid var(--line); padding-top:9pt; display:grid; grid-template-columns:1.2fr 1fr 1fr; gap:9pt; font-size:8pt; }
+    .contact-band strong { display:block; color:var(--stone); font-weight:400; margin-bottom:2pt; }
+    .footer { position:absolute; left:15mm; right:15mm; bottom:7mm; display:flex; justify-content:space-between; color:#85837b; font-size:7.5pt; }
+    .page-1 .footer { bottom:7mm; }
+    .page-1 { padding-top:24mm; }
+    .page-1 .identity { margin-top:18mm; }
+    .page-1 .contact-band { bottom:17mm; }
+    .page-2 .grid-2 { margin-top:12pt; }
+    .page-6 .product-summary { font-size:9.2pt; }
+    @media print {
+      body { background:none; }
+      .page { margin:0; }
+      a { color:var(--blue); }
+    }
+  </style>
+</head>
+<body>
+  <section class="page page-1">
+    <div class="eyebrow">求职作品集 · 2026</div>
+    <div class="identity">
+      <h1>梁卓雯 Zhuowen Liang</h1>
+      <div class="kicker">Technical Documentation Portfolio · 技术文档工程师｜深圳</div>
+      <p class="lead">电子信息硕士，围绕技术资料分析、信息架构和文档交付，持续完成硬件开发者文档、API 文档、产品文档与 Docs-as-Code 项目。</p>
+      <p class="lead">能够从 Datasheet、接口定义、产品流程和代码仓库中提取开发者真正需要的信息，再把它们组织成可以执行、查询和维护的文档。</p>
+      <div class="tag-row">
+        <span class="tag">Hardware Documentation</span><span class="tag">API Documentation</span>
+        <span class="tag">Product Documentation</span><span class="tag">Docs-as-Code</span>
+        <span class="tag">English Technical Writing</span>
+      </div>
+      <div class="route" aria-label="技术资料分析到文档交付">
+        <div class="route-step"><strong>技术资料分析</strong><span>识别来源、事实与验证边界</span></div>
+        <div class="arrow">→</div>
+        <div class="route-step"><strong>信息架构</strong><span>按读者任务重组内容</span></div>
+        <div class="arrow">→</div>
+        <div class="route-step"><strong>文档交付</strong><span>让内容可执行、可查、可维护</span></div>
+      </div>
+    </div>
+    <div class="contact-band">
+      <div><strong>Portfolio</strong><a href="https://alison2fun.github.io/tech-docs-portfolio/">alison2fun.github.io/tech-docs-portfolio</a></div>
+      <div><strong>Email</strong><a href="mailto:lzwof@foxmail.com">lzwof@foxmail.com</a></div>
+      <div><strong>Resume</strong><a href="https://alison2fun.github.io/tech-docs-portfolio/%E7%AE%80%E5%8E%86/">Online resume</a></div>
+    </div>
+    <div class="footer"><span>Technical Documentation Portfolio</span><span>01 / 06</span></div>
+  </section>
+
+  <section class="page page-2">
+    <div class="eyebrow">Capability map</div>
+    <h2 class="section-title">Documentation Capability Overview</h2>
+    <p class="project-summary">四类能力都落在已完成的页面、仓库配置或可核对的资料来源上。</p>
+    <div class="grid-2">
+      <article class="card cap-card"><div class="num">01</div><h3>Hardware Documentation</h3><dl><dt>输入</dt><dd>Datasheet、EVM User's Guide、原理图、GUI 资料</dd><dt>处理</dt><dd>交叉核对器件事实，按首次采集和底层读取任务重组</dd><dt>交付</dt><dd>Quick Start、系统说明、配置与读取、故障排查</dd></dl></article>
+      <article class="card cap-card"><div class="num">02</div><h3>API Documentation</h3><dl><dt>输入</dt><dd>公开 REST API、Endpoint、命令行输出和错误信息</dd><dt>处理</dt><dd>拆分主路径与诊断路径，明确命令、可观察结果和通过标准</dd><dt>交付</dt><dd>英文 Quick Start、Troubleshooting、接口说明</dd></dl></article>
+      <article class="card cap-card"><div class="num">03</div><h3>Product Documentation</h3><dl><dt>输入</dt><dd>小程序原型、产品流程、云函数和数据库边界</dd><dt>处理</dt><dd>按用户、产品和维护者三类任务组织信息</dd><dt>交付</dt><dd>User Guide、PRD、System Flow、隐私边界和迭代记录</dd></dl></article>
+      <article class="card cap-card"><div class="num">04</div><h3>Docs-as-Code Workflow</h3><dl><dt>输入</dt><dd>Markdown 文档仓库与写作规则</dd><dt>处理</dt><dd>统一版本管理、本地检查、严格构建和发布条件</dd><dt>交付</dt><dd>Vale + MkDocs + GitHub Actions + GitHub Pages 工作流</dd></dl></article>
+    </div>
+    <div class="footer"><span>Capability Overview</span><span>02 / 06</span></div>
+  </section>
+
+  <section class="page page-3">
+    <div class="project-head"><div><div class="project-no">PROJECT 01 · HARDWARE DOCUMENTATION</div><div class="project-title">OPT4001 EVM<br>Developer Documentation</div><p class="project-summary">TI 两份官方资料共 89 页。板卡结构、首次采集、I²C 读写、结果寄存器和故障信息分散在不同章节。</p></div><div class="fact-box"><strong>处理目标</strong><br>不是缩短 Datasheet，而是按开发者第一次成功与后续调试任务重组。</div></div>
+    <figure class="diagram"><img src="assets/opt4001-source-task-map.svg" alt="从官方资料到开发者任务文档"><figcaption class="caption">从 Datasheet 与 EVM User's Guide 中提取信息，再按开发者任务形成四篇文档。</figcaption></figure>
+    <div class="deliverables">
+      <div class="deliverable"><strong>Quick Start</strong>完成第一次 lux 数据采集</div>
+      <div class="deliverable"><strong>System</strong>理解控制、电气与光学链路</div>
+      <div class="deliverable"><strong>I²C + lux</strong>配置、读取结果并换算 lux</div>
+      <div class="deliverable"><strong>Troubleshooting</strong>按现象定位问题层级</div>
+    </div>
+    <p class="boundary">验证边界：器件事实与系统关系已按 TI 官方资料交叉核对；作者尚未使用真实 OPT4001YMNEVM 完成独立实物验证。</p>
+    <div class="footer"><span>OPT4001 EVM Developer Documentation</span><span>03 / 06</span></div>
+  </section>
+
+  <section class="page page-4">
+    <div class="project-head"><div><div class="project-no">PROJECT 02 · ENGLISH API DOCUMENTATION</div><div class="project-title">GitHub REST API<br>Documentation</div><p class="project-summary">使用公开仓库 <code>alison2fun/tech-docs-portfolio</code> 作为请求对象，把正常操作与故障诊断拆成两条连续路径。</p></div><div class="fact-box"><strong>完成标准</strong><br>不仅发出命令，还要看到 HTTP 200，并核对仓库全名、可见性和默认分支。</div></div>
+    <div class="api-layout">
+      <div>
+        <article class="path-card"><h3>Quick Start</h3><ul><li>提供 GitHub CLI 与 <code>curl</code> 两种方法</li><li>在关键命令后写明可观察结果</li><li>核对 <code>full_name</code>、<code>visibility</code> 和 <code>default_branch</code></li></ul></article>
+        <article class="path-card"><h3>Troubleshooting</h3><ul><li>按终端中的真实症状进入诊断</li><li>区分参数解析、认证、连接、404 和限流</li><li>修复后返回 Quick Start 继续原任务</li></ul></article>
+      </div>
+      <figure class="screenshot"><img src="assets/github-rest-api-troubleshooting-toc.png" alt="GitHub REST API Troubleshooting 内容入口"><figcaption class="caption">参考 GitHub 官方 Troubleshooting 的按症状检索方式。</figcaption></figure>
+    </div>
+    <div class="evidence">
+      <div><strong>curl</strong>8.14.1 请求已在 Windows PowerShell 中跑通</div>
+      <div><strong>GitHub CLI</strong>2.96.0 安装与浏览器认证已检查</div>
+      <div><strong>保留边界</strong>单行 GitHub CLI API 请求尚未重新运行</div>
+    </div>
+    <div class="footer"><span>GitHub REST API Documentation</span><span>04 / 06</span></div>
+  </section>
+
+  <section class="page page-5">
+    <div class="project-head"><div><div class="project-no">PROJECT 03 · DOCUMENTATION ENGINEERING</div><div class="project-title">Docs-as-Code<br>Workflow</div><p class="project-summary">当前作品集本身就是这条文档工程工作流的运行对象。内容、规则、构建和发布配置都保存在同一仓库中。</p></div><div class="fact-box"><strong>发布条件</strong><br>主分支先完成 Vale 检查和 MkDocs 严格构建，验证通过后才部署到 GitHub Pages。</div></div>
+    <figure class="pipeline"><img src="assets/workflow-docs-ci.svg" alt="Markdown 到 GitHub Pages 的文档工作流"><figcaption class="caption">Markdown → Vale + MkDocs → GitHub Actions → GitHub Pages</figcaption></figure>
+    <div class="ops-grid">
+      <article class="card"><h3>Version control</h3><p>Markdown、配置和图片与代码一起进入 Git 版本历史，修改能够追踪和回退。</p></article>
+      <article class="card"><h3>Automated validation</h3><p>Vale 检查写作规则，MkDocs 使用严格模式构建；Pull Request 与主分支使用同一套仓库配置。</p></article>
+      <article class="card"><h3>Continuous deployment</h3><p>GitHub Actions 先验证文档。主分支通过后，部署任务再发布到 GitHub Pages。</p></article>
+    </div>
+    <div class="footer"><span>Docs-as-Code Workflow</span><span>05 / 06</span></div>
+  </section>
+
+  <section class="page page-6">
+    <div class="project-head"><div><div class="project-no">PROJECT 04 · PRODUCT DOCUMENTATION</div><div class="project-title">Product Documentation<br>Practice</div><p class="project-summary">以个人微信小程序为对象，主案例是把大任务拆成五个可执行步骤的“微步 ACTION”。文档把用户任务、产品判断和技术维护分开组织。</p></div><div class="fact-box"><strong>文档对象</strong><br>用户如何开始、产品如何定义边界、维护者如何理解流程与数据去向。</div></div>
+    <div class="product-layout">
+      <figure class="product-image"><img src="assets/mini-programs-overview.png" alt="个人小程序产品文档示意"></figure>
+      <div>
+        <article class="audience-card"><h3>User Guide</h3><p>原型快速体验、创建与拆解任务、进度管理、常见问题和输入安全提醒。</p></article>
+        <article class="audience-card"><h3>PRD</h3><p>产品问题、用户故事、功能状态、完成标准、异常边界和非目标范围。</p></article>
+        <article class="audience-card"><h3>User Flow &amp; Maintenance</h3><p>系统流程、云函数调用、数据库保存、数据与隐私边界、迭代记录和路线图。</p></article>
+      </div>
+    </div>
+    <div class="rule"></div>
+    <p class="project-summary">这组文档把能够操作的原型继续补成可供不同读者使用的产品文档集：用户查操作，产品人员看需求与边界，维护者查流程和数据。</p>
+    <div class="contact-band">
+      <div><strong>Portfolio</strong><a href="https://alison2fun.github.io/tech-docs-portfolio/">alison2fun.github.io/tech-docs-portfolio</a></div>
+      <div><strong>Email</strong><a href="mailto:lzwof@foxmail.com">lzwof@foxmail.com</a></div>
+      <div><strong>Resume</strong><a href="https://alison2fun.github.io/tech-docs-portfolio/%E7%AE%80%E5%8E%86/">Online resume</a></div>
+    </div>
+    <div class="footer"><span>Product Documentation Practice</span><span>06 / 06</span></div>
+  </section>
+</body>
+</html>

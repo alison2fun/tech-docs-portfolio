@@ -505,6 +505,11 @@ body:has(.hardware-read-path-page) .md-nav--secondary .md-nav__list .md-nav__lis
   display: block;
 }
 
+/* Show problem-level headings in the troubleshooting page's right navigation. */
+body:has(.hardware-troubleshooting-page) .md-nav--secondary .md-nav__list .md-nav__list {
+  display: block;
+}
+
 body:has(.hardware-read-path-page) .md-nav--secondary li:has(> a[href="#read-path-overview"]),
 body:has(.hardware-read-path-page) .md-nav--secondary li:has(> a[href="#source-opt4001-data"]),
 body:has(.hardware-read-path-page) .md-nav--secondary li:has(> a[href="#source-opt4001-evm"]) {
@@ -1932,6 +1937,254 @@ body[data-md-color-scheme="slate"] .md-typeset table:not([class]) td {
 
 .portfolio-context strong {
   color: var(--kami-olive);
+}
+
+/* Portfolio overview: compact visual project directory. */
+.portfolio-overview-page .portfolio-overview-intro {
+  max-width: 52rem;
+  margin: 0 0 1rem;
+  color: var(--kami-muted);
+  font-size: 0.88rem;
+  line-height: 1.75;
+}
+
+.portfolio-overview-page .portfolio-overview-intro p {
+  margin: 0 0 0.45rem;
+}
+
+.portfolio-overview-page .portfolio-overview-intro p:last-child {
+  margin-bottom: 0;
+}
+
+.portfolio-overview-page .portfolio-overview-intro strong {
+  color: var(--kami-text);
+  font-weight: 600;
+}
+
+.portfolio-overview-page > h2 {
+  margin-top: 1.35rem;
+  margin-bottom: 0.85rem;
+}
+
+.portfolio-overview-page .project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1rem, 2.2vw, 1.45rem);
+}
+
+.portfolio-overview-page .project-card {
+  display: flex;
+  min-width: 0;
+  min-height: 19rem;
+  flex-direction: column;
+  overflow: hidden;
+  background: rgba(255, 253, 247, 0.86);
+  border: 1px solid var(--kami-border);
+  border-radius: 8px;
+  box-shadow: 0 10px 26px rgba(44, 38, 26, 0.055);
+  transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.portfolio-overview-page .project-card:hover {
+  border-color: var(--kami-border-strong);
+  box-shadow: 0 14px 30px rgba(44, 38, 26, 0.08);
+  transform: translateY(-2px);
+}
+
+.portfolio-overview-page .project-card__image {
+  display: grid;
+  width: 100%;
+  box-sizing: border-box;
+  height: 184px;
+  place-items: center;
+  padding: 0.55rem;
+  overflow: hidden;
+  background: var(--kami-ivory);
+  border-bottom: 1px solid var(--kami-border);
+}
+
+.portfolio-overview-page .project-card__image img,
+.md-typeset .portfolio-overview-page .project-card__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  margin: 0;
+  object-fit: contain;
+  object-position: center;
+}
+
+.portfolio-overview-page .project-card__body {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  flex-direction: column;
+  padding: 10px 16px 12px;
+}
+
+.portfolio-overview-page .project-card__meta {
+  margin: 0 0 4px;
+  color: var(--kami-ochre);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.045em;
+}
+
+.portfolio-overview-page .project-card__title {
+  display: -webkit-box;
+  min-height: 44px;
+  margin: 0 0 6px;
+  overflow: hidden;
+  color: var(--kami-blue);
+  font-family: var(--kami-serif);
+  font-size: 18px;
+  font-weight: 550;
+  line-height: 1.22;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.portfolio-overview-page .project-card__description {
+  display: -webkit-box;
+  min-height: 40px;
+  margin: 0 0 7px;
+  overflow: hidden;
+  color: var(--kami-muted);
+  font-size: 13px;
+  line-height: 1.5;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.portfolio-overview-page .project-card__tags {
+  display: flex;
+  min-height: 28px;
+  flex-wrap: wrap;
+  gap: 0.38rem;
+  margin: auto 0 8px;
+}
+
+.portfolio-overview-page .project-card__tags .doc-badge {
+  margin: 0;
+  padding: 3px 10px;
+  font-size: 11px;
+}
+
+.portfolio-overview-page .project-card__cta {
+  align-self: flex-start;
+  color: var(--kami-blue);
+  font-size: 13px;
+  line-height: 1.5;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.portfolio-overview-page .project-card__cta:hover,
+.portfolio-overview-page .project-card__cta:focus-visible {
+  color: var(--kami-ochre);
+}
+
+.portfolio-overview-page .featured-writing-intro {
+  margin: 0 0 0.55rem;
+  color: var(--kami-muted);
+  font-size: 0.76rem;
+}
+
+.portfolio-overview-page .featured-writing-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--kami-border);
+  border-bottom: 1px solid var(--kami-border);
+}
+
+.portfolio-overview-page .featured-writing-list li {
+  margin: 0;
+}
+
+.portfolio-overview-page .featured-writing-list li + li {
+  border-top: 1px solid var(--kami-border);
+}
+
+.portfolio-overview-page .featured-writing-list a {
+  display: grid;
+  grid-template-columns: 2.2rem minmax(0, 1fr);
+  gap: 0.7rem;
+  align-items: start;
+  padding: 0.65rem 0.15rem;
+  color: var(--kami-text);
+  text-decoration: none;
+  transition: background-color 150ms ease;
+}
+
+.portfolio-overview-page .featured-writing-list a:hover,
+.portfolio-overview-page .featured-writing-list a:focus-visible {
+  background: rgba(230, 237, 244, 0.3);
+}
+
+.portfolio-overview-page .featured-writing-list__number {
+  color: var(--kami-ochre);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.portfolio-overview-page .featured-writing-list__content {
+  display: grid;
+  gap: 0.12rem;
+  min-width: 0;
+}
+
+.portfolio-overview-page .featured-writing-list__content strong {
+  color: var(--kami-blue);
+  font-family: var(--kami-serif);
+  font-size: 0.82rem;
+  font-weight: 550;
+  line-height: 1.4;
+}
+
+.portfolio-overview-page .featured-writing-list__content > span {
+  color: var(--kami-muted);
+  font-size: 0.66rem;
+  line-height: 1.45;
+}
+
+.portfolio-overview-page .featured-writing-all {
+  margin: 0.6rem 0 0;
+  text-align: right;
+}
+
+.portfolio-overview-page .featured-writing-all a {
+  color: var(--kami-blue);
+  font-size: 0.74rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+@media (max-width: 42rem) {
+  .portfolio-overview-page .project-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .portfolio-overview-page .project-card {
+    min-height: 0;
+  }
+
+  .portfolio-overview-page .project-card__image {
+    height: clamp(10rem, 54vw, 13rem);
+  }
+
+  .portfolio-overview-page .project-card__title,
+  .portfolio-overview-page .project-card__description {
+    min-height: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-overview-page .project-card,
+  .portfolio-overview-page .featured-writing-list a {
+    transition: none;
+  }
 }
 
 .bottom-pager {
