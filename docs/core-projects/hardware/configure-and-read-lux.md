@@ -6,21 +6,13 @@ OPT4001YMN 上电后不会立即持续产生新的环境光测量结果。
 
 主控需要先找到器件、启动测量、等待转换完成，再读取结果寄存器，并将原始数据换算为 lux。
 
-本页按照“找到器件 → 启动测量 → 等待数据 → 读取结果 → 验证结果 → 换算 lux”的任务顺序组织这些信息。
-
-!!! info "验证状态"
-
-    本页根据 TI [《OPT4001 Datasheet》](https://www.ti.com/lit/ds/symlink/opt4001.pdf)和
-    [《OPT4001YMNEVM User's Guide》](https://www.ti.com/lit/ug/sbou278/sbou278.pdf)整理。
-
-    工作模式、I²C 地址、寄存器字段和 lux 换算公式已经过官方资料核对。
-    示例流程和代码尚未在 OPT4001YMNEVM 实物或目标 MCU 上运行。
+本页按照“找到器件 → 启动测量 → 等待数据 → 读取结果 → 验证结果 → 换算 lux”的任务顺序组织这些信息。第一次阅读建议先理解整条数据流，再查看具体字段。
 
 <span id="read-path-overview"></span>
 
 ![OPT4001YMN 数据读取路径](../../assets/opt4001/opt4001-read-task-flow.svg){ .doc-figure .figure--large .figure--diagram }
 
-*图 1：OPT4001YMN 数据读取路径。根据 TI [《OPT4001 Datasheet》](https://www.ti.com/lit/ds/symlink/opt4001.pdf)的工作模式、I²C 编程和寄存器定义整理。该图表示读取任务，不是芯片内部框图。*
+*图 1：OPT4001YMN 数据读取路径。根据 TI [《OPT4001 Datasheet》](https://www.ti.com/lit/ds/symlink/opt4001.pdf)的工作模式、I²C 编程和寄存器定义整理。*
 {: .figure-caption }
 
 ## 找到器件

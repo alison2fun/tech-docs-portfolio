@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 800" role="img" aria-labelledby="title desc">
+  <title id="title">从官方资料到开发者任务文档</title>
+  <desc id="desc">OPT4001 Datasheet 和 OPT4001YMNEVM User's Guide 中的信息先汇入开发者任务，再分别组织为 Quick Start、系统结构、配置读取和故障排查页面。</desc>
+  <defs>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0 0L10 4L0 8Z" fill="#1b365d"/>
+    </marker>
+    <style>
+      text { font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif; fill: #243145; }
+      .stage { font-size: 15px; font-weight: 700; fill: #8a6a3e; letter-spacing: 0.08em; }
+      .title { font-size: 21px; font-weight: 700; fill: #1b365d; }
+      .item { font-size: 15px; fill: #504e49; }
+      .small { font-size: 14px; fill: #6f6b63; }
+      .inverse { fill: #fffdf7; }
+      .inverse-sub { fill: #dce7f4; }
+      .line { fill: none; stroke: #1b365d; stroke-width: 2.5; marker-end: url(#arrow-blue); }
+    </style>
+  </defs>
+
+  <rect width="760" height="800" rx="16" fill="#fffdf7"/>
+
+  <text class="stage" x="28" y="30">01 · 官方来源</text>
+
+  <path class="line" d="M200 268C200 310 300 310 350 338"/>
+  <path class="line" d="M560 268C560 310 460 310 410 338"/>
+  <path class="line" d="M380 450V505"/>
+  <path class="line" d="M380 505C325 512 205 518 170 546"/>
+  <path class="line" d="M380 505C435 512 555 518 590 546"/>
+  <path class="line" d="M380 505C250 532 20 558 20 712H50"/>
+  <path class="line" d="M380 505C510 532 740 558 740 712H710"/>
+
+  <rect x="40" y="52" width="320" height="216" rx="12" fill="#e8eef6" stroke="#1b365d" stroke-width="2"/>
+  <text class="title" x="64" y="88">OPT4001 Datasheet</text>
+  <line x1="64" y1="104" x2="336" y2="104" stroke="#cad7e6"/>
+  <text class="item" x="68" y="134">• 封装与引脚</text>
+  <text class="item" x="68" y="164">• 工作模式</text>
+  <text class="item" x="68" y="194">• I²C 与寄存器</text>
+  <text class="item" x="68" y="224">• 光学布局</text>
+
+  <rect x="400" y="52" width="320" height="216" rx="12" fill="#f3ead8" stroke="#b38a58" stroke-width="2"/>
+  <text class="title" x="424" y="88">EVM User's Guide</text>
+  <line x1="424" y1="104" x2="696" y2="104" stroke="#e4d2b2"/>
+  <text class="item" x="428" y="134">• 板卡结构</text>
+  <text class="item" x="428" y="164">• 软件与连接</text>
+  <text class="item" x="428" y="194">• GUI 操作</text>
+  <text class="item" x="428" y="224">• 故障提示</text>
+
+  <text class="stage" x="28" y="326">02 · 按任务重组</text>
+  <rect x="215" y="338" width="330" height="112" rx="56" fill="#1b365d" stroke="#1b365d" stroke-width="2"/>
+  <text class="inverse" x="380" y="383" text-anchor="middle" font-size="25" font-weight="700">开发者任务</text>
+  <text class="inverse-sub" x="380" y="416" text-anchor="middle" font-size="15">首次采集 · 继续集成 · 故障排查</text>
+
+  <text class="stage" x="28" y="528">03 · 形成页面</text>
+
+  <rect x="50" y="546" width="240" height="92" rx="10" fill="#e4ece4" stroke="#5f7e65" stroke-width="2"/>
+  <text class="title" x="170" y="582" text-anchor="middle">Quick Start</text>
+  <text class="small" x="170" y="610" text-anchor="middle">完成第一次成功采集</text>
+
+  <rect x="470" y="546" width="240" height="92" rx="10" fill="#e8eef6" stroke="#1b365d" stroke-width="2"/>
+  <text class="title" x="590" y="582" text-anchor="middle">评估系统与硬件结构</text>
+  <text class="small" x="590" y="610" text-anchor="middle">理解三条系统链路</text>
+
+  <rect x="50" y="666" width="240" height="92" rx="10" fill="#e8eef6" stroke="#1b365d" stroke-width="2"/>
+  <text class="title" x="170" y="702" text-anchor="middle">配置与数据读取</text>
+  <text class="small" x="170" y="730" text-anchor="middle">从工作模式走到 lux</text>
+
+  <rect x="470" y="666" width="240" height="92" rx="10" fill="#f2e3dc" stroke="#a26454" stroke-width="2"/>
+  <text class="title" x="590" y="702" text-anchor="middle">故障排查</text>
+  <text class="small" x="590" y="730" text-anchor="middle">根据现象定位系统层级</text>
+</svg>

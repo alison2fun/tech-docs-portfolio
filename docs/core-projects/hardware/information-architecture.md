@@ -13,14 +13,23 @@ OPT4001YMN coupon board 完成环境光测量。
 
 本页说明这些部分如何连接，以及它们各自承担什么作用。
 
-!!! info "验证状态"
+## 先看结论
 
-    本页根据 TI [《OPT4001YMNEVM User's Guide》](https://www.ti.com/lit/ug/sbou278/sbou278.pdf)和
-    [《OPT4001 Datasheet》](https://www.ti.com/lit/ds/symlink/opt4001.pdf)整理。
+### 系统链路
 
-    板卡关系、器件引脚和光学结构已经过官方资料核对。
-    作者目前没有 OPT4001YMNEVM 实物，尚未独立验证硬件连接、
-    通信和光照响应。
+PC → OPTMBEVM 控制板 → coupon board → OPT4001
+
+PC 通过 USB 与控制板通信，控制板再通过 I²C 与 OPT4001 交互。
+
+### 板卡职责
+
+控制板负责通信和控制，coupon board 承载传感器。
+
+阅读系统问题时先区分控制链路与传感器板本身。
+
+### 光学结构
+
+OPT4001 的测量结果不仅受寄存器配置影响，也受传感器朝向、开孔和遮挡影响。
 
 ## 系统总览
 
@@ -40,7 +49,7 @@ PC EVM GUI
 
 ![OPT4001YMNEVM 系统组成和数据路径](../../assets/opt4001/opt4001-system-overview.svg){ .doc-figure .figure--large .figure--diagram }
 
-*图 1：OPT4001YMNEVM 系统组成和数据路径。根据 TI [《OPT4001YMNEVM User's Guide》](https://www.ti.com/lit/ug/sbou278/sbou278.pdf)第 3 页和第 5 页重绘。该图不表示实际 PCB 走线和机械比例。*
+*图 1：OPT4001YMNEVM 系统组成和数据路径。根据 TI [《OPT4001YMNEVM User's Guide》](https://www.ti.com/lit/ug/sbou278/sbou278.pdf)第 3 页和第 5 页重绘。*
 {: .figure-caption }
 
 ## 板卡结构 { #board-structure }

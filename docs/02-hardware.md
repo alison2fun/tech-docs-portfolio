@@ -2,13 +2,13 @@
 
 <div class="hardware-doc" markdown>
 
-本页帮助第一次使用 OPT4001YMNEVM 的读者完成首次环境光数据采集。完成后，EVM GUI 中应显示实时 lux 数值，曲线区域持续出现新的数据点。
+本页带你完成 OPT4001YMNEVM 的第一次采集：检查评估板、连接 PC、启动 EVM GUI，并确认第一组环境光数据。
 
-!!! info "验证状态"
+!!! success "完成标准"
 
-    本页根据 TI [《OPT4001YMNEVM User's Guide》](https://www.ti.com/lit/ug/sbou278/sbou278.pdf)和 [《OPT4001 Datasheet》](https://www.ti.com/lit/ds/symlink/opt4001.pdf)整理。操作步骤、界面状态和错误提示均有官方资料依据。
+    完成本页后，EVM GUI 应开始显示并持续更新 lux 数据。
 
-    作者目前没有 OPT4001YMNEVM 实物，尚未独立复现软件安装、硬件连接和数据采集。页面中的界面图片来自 TI 官方文档，不代表作者的实测结果。
+    如果 GUI 无法连接设备，或 lux 数据没有更新，直接进入[故障排查](core-projects/hardware/troubleshooting.md)。
 
 ## 开始前准备
 

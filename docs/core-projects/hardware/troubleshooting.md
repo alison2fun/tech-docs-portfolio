@@ -1,21 +1,12 @@
 # 故障排查
 
-<div class="hardware-doc" markdown>
+<div class="hardware-doc hardware-troubleshooting-page" markdown>
 
 OPT4001YMNEVM 的首次采集依赖电脑、USB、OPTMBEVM 母板、
 coupon board、OPT4001YMN 和 EVM GUI 共同工作。
 
 出现异常时，先根据可观察到的现象判断问题停在哪一层，再检查对应的连接、
 配置或数据处理过程。
-
-!!! info "验证状态"
-
-    本页根据 TI [《OPT4001YMNEVM User's Guide》](https://www.ti.com/lit/ug/sbou278/sbou278.pdf)和
-    [《OPT4001 Datasheet》](https://www.ti.com/lit/ds/symlink/opt4001.pdf)整理。
-
-    官方文档明确给出的错误现象和检查步骤在正文中单独说明。
-    自定义主控、数据解析和光学路径中的补充检查根据系统结构整理，
-    尚未在 OPT4001YMNEVM 实物上复现。
 
 ## 排查路径
 
